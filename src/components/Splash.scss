@@ -1,0 +1,24 @@
+.splash {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    
+    .expand-icon {
+        position: absolute;
+        bottom: 2rem;
+        cursor: pointer;
+        animation: bobble 1s infinite alternate;
+    }
+}
+
+@keyframes bobble {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-1rem);
+    }
+}
