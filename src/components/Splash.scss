@@ -1,9 +1,16 @@
-.splash {
+.Splash {
 	height: 100vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
     align-items: center;
+
+    .splash-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     
     .expand-icon {
         position: absolute;
@@ -11,14 +18,21 @@
         cursor: pointer;
         animation: bobble 1s infinite alternate;
     }
+
+    .logo-with-icons {
+        width: 20rem;
+        height: auto;
+    }
 }
 
-@keyframes bobble {
-    0% {
-        transform: translateY(0);
-    }
+@media (min-width: $min-medium-screen) {
+    .Splash {
+        .splash-body {
+            align-items: flex-start;
+        }
 
-    100% {
-        transform: translateY(-1rem);
+        .logo-with-icons {
+            width: 30rem;
+        }
     }
 }

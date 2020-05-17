@@ -1,0 +1,30 @@
+// Tiny screens: small smartphones
+$max-tiny-screen: 399px;
+
+// Small screens: large smartphones
+$min-small-screen: 400px;
+$max-small-screen: 599px;
+
+// Medium screens: Small tablets in landscape mode, or large tablets in portrait mode
+$min-medium-screen: 600px;
+$max-medium-screen: 899px;
+
+// Large screens: Laptops, iPad, Surface, etc
+$min-large-screen: 900px;
+$max-large-screen: 1199px;
+
+// Huge screens: full screen laptops, large monitors, TVs, etc
+$min-huge-screen: 1200px;
+
+@keyframes bobble {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-1rem);
+	}
+}
+
+@import 'components/Header.scss';
+@import 'components/Splash.scss';

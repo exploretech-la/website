@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 
-import './Header.scss';
-
 export default class Header extends Component {
     render() {
         return (
