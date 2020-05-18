@@ -1,0 +1,20 @@
+.Header {
+    .logo-compass {
+        width: 3rem;
+        height: auto;
+
+        @media (min-width: map-get($grid-breakpoints, sm)) {
+            display: none;
+        }
+    }
+
+    .logo-with-icons {
+        display: none;
+        width: 12rem;
+        height: auto;
+
+        @media (min-width: map-get($grid-breakpoints, sm)) {
+            display: block;
+        }
+    }
+}

@@ -26,5 +26,6 @@ $min-huge-screen: 1200px;
 	}
 }
 
+@import "~bootstrap/scss/bootstrap";
 @import 'components/Header.scss';
 @import 'components/Splash.scss';
