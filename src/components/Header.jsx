@@ -11,7 +11,7 @@ export default class Header extends Component {
         return (
             <Navbar className="Header" collapseOnSelect expand="sm">
                 <Navbar.Brand>
-                    <img src={CompassLogo} className="logo-compass" alt="logo-with-icon-group" />
+                    <img src={CompassLogo} className="logo-compass" alt="logo-compass" />
                     <img src={LogoWithIcons} className="logo-with-icons" alt="logo-with-icon-group" />
                 </Navbar.Brand>
                 <Navbar.Toggle />

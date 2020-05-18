@@ -1,4 +1,6 @@
 .Header {
+    background-color: $color-aqua;
+
     .logo-compass {
         width: 3rem;
         height: auto;
@@ -10,7 +12,7 @@
 
     .logo-with-icons {
         display: none;
-        width: 12rem;
+        width: 14rem;
         height: auto;
 
         @media (min-width: map-get($grid-breakpoints, sm)) {

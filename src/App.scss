@@ -16,6 +16,9 @@ $max-large-screen: 1199px;
 // Huge screens: full screen laptops, large monitors, TVs, etc
 $min-huge-screen: 1200px;
 
+$color-aqua: #98D6D6;
+$color-navy: #0B546F;
+
 @keyframes bobble {
 	0% {
 		transform: translateY(0);

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import { MdExpandMore } from 'react-icons/md';
 
-import LogoWithIconGroup from '../static/svg/logo-with-icon-group.svg';
+import LogoWithIconGroup from '../static/svg/logo-navy-with-icon-group-white.svg';
 
 export default class Splash extends Component {
     render() {
@@ -11,8 +11,10 @@ export default class Splash extends Component {
             <div className="Splash">
                 <div className="splash-body">
                     <img src={LogoWithIconGroup} className="logo-with-icon-group" alt="logo-with-icon-group" />
-                    <p>Inspiring students to explore opportunities in computer science, engineering, and technology.</p>
-                    <p><Button variant="primary">Learn more</Button></p>
+                    <div className="splash-content">
+                        <h1>Inspiring the Future of Tech.</h1>
+                        <Button variant="primary">Learn more</Button>
+                    </div>
                 </div>
                 <MdExpandMore className="expand-icon" size="2em" />
             </div>
