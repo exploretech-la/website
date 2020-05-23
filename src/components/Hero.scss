@@ -1,0 +1,53 @@
+.Hero {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-aqua;
+    color: $color-navy;
+
+    .hero-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .logo-with-icon-group {
+            width: 20rem;
+            height: auto;
+        }
+    }
+
+    .event-info {
+        margin-bottom: 1rem;
+    }
+    
+    .expand-icon {
+        position: absolute;
+        bottom: 2rem;
+        cursor: pointer;
+        animation: bobble 1s infinite alternate;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .Hero {
+        .hero-body {
+            flex-direction: row;
+
+            .logo-with-icon-group {
+                width: 30rem;
+                margin-right: 4rem;
+            }
+
+            .hero-content {
+                max-width: 300px;
+            }
+        }
+    }
+}
