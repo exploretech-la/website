@@ -1,6 +1,8 @@
 $color-aqua: #98D6D6;
 $color-navy: #0B546F;
 
+$section-width: 960px;
+
 @keyframes bobble {
 	0% {
 		transform: translateY(0);
@@ -11,15 +13,14 @@ $color-navy: #0B546F;
 	}
 }
 
-.App {
-	.page-content {
-		width: 960px;
-		margin: auto;
-	}
-}
-
+// Common Styles
 @import '~bootstrap/scss/bootstrap';
+@import 'components/common/UnorderedItemList.scss';
+
+// Component Styles
 @import 'components/Header.scss';
 @import 'components/Hero.scss';
 @import 'components/InvolvementCards.scss';
 @import 'components/About.scss';
+@import 'components/Schedule.scss';
+@import 'components/Footer.scss';

@@ -1,0 +1,36 @@
+.UnorderedItemList {
+    .item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 24px;
+
+        .item-indicator {
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background-color: #448494;
+            text-align: center;
+            line-height: 1.5;
+            flex-shrink: 0;
+            margin-right: 16px;
+        }
+
+        .item-indicator::after {
+            content: '';
+            display: block;
+            margin-left: 11px;
+            width: 2px;
+            height: 50px;
+            background-color: #448494;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+
+            .item-indicator::after {
+                display: none;
+            }
+        }
+    }
+}
