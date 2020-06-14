@@ -16,9 +16,15 @@ export default class Footer extends Component {
                         <div className="social-media">
                             <p>FIND US ON</p>
                             <div className="social-media-list">
-                                <FaFacebook className="social-media-icon" size="2em" />
-                                <FaInstagram className="social-media-icon" size="2em" />
-                                <FaLinkedin className="social-media-icon" size="2em" />
+                                <a href="https://www.facebook.com/exploretech.la/" target="_blank">
+                                    <FaFacebook className="social-media-icon" size="2em" />
+                                </a>
+                                <a href="https://www.instagram.com/exploretech.la/" target="_blank">
+                                    <FaInstagram className="social-media-icon" size="2em" />
+                                </a>
+                                <a href="https://www.linkedin.com/company/exploretech-la/" target="_blank">
+                                    <FaLinkedin className="social-media-icon" size="2em" />
+                                </a>
                             </div> 
                         </div>
                         <div className="email">
