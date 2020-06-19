@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9dd0a3837b6c04b1b93512f8f645f929",
+    "revision": "98a5e7cb0308c9558206c312814f3ced",
     "url": "/website/index.html"
   },
   {
-    "revision": "0e184fc76a9b987988f1",
+    "revision": "80fc72c285b0b3878652",
     "url": "/website/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "97fd0ce9885e2cd88d56",
-    "url": "/website/static/css/main.0db86467.chunk.css"
+    "revision": "6a35cae14a04ba13c9c3",
+    "url": "/website/static/css/main.b58d0580.chunk.css"
   },
   {
-    "revision": "0e184fc76a9b987988f1",
-    "url": "/website/static/js/2.48577af6.chunk.js"
+    "revision": "80fc72c285b0b3878652",
+    "url": "/website/static/js/2.7cb94453.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/website/static/js/2.48577af6.chunk.js.LICENSE.txt"
+    "url": "/website/static/js/2.7cb94453.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "97fd0ce9885e2cd88d56",
-    "url": "/website/static/js/main.ccffc287.chunk.js"
+    "revision": "6a35cae14a04ba13c9c3",
+    "url": "/website/static/js/main.00df0fa0.chunk.js"
   },
   {
     "revision": "418f45f3f017fdfbbfb7",
@@ -46,5 +46,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6632378cc8a89e04a147e66873fe4f7f",
     "url": "/website/static/media/microsoft-vr-demo.6632378c.jpg"
+  },
+  {
+    "revision": "65221f8c5f3945368b1677ba0ad697d3",
+    "url": "/website/static/media/team-photo-2020.65221f8c.jpg"
   }
 ]);
