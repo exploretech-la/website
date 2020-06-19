@@ -13,6 +13,14 @@ $section-width: 960px;
 	}
 }
 
+.pill-divider {
+	height: 0.5rem;
+	width: 4rem;
+	margin-bottom: 1.5rem;
+	background: $color-aqua;
+	border-radius: 0.25rem;
+}
+
 // Common Styles
 @import '~bootstrap/scss/bootstrap';
 @import 'components/common/UnorderedItemList.scss';

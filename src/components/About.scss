@@ -1,18 +1,19 @@
 .About {
     padding: 64px 0;
 
-    .about-inner {
+    .about-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: $section-width;
         margin: auto;
 
-        .workshop-photo {
-            align-self: center;
-            width: 28rem;
-            height: auto;
-            margin-left: 2rem;
+        &:not(:last-child) {
+            padding-bottom: 64px;
+        }
+
+        .left-column, .right-column {
+            width: 46%;
         }
     }
 }
