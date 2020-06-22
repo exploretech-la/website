@@ -1,0 +1,41 @@
+.Sponsors {
+    padding: 64px 0;
+
+    .sponsors-container {
+        width: $section-width;
+        margin: auto;
+
+        .sponsors-header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-container {
+            margin: 2rem;
+        }
+
+        .large-logos, .small-logos {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .large-logos {
+            padding-bottom: 32px;
+
+            .logo {
+                width: 24rem;
+                height: auto;
+            }
+        }
+
+        .small-logos {
+            .logo {
+                width: 15rem;
+                height: auto;
+            }
+        }
+    }
+}
