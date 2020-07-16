@@ -33,5 +33,5 @@ export const SmallLogoSponsors = [
     }, {
         name: 'capcom',
         src: require('static/sponsors/capcom.svg'),
-    }
+    },
 ];

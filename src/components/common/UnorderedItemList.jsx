@@ -18,7 +18,7 @@ export default class UnorderedItemList extends PureComponent {
     }
 
     render() {
-        const classnames = classNames('UnorderedItemList', this.propsclassName);
+        const classnames = classNames('UnorderedItemList', this.props.className);
         const items = this.props.items.map((item, index) => this._getItem(index+1, item));
 
         return (

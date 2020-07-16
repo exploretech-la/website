@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Hero from './Hero';
 import About from './About';
+import Speakers from './Speakers';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 
@@ -18,6 +19,7 @@ export default class Home extends Component {
                 <About />
                 {/* <Schedule /> */}
                 {/* <InvolvementCards /> */}
+                <Speakers />
                 <Sponsors />
                 <Footer />
             </div>
