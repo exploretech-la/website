@@ -15,5 +15,43 @@
         .left-column, .right-column {
             width: 46%;
         }
+
+        .founding-story {
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                .MdKeyboardArrowRight {
+                    fill: white;
+                    background-color: #448494;
+                    border: 2px solid #448494;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: #448494;
+            }
+
+            p {
+                margin-bottom: 0;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .MdKeyboardArrowRight {
+        fill: #448494;
+        border: 2px solid #E2E2E2;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
+        -moz-transition: all 0.3s ease-in-out; /** Firefox **/
+        -o-transition: all 0.3s ease-in-out; /** Opera **/
     }
 }

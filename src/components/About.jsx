@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import { MdKeyboardArrowRight } from 'react-icons/md';
+
 import HomePageSections from 'constants/HomePageSections';
 
 import MicrosoftVRDemo from '../static/images/microsoft-vr-demo.jpg';
 import TeamPhoto from '../static/images/team-photo-2020.jpg';
+
+const FoundingStoryLink = 'https://medium.com/@nathan_yang/5-reasons-why-i-loved-ucla-de9d0704126e';
 
 export default class About extends Component {
 
@@ -43,6 +47,10 @@ export default class About extends Component {
                         <h3 className="section-title">Our Team</h3>
                         <div className="pill-divider" />
                         <p>Founded in 2017 as student organization at UCLA, exploretech.la is run by students for students. We apply our insights as recent high school graduates and current college students to create engaging and impactful learning experiences for our younger peers.</p>
+                        <div className="founding-story">
+                            <p><a href={FoundingStoryLink} target="_blank">Read about our founding story</a></p>
+                            <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
+                        </div>
                     </div>
                 </div>
             </div>

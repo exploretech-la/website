@@ -61,18 +61,22 @@
                 align-items: center;
                 cursor: pointer;
 
-                a {
-                    text-decoration: none;
-                    color: #448494;
-                    margin-right: 8px;
-                }
-
                 &:hover {
                     .MdKeyboardArrowRight {
                         fill: white;
                         background-color: #448494;
                         border: 2px solid #448494;
                     }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #448494;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    margin-right: 8px;
                 }
             }
         }

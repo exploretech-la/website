@@ -43,7 +43,7 @@ export default class Sponsors extends Component {
                     <div className="sponsor-contact">
                         <h5>Interested in sponsoring?</h5>
                         <div className="sponsor-cta">
-                            <b><a href="mailto:exploretechla@cs.ucla.edu" target="_blank">Email Us!</a></b>
+                            <p><b><a href="mailto:exploretechla@cs.ucla.edu" target="_blank">Email Us!</a></b></p>
                             <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
                         </div>
                     </div>
