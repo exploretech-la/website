@@ -1,7 +1,11 @@
 .Sponsors {
-    padding: 64px 0;
+    padding: $section-vertical-padding 0;
 
     .sponsors-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: $section-width;
         margin: auto;
 
@@ -22,20 +26,67 @@
             align-items: center;
         }
 
-        .large-logos {
+        .large-logos, .small-logos {
             padding-bottom: 32px;
+        }
 
+        .large-logos {
             .logo {
-                width: 24rem;
+                width: 20rem;
                 height: auto;
             }
         }
 
         .small-logos {
             .logo {
-                width: 15rem;
+                width: 12rem;
                 height: auto;
             }
         }
+
+        .sponsor-contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h5 {
+                margin-bottom: 1rem;
+            }
+
+            .sponsor-cta {
+                display: flex;
+                flex-direction: row;
+                text-decoration: none;
+                align-items: center;
+                cursor: pointer;
+
+                a {
+                    text-decoration: none;
+                    color: #448494;
+                    margin-right: 8px;
+                }
+
+                &:hover {
+                    .MdKeyboardArrowRight {
+                        fill: white;
+                        background-color: #448494;
+                        border: 2px solid #448494;
+                    }
+                }
+            }
+        }
+    }
+
+    .MdKeyboardArrowRight {
+        fill: #448494;
+        border: 2px solid #E2E2E2;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
+        -moz-transition: all 0.3s ease-in-out; /** Firefox **/
+        -o-transition: all 0.3s ease-in-out; /** Opera **/
     }
 }

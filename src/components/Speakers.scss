@@ -1,5 +1,5 @@
 .Speakers {
-    padding: 64px 0;
+    padding: $section-vertical-padding 0;
 
     p {
         margin-bottom: 0.25rem;
@@ -48,7 +48,7 @@
         }
 
         .speaker:hover {
-            background-color: #EEEEEE;
+            background-color: #F5F5F5;
             transition: 0.5s;
         }
     }

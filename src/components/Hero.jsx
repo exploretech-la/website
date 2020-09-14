@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import Button from 'react-bootstrap/Button';
-import { MdExpandMore } from 'react-icons/md';
+
+import HomePageSections from 'constants/HomePageSections';
 
 import LogoWithIconGroup from '../static/svg/logo-navy-with-icon-group-white.svg';
 
@@ -17,10 +18,12 @@ export default class Hero extends Component {
                             <p>March 6th, 2020</p>
                             <p>University of California, Los Angeles</p>
                         </div>
-                        <Button variant="primary">Learn more</Button>
+                        <div className="hero-cta">
+                            <Button variant="info" href={`#${HomePageSections.GET_INVOLVED.name}`}>Get Involved</Button>
+                            <Button variant="light" href={`#${HomePageSections.ABOUT.name}`}>Learn More</Button>
+                        </div>
                     </div>
                 </div>
-                {/* <MdExpandMore className="expand-icon" size="2em" /> */}
             </div>
         );
     }

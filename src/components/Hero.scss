@@ -17,10 +17,19 @@
             width: 20rem;
             height: auto;
         }
-    }
 
-    .event-info {
-        margin-bottom: 1rem;
+        .event-info {
+            margin-bottom: 1rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-direction: row;
+
+            .btn:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
     }
     
     .expand-icon {

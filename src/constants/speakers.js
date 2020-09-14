@@ -33,8 +33,8 @@ export const PastSpeakers = [
         link: 'https://www.linkedin.com/in/solomon-russell-220aa014/',
     }, {
         name: 'Ruth Johnson',
-        title: 'PhD Student',
-        org: 'UCLA Computer Science',
+        title: 'Computer Science PhD Student',
+        org: 'UCLA',
         image: require('static/speakers/ruth-johnson.jpeg'),
         link: 'https://www.linkedin.com/in/ruthjohnson13/',
     }, {

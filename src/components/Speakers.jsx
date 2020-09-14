@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import HomePageSections from 'constants/HomePageSections';
 import { CurrentSpeakers, PastSpeakers } from 'constants/speakers';
 
 const SpeakersTypeEnum = {
@@ -36,7 +37,7 @@ export default class Speakers extends Component {
         const classnames = classNames('Speakers', this.props.className);
 
         return (
-            <div className={classnames}>
+            <div className={classnames} id={HomePageSections.SPEAKERS.name}>
                 {this._renderSpeakers(currentSpeakers, SpeakersTypeEnum.CURRENT)}
                 {this._renderSpeakers(pastSpeakers, SpeakersTypeEnum.PAST)}
             </div>
@@ -68,8 +69,8 @@ export default class Speakers extends Component {
 
         const { name, title, org, image, link } = speaker;
         return (
-            <a href={link} target="_blank">
-                <div className="speaker" key={name}>
+            <a href={link} target="_blank" key={name}>
+                <div className="speaker">
                     <img src={image} className="speaker-image" alt={name} />
                     <h5 className="speaker-name">{name}</h5>
                     <p className="speaker-title">{title}, {org}</p>

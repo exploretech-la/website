@@ -29,7 +29,7 @@ export default class Footer extends Component {
                         </div>
                         <div className="email">
                             <p>REACH US AT</p>
-                            <p><a href="mailto:info@exploretech.la">info@exploretech.la</a></p>
+                            <p><a href="mailto:exploretechla@cs.ucla.edu" target="_blank">exploretechla@cs.ucla.edu</a></p>
                         </div>
                     </div>
                     <div className="footer-item">

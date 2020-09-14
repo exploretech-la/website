@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import HomePageSections from 'constants/HomePageSections';
+
 import MicrosoftVRDemo from '../static/images/microsoft-vr-demo.jpg';
 import TeamPhoto from '../static/images/team-photo-2020.jpg';
 
@@ -23,7 +25,7 @@ export default class About extends Component {
         const classnames = classNames('About', this.props.className);
 
         return (
-            <div className={classnames}>
+            <div className={classnames} id={HomePageSections.ABOUT.name}>
                 <div className="about-content about-org">
                     <div className="left-column">
                         <h3 className="section-title">What is exploretech.la?</h3>
