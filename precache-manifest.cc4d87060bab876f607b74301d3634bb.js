@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9ce4abf507fad80de67cc7e3b477de13",
+    "revision": "ec3ae5ffeac47aa98bf257646fcf7727",
     "url": "/website/index.html"
   },
   {
-    "revision": "ad952607de812ff71d0a",
-    "url": "/website/static/css/2.829c9cb5.chunk.css"
+    "revision": "e5c8b82128d335794116",
+    "url": "/website/static/css/2.f3cffc9e.chunk.css"
   },
   {
-    "revision": "bcb47ceb5ea5e015926a",
-    "url": "/website/static/css/main.e608daae.chunk.css"
+    "revision": "d61087c7ea0e7201cdea",
+    "url": "/website/static/css/main.94fd083d.chunk.css"
   },
   {
-    "revision": "ad952607de812ff71d0a",
-    "url": "/website/static/js/2.819fe88a.chunk.js"
+    "revision": "e5c8b82128d335794116",
+    "url": "/website/static/js/2.ea544e90.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/website/static/js/2.819fe88a.chunk.js.LICENSE.txt"
+    "url": "/website/static/js/2.ea544e90.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bcb47ceb5ea5e015926a",
-    "url": "/website/static/js/main.62c8f6df.chunk.js"
+    "revision": "d61087c7ea0e7201cdea",
+    "url": "/website/static/js/main.0262048e.chunk.js"
   },
   {
-    "revision": "418f45f3f017fdfbbfb7",
-    "url": "/website/static/js/runtime-main.e5cbaae1.js"
+    "revision": "e1d391a48a471e60a97a",
+    "url": "/website/static/js/runtime-main.0a64ae90.js"
   },
   {
     "revision": "6abbf0ed0ada77658d702bdbf5896c0e",
@@ -96,6 +96,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/website/static/media/solomon-russell.e6f61a67.jpeg"
   },
   {
+    "revision": "a2e04b80dd0c054095001c8858c10673",
+    "url": "/website/static/media/speaker-connie.a2e04b80.jpg"
+  },
+  {
+    "revision": "530245ac3fb05ebe8e9872112535330e",
+    "url": "/website/static/media/taboola-booth.530245ac.jpg"
+  },
+  {
+    "revision": "61658ddae191c3ca1c25995a824c0453",
+    "url": "/website/static/media/teals-vr.61658dda.jpg"
+  },
+  {
     "revision": "b0edb22bab632acd1d0a61a8c6a279bc",
     "url": "/website/static/media/teals.b0edb22b.png"
   },
@@ -106,6 +118,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "665983d47832ba9cc7d2be0a5fa29326",
     "url": "/website/static/media/tyler-menezes.665983d4.png"
+  },
+  {
+    "revision": "0986e1c59418f943b41d055021c87237",
+    "url": "/website/static/media/ucla-cs.0986e1c5.png"
   },
   {
     "revision": "a1880337ae61ab6852992ab1ad776d6b",
