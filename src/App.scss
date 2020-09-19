@@ -1,7 +1,15 @@
+// See colors in the exploretech.la Design System in Figma
 $color-aqua: #98D6D6;
+$color-muted-blue: #448494;
 $color-navy: #0B546F;
+$color-teal: #57ADA3;
+$color-white: #FFFFFF;
 
-$section-width: 960px;
+$section-width: 1040px;
+$section-horizontal-padding-xs: 24px;
+$section-horizontal-padding-sm: 40px;
+$section-horizontal-padding-md: 52px;
+$section-horizontal-padding-lg: 64px;
 $section-vertical-padding: 64px;
 
 @keyframes bobble {
@@ -30,14 +38,5 @@ html {
 @import '~bootstrap/scss/bootstrap';
 @import 'components/common/UnorderedItemList.scss';
 
-// Component Styles
-@import 'components/Header.scss';
-@import 'components/Hero.scss';
-@import 'components/About.scss';
-@import 'components/GetInvolved.scss';
-@import 'components/Speakers.scss';
-@import 'components/Sponsors.scss';
-@import 'components/Footer.scss';
-
-@import 'components/COVID19Update.scss';
-// @import 'components/Schedule.scss';
+// Page Styles
+@import 'components/Home.scss';

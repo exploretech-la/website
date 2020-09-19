@@ -6,7 +6,7 @@ export const PastSpeakers = [
         title: 'Dean',
         org: 'UCLA Samueli School of Engineering',
         image: require('static/speakers/jayathi-murthy.png'),
-        link: 'https://www.linkedin.com/in/jayathi-murthy-96a08262/'
+        link: 'https://samueli.ucla.edu/jayathi-y-murthy/'
     }, {
         name: 'Carey Nachenberg',
         title: 'Principal Engineer',

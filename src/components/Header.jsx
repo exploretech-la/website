@@ -11,7 +11,7 @@ import CompassLogo from '../static/svg/logo-compass.svg';
 export default class Header extends Component {
     render() {
         return (
-            <Navbar className="Header" collapseOnSelect expand="sm">
+            <Navbar className="Section Header" collapseOnSelect expand="sm">
                 <Navbar.Brand href="/">
                     <img src={CompassLogo} className="logo-compass" alt="logo-compass" />
                     <img src={LogoWithIcons} className="logo-with-icons" alt="logo-with-icons" />

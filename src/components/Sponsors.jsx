@@ -25,10 +25,10 @@ export default class Sponsors extends Component {
         const largeLogos = LargeLogoSponsors.map(logo => this._renderLogo(logo));
         const smallLogos = SmallLogoSponsors.map(logo => this._renderLogo(logo));
 
-        const classnames = classNames('Sponsors', this.props.className);
+        const classnames = classNames('Section', 'Sponsors', this.props.className);
 
         return (
-            <div className={classnames} id={HomePageSections.SPONSORS.name}>
+            <section className={classnames} id={HomePageSections.SPONSORS.name}>
                 <div className="sponsors-container">
                     <div className="sponsors-header">
                         <h3>Our Sponsors</h3>
@@ -43,12 +43,12 @@ export default class Sponsors extends Component {
                     <div className="sponsor-contact">
                         <h5>Interested in sponsoring?</h5>
                         <div className="sponsor-cta">
-                            <p><b><a href="mailto:exploretechla@cs.ucla.edu" target="_blank">Email Us!</a></b></p>
+                            <p><b><a href="mailto:exploretechla@cs.ucla.edu" target="_blank" rel="noopener noreferrer">Email Us!</a></b></p>
                             <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         );
     }
 
@@ -57,7 +57,7 @@ export default class Sponsors extends Component {
         const { name, src, website } = logo;
         return (
             <div className="logo-container" key={name}>
-                <a href={website} target="_blank">
+                <a href={website} target="_blank" rel="noopener noreferrer">
                     <img src={src} className="logo" alt={name} />
                 </a>
             </div>

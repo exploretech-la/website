@@ -1,21 +1,43 @@
 .Header {
     background-color: $color-aqua;
 
-    .logo-compass {
-        width: 3rem;
-        height: auto;
+    &.Section {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 
-        @media (min-width: map-get($grid-breakpoints, sm)) {
-            display: none;
-        }
+    .navbar-nav {
+        padding-top: 0.5rem;
+    }
+
+    .logo-compass {
+        display: block;
+        width: 2.5rem;
+        height: auto;
     }
 
     .logo-with-icons {
         display: none;
-        width: 14rem;
+        max-width: 14rem;
         height: auto;
+    }
+}
 
-        @media (min-width: map-get($grid-breakpoints, sm)) {
+@include media-breakpoint-up(sm) {
+    .Header {
+        .navbar-nav {
+            padding-top: 0;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .Header {
+        .logo-compass {
+            display: none;
+        }
+
+        .logo-with-icons {
             display: block;
         }
     }

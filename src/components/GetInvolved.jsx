@@ -11,10 +11,12 @@ import SpeakerConnie from 'static/images/speaker-connie.jpg';
 import TaboolaBooth from 'static/images/taboola-booth.jpg';
 import TEALS_VR from 'static/images/teals-vr.jpg';
 
+const mailingListLink = "http://eepurl.com/gEFmPX";
+
 export default class GetInvolved extends Component {
 	render() {
 		return (
-			<div className="GetInvolved" id={`${HomePageSections.GET_INVOLVED.name}`}>
+			<section className="Section GetInvolved" id={`${HomePageSections.GET_INVOLVED.name}`}>
 				<div className="cards-container">
 					<div className="cards-header">
 						<h3>Get Involved</h3>
@@ -23,16 +25,14 @@ export default class GetInvolved extends Component {
 					<CardDeck>
 						<Card className="high-schools">
 							<Card.Img variant="top" src={TEALS_VR} />
-							<a href="mailto:exploretechla@cs.ucla.edu" target="_blank">
+							<a href="mailto:exploretechla@cs.ucla.edu" target="_blank" rel="noopener noreferrer">
 								<Card.ImgOverlay>
 									<div className="card-content">
 										<Card.Title>For High Schools</Card.Title>
-										<Card.Text>
-											Inspire your students
-										</Card.Text>
-										<div className="get-involved-action">
+										<Card.Text>Inspire your students</Card.Text>
+										<div className="get-involved-cta">
 											<MdKeyboardArrowRight className="MdKeyboardArrowRight" />
-											<p className="action-description">Email us</p>
+											<Card.Text className="cta-text">Email us</Card.Text>
 										</div>
 									</div>
 									<div className="gradient-back" />
@@ -41,16 +41,15 @@ export default class GetInvolved extends Component {
 						</Card>
 						<Card className="companies">
 							<Card.Img variant="top" src={TaboolaBooth} />
-							<a href="mailto:exploretechla@cs.ucla.edu" target="_blank">
+							<a href="mailto:exploretechla@cs.ucla.edu" target="_blank" rel="noopener noreferrer">
 								<Card.ImgOverlay>
 									<div className="card-content">
 										<Card.Title>For Companies</Card.Title>
-										<Card.Text>
-											Become an industry partner
-										</Card.Text>
-										<div className="get-involved-action">
+										<Card.Text className="full-content">Become an industry partner</Card.Text>
+										<Card.Text className="short-content">Partner with us</Card.Text>
+										<div className="get-involved-cta">
 											<MdKeyboardArrowRight className="MdKeyboardArrowRight" />
-											<p className="action-description">Email us</p>
+											<Card.Text className="cta-text">Email us</Card.Text>
 										</div>
 									</div>
 									<div className="gradient-back" />
@@ -59,16 +58,15 @@ export default class GetInvolved extends Component {
 						</Card>
 						<Card className="ucla-students">
 							<Card.Img variant="top" src={SpeakerConnie} />
-							<a href="http://eepurl.com/gEFmPX" target="_blank">
+							<a href={mailingListLink} target="_blank" rel="noopener noreferrer">
 								<Card.ImgOverlay>
 									<div className="card-content">
 										<Card.Title>For UCLA Students</Card.Title>
-										<Card.Text>
-											Join our team
-										</Card.Text>
-										<div className="get-involved-action">
+										<Card.Text>Join our team</Card.Text>
+										<div className="get-involved-cta">
 											<MdKeyboardArrowRight className="MdKeyboardArrowRight" />
-											<p className="action-description">Sign up for our mailing list</p>
+											<Card.Text className="cta-text short-content">Get our newsletter</Card.Text>
+											<Card.Text className="cta-text full-content">Sign up for our newsletter</Card.Text>
 										</div>
 									</div>
 									<div className="gradient-back" />
@@ -77,7 +75,7 @@ export default class GetInvolved extends Component {
 						</Card>
 					</CardDeck>
 				</div>
-			</div>
+			</section>
 		);
 	}
 

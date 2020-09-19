@@ -34,13 +34,13 @@ export default class Speakers extends Component {
         const currentSpeakers = CurrentSpeakers.map(speaker => this._renderSpeaker(speaker));
         const pastSpeakers = PastSpeakers.map(speaker => this._renderSpeaker(speaker));
 
-        const classnames = classNames('Speakers', this.props.className);
+        const classnames = classNames('Section', 'Speakers', this.props.className);
 
         return (
-            <div className={classnames} id={HomePageSections.SPEAKERS.name}>
+            <section className={classnames} id={HomePageSections.SPEAKERS.name}>
                 {this._renderSpeakers(currentSpeakers, SpeakersTypeEnum.CURRENT)}
                 {this._renderSpeakers(pastSpeakers, SpeakersTypeEnum.PAST)}
-            </div>
+            </section>
         );
     }
 
@@ -69,7 +69,7 @@ export default class Speakers extends Component {
 
         const { name, title, org, image, link } = speaker;
         return (
-            <a href={link} target="_blank" key={name}>
+            <a href={link} target="_blank" rel="noopener noreferrer" key={name}>
                 <div className="speaker">
                     <img src={image} className="speaker-image" alt={name} />
                     <h5 className="speaker-name">{name}</h5>

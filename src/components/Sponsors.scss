@@ -1,12 +1,10 @@
 .Sponsors {
-    padding: $section-vertical-padding 0;
-
     .sponsors-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: $section-width;
+        max-width: $section-width;
         margin: auto;
 
         .sponsors-header {
@@ -16,7 +14,7 @@
         }
 
         .logo-container {
-            margin: 2rem;
+            margin: 1rem;
         }
 
         .large-logos, .small-logos {
@@ -32,14 +30,14 @@
 
         .large-logos {
             .logo {
-                width: 20rem;
+                width: 14rem;
                 height: auto;
             }
         }
 
         .small-logos {
             .logo {
-                width: 12rem;
+                width: 8rem;
                 height: auto;
             }
         }
@@ -87,10 +85,33 @@
         border: 2px solid #E2E2E2;
         border-radius: 50%;
         width: 1.5rem;
+        min-width: 1.5rem;
         height: 1.5rem;
         transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
         -moz-transition: all 0.3s ease-in-out; /** Firefox **/
         -o-transition: all 0.3s ease-in-out; /** Opera **/
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .Sponsors {
+        .sponsors-container {
+            .logo-container {
+                margin: 2rem;
+            }
+
+            .large-logos {
+                .logo {
+                    width: 16rem;
+                }
+            }
+
+            .small-logos {
+                .logo {
+                    width: 12rem;
+                }
+            }
+        }
     }
 }

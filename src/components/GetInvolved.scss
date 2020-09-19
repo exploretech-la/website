@@ -1,55 +1,56 @@
 .GetInvolved {
-    padding: $section-vertical-padding 0;
     background-color: #F5F5F5;
 
     .cards-container {
         margin: 0 auto;
-        width: $section-width;
+        max-width: $section-width;
 
         .cards-header {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 1rem;
         }
 
-        .card {
-            &:hover {
-                .card-img-overlay {
-                    .card-content {
-                        .get-involved-action {
-                            .action-description {
-                                opacity: 1;
-                            }
+        .card-deck {
+            overflow-x: scroll;
+            white-space: nowrap;
+            padding-bottom: 1.5rem;
+            transform: scaleX(-1) rotateZ(180deg);
+        };
 
-                            .MdKeyboardArrowRight {
-                                background-color: #448494;
-                                border: 2px solid #448494;
-                            }
-                        }
-                    }
+        .card {
+            display: inline-block;
+            width: 18rem;
+            margin-bottom: 0;
+            transform: scaleX(-1) rotateZ(180deg);
+
+            @include media-breakpoint-down(xs) {
+                &:not(:last-child) {
+                    margin-right: 8px;
                 }
             }
 
             &.high-schools {
                 .card-img-top {
-                    object-position: 25% 70%;
+                    object-position: 25% 80%;
                 }
             }
 
             &.companies {
                 .card-img-top {
-                    object-position: 38% 50%;
+                    object-position: 44% 50%;
                 }
             }
 
             &.ucla-students {
                 .card-img-top {
-                    object-position: 8% 50%;
+                    object-position: 15% 50%;
                 }
             }
 
             .card-img-top {
-                height: 416px;
+                height: 512px;
                 object-fit: cover;
             }
 
@@ -57,7 +58,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                color: #fff;
+                color: $color-white;
     
                 .card-content {
                     z-index: 2;
@@ -70,14 +71,13 @@
                         margin-bottom: 0.4rem;
                     }
 
-                    .get-involved-action {
+                    .get-involved-cta {
                         display: flex;
                         flex-direction: row;
                         align-items: center;
     
-                        .action-description {
-                            display: inline-block;
-                            opacity: 0;
+                        .cta-text {
+                            opacity: 1;
                             margin-bottom: 0;
                             margin-left: 8px;
                             transition: all 0.3s ease-in-out;
@@ -85,6 +85,14 @@
                             -moz-transition: all 0.3s ease-in-out; /** Firefox **/
                             -o-transition: all 0.3s ease-in-out; /** Opera **/
                         }
+                    }
+
+                    .short-content {
+                        display: none;
+                    }
+
+                    .full-content {
+                        display: block;
                     }
                 }
     
@@ -107,14 +115,141 @@
     }
 
     .MdKeyboardArrowRight {
-        fill: white;
-        border: 2px solid rgba(255, 255, 255, .30);;
+        fill: $color-white;
+        background-color: $color-muted-blue;
+        border: 2px solid $color-muted-blue;
         border-radius: 50%;
         width: 1.5rem;
+        min-width: 1.5rem;
         height: 1.5rem;
         transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
         -moz-transition: all 0.3s ease-in-out; /** Firefox **/
         -o-transition: all 0.3s ease-in-out; /** Opera **/
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .GetInvolved {
+        .cards-container {
+            .card-deck {
+                display: block;
+            }
+
+            .card {
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    .card-img-overlay {
+                        .card-content {
+                            .get-involved-cta {
+                                .cta-text {
+                                    opacity: 1;
+                                }
+    
+                                .MdKeyboardArrowRight {
+                                    background-color: $color-muted-blue;
+                                    border: 2px solid $color-muted-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.high-schools {
+                    .card-img-top {
+                        object-position: 20% 80%;
+                    }
+                }
+
+                .card-img-overlay {
+                    .card-content {
+                        .get-involved-cta {
+                            .cta-text {
+                                opacity: 0;
+                            }
+
+                            .MdKeyboardArrowRight {
+                                background-color: transparent;
+                                border: 2px solid rgba(255, 255, 255, 0.3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .GetInvolved {
+        .cards-container {
+            .card-deck {
+                display: flex;
+                overflow-x: visible;
+            }
+
+            .card {
+                display: flex;
+                width: 100%;
+
+                &.high-schools {
+                    .card-img-top {
+                        object-position: 30% 80%;
+                    }
+                }
+
+                &.companies {
+                    .card-img-top {
+                        object-position: 40% 50%;
+                    }
+                }
+
+                &.ucla-students {
+                    .card-img-top {
+                        object-position: 12% 50%;
+                    }
+                }
+
+                .card-img-overlay {
+                    .card-content {
+                        // Only display short content for medium screens when the cards get too compressed
+                        .short-content {
+                            display: block;
+                        }
+    
+                        .full-content {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .GetInvolved {
+        .cards-container {
+            .card {
+                .card-img-overlay {
+                    .card-content {
+                        .short-content {
+                            display: none;
+                        }
+    
+                        .full-content {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

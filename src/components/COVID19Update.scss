@@ -1,9 +1,8 @@
 .COVID-19_Update {
-    padding: $section-vertical-padding 0;
     background-color: #F5F5F5;
 
     .update-content {
-        width: $section-width;
+        max-width: $section-width;
         margin: auto;
     }
 }

@@ -1,36 +1,54 @@
 .Hero {
-    height: 600px;
-    width: 100%;
+    height: 560px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: $color-aqua;
     color: $color-navy;
 
-    .hero-body {
+    .logo-with-icon-group {
+        width: 20rem;
+        height: auto;
+        margin-bottom: 2rem;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .hero-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
 
-        .logo-with-icon-group {
-            width: 20rem;
-            height: auto;
+        .h1-title {
+            display: none;
         }
 
-        .event-info {
-            margin-bottom: 1rem;
+        .h2-title {
+            display: block;
         }
 
         .hero-cta {
             display: flex;
             flex-direction: row;
+            margin-top: 1rem;
 
             .btn:not(:last-child) {
                 margin-right: 16px;
             }
         }
     }
+
+    // .hero-body {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+
+        
+    // }
     
     .expand-icon {
         position: absolute;
@@ -44,19 +62,49 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, lg)) {
+@include media-breakpoint-up(sm) {
     .Hero {
-        .hero-body {
-            flex-direction: row;
+        .logo-with-icon-group {
+            width: 25rem;
+        }
 
-            .logo-with-icon-group {
-                width: 30rem;
-                margin-right: 4rem;
+        .hero-content {
+            .h1-title {
+                display: block;
             }
 
-            .hero-content {
-                max-width: 300px;
+            .h2-title {
+                display: none;
             }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .Hero {
+        flex-direction: row;
+
+        .logo-with-icon-group {
+            margin-right: 3rem;
+            margin-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .hero-content {
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            max-width: 300px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .Hero {
+        .logo-with-icon-group {
+            width: 30rem;
+            margin-right: 4rem;
         }
     }
 }

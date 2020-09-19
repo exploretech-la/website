@@ -1,19 +1,27 @@
 .About {
-    padding: $section-vertical-padding 0;
-
     .about-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: $section-width;
+        max-width: $section-width;
         margin: auto;
 
         &:not(:last-child) {
-            padding-bottom: 64px;
+            padding-bottom: 32px;
+        }
+
+        &.about-org {
+            flex-direction: column-reverse;
+        }
+
+        &.about-team {
+            flex-direction: column;
         }
 
         .left-column, .right-column {
-            width: 46%;
+            &.text {
+                padding-top: 32px;
+            }
         }
 
         .founding-story {
@@ -26,14 +34,14 @@
             &:hover {
                 .MdKeyboardArrowRight {
                     fill: white;
-                    background-color: #448494;
-                    border: 2px solid #448494;
+                    background-color: $color-muted-blue;
+                    border: 2px solid $color-muted-blue;
                 }
             }
 
             a {
                 text-decoration: none;
-                color: #448494;
+                color: $color-muted-blue;
             }
 
             p {
@@ -41,17 +49,48 @@
                 margin-right: 8px;
             }
         }
+
+        img {
+            max-width: 100%;
+            max-height: 100vh;
+            height: auto;
+        }
     }
 
     .MdKeyboardArrowRight {
-        fill: #448494;
+        fill: $color-muted-blue;
         border: 2px solid #E2E2E2;
         border-radius: 50%;
         width: 1.5rem;
+        min-width: 1.5rem;
         height: 1.5rem;
         transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
         -moz-transition: all 0.3s ease-in-out; /** Firefox **/
         -o-transition: all 0.3s ease-in-out; /** Opera **/
+    }
+}
+
+@include media-breakpoint-up(md) { 
+    .About {
+        .about-content {
+            justify-content: space-between;
+
+            &:not(:last-child) {
+                padding-bottom: 64px;
+            }
+
+            &.about-org, &.about-team {
+                flex-direction: row;
+            }
+
+            .left-column, .right-column {
+                width: 46%;
+
+                &.text {
+                    padding-top: 0px;
+                }
+            }
+        }
     }
 }

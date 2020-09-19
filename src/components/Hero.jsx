@@ -9,22 +9,22 @@ import LogoWithIconGroup from '../static/svg/logo-navy-with-icon-group-white.svg
 export default class Hero extends Component {
     render() {
         return (
-            <div className="Hero">
-                <div className="hero-body">
-                    <img src={LogoWithIconGroup} className="logo-with-icon-group" alt="logo-with-icon-group" />
+            <section className="Section Hero">
+                {/* <div className="hero-body">
+                    
+                </div> */}
+                <img src={LogoWithIconGroup} className="logo-with-icon-group" alt="logo-with-icon-group" />
                     <div className="hero-content">
-                        <h1>Inspiring the Future of Tech.</h1>
-                        <div className="event-info">
-                            <p>March 6th, 2020</p>
-                            <p>University of California, Los Angeles</p>
-                        </div>
+                        <h1 className="h1-title">Inspire the Future&nbsp;of&nbsp;Tech</h1>
+                        <h2 className="h2-title">Inspire the Future&nbsp;of&nbsp;Tech</h2>
+                        <p>Spring 2021</p>
+                        <p>University of California, Los Angeles</p>
                         <div className="hero-cta">
                             <Button variant="info" href={`#${HomePageSections.GET_INVOLVED.name}`}>Get Involved</Button>
                             <Button variant="light" href={`#${HomePageSections.ABOUT.name}`}>Learn More</Button>
                         </div>
                     </div>
-                </div>
-            </div>
+            </section>
         );
     }
 }

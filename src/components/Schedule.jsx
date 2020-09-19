@@ -16,9 +16,9 @@ const scheduleItems = [
 export default class Schedule extends Component {
     render() {
         return (
-            <div className="Schedule">
+            <section className="Section Schedule">
                 {/* <UnorderedItemList items={scheduleItems} /> */}
-            </div>
+            </section>
         );
     }
 }

@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import Carousel from 'react-bootstrap/Carousel'
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
 import HomePageSections from 'constants/HomePageSections';
+import CaourselImages from 'constants/carousel';
 
-import MicrosoftVRDemo from '../static/images/microsoft-vr-demo.jpg';
-import TeamPhoto from '../static/images/team-photo-2020.jpg';
+import TeamPhoto from 'static/images/team-photo-2020.jpg';
 
 const FoundingStoryLink = 'https://medium.com/@nathan_yang/5-reasons-why-i-loved-ucla-de9d0704126e';
 
@@ -26,34 +27,69 @@ export default class About extends Component {
     }
 
     render() {
-        const classnames = classNames('About', this.props.className);
+        const classnames = classNames('Section', 'About', this.props.className);
 
         return (
-            <div className={classnames} id={HomePageSections.ABOUT.name}>
+            <section className={classnames} id={HomePageSections.ABOUT.name}>
                 <div className="about-content about-org">
-                    <div className="left-column">
-                        <h3 className="section-title">What is exploretech.la?</h3>
-                        <div className="pill-divider" />
+                    <div className="left-column text">
+                        <div className="section-title">
+                            <h3 className="title">What is exploretech.la?</h3>
+                            <div className="pill-divider" />
+                        </div>
                         <div className="about-description">
                             <p>exploretech.la is an annual event at UCLA that aims to inspire high school students from underserved communities in the Greater Los Angeles Area to explore computer science, engineering, and technology.</p>
                             <p>In partnership with industry and academic organizations, our event introduce students to the various applications of tech through our panels, interactive workshops, and exhibition hall.</p>
                         </div>
                     </div>
-                    <img src={MicrosoftVRDemo} className="workshop-photo right-column" alt="workshop-photo" />
+                    {this._renderCarousel({ className: 'right-column' })}
                 </div>
                 <div className="about-content about-team">
-                    <img src={TeamPhoto} className="team-photo left-column" alt="team-photo" />
-                    <div className="right-column">
-                        <h3 className="section-title">Our Team</h3>
-                        <div className="pill-divider" />
-                        <p>Founded in 2017 as student organization at UCLA, exploretech.la is run by students for students. We apply our insights as recent high school graduates and current college students to create engaging and impactful learning experiences for our younger peers.</p>
+                    <img src={TeamPhoto} className="team-photo left-column" alt="Our Team" />
+                    <div className="right-column text">
+                        <div className="section-title">
+                            <h3 className="title">Our Team</h3>
+                            <div className="pill-divider" />
+                        </div>
+                        <p>
+                            Founded in 2017 as student organization at UCLA, exploretech.la is run by students for students.
+                            We apply our insights as recent high school graduates to create engaging and impactful learning experiences for our younger peers.
+                            We believe that every student should have equal access to STEM education and opportunities.
+                        </p>
                         <div className="founding-story">
-                            <p><a href={FoundingStoryLink} target="_blank">Read about our founding story</a></p>
+                            <p><a href={FoundingStoryLink} target="_blank" rel="noopener noreferrer">Read about our founding story</a></p>
                             <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+        );
+    }
+
+    /**
+     * Warning: CaourselImages with different heights causes the Carousel to be buggy.
+     * As of this comment being written, all the pre-selected images are the same height.
+     * To fix this, we need to use images with all the same height or do some styling with
+     * object-fit.
+     */
+    _renderCarousel({ className }) {
+        const carouselItems = CaourselImages.map(img => this._renderCarouselItem(img))
+        return (
+            <Carousel className={className}>
+                {carouselItems}
+            </Carousel>
+        );
+    }
+
+    _renderCarouselItem(img) {
+        if (!img || !img.src || !img.alt) {
+            return null;
+        }
+
+        return (
+            <Carousel.Item key={img.alt}>
+                <img src={img.src} alt={img.alt} />
+            </Carousel.Item>
         );
     }
 }
