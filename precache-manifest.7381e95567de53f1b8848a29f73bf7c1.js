@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e8041f9d02de6db66d101ac5f2bc0ad",
+    "revision": "dc4042f62b79f78c481b04c452a6ef77",
     "url": "/website/index.html"
   },
   {
-    "revision": "2a3a3121cdf95430c6b1",
+    "revision": "bb3e4bedb45d13fb61fc",
     "url": "/website/static/css/2.f3cffc9e.chunk.css"
   },
   {
-    "revision": "4f132da7457573b084b0",
-    "url": "/website/static/css/main.52d01cec.chunk.css"
+    "revision": "e95ba21a3acd8575d133",
+    "url": "/website/static/css/main.408e7a50.chunk.css"
   },
   {
-    "revision": "2a3a3121cdf95430c6b1",
-    "url": "/website/static/js/2.63c174dc.chunk.js"
+    "revision": "bb3e4bedb45d13fb61fc",
+    "url": "/website/static/js/2.14db8716.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/website/static/js/2.63c174dc.chunk.js.LICENSE.txt"
+    "url": "/website/static/js/2.14db8716.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4f132da7457573b084b0",
-    "url": "/website/static/js/main.f4f8c92c.chunk.js"
+    "revision": "e95ba21a3acd8575d133",
+    "url": "/website/static/js/main.d6c0f769.chunk.js"
   },
   {
     "revision": "e1d391a48a471e60a97a",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3b2da79efd0b4589af4af549dd200b6a",
     "url": "/website/static/media/coca-cola.3b2da79e.svg"
+  },
+  {
+    "revision": "a19c84474e5db1b55eb3d6ad99271a8c",
+    "url": "/website/static/media/demo-microsoft-vr.a19c8447.jpg"
   },
   {
     "revision": "9837f38a0bdd7a352fb766ae54625e25",
@@ -70,10 +74,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3aea7cbcfe713aebe2f75be0b2b12f74",
     "url": "/website/static/media/logo-with-icons-white.3aea7cbc.svg"
-  },
-  {
-    "revision": "6632378cc8a89e04a147e66873fe4f7f",
-    "url": "/website/static/media/microsoft-vr-demo.6632378c.jpg"
   },
   {
     "revision": "549b34636c9d3ee44c6045f9f9ffcc60",
@@ -112,8 +112,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/website/static/media/teals.b0edb22b.png"
   },
   {
-    "revision": "65221f8c5f3945368b1677ba0ad697d3",
-    "url": "/website/static/media/team-photo-2020.65221f8c.jpg"
+    "revision": "adea72bd5f6ddc1807873ddf206bf294",
+    "url": "/website/static/media/team-photo-2020.adea72bd.jpg"
   },
   {
     "revision": "665983d47832ba9cc7d2be0a5fa29326",
@@ -126,6 +126,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a1880337ae61ab6852992ab1ad776d6b",
     "url": "/website/static/media/ucla-samueli-engineering.a1880337.png"
+  },
+  {
+    "revision": "7b502e3dd0e2ff24dd5d8403da208100",
+    "url": "/website/static/media/workshop-audience.7b502e3d.jpg"
+  },
+  {
+    "revision": "a21873da87754f5f51289a757a004577",
+    "url": "/website/static/media/workshop-dev-tools.a21873da.jpg"
+  },
+  {
+    "revision": "4f42ac29aaa970a0d65257abddcccba7",
+    "url": "/website/static/media/workshop-kaylie.4f42ac29.jpg"
+  },
+  {
+    "revision": "6c06050e4f603b71f18c5ea0e1f5b1b9",
+    "url": "/website/static/media/workshop-scratch.6c06050e.jpg"
   },
   {
     "revision": "0c97847a8fa8d7dcb7edb4c17d2b2fbb",
