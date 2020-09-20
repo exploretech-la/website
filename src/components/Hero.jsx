@@ -17,7 +17,7 @@ export default class Hero extends Component {
                     <div className="hero-content">
                         <h1 className="h1-title">Inspire the Future&nbsp;of&nbsp;Tech</h1>
                         <h2 className="h2-title">Inspire the Future&nbsp;of&nbsp;Tech</h2>
-                        <p>Spring 2021</p>
+                        <p>April 10-11, 2021</p>
                         <p>University of California, Los Angeles</p>
                         <div className="hero-cta">
                             <Button variant="info" href={`#${HomePageSections.GET_INVOLVED.name}`}>Get Involved</Button>
