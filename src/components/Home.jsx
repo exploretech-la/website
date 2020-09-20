@@ -8,15 +8,22 @@ import Speakers from './Speakers';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 
-// import COVID19Update from './COVID19Update';
+import GA from 'util/GoogleAnalytics';
+
 
 export default class Home extends Component {
+    componentDidMount() {
+        const isGAEnabled = GA.init();
+        if (isGAEnabled) {
+            GA.trackPageView('/');
+        }
+    }
+
     render() {
         return (
             <div className="Home">
                 <Header />
                 <Hero />
-                {/* <COVID19Update /> */}
                 <About />
                 <GetInvolved />
                 <Speakers />
