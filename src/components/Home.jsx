@@ -10,7 +10,6 @@ import Footer from './Footer';
 
 import GA from 'util/GoogleAnalytics';
 
-
 export default class Home extends Component {
     componentDidMount() {
         const isGAEnabled = GA.init();

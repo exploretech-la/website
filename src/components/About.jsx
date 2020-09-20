@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import ReactGA from 'react-ga';
 
 import Carousel from 'react-bootstrap/Carousel'
 import { MdKeyboardArrowRight } from 'react-icons/md';
@@ -57,7 +58,7 @@ export default class About extends Component {
                             We believe that every student should have equal access to STEM education and opportunities.
                         </p>
                         <div className="founding-story">
-                            <p><a href={FoundingStoryLink} target="_blank" rel="noopener noreferrer">Read about our founding story</a></p>
+                            <p><ReactGA.OutboundLink to={FoundingStoryLink} target="_blank" eventLabel="founding_story">Read about our founding story</ReactGA.OutboundLink></p>
                             <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
                         </div>
                     </div>

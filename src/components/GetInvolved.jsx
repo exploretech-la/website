@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
@@ -11,7 +12,8 @@ import SpeakerConnie from 'static/images/speaker-connie.jpg';
 import TaboolaBooth from 'static/images/taboola-booth.jpg';
 import TEALS_VR from 'static/images/teals-vr.jpg';
 
-const mailingListLink = "http://eepurl.com/gEFmPX";
+const highSchoolInterestForm = 'https://forms.gle/DAmRPcJiyJmppKnJ7';
+const mailingListSignUp = 'http://eepurl.com/gEFmPX';
 
 export default class GetInvolved extends Component {
 	render() {
@@ -25,7 +27,7 @@ export default class GetInvolved extends Component {
 					<CardDeck>
 						<Card className="high-schools">
 							<Card.Img variant="top" src={TEALS_VR} />
-							<a href="https://forms.gle/DAmRPcJiyJmppKnJ7" target="_blank" rel="noopener noreferrer">
+							<ReactGA.OutboundLink to={highSchoolInterestForm} target="_blank" eventLabel="high_school_interest_form">
 								<Card.ImgOverlay>
 									<div className="card-content">
 										<Card.Title>For High Schools</Card.Title>
@@ -37,11 +39,11 @@ export default class GetInvolved extends Component {
 									</div>
 									<div className="gradient-back" />
 								</Card.ImgOverlay>
-							</a>	
+							</ReactGA.OutboundLink>
 						</Card>
 						<Card className="companies">
 							<Card.Img variant="top" src={TaboolaBooth} />
-							<a href="mailto:exploretechla@cs.ucla.edu" target="_blank" rel="noopener noreferrer">
+							<ReactGA.OutboundLink to="mailto:exploretechla@cs.ucla.edu" target="_blank" eventLabel="email_us_companies">
 								<Card.ImgOverlay>
 									<div className="card-content">
 										<Card.Title>For Companies</Card.Title>
@@ -54,11 +56,11 @@ export default class GetInvolved extends Component {
 									</div>
 									<div className="gradient-back" />
 								</Card.ImgOverlay>
-							</a>
+							</ReactGA.OutboundLink>
 						</Card>
 						<Card className="ucla-students">
 							<Card.Img variant="top" src={SpeakerConnie} />
-							<a href={mailingListLink} target="_blank" rel="noopener noreferrer">
+							<ReactGA.OutboundLink to={mailingListSignUp} target="_blank" eventLabel="ucla_student_mailing_list">
 								<Card.ImgOverlay>
 									<div className="card-content">
 										<Card.Title>For UCLA Students</Card.Title>
@@ -71,15 +73,11 @@ export default class GetInvolved extends Component {
 									</div>
 									<div className="gradient-back" />
 								</Card.ImgOverlay>
-							</a>
+							</ReactGA.OutboundLink>
 						</Card>
 					</CardDeck>
 				</div>
 			</section>
 		);
-	}
-
-	_openMailingList() {
-		window.open('', '_blank');
 	}
 }

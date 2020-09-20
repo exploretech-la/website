@@ -16,7 +16,7 @@ export const LargeLogoSponsors = [
 
 export const SmallLogoSponsors = [
     {
-        name: 'ucla-samueli-engineering',
+        name: 'ucla_samueli_engineering',
         src: require('static/sponsors/ucla-samueli-engineering.png'),
         website: 'https://samueli.ucla.edu/'
     }, {
@@ -44,7 +44,7 @@ export const SmallLogoSponsors = [
         src: require('static/sponsors/capcom.svg'),
         website: 'https://www.capcom.com/us/',
     }, {
-        name: 'green-hills-software',
+        name: 'green_hills_software',
         src: require('static/sponsors/green-hills-software.png'),
         website: 'https://www.ghs.com/',
     }, {

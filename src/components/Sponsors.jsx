@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import ReactGA from 'react-ga';
 
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
@@ -43,7 +44,9 @@ export default class Sponsors extends Component {
                     <div className="sponsor-contact">
                         <h5>Interested in sponsoring?</h5>
                         <div className="sponsor-cta">
-                            <p><b><a href="mailto:exploretechla@cs.ucla.edu" target="_blank" rel="noopener noreferrer">Email Us!</a></b></p>
+                            <p><b><ReactGA.OutboundLink to="mailto:exploretechla@cs.ucla.edu" target="_blank" eventLabel="email_us_sponsors">
+                                Email Us!
+                            </ReactGA.OutboundLink></b></p>
                             <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
                         </div>
                     </div>
@@ -57,9 +60,9 @@ export default class Sponsors extends Component {
         const { name, src, website } = logo;
         return (
             <div className="logo-container" key={name}>
-                <a href={website} target="_blank" rel="noopener noreferrer">
+                <ReactGA.OutboundLink to={website} target="_blank" eventLabel={name}>
                     <img src={src} className="logo" alt={name} />
-                </a>
+                </ReactGA.OutboundLink>
             </div>
         );
     }
