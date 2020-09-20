@@ -11,7 +11,7 @@ import CaourselImages from 'constants/carousel';
 
 import TeamPhoto from 'static/images/team-photo-2020.jpg';
 
-const FoundingStoryLink = 'https://medium.com/@nathan_yang/5-reasons-why-i-loved-ucla-de9d0704126e';
+const foundingStoryLink = 'https://medium.com/techatucla/exploretechla-founding-story-3bb8a947f931';
 
 export default class About extends Component {
 
@@ -58,7 +58,7 @@ export default class About extends Component {
                             We believe that every student should have equal access to STEM education and opportunities.
                         </p>
                         <div className="founding-story">
-                            <p><ReactGA.OutboundLink to={FoundingStoryLink} target="_blank" eventLabel="founding_story">Read about our founding story</ReactGA.OutboundLink></p>
+                            <p><ReactGA.OutboundLink to={foundingStoryLink} target="_blank" eventLabel="founding_story">Read about our founding story</ReactGA.OutboundLink></p>
                             <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
                         </div>
                     </div>
