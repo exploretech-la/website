@@ -1,24 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.408e7a50.chunk.css",
-    "main.js": "/static/js/main.d6c0f769.chunk.js",
-    "main.js.map": "/static/js/main.d6c0f769.chunk.js.map",
+    "main.js": "/static/js/main.219cbcc2.chunk.js",
+    "main.js.map": "/static/js/main.219cbcc2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.026b2492.js",
     "runtime-main.js.map": "/static/js/runtime-main.026b2492.js.map",
     "static/css/2.f3cffc9e.chunk.css": "/static/css/2.f3cffc9e.chunk.css",
-    "static/js/2.14db8716.chunk.js": "/static/js/2.14db8716.chunk.js",
-    "static/js/2.14db8716.chunk.js.map": "/static/js/2.14db8716.chunk.js.map",
+    "static/js/2.6d6b0a10.chunk.js": "/static/js/2.6d6b0a10.chunk.js",
+    "static/js/2.6d6b0a10.chunk.js.map": "/static/js/2.6d6b0a10.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2a693c4bf7508cdd5dd8350b7b6d316f.js": "/precache-manifest.2a693c4bf7508cdd5dd8350b7b6d316f.js",
+    "precache-manifest.e78b6573ce35088923033bc71e2f5a52.js": "/precache-manifest.e78b6573ce35088923033bc71e2f5a52.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.f3cffc9e.chunk.css.map": "/static/css/2.f3cffc9e.chunk.css.map",
     "static/css/main.408e7a50.chunk.css.map": "/static/css/main.408e7a50.chunk.css.map",
-    "static/js/2.14db8716.chunk.js.LICENSE.txt": "/static/js/2.14db8716.chunk.js.LICENSE.txt",
+    "static/js/2.6d6b0a10.chunk.js.LICENSE.txt": "/static/js/2.6d6b0a10.chunk.js.LICENSE.txt",
+    "static/media/asucla.png": "/static/media/asucla.a2bf6455.png",
     "static/media/capcom.svg": "/static/media/capcom.6abbf0ed.svg",
     "static/media/carey-nachenberg.png": "/static/media/carey-nachenberg.59523cba.png",
     "static/media/coca-cola.svg": "/static/media/coca-cola.3b2da79e.svg",
     "static/media/demo-microsoft-vr.jpg": "/static/media/demo-microsoft-vr.a19c8447.jpg",
     "static/media/google.png": "/static/media/google.9837f38a.png",
+    "static/media/green-hills-software.png": "/static/media/green-hills-software.4761472c.png",
     "static/media/jayathi-murthy.png": "/static/media/jayathi-murthy.6111a0dc.png",
     "static/media/justin-brezhnev.png": "/static/media/justin-brezhnev.8ab7e5eb.png",
     "static/media/linode.svg": "/static/media/linode.de4e45c9.svg",
@@ -48,8 +50,8 @@
   "entrypoints": [
     "static/js/runtime-main.026b2492.js",
     "static/css/2.f3cffc9e.chunk.css",
-    "static/js/2.14db8716.chunk.js",
+    "static/js/2.6d6b0a10.chunk.js",
     "static/css/main.408e7a50.chunk.css",
-    "static/js/main.d6c0f769.chunk.js"
+    "static/js/main.219cbcc2.chunk.js"
   ]
 }
