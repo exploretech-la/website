@@ -15,7 +15,7 @@ export default class Home extends Component {
     componentDidMount() {
         const isGAEnabled = GA.init();
         if (isGAEnabled) {
-            GA.trackPageView('/');
+            GA.trackPageView();
         }
     }
 

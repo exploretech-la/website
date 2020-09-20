@@ -13,8 +13,8 @@ const init = () => {
     return isGAEnabled;
 }
 
-const trackPageView = (page) => {   
-    ReactGA.pageview(page); 
+const trackPageView = () => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
 }
 
 export default {
