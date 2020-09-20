@@ -25,14 +25,14 @@ export default class GetInvolved extends Component {
 					<CardDeck>
 						<Card className="high-schools">
 							<Card.Img variant="top" src={TEALS_VR} />
-							<a href="mailto:exploretechla@cs.ucla.edu" target="_blank" rel="noopener noreferrer">
+							<a href="https://forms.gle/DAmRPcJiyJmppKnJ7" target="_blank" rel="noopener noreferrer">
 								<Card.ImgOverlay>
 									<div className="card-content">
 										<Card.Title>For High Schools</Card.Title>
 										<Card.Text>Inspire your students</Card.Text>
 										<div className="get-involved-cta">
 											<MdKeyboardArrowRight className="MdKeyboardArrowRight" />
-											<Card.Text className="cta-text">Email us</Card.Text>
+											<Card.Text className="cta-text">Sign up for updates</Card.Text>
 										</div>
 									</div>
 									<div className="gradient-back" />

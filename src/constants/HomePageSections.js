@@ -1,6 +1,6 @@
 const HomePageSections = {
     ABOUT: {
-        name: 'home',
+        name: 'about',
     },
     GET_INVOLVED: {
         name: 'get-involved',

@@ -38,8 +38,8 @@ export default class About extends Component {
                             <div className="pill-divider" />
                         </div>
                         <div className="about-description">
-                            <p>exploretech.la is an annual event at UCLA that aims to inspire high school students from underserved communities in the Greater Los Angeles Area to explore computer science, engineering, and technology.</p>
-                            <p>In partnership with industry and academic organizations, our event introduce students to the various applications of tech through our panels, interactive workshops, and exhibition hall.</p>
+                            <p>exploretech.la is an annual event hosted by UCLA students that aims to inspire high school students from underserved communities in the Greater Los Angeles Area to explore computer science, engineering, and technology.</p>
+                            <p>In partnership with industry and academic organizations, our event introduces students to the various applications of tech through our panels, interactive workshops, and exhibition hall.</p>
                         </div>
                     </div>
                     {this._renderCarousel({ className: 'right-column' })}
@@ -62,12 +62,30 @@ export default class About extends Component {
                         </div>
                     </div>
                 </div>
+                {this._getCovid19Update()}
             </section>
         );
     }
 
+    _getCovid19Update() {
+        return (
+            <div className="about-content covid19-update">
+                <div className="text">
+                    <div className="section-title">
+                        <h3 className="title">COVID-19 Update</h3>
+                        <div className="pill-divider" />
+                    </div>
+                    <p>
+                        With the ongoing pandemic, our team has decided to move exploretech.la 2021 to a virtual format for the safety of our attendees, partners, and staff members.
+                        exploretech.la 2021 will be a virtual event with interactive, live-streamed activities that will take place over the course of two days.
+                    </p>
+                </div>
+            </div>
+        );
+    }
+
     /**
-     * Warning: CaourselImages with different heights causes the Carousel to be buggy.
+     * WARNING: CaourselImages with different heights causes the Carousel to be buggy.
      * As of this comment being written, all the pre-selected images are the same height.
      * To fix this, we need to use images with all the same height or do some styling with
      * object-fit.
