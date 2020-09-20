@@ -43,5 +43,13 @@ export const SmallLogoSponsors = [
         name: 'capcom',
         src: require('static/sponsors/capcom.svg'),
         website: 'https://www.capcom.com/us/',
+    }, {
+        name: 'green-hills-software',
+        src: require('static/sponsors/green-hills-software.png'),
+        website: 'https://www.ghs.com/',
+    }, {
+        name: 'asucla',
+        src: require('static/sponsors/asucla.png'),
+        website: 'https://asucla.ucla.edu/',
     },
 ];
