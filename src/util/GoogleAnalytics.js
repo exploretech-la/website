@@ -17,7 +17,7 @@ const trackPageView = () => {
     ReactGA.pageview(window.location.pathname + window.location.search);
 }
 
- const trackEvent = (category, action, label) => {
+ const trackEvent = ({ category, action, label }) => {
     ReactGA.event({
       category: category,
       action: action,

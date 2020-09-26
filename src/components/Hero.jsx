@@ -30,10 +30,18 @@ export default class Hero extends Component {
     }
 
     _trackGetInvolvedClick() {
-        GA.trackEvent('Hero', 'Clicked CTA', 'Get Involved');
+        GA.trackEvent({
+            category: 'Hero',
+            action: 'Clicked CTA',
+            label: 'Get Involved'
+        });
     }
 
     _trackLearnMoreClick() {
-        GA.trackEvent('Hero', 'Clicked CTA', 'Learn More');
+        GA.trackEvent({
+            category: 'Hero',
+            action: 'Clicked CTA',
+            label: 'Learn More'
+        });
     }
 }
