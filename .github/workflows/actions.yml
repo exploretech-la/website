@@ -27,6 +27,14 @@ jobs:
       # Runs the deploy script
       - name: Run the deploy script
         env:
+          USER_NAME: 'exploretech.la'
+          USER_EMAIL: 'exploretechla@cs.ucla.edu'
+          REPOSITORY: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_ACCESS_TOKEN }}
           GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GOOGLE_ANALYTICS_TRACKING_ID }}
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
-        run: npm run deploy
+        run: |
+          git config --global user.name $USER_NAME
+          git config --global user.email $USER_EMAIL
+          git remote set-url origin https://${GITHUB_TOKEN}@github.com/${REPOSITORY}
+          npm run deploy
