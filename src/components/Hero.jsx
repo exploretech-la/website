@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import Button from 'react-bootstrap/Button';
 
+import GA from 'util/GoogleAnalytics';
 import HomePageSections from 'constants/HomePageSections';
-
-import LogoWithIconGroup from '../static/svg/logo-navy-with-icon-group-white.svg';
+import LogoWithIconGroup from 'static/svg/logo-navy-with-icon-group-white.svg';
 
 export default class Hero extends Component {
     render() {
@@ -17,11 +17,23 @@ export default class Hero extends Component {
                         <p>Hosted virtually April 10-11, 2021</p>
                         <p>University of California, Los Angeles</p>
                         <div className="hero-cta">
-                            <Button variant="info" href={`#${HomePageSections.GET_INVOLVED.name}`}>Get Involved</Button>
-                            <Button variant="light" href={`#${HomePageSections.ABOUT.name}`}>Learn More</Button>
+                            <Button variant="info" href={`#${HomePageSections.GET_INVOLVED.name}`} onClick={this._trackGetInvolvedClick}>
+                                Get Involved
+                            </Button>
+                            <Button variant="light" href={`#${HomePageSections.ABOUT.name}`} onClick={this._trackLearnMoreClick}>
+                                Learn More
+                            </Button>
                         </div>
                     </div>
             </section>
         );
+    }
+
+    _trackGetInvolvedClick() {
+        GA.trackEvent('Hero', 'Clicked CTA', 'Get Involved');
+    }
+
+    _trackLearnMoreClick() {
+        GA.trackEvent('Hero', 'Clicked CTA', 'Learn More');
     }
 }
