@@ -1,32 +1,36 @@
 import ReactGA from 'react-ga';
 
-// WARNING: DO NOT COMMIT TRACKING ID
-const trackingId = null;
-
+/**
+ * Initializes Google Analytics if we are in the production environmentand have a non-null tracking ID
+ *
+ * WARNING: DO NOT COMMIT THE ACTUAL TRACKING ID
+ */
 const init = () => {
-    const isGAEnabled = (process.env.NODE_ENV === 'production') && (trackingId !== null);
+  const isProd = (process.env.NODE_ENV === 'production');
+  const trackingId = null;
+  const isGAEnabled = isProd && (trackingId !== null);
 
-    if (isGAEnabled) {
-        ReactGA.initialize(trackingId);
-    }
+  if (isGAEnabled) {
+    ReactGA.initialize(trackingId);
+  }
 
-    return isGAEnabled;
+  return isGAEnabled;
 }
 
 const trackPageView = () => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+  ReactGA.pageview(window.location.pathname + window.location.search);
 }
 
- const trackEvent = ({ category, action, label }) => {
-    ReactGA.event({
-      category: category,
-      action: action,
-      label: label
-    });
-  };
+const trackEvent = ({ category, action, label }) => {
+  ReactGA.event({
+    category: category,
+    action: action,
+    label: label
+  });
+};
 
 export default {
-    init,
-    trackPageView,
-    trackEvent,
+  init,
+  trackPageView,
+  trackEvent,
 };
