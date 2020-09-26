@@ -16,6 +16,9 @@ export default class Home extends Component {
         if (isGAEnabled) {
             GA.trackPageView();
         }
+
+        console.log("Hello!");
+        console.log(process.env.TEST_SECRET);
     }
 
     render() {
