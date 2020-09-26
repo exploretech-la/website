@@ -7,7 +7,7 @@ import ReactGA from 'react-ga';
  */
 const init = () => {
   const isProd = (process.env.NODE_ENV === 'production');
-  const trackingId = isProd ? process.env.GOOGLE_ANALYTICS_TRACKING_ID : null;
+  const trackingId = isProd ? process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID : null;
   const isGAEnabled = isProd && (trackingId !== null);
 
   if (isGAEnabled) {

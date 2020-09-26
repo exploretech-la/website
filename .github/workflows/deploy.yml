@@ -1,4 +1,4 @@
-name: exploretech-la-website-actions
+name: exploretech.la Continuous Deployment
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -31,8 +31,7 @@ jobs:
           USER_EMAIL: 'exploretechla@cs.ucla.edu'
           REPOSITORY: ${{ github.repository }}
           GITHUB_TOKEN: ${{ secrets.DEPLOY_ACCESS_TOKEN }}
-          GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GOOGLE_ANALYTICS_TRACKING_ID }}
-          TEST_SECRET: ${{ secrets.TEST_SECRET }}
+          REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GOOGLE_ANALYTICS_TRACKING_ID }}
         run: |
           git config --global user.name $USER_NAME
           git config --global user.email $USER_EMAIL
