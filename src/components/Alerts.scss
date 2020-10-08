@@ -1,0 +1,49 @@
+.Alerts {
+    // padding-top: 2.5rem !important;
+    padding-bottom: 0 !important;
+
+    .alert {
+        margin-bottom: 0;
+    }
+
+    .alerts-container {
+        max-width: $section-width;
+        margin: auto;
+
+        // .team-application-alert {
+        //     a {
+        //         display: flex;
+        //         flex-direction: row;
+        //         align-items: center;
+        //         text-decoration: none;
+        //         color: $color-muted-blue;
+    
+        //         &:hover {
+        //             .MdKeyboardArrowRight {
+        //                 fill: white;
+        //                 background-color: $color-muted-blue;
+        //                 border: 2px solid $color-muted-blue;
+        //             }
+        //         }
+    
+        //         p {
+        //             margin-bottom: 0;
+        //             margin-right: 8px;
+        //         }
+        //     }
+        // }
+    }
+
+    .MdKeyboardArrowRight {
+        fill: $color-muted-blue;
+        border: 2px solid #E2E2E2;
+        border-radius: 50%;
+        width: 1.5rem;
+        min-width: 1.5rem;
+        height: 1.5rem;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
+        -moz-transition: all 0.3s ease-in-out; /** Firefox **/
+        -o-transition: all 0.3s ease-in-out; /** Opera **/
+    }
+}

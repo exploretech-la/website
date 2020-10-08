@@ -31,12 +31,12 @@
         }
 
         .hero-cta {
+            margin-top: 1rem;
             display: flex;
             flex-direction: row;
-            margin-top: 1rem;
 
             .btn:not(:last-child) {
-                margin-right: 16px;
+                margin-right: 1rem;
             }
         }
     }

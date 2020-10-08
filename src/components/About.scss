@@ -25,28 +25,25 @@
         }
 
         .founding-story {
-            display: flex;
-            flex-direction: row;
-            text-decoration: none;
-            align-items: center;
-            cursor: pointer;
-
-            &:hover {
-                .MdKeyboardArrowRight {
-                    fill: white;
-                    background-color: $color-muted-blue;
-                    border: 2px solid $color-muted-blue;
-                }
-            }
-
             a {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
                 text-decoration: none;
                 color: $color-muted-blue;
-            }
 
-            p {
-                margin-bottom: 0;
-                margin-right: 8px;
+                &:hover {
+                    .MdKeyboardArrowRight {
+                        fill: white;
+                        background-color: $color-muted-blue;
+                        border: 2px solid $color-muted-blue;
+                    }
+                }
+
+                p {
+                    margin-bottom: 0;
+                    margin-right: 0.5rem;
+                }
             }
         }
 

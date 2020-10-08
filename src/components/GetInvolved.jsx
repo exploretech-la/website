@@ -12,8 +12,9 @@ import SpeakerConnie from 'static/images/speaker-connie.jpg';
 import TaboolaBooth from 'static/images/taboola-booth.jpg';
 import TEALS_VR from 'static/images/teals-vr.jpg';
 
-const highSchoolInterestForm = 'https://forms.gle/DAmRPcJiyJmppKnJ7';
-const mailingListSignUp = 'http://eepurl.com/gEFmPX';
+const HighSchoolInterestForm = 'https://forms.gle/DAmRPcJiyJmppKnJ7';
+const MailingListSignUp = 'http://eepurl.com/gEFmPX';
+const TeamApplicationLink = 'https://forms.gle/hK69nfPBghkbXwVY6';
 
 export default class GetInvolved extends Component {
 	render() {
@@ -24,10 +25,19 @@ export default class GetInvolved extends Component {
 						<h3>Get Involved</h3>
 						<div className="pill-divider" />
 					</div>
+					<div className="team-application">
+						<p>UCLA Students: Our 2021 team applications are now open! Apply by Saturday, October 17th at 11:59 PM PDT.</p>
+						<div className="team-application-cta">
+							<ReactGA.OutboundLink to={TeamApplicationLink} target="_blank" eventLabel="Team Application">
+								<p><b>Apply now!</b></p>
+								<MdKeyboardArrowRight className="MdKeyboardArrowRight" />
+							</ReactGA.OutboundLink>
+						</div>
+					</div>
 					<CardDeck>
 						<Card className="high-schools">
 							<Card.Img variant="top" src={TEALS_VR} />
-							<ReactGA.OutboundLink to={highSchoolInterestForm} target="_blank" eventLabel="high_school_interest_form">
+							<ReactGA.OutboundLink to={HighSchoolInterestForm} target="_blank" eventLabel="high_school_interest_form">
 								<Card.ImgOverlay>
 									<div className="card-content">
 										<Card.Title>For High Schools</Card.Title>
@@ -60,7 +70,7 @@ export default class GetInvolved extends Component {
 						</Card>
 						<Card className="ucla-students">
 							<Card.Img variant="top" src={SpeakerConnie} />
-							<ReactGA.OutboundLink to={mailingListSignUp} target="_blank" eventLabel="ucla_student_mailing_list">
+							<ReactGA.OutboundLink to={MailingListSignUp} target="_blank" eventLabel="ucla_student_mailing_list">
 								<Card.ImgOverlay>
 									<div className="card-content">
 										<Card.Title>For UCLA Students</Card.Title>

@@ -44,10 +44,10 @@ export default class Sponsors extends Component {
                     <div className="sponsor-contact">
                         <h5>Interested in sponsoring?</h5>
                         <div className="sponsor-cta">
-                            <p><b><ReactGA.OutboundLink to="mailto:exploretechla@cs.ucla.edu" target="_blank" eventLabel="email_us_sponsors">
-                                Email Us!
-                            </ReactGA.OutboundLink></b></p>
-                            <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
+                            <ReactGA.OutboundLink to="mailto:exploretechla@cs.ucla.edu" target="_blank" eventLabel="email_us_sponsors">
+                                <p>Email Us!</p>
+                                <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
+                            </ReactGA.OutboundLink>
                         </div>
                     </div>
                 </div>
