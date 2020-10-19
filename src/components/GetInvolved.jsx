@@ -14,7 +14,7 @@ import TEALS_VR from 'static/images/teals-vr.jpg';
 
 const HighSchoolInterestForm = 'https://forms.gle/DAmRPcJiyJmppKnJ7';
 const MailingListSignUp = 'http://eepurl.com/gEFmPX';
-const TeamApplicationLink = 'https://forms.gle/hK69nfPBghkbXwVY6';
+// const TeamApplicationLink = null;
 
 export default class GetInvolved extends Component {
 	render() {
@@ -25,7 +25,7 @@ export default class GetInvolved extends Component {
 						<h3>Get Involved</h3>
 						<div className="pill-divider" />
 					</div>
-					<div className="team-application">
+					{/* <div className="team-application">
 						<p>UCLA Students: Our 2021 team applications are now open! Apply by Saturday, October 17th at 11:59 PM PDT.</p>
 						<div className="team-application-cta">
 							<ReactGA.OutboundLink to={TeamApplicationLink} target="_blank" eventLabel="Team Application">
@@ -33,7 +33,7 @@ export default class GetInvolved extends Component {
 								<MdKeyboardArrowRight className="MdKeyboardArrowRight" />
 							</ReactGA.OutboundLink>
 						</div>
-					</div>
+					</div> */}
 					<CardDeck>
 						<Card className="high-schools">
 							<Card.Img variant="top" src={TEALS_VR} />

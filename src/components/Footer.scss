@@ -54,6 +54,11 @@
             }
         }
     }
+
+    .FaHeart {
+        fill: red;
+        margin-bottom: 2px;
+    }
 }
 
 @include media-breakpoint-up(sm) {

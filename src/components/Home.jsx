@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Header from './Header';
-import Alerts from './Alerts';
 import Hero from './Hero';
 import About from './About';
 import GetInvolved from './GetInvolved';
@@ -24,7 +23,6 @@ export default class Home extends Component {
             <div className="Home">
                 <Header />
                 <Hero />
-                <Alerts />
                 <About />
                 <GetInvolved />
                 <Speakers />

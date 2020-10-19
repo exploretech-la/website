@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaHeart } from 'react-icons/fa';
 
 import LogoWithIcons from '../static/svg/logo-with-icons-white.svg';
 
@@ -36,7 +36,7 @@ export default class Footer extends Component {
                         <p><ReactGA.OutboundLink to="mailto:exploretechla@cs.ucla.edu" target="_blank" eventLabel="email_us_footer">exploretechla@cs.ucla.edu</ReactGA.OutboundLink></p>
                     </div>
                     <div className="footer-item">
-                        <p>Made with <span role="img" aria-label="heart">❤️</span>in LA</p>
+                        <p>Made with <FaHeart className="FaHeart" /> in LA</p>
                     </div>
                 </div>
             </section>
