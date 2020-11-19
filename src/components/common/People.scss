@@ -1,0 +1,59 @@
+.People {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+    transform: scaleX(-1) rotateZ(180deg);
+
+    p {
+        margin-bottom: 0.25rem;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+
+    .person {
+        width: 14rem;
+        height: 100%;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        cursor: pointer;
+        color:  black;
+        transition: color 0.5s;
+        transform: scaleX(-1) rotateZ(180deg);
+
+        .person-image {
+            width: 10rem;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 1.25rem;
+        }
+
+        .person-title {
+            font-size: small;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .People {
+        .person:hover {
+            color:  $color-muted-blue;
+            transition: color 0.5s;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .People {
+        transform: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+
+        .person {
+            transform: none;
+        }
+    }
+}

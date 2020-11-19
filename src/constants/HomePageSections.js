@@ -8,6 +8,9 @@ const HomePageSections = {
     SPEAKERS: {
         name: 'speakers',
     },
+    LEADERSHIP: {
+        name: 'leadership',
+    },
     SPONSORS: {
         name: 'sponsors',
     },

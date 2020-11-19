@@ -5,6 +5,7 @@ import Hero from './Hero';
 import About from './About';
 import GetInvolved from './GetInvolved';
 import Speakers from './Speakers';
+import Leadership from './Leadership';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 
@@ -26,6 +27,7 @@ export default class Home extends Component {
                 <About />
                 <GetInvolved />
                 <Speakers />
+                <Leadership />
                 <Sponsors />
                 <Footer />
             </div>
