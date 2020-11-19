@@ -1,35 +1,47 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b5f091e3c1b48dc879d1807d059fc40",
+    "revision": "a64caa7fcf9f85e6928cd6fa2ea3eb12",
     "url": "/index.html"
   },
   {
-    "revision": "adcd409890383765114e",
+    "revision": "8eeda53cf919168ae14f",
     "url": "/static/css/2.f3cffc9e.chunk.css"
   },
   {
-    "revision": "abbd5d93e2ec7ea2581b",
-    "url": "/static/css/main.4d9fd188.chunk.css"
+    "revision": "b12eaf9accad6ba7dc1e",
+    "url": "/static/css/main.88b4c960.chunk.css"
   },
   {
-    "revision": "adcd409890383765114e",
-    "url": "/static/js/2.90a7b46e.chunk.js"
+    "revision": "8eeda53cf919168ae14f",
+    "url": "/static/js/2.563ba4b5.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/static/js/2.90a7b46e.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.563ba4b5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "abbd5d93e2ec7ea2581b",
-    "url": "/static/js/main.7d053d61.chunk.js"
+    "revision": "b12eaf9accad6ba7dc1e",
+    "url": "/static/js/main.6eaa1f71.chunk.js"
   },
   {
     "revision": "068310cf975a011c792f",
     "url": "/static/js/runtime-main.026b2492.js"
   },
   {
+    "revision": "6119e83ccd99a4982730a5efb8561a84",
+    "url": "/static/media/adnan-darwiche.6119e83c.jpg"
+  },
+  {
+    "revision": "bd75c78e7e22ad9a7afb789e4c38afc1",
+    "url": "/static/media/annie-chen.bd75c78e.jpg"
+  },
+  {
     "revision": "a2bf6455604723d910e7a3f311df9856",
     "url": "/static/media/asucla.a2bf6455.png"
+  },
+  {
+    "revision": "cc1860a10fdda2149bdb1d0a77918a8f",
+    "url": "/static/media/bonnie-lee.cc1860a1.jpg"
   },
   {
     "revision": "6abbf0ed0ada77658d702bdbf5896c0e",
@@ -48,12 +60,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/demo-microsoft-vr.a19c8447.jpg"
   },
   {
+    "revision": "516f9efabf1021e9333866dc6e08ee40",
+    "url": "/static/media/evan-wang.516f9efa.jpg"
+  },
+  {
     "revision": "9837f38a0bdd7a352fb766ae54625e25",
     "url": "/static/media/google.9837f38a.png"
   },
   {
     "revision": "4761472c565a83afbf5cc3526cd5bf2a",
     "url": "/static/media/green-hills-software.4761472c.png"
+  },
+  {
+    "revision": "5e8257b306f9e52d298e570bf52e0a35",
+    "url": "/static/media/haley-zhang.5e8257b3.jpg"
+  },
+  {
+    "revision": "44af3593839ee4ad2f191912e12d32a6",
+    "url": "/static/media/jack-gardner.44af3593.jpg"
   },
   {
     "revision": "6111a0dc58c96d5e31e039decd6380f1",
@@ -134,6 +158,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a1880337ae61ab6852992ab1ad776d6b",
     "url": "/static/media/ucla-samueli-engineering.a1880337.png"
+  },
+  {
+    "revision": "09ab8dbce9df0d3defe1a4461331404b",
+    "url": "/static/media/vivian-doan.09ab8dbc.jpg"
   },
   {
     "revision": "7b502e3dd0e2ff24dd5d8403da208100",
