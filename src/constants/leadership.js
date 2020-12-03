@@ -13,7 +13,7 @@ export const Leadership = [
         name: 'Annie Chen',
         title: 'Design Director',
         image: require('static/leadership/annie-chen.jpg'),
-        link: null,
+        link: 'https://www.linkedin.com/in/annie-chen-369b63132/',
     }, {
         name: 'Vivian Doan',
         title: 'External Director & Advisor',
@@ -23,7 +23,7 @@ export const Leadership = [
         name: 'Haley Zhang',
         title: 'Operations Director',
         image: require('static/leadership/haley-zhang.jpg'),
-        link: null,
+        link: 'https://www.linkedin.com/in/haley-xiaohe-zhang-996341173/',
     }, {
         name: 'Bonnie Lee',
         title: 'Advisor',
