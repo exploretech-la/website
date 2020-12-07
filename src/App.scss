@@ -1,3 +1,5 @@
+@import '~bootstrap/scss/bootstrap';
+
 // See colors in the exploretech.la Design System in Figma
 $color-aqua: #98D6D6;
 $color-muted-blue: #448494;
@@ -13,31 +15,111 @@ $section-horizontal-padding-lg: 64px;
 $section-vertical-padding: 64px;
 
 @keyframes bobble {
-	0% {
-		transform: translateY(0);
-	}
+  0% {
+    transform: translateY(0);
+  }
 
-	100% {
-		transform: translateY(-1rem);
-	}
+  100% {
+    transform: translateY(-1rem);
+  }
 }
 
 .pill-divider {
-	height: 0.5rem;
-	width: 4rem;
-	margin-bottom: 1.5rem;
-	background: $color-aqua;
-	border-radius: 0.25rem;
+  height: 0.5rem;
+  width: 4rem;
+  margin-bottom: 1.5rem;
+  background: $color-aqua;
+  border-radius: 0.25rem;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-// Common Styles
-@import '~bootstrap/scss/bootstrap';
+.App {
+  section, .Section {
+    padding-top: $section-vertical-padding;
+    padding-bottom: $section-vertical-padding;
+    padding-left: $section-horizontal-padding-xs;
+    padding-right: $section-horizontal-padding-xs;
+  }
+
+  /* Height */
+  ::-webkit-scrollbar {
+    height: 2px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ebebeb;
+    border-radius: 1px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $color-aqua;
+    border-radius: 1px;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .App {
+    overflow-x: hidden;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .App {
+    section, .Section {
+      padding-left: $section-horizontal-padding-sm;
+      padding-right: $section-horizontal-padding-sm;
+    }
+
+    /* Height */
+    ::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      border-radius: 2px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .App {
+    section, .Section {
+      padding-left: $section-horizontal-padding-md;
+      padding-right: $section-horizontal-padding-md;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .App {
+    section, .Section {
+      padding-left: $section-horizontal-padding-lg;
+      padding-right: $section-horizontal-padding-lg;
+    }
+  }
+}
+
+// Common Component Styles
+@import 'components/common/Header.scss';
+@import 'components/common/LinkWithArrow.scss';
 @import 'components/common/UnorderedItemList.scss';
 @import 'components/common/People.scss';
 
 // Page Styles
 @import 'components/Home.scss';
+@import 'components/PageNotFound.scss';

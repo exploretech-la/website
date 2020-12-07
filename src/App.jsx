@@ -1,17 +1,33 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import Home from './components/Home';
+import GA from 'util/GoogleAnalytics';
+
+import Header from 'components/common/Header';
+import Home from 'components/Home';
+import PageNotFound from 'components/PageNotFound';
 
 import './App.scss';
 
 class App extends Component {
-	render() {
-		return (
-			<div className="App">
-				<Home />
-			</div>
-		);
-	}
+  componentDidMount() {
+    const isGAEnabled = GA.init();
+    if (isGAEnabled) {
+      GA.trackPageView();
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header/>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route component={PageNotFound} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;

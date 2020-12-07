@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 export default class UnorderedItemList extends PureComponent {
 
@@ -18,11 +18,11 @@ export default class UnorderedItemList extends PureComponent {
     }
 
     render() {
-        const classnames = classNames('UnorderedItemList', this.props.className);
+        const classNames = classnames('UnorderedItemList', this.props.className);
         const items = this.props.items.map((item, index) => this._getItem(index+1, item));
 
         return (
-            <div className={classnames}>
+            <div className={classNames}>
                 {items}
             </div>
         );

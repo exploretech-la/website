@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classnames from 'classnames';
 import ReactGA from 'react-ga';
 
 import { MdKeyboardArrowRight } from 'react-icons/md';
@@ -26,10 +26,10 @@ export default class Sponsors extends Component {
         const largeLogos = LargeLogoSponsors.map(logo => this._renderLogo(logo));
         const smallLogos = SmallLogoSponsors.map(logo => this._renderLogo(logo));
 
-        const classnames = classNames('Section', 'Sponsors', this.props.className);
+        const classNames = classnames('Section', 'Sponsors', this.props.className);
 
         return (
-            <section className={classnames} id={HomePageSections.SPONSORS.name}>
+            <section className={classNames} id={HomePageSections.SPONSORS.name}>
                 <div className="sponsors-container">
                     <div className="sponsors-header">
                         <h3>Past Sponsors</h3>

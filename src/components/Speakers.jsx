@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 import People from 'components/common/People';
 
@@ -33,9 +33,9 @@ export default class Speakers extends Component {
     }
 
     render() {
-        const classnames = classNames('Section', 'Speakers', this.props.className);
+        const classNames = classnames('Section', 'Speakers', this.props.className);
         return (
-            <section className={classnames} id={HomePageSections.SPEAKERS.name}>
+            <section className={classNames} id={HomePageSections.SPEAKERS.name}>
                 {this._renderSpeakers(CurrentSpeakers, SpeakersTypeEnum.CURRENT)}
                 {this._renderSpeakers(PastSpeakers, SpeakersTypeEnum.PAST)}
             </section>

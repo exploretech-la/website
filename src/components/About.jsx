@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classnames from 'classnames';
 import ReactGA from 'react-ga';
 
 import Carousel from 'react-bootstrap/Carousel'
@@ -28,10 +28,10 @@ export default class About extends Component {
     }
 
     render() {
-        const classnames = classNames('Section', 'About', this.props.className);
+        const classNames = classnames('Section', 'About', this.props.className);
 
         return (
-            <section className={classnames} id={HomePageSections.ABOUT.name}>
+            <section className={classNames} id={HomePageSections.ABOUT.name}>
                 <div className="about-content about-org">
                     <div className="left-column text">
                         <div className="section-title">

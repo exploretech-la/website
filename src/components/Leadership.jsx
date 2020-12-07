@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 import People from 'components/common/People';
 
@@ -22,9 +22,9 @@ export default class Speakers extends Component {
     }
 
     render() {
-        const classnames = classNames('Section', 'Leadership', this.props.className);
+        const classNames = classnames('Section', 'Leadership', this.props.className);
         return (
-            <section className={classnames} id={HomePageSections.LEADERSHIP.name}>
+            <section className={classNames} id={HomePageSections.LEADERSHIP.name}>
                 <div className="leadership-container">
                     <div className="leadership-header">
                         <h3>Our Leadership</h3>

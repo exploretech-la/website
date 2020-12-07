@@ -1,5 +1,7 @@
 .Header {
-    background-color: $color-aqua;
+    &.Home {
+        background-color: $color-aqua;
+    }
 
     &.Section {
         padding-top: 1rem;

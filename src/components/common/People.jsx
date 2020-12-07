@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classnames from 'classnames';
 import ReactGA from 'react-ga';
 
 export default class People extends Component {
@@ -25,10 +25,10 @@ export default class People extends Component {
         }
 
         const peopleElements = this.props.people.map(person => this._renderPerson(person));
-        const classnames = classNames('People', this.props.className);
+        const classNames = classnames('People', this.props.className);
 
         return (
-            <div className={classnames}>
+            <div className={classNames}>
                 {peopleElements}
             </div>
         );
