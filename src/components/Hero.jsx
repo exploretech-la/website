@@ -15,10 +15,11 @@ export default class Hero extends Component {
                     <h1 className="h1-title">Inspire the Future&nbsp;of&nbsp;Tech</h1>
                     <h2 className="h2-title">Inspire the Future&nbsp;of&nbsp;Tech</h2>
                     <p>Hosted virtually April 10-11, 2021</p>
+                    <p>10:00AM - 1:30PM</p>
                     <p>University of California, Los Angeles</p>
                     <div className="hero-cta">
-                        <Button variant="info" href={`#${HomePageSections.GET_INVOLVED.name}`} onClick={this._trackGetInvolvedClick}>
-                            Get Involved
+                        <Button variant="info" href={`/register`} onClick={this._trackRegisterTodayClick}>
+                            Register Today!
                         </Button>
                         <Button variant="light" href={`#${HomePageSections.ABOUT.name}`} onClick={this._trackLearnMoreClick}>
                             Learn More
@@ -34,6 +35,14 @@ export default class Hero extends Component {
             category: 'Hero',
             action: 'Click',
             label: 'Get Involved'
+        });
+    }
+
+    _trackRegisterTodayClick() {
+        GA.trackEvent({
+            category: 'Hero',
+            action: 'Click',
+            label: 'Register Today'
         });
     }
 

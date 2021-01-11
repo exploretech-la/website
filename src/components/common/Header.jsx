@@ -26,12 +26,14 @@ function Header() {
   const generalNavItems = (
     <Nav>
       <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
+      <Nav.Item><Nav.Link href="/register">Registration</Nav.Link></Nav.Item>
     </Nav>
   );
 
   const homeNavItems = (
     <Nav>
       <Nav.Item><Nav.Link href={`#${HomePageSections.ABOUT.name}`}>About</Nav.Link></Nav.Item>
+      <Nav.Item><Nav.Link href={`/register`}>Registration</Nav.Link></Nav.Item>
       <Nav.Item><Nav.Link href={`#${HomePageSections.GET_INVOLVED.name}`}>Get Involved</Nav.Link></Nav.Item>
       <Nav.Item><Nav.Link href={`#${HomePageSections.SPEAKERS.name}`}>Speakers</Nav.Link></Nav.Item>
       <Nav.Item><Nav.Link href={`#${HomePageSections.SPONSORS.name}`}>Sponsors</Nav.Link></Nav.Item>

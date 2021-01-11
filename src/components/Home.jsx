@@ -7,11 +7,13 @@ import Speakers from './Speakers';
 import Leadership from './Leadership';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
+import RegistrationAlert from './Registration/RegistrationAlert';
 
 function Home() {
   return (
     <div className="Home">
       <Hero />
+      <RegistrationAlert />
       <About />
       <GetInvolved />
       <Speakers />
