@@ -12,14 +12,13 @@
         padding-bottom: 32px;
     }
 
-    .schedule-title {
-      align-items: center;
-      text-align: center;
+    &.schedule-column-container {
+        flex-direction: column;
     }
 
-    .schedule-column-container {
-        flex-direction: row;
-        justify-content: space-between;
+    .schedule-title {
+        align-items: center;
+        text-align: center;
     }
 
     .left-column, .right-column {
@@ -33,13 +32,13 @@
 @include media-breakpoint-up(md) { 
   .Schedule {
       .schedule-content {
-          justify-content: center;
+          justify-content: space-between;
 
           &:not(:last-child) {
               padding-bottom: 64px;
           }
 
-          &.schedule-columns {
+          &.schedule-column-container {
               flex-direction: row;
           }
 
