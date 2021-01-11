@@ -6,6 +6,7 @@ import Eligibility from './Eligibility';
 import Waivers from './Waivers';
 import FAQ from './FAQ';
 import Footer from '../Footer';
+import Schedule from './Schedule';
 
 function Register() {
   return (
@@ -15,6 +16,7 @@ function Register() {
       </div>
       <RegistrationAlert />
       <RegistrationTop />
+      <Schedule />
       <Eligibility />
       <Waivers />
       <FAQ />

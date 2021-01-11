@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
 
 export default class RegistrationTop extends Component {
 
@@ -32,21 +32,30 @@ export default class RegistrationTop extends Component {
                             </div>
                             <div className="registration-description">
                                 <p>exploretech.la is an annual event hosted by UCLA students that aims to inspire high school students from underserved communities in the Greater Los Angeles Area to explore computer science, engineering, and technology.</p>
-                                <ul>
+                                <p>With the ongoing pandemic, our team has decided to move exploretech.la 2021 to a virtual format for the safety of our attendees, partners, and staff members.</p>
+                                <ul className="no-style">
                                     <li><b>Event Dates:</b> April 10-11, 2021</li>
                                     <li><b>Time:</b> 10:00AM - 1:30PM</li>
                                     <li><b>Location:</b> Held virtually</li>
                                 </ul>
+                                <p>Our event will include:
+                                    <ul className="no-margin">
+                                        <li>Interactive workshops</li>
+                                        <li>Panels with industry guests and college students</li>
+                                        <li>Opportunity to chat with current UCLA undergraduates</li>
+                                        <li>An exploretech.box for all students (while supplies last)</li>
+                                    </ul>
+                                </p>
                             </div>
                         </div>
                         <div className="right-column text">
-                        <div className="section-title">
+                            <div className="section-title">
                                 <h3 className="title">Registration Deadlines</h3>
                                 <div className="pill-divider" />
                             </div>
                             <div className="registration-types">
                                 <div className="section-title">
-                                    <h4 className="title">Early Registration - <b>Open Now!</b></h4>
+                                    <h4 className="title">Early Registration - <Badge variant="info">Open Now!</Badge></h4>
                                 </div>
                                 <p><b>Deadline:</b> January 24, 2021 at 11:59PM PST</p>
                                 <p><em>*As long as space permits and all eligibility requirements are met, you will be accepted and guaranteed a box.</em></p>
@@ -57,26 +66,8 @@ export default class RegistrationTop extends Component {
                             </div>
                         </div>
                     </div>
-                    {this._getCovid19Update()}
                 </div>
             </section>
-        );
-    }
-
-    _getCovid19Update() {
-        return (
-            <div className="registration-content covid19-update">
-                <div className="text">
-                    <div className="section-title">
-                        <h3 className="title">COVID-19 Update</h3>
-                        <div className="pill-divider" />
-                    </div>
-                    <p>
-                        With the ongoing pandemic, our team has decided to move exploretech.la 2021 to a virtual format for the safety of our attendees, partners, and staff members.
-                        exploretech.la 2021 will be a virtual event with interactive, live-streamed activities that will take place over the course of two days.
-                    </p>
-                </div>
-            </div>
         );
     }
 }

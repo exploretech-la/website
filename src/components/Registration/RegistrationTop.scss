@@ -32,9 +32,15 @@
           }
       }
 
-      ul {
-        list-style-type: none;
-        margin-left: -40px;
+      ul { 
+        &.no-style {
+            list-style-type: none;
+            margin-left: -40px;
+        }
+
+        &.no-margin {
+            margin-left: -24px;
+        }
       }
   }
 

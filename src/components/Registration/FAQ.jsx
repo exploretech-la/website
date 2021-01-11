@@ -108,9 +108,20 @@ export default class FAQ extends Component {
             </Card>
             <Card>
               <Accordion.Toggle as={Card.Header} eventKey="6">
-                <b>If I'm not an LA County resident, can I still participate?</b>
+                <b>What is the College Buddy Chat?</b>
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="6">
+                <Card.Body>
+                  Each day you will have the opportunity to talk with one to two UCLA undergraduates about their life at UCLA and in STEM. 
+                  Feel free to ask them any questions you may have about going from high school to college and pursuing a STEM degree!
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="7">
+                <b>If I'm not an LA County resident, can I still participate?</b>
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="7">
                 <Card.Body>
                   If you do not reside in LA County and would like to attend the event, you can fill out the registration 
                   form and we will place you on a waitlist. Depending on availability, we may open up the event to non-LA 
@@ -119,30 +130,30 @@ export default class FAQ extends Component {
               </Accordion.Collapse>
             </Card>
             <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="7">
+              <Accordion.Toggle as={Card.Header} eventKey="8">
                 <b>When is the deadline to register for the event?</b>
               </Accordion.Toggle>
-              <Accordion.Collapse eventKey="7">
+              <Accordion.Collapse eventKey="8">
                 <Card.Body>
                   Please see the Registration Deadlines section for more information about deadlines.
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
             <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="8">
+              <Accordion.Toggle as={Card.Header} eventKey="9">
                 <b>Who can participate/register for the event? </b>
               </Accordion.Toggle>
-              <Accordion.Collapse eventKey="8">
+              <Accordion.Collapse eventKey="9">
                 <Card.Body>
                   Please see the Eligibility section for more information about who can participate in this event.
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
             <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="9">
+              <Accordion.Toggle as={Card.Header} eventKey="10">
                 <b>I am homeschooled, can I still attend the event? </b>
               </Accordion.Toggle>
-              <Accordion.Collapse eventKey="9">
+              <Accordion.Collapse eventKey="10">
                 <Card.Body>
                   Yes you can! Just denote on the registration form that you are homeschooled where it asks for your school name.
                 </Card.Body>
