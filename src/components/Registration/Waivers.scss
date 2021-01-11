@@ -15,13 +15,26 @@
   .buttons {
     padding-top: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 
     .button {
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
   
+}
+
+@include media-breakpoint-up(md) { 
+  .Waivers {
+    .buttons {
+      flex-direction: row;
+
+      .button {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
 }
