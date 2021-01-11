@@ -86,9 +86,20 @@ export default class FAQ extends Component {
             </Card>
             <Card>
               <Accordion.Toggle as={Card.Header} eventKey="4">
-                <b>What happens if I don’t get my box in time?</b>
+                <b>What is an exploretech.box?</b>
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="4">
+                <Card.Body>
+                An exploretech.box is a box that will hold all of the supplemental workshop materials and swag for the event. We will ship these 
+                to our attendees prior to the event. Supplies will be limited, but not having a box will not prevent you from attending our event. 
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="5">
+                <b>What happens if I don’t get my box in time?</b>
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="5">
                 <Card.Body>
                   We plan to ship the boxes well ahead of time so you should have them by event day. 
                   In the case your box does not arrive on time, you will still be able to participate in the event.
@@ -96,10 +107,10 @@ export default class FAQ extends Component {
               </Accordion.Collapse>
             </Card>
             <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="5">
+              <Accordion.Toggle as={Card.Header} eventKey="6">
                 <b>If I'm not an LA County resident, can I still participate?</b>
               </Accordion.Toggle>
-              <Accordion.Collapse eventKey="5">
+              <Accordion.Collapse eventKey="6">
                 <Card.Body>
                   If you do not reside in LA County and would like to attend the event, you can fill out the registration 
                   form and we will place you on a waitlist. Depending on availability, we may open up the event to non-LA 
@@ -108,30 +119,30 @@ export default class FAQ extends Component {
               </Accordion.Collapse>
             </Card>
             <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="6">
+              <Accordion.Toggle as={Card.Header} eventKey="7">
                 <b>When is the deadline to register for the event?</b>
               </Accordion.Toggle>
-              <Accordion.Collapse eventKey="6">
+              <Accordion.Collapse eventKey="7">
                 <Card.Body>
                   Please see the Registration Deadlines section for more information about deadlines.
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
             <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="7">
+              <Accordion.Toggle as={Card.Header} eventKey="8">
                 <b>Who can participate/register for the event? </b>
               </Accordion.Toggle>
-              <Accordion.Collapse eventKey="7">
+              <Accordion.Collapse eventKey="8">
                 <Card.Body>
                   Please see the Eligibility section for more information about who can participate in this event.
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
             <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="8">
+              <Accordion.Toggle as={Card.Header} eventKey="9">
                 <b>I am homeschooled, can I still attend the event? </b>
               </Accordion.Toggle>
-              <Accordion.Collapse eventKey="8">
+              <Accordion.Collapse eventKey="9">
                 <Card.Body>
                   Yes you can! Just denote on the registration form that you are homeschooled where it asks for your school name.
                 </Card.Body>

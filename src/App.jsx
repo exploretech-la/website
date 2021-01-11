@@ -8,6 +8,10 @@ import Home from 'components/Home';
 import Register from 'components/Registration/Register';
 import PageNotFound from 'components/PageNotFound';
 
+import LiabilityWaiver from 'static/waivers/exploretech.la 2021 Liability Waiver.pdf';
+import MultimediaRelease from 'static/waivers/exploretech.la 2021 Multimedia Release Form.pdf';
+import StudentVerification from 'static/waivers/exploretech.la 2021 Student Verification Form.pdf';
+
 import './App.scss';
 
 class App extends Component {
