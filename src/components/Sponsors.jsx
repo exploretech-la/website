@@ -32,7 +32,7 @@ export default class Sponsors extends Component {
             <section className={classNames} id={HomePageSections.SPONSORS.name}>
                 <div className="sponsors-container">
                     <div className="sponsors-header">
-                        <h3>Past Sponsors</h3>
+                        <h3>Our Sponsors</h3>
                         <div className="pill-divider" />
                     </div>
                     <div className="large-logos">
