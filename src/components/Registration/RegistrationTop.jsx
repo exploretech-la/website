@@ -24,9 +24,6 @@ export default class RegistrationTop extends Component {
         return (
             <section className={classNames}>
                 <div className="registration-content">
-                    <div className="registration-title">
-                        <h1>Registration</h1>
-                    </div>
                     <div className="registration-content registration-event-info">
                         <div className="left-column text">
                             <div className="section-title">
