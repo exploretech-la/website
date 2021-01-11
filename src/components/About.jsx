@@ -10,7 +10,6 @@ import HomePageSections from 'constants/HomePageSections';
 import CaourselImages from 'constants/carousel';
 
 import TeamPhoto from 'static/images/team-photo-2020.jpg';
-import { Link } from 'react-router-dom';
 
 const FoundingStoryLink = 'https://medium.com/techatucla/exploretechla-founding-story-3bb8a947f931';
 

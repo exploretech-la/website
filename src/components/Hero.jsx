@@ -18,7 +18,7 @@ export default class Hero extends Component {
                     <p>10:00AM - 1:30PM</p>
                     <p>University of California, Los Angeles</p>
                     <div className="hero-cta">
-                        <Button variant="info" href={`/register`}>
+                        <Button variant="info" href={`/register`} onClick={this._trackRegisterTodayClick}>
                             Register Today!
                         </Button>
                         <Button variant="light" href={`#${HomePageSections.ABOUT.name}`} onClick={this._trackLearnMoreClick}>
@@ -35,6 +35,14 @@ export default class Hero extends Component {
             category: 'Hero',
             action: 'Click',
             label: 'Get Involved'
+        });
+    }
+
+    _trackRegisterTodayClick() {
+        GA.trackEvent({
+            category: 'Hero',
+            action: 'Click',
+            label: 'Register Today'
         });
     }
 
