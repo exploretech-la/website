@@ -3,6 +3,7 @@ import React from 'react';
 import RegistrationAlert from './RegistrationAlert';
 import RegistrationTop from './RegistrationTop';
 import Eligibility from './Eligibility';
+import Waivers from './Waivers';
 import FAQ from './FAQ';
 import Footer from '../Footer';
 
@@ -15,6 +16,7 @@ function Register() {
       <RegistrationAlert />
       <RegistrationTop />
       <Eligibility />
+      <Waivers />
       <FAQ />
       <Footer />
     </div>

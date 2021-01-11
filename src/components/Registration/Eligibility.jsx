@@ -37,6 +37,7 @@ export default class Eligibility extends Component {
                                   <ul><li>Public or private high school students are eligible, as well as homeschooled students</li></ul>
                                 <li>Must be a Los Angeles County resident</li>
                                 <li>Must have a computer and reliable internet connection for the duration of the event</li>
+                                <li>Must fill out all required waivers (Liability, Multimedia Release, and Student Verification)</li>
                             </ul>
                           </div>
                       </div>
@@ -48,6 +49,8 @@ export default class Eligibility extends Component {
                             <ul>
                                 <li>Must be a current high school teacher in Los Angeles County</li>
                                 <li>Must have a computer and reliable internet connection for the duration of the event</li>
+                                <li>Must fill out all required waivers (Liability and Multimedia Release)</li>
+                                <li>Must submit photo of teacher badge/ID as verification</li>
                             </ul>
                         </div>
                       </div>
