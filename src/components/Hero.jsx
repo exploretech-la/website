@@ -17,8 +17,8 @@ export default class Hero extends Component {
                     <p>Hosted virtually April 10-11, 2021</p>
                     <p>University of California, Los Angeles</p>
                     <div className="hero-cta">
-                        <Button variant="info" href={`#${HomePageSections.GET_INVOLVED.name}`} onClick={this._trackGetInvolvedClick}>
-                            Get Involved
+                        <Button variant="info" href={`/register`}>
+                            Register Today!
                         </Button>
                         <Button variant="light" href={`#${HomePageSections.ABOUT.name}`} onClick={this._trackLearnMoreClick}>
                             Learn More
