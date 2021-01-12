@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <App />
   </BrowserRouter>,
   document.getElementById('root')
