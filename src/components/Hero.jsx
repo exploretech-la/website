@@ -15,7 +15,7 @@ export default class Hero extends Component {
                     <h1 className="h1-title">Inspire the Future&nbsp;of&nbsp;Tech</h1>
                     <h2 className="h2-title">Inspire the Future&nbsp;of&nbsp;Tech</h2>
                     <p>Hosted virtually April 10-11, 2021</p>
-                    <p>10:00AM - 1:30PM</p>
+                    <p>10:00AM - 1:30PM PST</p>
                     <p>University of California, Los Angeles</p>
                     <div className="hero-cta">
                         <Button variant="info" href={`/register`} onClick={this._trackRegisterTodayClick}>

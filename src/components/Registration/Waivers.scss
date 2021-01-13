@@ -6,7 +6,7 @@
   margin: auto;
   padding-bottom: 32px;
 
-  .waivers-title {
+  .waivers-title, .waivers-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 
     .button {
       padding-top: 10px;

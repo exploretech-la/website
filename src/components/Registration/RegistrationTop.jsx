@@ -35,7 +35,7 @@ export default class RegistrationTop extends Component {
                                 <p>With the ongoing pandemic, our team has decided to move exploretech.la 2021 to a virtual format for the safety of our attendees, partners, and staff members.</p>
                                 <ul className="no-style">
                                     <li><b>Event Dates:</b> April 10-11, 2021</li>
-                                    <li><b>Time:</b> 10:00AM - 1:30PM</li>
+                                    <li><b>Time:</b> 10:00AM - 1:30PM PST</li>
                                     <li><b>Location:</b> Held virtually</li>
                                 </ul>
                                 <p>Our event will include:

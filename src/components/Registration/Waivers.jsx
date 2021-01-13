@@ -54,6 +54,15 @@ export default class Waivers extends Component {
                   </Button>
                 </div>
               </div>
+              <div className="waivers-text">
+                <p><b>All forms can also be found here, in both PDF and Google Docs formats (for easier editing):</b></p>
+                <p>To edit the Google Docs, please make a copy of the waiver into your own Drive and fill it out there. Simply save as PDF to upload to the registration form.</p>
+                <div className="button">
+                  <Button variant="outline-info" href={`https://tinyurl.com/exploretechla2021-waivers`} size="lg">
+                    All Forms (PDFs and Google Docs)
+                  </Button>
+                </div>
+              </div>
             </section>
         );
     }
