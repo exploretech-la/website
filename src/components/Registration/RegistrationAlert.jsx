@@ -25,7 +25,7 @@ export default class RegistrationAlert extends Component {
         return (
             <div className={classNames}>
               <h3>
-                Early Registration is open until <b>January 24th! </b> 
+                General Registration is open until <b>February 28th! </b> 
                 Sign up today to ensure your spot!
               </h3>
               <div className="buttons">
