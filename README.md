@@ -1,6 +1,6 @@
 # exploretech.la
 
-exploretech.la's website.
+The website for [exploretech.la](https://www.exploretech.la/)
 
 ---
 
