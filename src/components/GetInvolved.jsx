@@ -14,7 +14,7 @@ import TEALS_VR from 'static/images/teals-vr.jpg';
 
 const HighSchoolInterestForm = 'https://forms.gle/DAmRPcJiyJmppKnJ7';
 const MailingListSignUp = 'http://eepurl.com/gEFmPX';
-// const TeamApplicationLink = null;
+const VolunteerApplicationLink = 'https://tinyurl.com/exploretechla2021volunteer';
 
 export default class GetInvolved extends Component {
 	render() {
@@ -25,15 +25,15 @@ export default class GetInvolved extends Component {
 						<h3>Get Involved</h3>
 						<div className="pill-divider" />
 					</div>
-					{/* <div className="team-application">
-						<p>UCLA Students: Our 2021 team applications are now open! Apply by Saturday, October 17th at 11:59 PM PDT.</p>
+					<div className="team-application">
+						<p><b>UCLA Students:</b> Our exploretech.la 2021 volunteer applications are now open! Apply by Monday, March 1st at 11:59 PM PDT!</p>
 						<div className="team-application-cta">
-							<ReactGA.OutboundLink to={TeamApplicationLink} target="_blank" eventLabel="Team Application">
+							<ReactGA.OutboundLink to={VolunteerApplicationLink} target="_blank" eventLabel="Volunteer Application">
 								<p><b>Apply now!</b></p>
 								<MdKeyboardArrowRight className="MdKeyboardArrowRight" />
 							</ReactGA.OutboundLink>
 						</div>
-					</div> */}
+					</div>
 					<CardDeck>
 						<Card className="high-schools">
 							<Card.Img variant="top" src={TEALS_VR} />
