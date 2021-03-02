@@ -58,12 +58,16 @@ export default class RegistrationTop extends Component {
                                     <h4 className="title">Early Registration - <Badge variant="secondary">Closed</Badge></h4>
                                 </div>
                                 <p><b>Deadline:</b> January 24, 2021 at 11:59PM PST</p>                                
-                                <p><b>NOTE:</b> If you have already registered during early registration, keep an eye out for a confirmation email from us by early February!</p>
                                 <p><em>*As long as space permits and all eligibility requirements are met, you will be accepted and guaranteed a box.</em></p>
                                 <div className="section-title">
-                                    <h4 className="title">General Registration - <Badge variant="info">Open Now!</Badge></h4>
+                                    <h4 className="title">General Registration - <Badge variant="secondary">Closed</Badge></h4>
                                 </div>
                                 <p><b>Deadline:</b> February 28, 2021 at 11:59PM PST</p>
+                                <p><b>NOTE:</b> Keep an eye out for a confirmation email from us by early March if you are a general registration applicant!</p>
+                                <div className="section-title">
+                                    <h4 className="title">Late Registration - <Badge variant="info">Ongoing</Badge></h4>
+                                </div>
+                                <p><em>*Late registration is first come first served. Boxes will not be guaranteed.</em></p>
                             </div>
                         </div>
                     </div>

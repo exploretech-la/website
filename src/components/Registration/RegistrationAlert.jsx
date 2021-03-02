@@ -25,9 +25,9 @@ export default class RegistrationAlert extends Component {
         return (
             <div className={classNames}>
               <h3>
-                General Registration is open until <b>February 28th! </b> 
-                Sign up today to ensure your spot!
+                Missed the general registration deadline? Late registration is still open!
               </h3>
+              <h5>(Boxes are not guaranteed but you will still receive admission to the event)</h5>
               <div className="buttons">
                 <div className="button">
                   <Button variant="outline-light" href={`https://forms.gle/oNH7tx4kufoKSAoa9`} size="lg" onClick={this._trackStudentRegistrationFormClick}>
