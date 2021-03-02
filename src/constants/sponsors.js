@@ -24,8 +24,16 @@ export const SmallLogoSponsors = [
         src: require('static/sponsors/northrop-grumman.png'),
         website: 'https://www.northropgrumman.com/',
     }, {
+        name: 'disney',
+        src: require('static/sponsors/disney.png'),
+        website: 'https://thewaltdisneycompany.com/',
+    }, {
         name: 'capcom',
         src: require('static/sponsors/capcom.svg'),
         website: 'https://www.capcom.com/us/',
+    }, {
+        name: 'cloud-girls',
+        src: require('static/sponsors/cloud-girls.png'),
+        website: 'https://cloudgirls.org/',
     }, 
 ];

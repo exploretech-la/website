@@ -7,6 +7,7 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 
 import HomePageSections from 'constants/HomePageSections';
 import { LargeLogoSponsors, SmallLogoSponsors } from 'constants/sponsors';
+import { CommunityPartners } from 'constants/community-partners';
 
 export default class Sponsors extends Component {
 
@@ -26,6 +27,8 @@ export default class Sponsors extends Component {
         const largeLogos = LargeLogoSponsors.map(logo => this._renderLogo(logo));
         const smallLogos = SmallLogoSponsors.map(logo => this._renderLogo(logo));
 
+        const commPartnerLogos = CommunityPartners.map(logo => this._renderLogo(logo));
+
         const classNames = classnames('Section', 'Sponsors', this.props.className);
 
         return (
@@ -40,6 +43,13 @@ export default class Sponsors extends Component {
                     </div>
                     <div className="small-logos">
                         {smallLogos}
+                    </div>
+                    <div className="sponsors-header">
+                        <h3>Our Community Partners</h3>
+                        <div className="pill-divider" />
+                    </div>
+                    <div className="small-logos">
+                        {commPartnerLogos}
                     </div>
                     <div className="sponsor-contact">
                         <h5>Interested in sponsoring?</h5>
