@@ -26,7 +26,7 @@ export default class GetInvolved extends Component {
 						<div className="pill-divider" />
 					</div>
 					<div className="team-application">
-						<p><b>UCLA Students:</b> Our exploretech.la 2021 volunteer applications are now open! Apply by Monday, March 1st at 11:59 PM PDT!</p>
+						<p><b>UCLA Students:</b> Our exploretech.la 2021 volunteer application deadline has been <b>EXTENDED</b>! Apply by Friday, March 12th at 11:59 PM PST!</p>
 						<div className="team-application-cta">
 							<ReactGA.OutboundLink to={VolunteerApplicationLink} target="_blank" eventLabel="Volunteer Application">
 								<p><b>Apply now!</b></p>
