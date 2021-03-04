@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f680c5ddc206ef01f87d1bd6172890b1",
+    "revision": "6c02402e3eee2c78b61dd425e21aded2",
     "url": "/index.html"
   },
   {
-    "revision": "0d3bae9824ce349ed59c",
+    "revision": "5ceb4914ae3f344d7283",
     "url": "/static/css/2.f3cffc9e.chunk.css"
   },
   {
-    "revision": "a9fe047e84d165ee5dd7",
+    "revision": "c34a404535edc5d72fdd",
     "url": "/static/css/main.531ee9b3.chunk.css"
   },
   {
-    "revision": "0d3bae9824ce349ed59c",
-    "url": "/static/js/2.ca1abd5c.chunk.js"
+    "revision": "5ceb4914ae3f344d7283",
+    "url": "/static/js/2.7a5fceec.chunk.js"
   },
   {
     "revision": "176c1a1a28b19c611d9701905d8d60b7",
-    "url": "/static/js/2.ca1abd5c.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.7a5fceec.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a9fe047e84d165ee5dd7",
-    "url": "/static/js/main.8b9e50d0.chunk.js"
+    "revision": "c34a404535edc5d72fdd",
+    "url": "/static/js/main.dc4f1cbc.chunk.js"
   },
   {
     "revision": "068310cf975a011c792f",
@@ -58,6 +58,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9f4ccc14c2ab7393b9edbc92dade9532",
     "url": "/static/media/cloud-girls.9f4ccc14.png"
+  },
+  {
+    "revision": "cc1c112eb77951a960f911782221c386",
+    "url": "/static/media/csta.cc1c112e.png"
   },
   {
     "revision": "a19c84474e5db1b55eb3d6ad99271a8c",
