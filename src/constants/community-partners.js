@@ -4,6 +4,10 @@ export const CommunityPartners = [
       src: require('static/community-partners/ace-mentor.png'),
       website: 'https://www.acementor.org/'
   }, {
+    name: 'csta',
+    src: require('static/community-partners/csta.png'),
+    website: 'https://www.csteachers.org/',
+  }, {
       name: 'diy-girls',
       src: require('static/community-partners/diy-girls.png'),
       website: 'https://www.diygirls.org/',
