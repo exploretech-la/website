@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+// import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import GA from 'util/GoogleAnalytics';
 
 export default class RegistrationAlert extends Component {
@@ -25,10 +26,13 @@ export default class RegistrationAlert extends Component {
         return (
             <div className={classNames}>
               <h3>
-                Missed the general registration deadline? Late registration is still open!
+                Registration is now closed - confirmations and shipping details have been sent out to all attendees!
               </h3>
-              <h5>(Boxes are not guaranteed but you will still receive admission to the event)</h5>
-              <div className="buttons">
+              <div className="notes">
+                <h5><b>IMPORTANT:</b> If you registered and did not receive any emails from us, please reach out to us ASAP so we can resolve this.</h5>
+                <h5>And if you are still interested in attending our event, please email us at exploretechla@cs.ucla.edu</h5>
+              </div>
+              {/* <div className="buttons">
                 <div className="button">
                   <Button variant="outline-light" href={`https://forms.gle/oNH7tx4kufoKSAoa9`} size="lg" onClick={this._trackStudentRegistrationFormClick}>
                     Student Registration Form
@@ -39,7 +43,7 @@ export default class RegistrationAlert extends Component {
                     Teacher Registration Form
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </div>
         );
     }

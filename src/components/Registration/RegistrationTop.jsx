@@ -35,7 +35,7 @@ export default class RegistrationTop extends Component {
                                 <p>With the ongoing pandemic, our team has decided to move exploretech.la 2021 to a virtual format for the safety of our attendees, partners, and staff members.</p>
                                 <ul className="no-style">
                                     <li><b>Event Dates:</b> April 10-11, 2021</li>
-                                    <li><b>Time:</b> 10:00AM - 1:30PM PST</li>
+                                    <li><b>Time:</b> 10:00AM - 1:30PM PDT</li>
                                     <li><b>Location:</b> Held virtually</li>
                                 </ul>
                                 <p>Our event will include:
@@ -65,9 +65,9 @@ export default class RegistrationTop extends Component {
                                 <p><b>Deadline:</b> February 28, 2021 at 11:59PM PST</p>
                                 <p><b>NOTE:</b> Keep an eye out for a confirmation email from us by early March if you are a general registration applicant!</p>
                                 <div className="section-title">
-                                    <h4 className="title">Late Registration - <Badge variant="info">Ongoing</Badge></h4>
+                                    <h4 className="title">Late Registration - <Badge variant="warning">By Email Only</Badge></h4>
                                 </div>
-                                <p><em>*Late registration is first come first served. Boxes will not be guaranteed.</em></p>
+                                <p><em>*If you are still interested in attending our event, please email us at exploretechla@cs.ucla.edu</em></p>
                             </div>
                         </div>
                     </div>
