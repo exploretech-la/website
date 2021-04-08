@@ -26,11 +26,10 @@ export default class RegistrationAlert extends Component {
         return (
             <div className={classNames}>
               <h3>
-                Registration is now closed - confirmations and shipping details have been sent out to all attendees!
+                <b>To attendees:</b> please make sure to check your emails for all of the details on how to access the event!
               </h3>
               <div className="notes">
                 <h5><b>IMPORTANT:</b> If you registered and did not receive any emails from us, please reach out to us ASAP so we can resolve this.</h5>
-                <h5>And if you are still interested in attending our event, please email us at exploretechla@cs.ucla.edu</h5>
               </div>
               {/* <div className="buttons">
                 <div className="button">
