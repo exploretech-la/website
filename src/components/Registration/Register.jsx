@@ -25,8 +25,8 @@ function Register() {
       <Schedule />
       {/* <Eligibility /> */}
       <ImportantLinks />
-      {/* <Waivers /> */}
       <FAQ />
+      <Waivers />
       <Footer />
     </div>
   );

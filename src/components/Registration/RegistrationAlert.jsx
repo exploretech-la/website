@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import GA from 'util/GoogleAnalytics';
 
 export default class RegistrationAlert extends Component {
@@ -26,41 +26,27 @@ export default class RegistrationAlert extends Component {
         return (
             <div className={classNames}>
               <h3>
-                <b>To attendees:</b> please make sure to check your emails for all of the details on how to access the event!
+                <b>To attendees:</b> Access our virtual event platform via the link below!
               </h3>
+              <div className="button">
+                <Button variant="outline-light" href={`https://tinyurl.com/exploretechla2021`} size="lg" onClick={this._trackEventPlatformClick}>
+                  Click here to log into the event!
+                </Button>
+              </div>
               <div className="notes">
+                <h5>All event info can be accessed under "Event Info" on our website!</h5>
                 <h5><b>IMPORTANT:</b> If you registered and did not receive any emails from us, please reach out to us ASAP so we can resolve this.</h5>
               </div>
-              {/* <div className="buttons">
-                <div className="button">
-                  <Button variant="outline-light" href={`https://forms.gle/oNH7tx4kufoKSAoa9`} size="lg" onClick={this._trackStudentRegistrationFormClick}>
-                    Student Registration Form
-                  </Button>
-                </div>
-                <div className="button">
-                  <Button variant="outline-light" href={`https://forms.gle/p3CxXh2dZjMJWd7V9`} size="lg" onClick={this._trackTeacherRegistrationFormClick}>
-                    Teacher Registration Form
-                  </Button>
-                </div>
-              </div> */}
             </div>
         );
     }
 
-    _trackStudentRegistrationFormClick() {
+    _trackEventPlatformClick() {
       GA.trackEvent({
           category: 'RegistrationAlert',
           action: 'Click',
-          label: 'Student Registration Form'
+          label: 'Event Platform Link'
       });
     }
-
-    _trackTeacherRegistrationFormClick() {
-      GA.trackEvent({
-          category: 'RegistrationAlert',
-          action: 'Click',
-          label: 'Teacher Registration Form'
-      });
-  }
 
 }
