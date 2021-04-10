@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ff9e7095fa7e4432383d80b1ee139592",
+    "revision": "2ead2babb0386ed068214f50381cbccd",
     "url": "/index.html"
   },
   {
-    "revision": "9e62ce7b49b78d80f9b3",
+    "revision": "1cb18b6d694a445675c6",
     "url": "/static/css/2.f3cffc9e.chunk.css"
   },
   {
-    "revision": "c8481e5960ea5d40aa96",
-    "url": "/static/css/main.fa800da1.chunk.css"
+    "revision": "61569439293339ef1cb6",
+    "url": "/static/css/main.7037dbed.chunk.css"
   },
   {
-    "revision": "9e62ce7b49b78d80f9b3",
-    "url": "/static/js/2.09eab279.chunk.js"
+    "revision": "1cb18b6d694a445675c6",
+    "url": "/static/js/2.4b0a4629.chunk.js"
   },
   {
     "revision": "176c1a1a28b19c611d9701905d8d60b7",
-    "url": "/static/js/2.09eab279.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.4b0a4629.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c8481e5960ea5d40aa96",
-    "url": "/static/js/main.e790f51f.chunk.js"
+    "revision": "61569439293339ef1cb6",
+    "url": "/static/js/main.7a83f907.chunk.js"
   },
   {
     "revision": "068310cf975a011c792f",
@@ -36,12 +36,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/adnan-darwiche.6119e83c.jpg"
   },
   {
+    "revision": "7806ab3fbbcc7f0a82ee95e5a6d9c851",
+    "url": "/static/media/alfredo-ayala.7806ab3f.jpg"
+  },
+  {
     "revision": "bd75c78e7e22ad9a7afb789e4c38afc1",
     "url": "/static/media/annie-chen.bd75c78e.jpg"
   },
   {
     "revision": "36cf0fc67049e2a1849d47d7ec14a906",
     "url": "/static/media/balsamiq.36cf0fc6.png"
+  },
+  {
+    "revision": "1e1ee397d2049f315dc03027fab2343f",
+    "url": "/static/media/banner.1e1ee397.png"
   },
   {
     "revision": "cc1860a10fdda2149bdb1d0a77918a8f",
@@ -52,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/capcom.6abbf0ed.svg"
   },
   {
-    "revision": "59523cba815f66fbe9544491b38ec933",
-    "url": "/static/media/carey-nachenberg.59523cba.png"
+    "revision": "0fbeaea472f367ec55f86c71d6297e11",
+    "url": "/static/media/carey-nachenberg.0fbeaea4.png"
   },
   {
     "revision": "9f4ccc14c2ab7393b9edbc92dade9532",
