@@ -18,8 +18,8 @@ export default class Hero extends Component {
                     <p>10:00AM - 1:30PM PDT</p>
                     <p>University of California, Los Angeles</p>
                     <div className="hero-cta">
-                        <Button variant="info" href={`/register`} onClick={this._trackRegisterTodayClick}>
-                            Register Today!
+                        <Button variant="info" href={`/exploretechla2021`} onClick={this._trackRegisterTodayClick}>
+                            Event Info
                         </Button>
                         <Button variant="light" href={`#${HomePageSections.ABOUT.name}`} onClick={this._trackLearnMoreClick}>
                             Learn More

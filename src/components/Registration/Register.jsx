@@ -1,25 +1,32 @@
 import React from 'react';
 
 import RegistrationAlert from './RegistrationAlert';
-import RegistrationTop from './RegistrationTop';
-import Eligibility from './Eligibility';
+// import RegistrationTop from './RegistrationTop';
+// import Eligibility from './Eligibility';
 import Waivers from './Waivers';
+import ImportantLinks from './ImportantLinks';
 import FAQ from './FAQ';
 import Footer from '../Footer';
 import Schedule from './Schedule';
 
+import Banner from 'static/images/banner.png';
+
 function Register() {
   return (
     <div className="Register">
-      <div className="registration-title">
-          <h1>Registration</h1>
+      <div className="banner">
+        <img src={Banner} className="banner" alt="banner" />
       </div>
       <RegistrationAlert />
-      <RegistrationTop />
+      <div className="registration-title">
+          <h1>Event Information</h1>
+      </div>
+      {/* <RegistrationTop /> */}
       <Schedule />
-      <Eligibility />
-      <Waivers />
+      {/* <Eligibility /> */}
+      <ImportantLinks />
       <FAQ />
+      <Waivers />
       <Footer />
     </div>
   );

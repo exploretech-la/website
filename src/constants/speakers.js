@@ -1,4 +1,16 @@
-export const CurrentSpeakers = [];
+export const CurrentSpeakers = [
+    {
+        name: 'Alfredo Ayala',
+        title: 'Walt Disney Executive R&D Imagineer at Walt Disney Imagineering',
+        image: require('static/speakers/alfredo-ayala.jpg'),
+        link: 'https://www.linkedin.com/in/alfredo-ayala-b0094426/'
+    }, {
+        name: 'Carey Nachenberg',
+        title: 'Adjunct Professor at UCLA, Principal SWE Lyft Level 5',
+        image: require('static/speakers/carey-nachenberg.png'),
+        link: 'https://www.linkedin.com/in/carey-nachenberg-14bbb03/',
+    }
+];
 
 export const PastSpeakers = [
     {
@@ -6,11 +18,6 @@ export const PastSpeakers = [
         title: 'Dean, UCLA Samueli School of Engineering',
         image: require('static/speakers/jayathi-murthy.png'),
         link: 'https://samueli.ucla.edu/jayathi-y-murthy/'
-    }, {
-        name: 'Carey Nachenberg',
-        title: 'Principal Engineer, Lyft',
-        image: require('static/speakers/carey-nachenberg.png'),
-        link: 'https://www.linkedin.com/in/carey-nachenberg-14bbb03/',
     }, {
         name: 'Justin Brezhnev',
         title: 'President & CEO, Hacker Fund',

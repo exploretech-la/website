@@ -3,6 +3,7 @@
 @import 'components/Registration/RegistrationTop.scss';
 @import 'components/Registration/Eligibility.scss';
 @import 'components/Registration/Waivers.scss';
+@import 'components/Registration/ImportantLinks.scss';
 @import 'components/Registration/FAQ.scss';
 @import 'components/Footer.scss';
 @import 'components/Registration/Schedule.scss';
@@ -14,6 +15,12 @@
       align-items: center;
       max-width: $section-width;
       margin: auto;
+      padding-top: 32px;
       padding-bottom: 32px;
+  }
+
+  .banner {
+      width: 100vw;
+      height: auto;
   }
 }

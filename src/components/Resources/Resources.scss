@@ -1,0 +1,26 @@
+// Resources Component Styles
+@import 'components/Footer.scss';
+
+.Resources {
+  .resources-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: $section-width;
+      margin: auto;
+      padding-top: 32px;
+      padding-bottom: 32px;
+  }
+
+  .resources-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .banner {
+      width: 100vw;
+      height: auto;
+  }
+}

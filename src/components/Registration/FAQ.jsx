@@ -31,10 +31,17 @@ export default class FAQ extends Component {
                   <p>
                     If your question is not answered below, please reach out to us at exploretechla@cs.ucla.edu for more information!
                   </p>
+                  <h3>
+                    Still interested in attending?
+                  </h3>
+                  <p>
+                    If you are still interested in attending, fill out the waivers at the bottom of the page (under "Waivers") and email them to us at exploretechla@cs.ucla.edu ASAP
+                    so we can get you registered!
+                  </p>
                 </div>
                 {this._getStudentFAQ()}
-                {this._getTeacherFAQ()}
-                {this._getParentFAQ()}
+                {/* {this._getTeacherFAQ()}
+                {this._getParentFAQ()} */}
               </div>
             </section>
         );
@@ -47,7 +54,17 @@ export default class FAQ extends Component {
             <h4 className="title">Student FAQs</h4>
             <div className="pill-divider" />
           </div>
-          <Accordion defaultActiveKey="0">
+          <Accordion defaultActiveKey="11">
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="11">
+                <b>I'm still interested in attending but registration is closed! Can I still attend? </b>
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="11">
+                <Card.Body>
+                  Yes you can! Just fill out all of the waivers under the "Waivers" secrtion below and email them to us at exploretechla@cs.ucla.edu ASAP so we can get you registered!
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
             <Card>
               <Accordion.Toggle as={Card.Header} eventKey="0">
               <b>Is there a registration fee? Are there any associated costs with the program (ie: need to pay for an account on the virtual platform?) </b>
@@ -64,14 +81,14 @@ export default class FAQ extends Component {
                 <Card.Body>No experience needed! This event is meant to help you explore the different fields of CS and tech!</Card.Body>
               </Accordion.Collapse>
             </Card>
-            <Card>
+            {/* <Card>
               <Accordion.Toggle as={Card.Header} eventKey="2">
                 <b>What if I can only make part of the event (only one day, missing a few hours, etc)?  </b>
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="2">
                 <Card.Body>Let us know in the registration form! </Card.Body>
               </Accordion.Collapse>
-            </Card>
+            </Card> */}
             <Card>
               <Accordion.Toggle as={Card.Header} eventKey="3">
                 <b>How would virtual format work? (boxes, platform, etc)  </b>
@@ -95,7 +112,7 @@ export default class FAQ extends Component {
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
-            <Card>
+            {/* <Card>
               <Accordion.Toggle as={Card.Header} eventKey="5">
                 <b>What happens if I don’t get my box in time?</b>
               </Accordion.Toggle>
@@ -105,7 +122,7 @@ export default class FAQ extends Component {
                   In the case your box does not arrive on time, you will still be able to participate in the event.
                 </Card.Body>
               </Accordion.Collapse>
-            </Card>
+            </Card> */}
             <Card>
               <Accordion.Toggle as={Card.Header} eventKey="6">
                 <b>What is the College Buddy Chat?</b>
@@ -117,7 +134,7 @@ export default class FAQ extends Component {
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
-            <Card>
+            {/* <Card>
               <Accordion.Toggle as={Card.Header} eventKey="7">
                 <b>If I'm not an LA County resident, can I still participate?</b>
               </Accordion.Toggle>
@@ -128,8 +145,8 @@ export default class FAQ extends Component {
                   County residents. However, you would not be eligible to receive an exploretech.box, as we can only ship within LA County.
                 </Card.Body>
               </Accordion.Collapse>
-            </Card>
-            <Card>
+            </Card> */}
+            {/* <Card>
               <Accordion.Toggle as={Card.Header} eventKey="8">
                 <b>When is the deadline to register for the event?</b>
               </Accordion.Toggle>
@@ -138,8 +155,8 @@ export default class FAQ extends Component {
                   Please see the Registration Deadlines section for more information about deadlines.
                 </Card.Body>
               </Accordion.Collapse>
-            </Card>
-            <Card>
+            </Card> */}
+            {/* <Card>
               <Accordion.Toggle as={Card.Header} eventKey="9">
                 <b>Who can participate/register for the event? </b>
               </Accordion.Toggle>
@@ -148,8 +165,8 @@ export default class FAQ extends Component {
                   Please see the Eligibility section for more information about who can participate in this event.
                 </Card.Body>
               </Accordion.Collapse>
-            </Card>
-            <Card>
+            </Card> */}
+            {/* <Card>
               <Accordion.Toggle as={Card.Header} eventKey="10">
                 <b>I am homeschooled, can I still attend the event? </b>
               </Accordion.Toggle>
@@ -158,7 +175,7 @@ export default class FAQ extends Component {
                   Yes you can! Just denote on the registration form that you are homeschooled where it asks for your school name.
                 </Card.Body>
               </Accordion.Collapse>
-            </Card>
+            </Card> */}
           </Accordion>
         </div>
       );
