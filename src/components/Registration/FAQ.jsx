@@ -54,7 +54,17 @@ export default class FAQ extends Component {
             <h4 className="title">Student FAQs</h4>
             <div className="pill-divider" />
           </div>
-          <Accordion defaultActiveKey="0">
+          <Accordion defaultActiveKey="11">
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="11">
+                <b>I'm still interested in attending but registration is closed! Can I still attend? </b>
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="11">
+                <Card.Body>
+                  Yes you can! Just fill out all of the waivers under the "Waivers" secrtion below and email them to us at exploretechla@cs.ucla.edu ASAP so we can get you registered!
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
             <Card>
               <Accordion.Toggle as={Card.Header} eventKey="0">
               <b>Is there a registration fee? Are there any associated costs with the program (ie: need to pay for an account on the virtual platform?) </b>
@@ -71,14 +81,14 @@ export default class FAQ extends Component {
                 <Card.Body>No experience needed! This event is meant to help you explore the different fields of CS and tech!</Card.Body>
               </Accordion.Collapse>
             </Card>
-            <Card>
+            {/* <Card>
               <Accordion.Toggle as={Card.Header} eventKey="2">
                 <b>What if I can only make part of the event (only one day, missing a few hours, etc)?  </b>
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="2">
                 <Card.Body>Let us know in the registration form! </Card.Body>
               </Accordion.Collapse>
-            </Card>
+            </Card> */}
             <Card>
               <Accordion.Toggle as={Card.Header} eventKey="3">
                 <b>How would virtual format work? (boxes, platform, etc)  </b>
