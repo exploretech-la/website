@@ -1,0 +1,17 @@
+.YoutubeEmbed {
+  .video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    height: 0;
+  }
+  
+  .video-responsive iframe, .video-responsive object, .video-responsive embed {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
