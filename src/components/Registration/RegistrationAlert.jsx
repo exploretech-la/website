@@ -26,26 +26,27 @@ export default class RegistrationAlert extends Component {
         return (
             <div className={classNames}>
               <h3>
-                <b>To attendees:</b> Access our virtual event platform via the link below!
+                <b>Missed our event? Want to rewatch workshops and panels?</b> 
               </h3>
-              <div className="button">
-                <Button variant="outline-light" href={`https://tinyurl.com/exploretechla2021`} size="lg" onClick={this._trackEventPlatformClick}>
-                  Click here to log into the event!
-                </Button>
-              </div>
               <div className="notes">
-                <h5>All event info can be accessed under "Event Info" on our website!</h5>
-                <h5><b>IMPORTANT:</b> If you registered and did not receive any emails from us, please reach out to us ASAP so we can resolve this.</h5>
+                <h5>Check out recordings and resources from exploretech.la 2021 on our Resources page!</h5>
+              </div>
+              <div className="buttons">
+                <div className="button">
+                  <Button variant="outline-light" href={`https://www.exploretech.la/resources`} size="lg" onClick={this._trackResourcesClick}>
+                    exploretech.la 2021 Recordings and Resources
+                  </Button>
+                </div>
               </div>
             </div>
         );
     }
 
-    _trackEventPlatformClick() {
+    _trackResourcesClick() {
       GA.trackEvent({
           category: 'RegistrationAlert',
           action: 'Click',
-          label: 'Event Platform Link'
+          label: 'Resources'
       });
     }
 
