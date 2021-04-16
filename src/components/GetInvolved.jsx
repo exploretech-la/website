@@ -13,7 +13,7 @@ import TaboolaBooth from 'static/images/taboola-booth.jpg';
 import TEALS_VR from 'static/images/teals-vr.jpg';
 
 const HighSchoolInterestForm = 'https://forms.gle/DAmRPcJiyJmppKnJ7';
-const MailingListSignUp = 'http://eepurl.com/gEFmPX';
+const MailingListSignUp = 'https://mailchi.mp/e1197feb6276/ucla-student-mailing-list';
 // const VolunteerApplicationLink = 'https://tinyurl.com/exploretechla2021volunteer';
 
 export default class GetInvolved extends Component {
