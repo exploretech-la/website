@@ -31,13 +31,11 @@ export default class Ceremonies extends Component {
                     <div className="ceremonies-videos">
                       <div className="ceremonies-videos left-column">
                         <h3>Opening Ceremony</h3>
-                        <p>video goes here later bc i'm dumb rn</p>
-                        <YoutubeEmbed embedId="rokGy0huYEA" />
+                        <YoutubeEmbed embedId="vsqvWQ6o22o" />
                       </div>
                       <div className="ceremonies-videos right-column">
                         <h3>Closing Ceremony</h3>
-                        <p>video goes here later bc i'm dumb rn</p>
-                        <YoutubeEmbed embedId="rokGy0huYEA" />
+                        <YoutubeEmbed embedId="dd3jXPCoK24" />
                       </div>
                     </div>
                 </div>

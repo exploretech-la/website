@@ -6,5 +6,25 @@
     align-items: center;
     max-width: $section-width;
     margin: auto;
+
+    .workshops-cards {
+      display: flex;
+      flex-direction: column;
+      width: 75vw;
+      padding-bottom: 50px;
+    }
+
+    .workshops-title {
+      display: flex;
+      padding-bottom: 32px;
+      flex-direction: column;
+      align-items: center;
+    } 
+
+    .card-row {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  
   }
 }
