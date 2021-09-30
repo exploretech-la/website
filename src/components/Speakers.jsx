@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import People from 'components/common/People';
 
 import HomePageSections from 'constants/HomePageSections';
-import { CurrentSpeakers, PastSpeakers } from 'constants/speakers';
+import { PastSpeakers } from 'constants/speakers';
 
 const SpeakersTypeEnum = {
     CURRENT: {
@@ -36,7 +36,6 @@ export default class Speakers extends Component {
         const classNames = classnames('Section', 'Speakers', this.props.className);
         return (
             <section className={classNames} id={HomePageSections.SPEAKERS.name}>
-                {this._renderSpeakers(CurrentSpeakers, SpeakersTypeEnum.CURRENT)}
                 {this._renderSpeakers(PastSpeakers, SpeakersTypeEnum.PAST)}
             </section>
         );

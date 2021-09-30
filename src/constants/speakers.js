@@ -1,4 +1,8 @@
 export const CurrentSpeakers = [
+    
+];
+
+export const PastSpeakers = [
     {
         name: 'Alfredo Ayala',
         title: 'Walt Disney Executive R&D Imagineer at Walt Disney Imagineering',
@@ -9,10 +13,7 @@ export const CurrentSpeakers = [
         title: 'Adjunct Professor at UCLA, Principal SWE Lyft Level 5',
         image: require('static/speakers/carey-nachenberg.png'),
         link: 'https://www.linkedin.com/in/carey-nachenberg-14bbb03/',
-    }
-];
-
-export const PastSpeakers = [
+    },
     {
         name: 'Jayathi Murthy',
         title: 'Dean, UCLA Samueli School of Engineering',
