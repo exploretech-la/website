@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b56cc700bd3a335c86ae1b2e0ae10fff",
+    "revision": "b01d29b48ff9e9e8ae5531059a49ee4b",
     "url": "/index.html"
   },
   {
-    "revision": "586f94ee6166fd09aeaa",
+    "revision": "dad8155231ec825f19f5",
     "url": "/static/css/2.f3cffc9e.chunk.css"
   },
   {
-    "revision": "1101b547f6a7953113e6",
+    "revision": "548b382fb412b8fd0ab5",
     "url": "/static/css/main.a0610404.chunk.css"
   },
   {
-    "revision": "586f94ee6166fd09aeaa",
-    "url": "/static/js/2.493629fe.chunk.js"
+    "revision": "dad8155231ec825f19f5",
+    "url": "/static/js/2.405a71e8.chunk.js"
   },
   {
     "revision": "176c1a1a28b19c611d9701905d8d60b7",
-    "url": "/static/js/2.493629fe.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.405a71e8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1101b547f6a7953113e6",
-    "url": "/static/js/main.0d7f8fa4.chunk.js"
+    "revision": "548b382fb412b8fd0ab5",
+    "url": "/static/js/main.1f287103.chunk.js"
   },
   {
     "revision": "068310cf975a011c792f",
@@ -36,12 +36,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/adnan-darwiche.6119e83c.jpg"
   },
   {
-    "revision": "7806ab3fbbcc7f0a82ee95e5a6d9c851",
-    "url": "/static/media/alfredo-ayala.7806ab3f.jpg"
+    "revision": "4abcb82932c7bd2baa2594cd177a506b",
+    "url": "/static/media/alex-walsh.4abcb829.jpg"
   },
   {
-    "revision": "bd75c78e7e22ad9a7afb789e4c38afc1",
-    "url": "/static/media/annie-chen.bd75c78e.jpg"
+    "revision": "7806ab3fbbcc7f0a82ee95e5a6d9c851",
+    "url": "/static/media/alfredo-ayala.7806ab3f.jpg"
   },
   {
     "revision": "36cf0fc67049e2a1849d47d7ec14a906",
@@ -52,8 +52,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/banner.1e1ee397.png"
   },
   {
-    "revision": "cc1860a10fdda2149bdb1d0a77918a8f",
-    "url": "/static/media/bonnie-lee.cc1860a1.jpg"
+    "revision": "b454830c774f89b3e636ed7199837752",
+    "url": "/static/media/belle-lerdworatawee.b454830c.jpg"
   },
   {
     "revision": "6abbf0ed0ada77658d702bdbf5896c0e",
@@ -84,8 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/diy-girls.526c397d.png"
   },
   {
-    "revision": "516f9efabf1021e9333866dc6e08ee40",
-    "url": "/static/media/evan-wang.516f9efa.jpg"
+    "revision": "96947fc30cc80a3579312cfe873b3bf7",
+    "url": "/static/media/erika-shen.96947fc3.jpg"
+  },
+  {
+    "revision": "ecd822887416d4939e43e5b3bfde077a",
+    "url": "/static/media/ethan-wong.ecd82288.jpg"
   },
   {
     "revision": "02fe472c6d9fc099df2ef3fd40a10b59",
@@ -100,12 +104,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/exploretech.la 2021 Student Verification Form.e564c764.pdf"
   },
   {
+    "revision": "1c834f5a5e79bdba8955c9faf248f576",
+    "url": "/static/media/haley-kim.1c834f5a.jpg"
+  },
+  {
     "revision": "5e8257b306f9e52d298e570bf52e0a35",
     "url": "/static/media/haley-zhang.5e8257b3.jpg"
   },
   {
-    "revision": "44af3593839ee4ad2f191912e12d32a6",
-    "url": "/static/media/jack-gardner.44af3593.jpg"
+    "revision": "b09c856ee1ee14c22176801958dcece4",
+    "url": "/static/media/jack-gardner.b09c856e.jpg"
   },
   {
     "revision": "6111a0dc58c96d5e31e039decd6380f1",
@@ -132,6 +140,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo-with-icons-white.3aea7cbc.svg"
   },
   {
+    "revision": "2b0a31975f23c16f09c968b97c864492",
+    "url": "/static/media/megan-pham.2b0a3197.jpg"
+  },
+  {
     "revision": "1cf19b81367144cfb3f1dfd46fa86af4",
     "url": "/static/media/nick-corral.1cf19b81.jpg"
   },
@@ -142,6 +154,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8a284de7845039414194e40dc5366704",
     "url": "/static/media/ruth-johnson.8a284de7.jpeg"
+  },
+  {
+    "revision": "e4d66b5141e1502f76b01a374e7fa31e",
+    "url": "/static/media/sabrina-liu.e4d66b51.jpg"
   },
   {
     "revision": "e6f61a67b7da2af30e06f3fffd8d4577",
@@ -186,10 +202,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a1880337ae61ab6852992ab1ad776d6b",
     "url": "/static/media/ucla-samueli-engineering.a1880337.png"
-  },
-  {
-    "revision": "09ab8dbce9df0d3defe1a4461331404b",
-    "url": "/static/media/vivian-doan.09ab8dbc.jpg"
   },
   {
     "revision": "7b502e3dd0e2ff24dd5d8403da208100",
