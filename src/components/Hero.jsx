@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 
 import GA from 'util/GoogleAnalytics';
-import HomePageSections from 'constants/HomePageSections';
+// import HomePageSections from 'constants/HomePageSections';
 import LogoWithIconGroup from 'static/svg/logo-navy-with-icon-group-white.svg';
+
+const TeamApplicationLink = 'https://tinyurl.com/exploretechla2022application';
+const InfoSessionSlidesLink = 'https://tinyurl.com/exploretechla2022slides';
 
 export default class Hero extends Component {
     render() {
@@ -14,15 +17,15 @@ export default class Hero extends Component {
                 <div className="hero-content">
                     <h1 className="h1-title">Inspire the Future&nbsp;of&nbsp;Tech</h1>
                     <h2 className="h2-title">Inspire the Future&nbsp;of&nbsp;Tech</h2>
-                    <p>Hosted virtually April 10-11, 2021</p>
-                    <p>10:00AM - 1:30PM PDT</p>
-                    <p>University of California, Los Angeles</p>
+                    <p>Interested in joining our team?</p>
+                    <p>Our 2022 applications are open!</p>
+                    <p>Apply by Friday, October 8th at 11:59 PM PDT.</p>
                     <div className="hero-cta">
-                        <Button variant="info" href={`/exploretechla2021`} onClick={this._trackRegisterTodayClick}>
-                            Event Info
+                        <Button variant="info" href={TeamApplicationLink} onClick={this._trackRegisterTodayClick}>
+                            Apply now!
                         </Button>
-                        <Button variant="light" href={`#${HomePageSections.ABOUT.name}`} onClick={this._trackLearnMoreClick}>
-                            Learn More
+                        <Button variant="light" href={InfoSessionSlidesLink} onClick={this._trackLearnMoreClick}>
+                            Info session
                         </Button>
                     </div>
                 </div>
