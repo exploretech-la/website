@@ -21,10 +21,10 @@ export default class Hero extends Component {
                     <p>Our 2022 applications are open!</p>
                     <p>Apply by Friday, October 8th at 11:59 PM PDT.</p>
                     <div className="hero-cta">
-                        <Button variant="info" href={TeamApplicationLink} onClick={this._trackRegisterTodayClick}>
+                        <Button variant="info" href={TeamApplicationLink} target='_blank' onClick={this._trackTeamApplicationClick}>
                             Apply now!
                         </Button>
-                        <Button variant="light" href={InfoSessionSlidesLink} onClick={this._trackLearnMoreClick}>
+                        <Button variant="light" href={InfoSessionSlidesLink} target='_blank' onClick={this._trackInfoSessionSlidesClick}>
                             Info session
                         </Button>
                     </div>
@@ -54,6 +54,22 @@ export default class Hero extends Component {
             category: 'Hero',
             action: 'Click',
             label: 'Learn More'
+        });
+    }
+
+    _trackTeamApplicationClick() {
+        GA.trackEvent({
+            category: 'Hero',
+            action: 'Click',
+            label: 'Team Application'
+        });
+    }
+
+    _trackInfoSessionSlidesClick() {
+        GA.trackEvent({
+            category: 'Hero',
+            action: 'Click',
+            label: 'Info Session'
         });
     }
 }
