@@ -4,7 +4,8 @@ import ReactGA from 'react-ga';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 
-const TeamApplicationLink = 'https://forms.gle/hK69nfPBghkbXwVY6';
+const TeamApplicationLink = 'https://tinyurl.com/exploretechla2022application';
+const InfoSessionSlidesLink = 'https://tinyurl.com/exploretechla2022slides';
 
 export default class Alerts extends Component {
     render() {
@@ -20,15 +21,24 @@ export default class Alerts extends Component {
     _getTeamApplicationAlert() {
         return (
             <Alert className="team-application-alert" variant='info'>
-                <Alert.Heading>UCLA Students: Team applications are open!</Alert.Heading>
+                <Alert.Heading>UCLA Students: Content & Operations Team applications are open!</Alert.Heading>
                 <p>
-                    Interested in joining our team? Our 2021 team applications are now open!
-                    Apply by Saturday, October 17th at 11:59 PM PDT.
+                    Interested in joining our team? Our 2022 team applications are now open!
+                    Apply by Friday, October 8th at 11:59 PM PDT.
                 </p>
                 <hr />
-                <Button variant='outline-info' href={TeamApplicationLink} target='_blank' onClick={this._trackTeamApplicationClick}>
-                    Apply now!
-                </Button>
+                <div className="buttons">
+                    <div className="button">
+                        <Button variant='info' href={TeamApplicationLink} target='_blank' onClick={this._trackTeamApplicationClick}>
+                            Apply now!
+                        </Button>
+                    </div>
+                    <div className="button">
+                        <Button variant='light' href={InfoSessionSlidesLink} target='_blank' onClick={this._trackInfoSessionSlidesClick}>
+                            Info Session
+                        </Button>
+                    </div>
+                </div>
             </Alert>
         );
     }
@@ -36,6 +46,12 @@ export default class Alerts extends Component {
     _trackTeamApplicationClick() {
         ReactGA.outboundLink({
             label: 'Team Application'
+        }, () => {});
+    }
+
+    _trackInfoSessionSlidesClick() {
+        ReactGA.outboundLink({
+            label: 'Info Session'
         }, () => {});
     }
 }

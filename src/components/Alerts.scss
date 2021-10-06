@@ -1,7 +1,10 @@
 .Alerts {
-    padding-bottom: 0 !important;
+    background-color: #d1ecf1;
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
 
     .alert {
+        border: 0 solid transparent;
         margin-bottom: 0;
     }
 
@@ -9,6 +12,18 @@
         max-width: $section-width;
         margin: auto;
     }
+
+    .buttons {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+    
+        .button {
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+      }
 
     .MdKeyboardArrowRight {
         fill: $color-muted-blue;
