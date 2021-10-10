@@ -24,7 +24,7 @@ export default class Alerts extends Component {
                 <Alert.Heading>UCLA Students: Content & Operations Team applications are open!</Alert.Heading>
                 <p>
                     Interested in joining our team? Our 2022 team applications are now open!
-                    Apply by Friday, October 8th at 11:59 PM PDT.
+                    Deadline extended! Apply by Sunday, October 10th at 11:59 PM PDT.
                 </p>
                 <hr />
                 <div className="buttons">
