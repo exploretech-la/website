@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Hero from './Hero';
-import Alerts from './Alerts'
+// import Alerts from './Alerts'
 import About from './About';
 import GetInvolved from './GetInvolved';
 import Speakers from './Speakers';
@@ -14,7 +14,7 @@ function Home() {
   return (
     <div className="Home">
       <Hero />
-      <Alerts />
+      {/* <Alerts /> */}
       <RegistrationAlert />
       <About />
       <GetInvolved />

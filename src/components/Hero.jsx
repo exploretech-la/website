@@ -14,14 +14,13 @@ export default class Hero extends Component {
                 <div className="hero-content">
                     <h1 className="h1-title">Inspire the Future&nbsp;of&nbsp;Tech</h1>
                     <h2 className="h2-title">Inspire the Future&nbsp;of&nbsp;Tech</h2>
-                    <p>Hosted virtually April 10-11, 2021</p>
-                    <p>10:00AM - 1:30PM PDT</p>
+                    <p>Next event April 1, 2022</p>
                     <p>University of California, Los Angeles</p>
                     <div className="hero-cta">
-                        <Button variant="info" href={`/exploretechla2021`} onClick={this._trackRegisterTodayClick}>
+                        {/* <Button variant="info" href={`/exploretechla2021`} onClick={this._trackRegisterTodayClick}>
                             Event Info
-                        </Button>
-                        <Button variant="light" href={`#${HomePageSections.ABOUT.name}`} onClick={this._trackLearnMoreClick}>
+                        </Button> */}
+                        <Button variant="info" href={`#${HomePageSections.ABOUT.name}`} onClick={this._trackLearnMoreClick}>
                             Learn More
                         </Button>
                     </div>
