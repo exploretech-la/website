@@ -35,19 +35,30 @@ export default class People extends Component {
     }
 
     _renderPerson(person) {
-        if (!person || !person.name || !person.title || !person.image) {
+        if (!person || !person.name || !person.image) {
             return null;
         }
 
-        const { name, title, image, link } = person;
+        const { name, title, descriptions, image, link } = person;
+        if (link) {
+            return (
+                <ReactGA.OutboundLink to={link} target="_blank" eventLabel={name} key={name}>
+                    <div className="person">
+                        <img src={image} className="person-image" alt={name} />
+                        <h5 className="person-name">{name}</h5>
+                        {title ? <p className="person-title">{title}</p> : null}
+                        {descriptions ? descriptions.map(description => <p className="person-description">{description}</p>) : null}
+                    </div>
+                </ReactGA.OutboundLink>
+            );
+        }
         return (
-            <ReactGA.OutboundLink to={link} target="_blank" eventLabel={name} key={name}>
-                <div className="person">
-                    <img src={image} className="person-image" alt={name} />
-                    <h5 className="person-name">{name}</h5>
-                    <p className="person-title">{title}</p>
-                </div>
-            </ReactGA.OutboundLink>
+            <div className="person">
+                <img src={image} className="person-image" alt={name} />
+                <h5 className="person-name">{name}</h5>
+                {title ? <p className="person-title">{title}</p> : null}
+                {descriptions ? descriptions.map(description => <p className="person-description">{description}</p>) : null}
+            </div>
         );
     }
 }

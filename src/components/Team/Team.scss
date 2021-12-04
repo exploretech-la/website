@@ -1,0 +1,27 @@
+// Team Component Styles
+@import 'components/Footer.scss';
+
+.Team {
+  .team-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: $section-width;
+      margin: auto;
+      padding-top: 32px;
+      padding-bottom: 32px;
+  }
+
+  .team-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .banner {
+      width: 100vw;
+      height: auto;
+  }
+}

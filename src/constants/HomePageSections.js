@@ -2,6 +2,9 @@ const HomePageSections = {
     ABOUT: {
         name: 'about',
     },
+    TEAM: {
+        name: 'our_team',
+    },
     GET_INVOLVED: {
         name: 'get-involved',
     },

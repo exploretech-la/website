@@ -1,0 +1,23 @@
+.External {
+    .external-container {
+        max-width: $section-width;
+        margin: auto;
+
+        .external-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .External {
+        .external-container {
+            .external-header {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

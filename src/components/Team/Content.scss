@@ -1,0 +1,23 @@
+.Content {
+    .content-container {
+        max-width: $section-width;
+        margin: auto;
+
+        .content-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .Content {
+        .content-container {
+            .content-header {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

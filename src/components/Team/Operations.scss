@@ -1,0 +1,25 @@
+.Operations {
+    background-color: #F5F5F5;
+
+    .operations-container {
+        max-width: $section-width;
+        margin: auto;
+
+        .operations-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .Opertions {
+        .operations-container {
+            .operations-header {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

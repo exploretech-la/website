@@ -1,0 +1,25 @@
+.Design {
+    background-color: #F5F5F5;
+
+    .design-container {
+        max-width: $section-width;
+        margin: auto;
+
+        .design-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .Design {
+        .design-container {
+            .design-header {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
