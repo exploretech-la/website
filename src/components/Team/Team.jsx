@@ -11,7 +11,7 @@ function Team() {
   return (
     <div className="Team">
       <div className="team-title">
-          <h1>Our Team</h1>
+          <h1>Meet Our Team</h1>
           <div className="pill-divider" />
       </div>
       <Leadership />
