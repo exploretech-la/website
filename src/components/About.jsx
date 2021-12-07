@@ -61,6 +61,12 @@ export default class About extends Component {
                             We apply our insights as recent high school graduates to create engaging and impactful learning experiences for our younger peers.
                             We believe that every student should have equal access to STEM education and opportunities.
                         </p>
+                        <div className="current-team">
+                            <ReactGA.OutboundLink to={"https://www.exploretech.la/our_team"} eventLabel="current_team">
+                                <p>Check out our current full team</p>
+                                <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
+                            </ReactGA.OutboundLink>
+                        </div>
                         <div className="founding-story">
                             <ReactGA.OutboundLink to={FoundingStoryLink} target="_blank" eventLabel="founding_story">
                                 <p>Read about our founding story</p>
