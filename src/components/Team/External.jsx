@@ -23,7 +23,7 @@ export default class ExternalComponent extends Component {
     render() {
         const classNames = classnames('Section', 'External', this.props.className);
         return (
-            <section className={classNames}>
+            <section className={classNames} id="external">
                 <div className="external-container">
                     <div className="external-header">
                         <h3>External</h3>

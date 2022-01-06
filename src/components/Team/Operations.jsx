@@ -23,7 +23,7 @@ export default class OperationsComponent extends Component {
     render() {
         const classNames = classnames('Section', 'Operations', this.props.className);
         return (
-            <section className={classNames}>
+            <section className={classNames} id="operations">
                 <div className="operations-container">
                     <div className="operations-header">
                         <h3>Operations</h3>

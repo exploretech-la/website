@@ -33,7 +33,7 @@ export default class RegistrationAlert extends Component {
               </div>
               <div className="buttons">
                 <div className="button">
-                  <Button variant="outline-light" href={`https://www.exploretech.la/resources`} size="lg" onClick={this._trackResourcesClick}>
+                  <Button variant="outline-light" href={`/resources`} size="lg" onClick={this._trackResourcesClick}>
                     exploretech.la 2021 Recordings and Resources
                   </Button>
                 </div>

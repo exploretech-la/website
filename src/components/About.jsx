@@ -52,7 +52,7 @@ export default class About extends Component {
                     <img src={TeamPhoto} className="team-photo left-column" alt="Our Team" />
                     <div className="right-column text">
                         <div className="section-title">
-                            <h3 className="title">Our Team</h3>
+                            <h3 className="title">Who is exploretech.la?</h3>
                             <div className="pill-divider" />
                         </div>
                         <p>
@@ -61,7 +61,7 @@ export default class About extends Component {
                             We believe that every student should have equal access to STEM education and opportunities.
                         </p>
                         <div className="current-team">
-                            <ReactGA.OutboundLink to={"https://www.exploretech.la/our_team"} eventLabel="current_team">
+                            <ReactGA.OutboundLink to={"/our_team"} eventLabel="current_team">
                                 <p>Check out our current full team</p>
                                 <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
                             </ReactGA.OutboundLink>
