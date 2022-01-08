@@ -43,7 +43,7 @@ export default class About extends Component {
                             <p>In partnership with industry and academic organizations, our event introduces students to the various applications of tech through our panels, interactive workshops, and exhibition hall.</p>
                             <p>Last year saw exploretech.la adapt to an online format in response to COVID-19, where we hosted about 200 students over our virtual platform.</p>
                             <p>This year, we are returning to Ackerman Grand Ballroom at UCLA as we return to hosting exploretech.la in person.</p>
-                            <p>The event will take place <b>April 1, 2021</b>, and we would love for you to <a className="in-text-link" href="#get-involved">attend</a>!</p>
+                            <p>The event will take place <b>April 1, 2022</b>, and we would love for you to <a className="in-text-link" href="#get-involved">attend</a>!</p>
                         </div>
                     </div>
                     {this._renderCarousel({ className: 'right-column' })}
