@@ -28,7 +28,7 @@ function Header() {
       <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
       {/* <Nav.Item><Nav.Link href="/exploretechla2021">Event Info</Nav.Link></Nav.Item> */}
       <Nav.Item><Nav.Link href={`/${HomePageSections.TEAM.name}`}>Our Team</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href="/resources">Resources</Nav.Link></Nav.Item>
+      <Nav.Item><Nav.Link href="/resources">exploretech.la 2021</Nav.Link></Nav.Item>
     </Nav>
   );
 
@@ -40,7 +40,7 @@ function Header() {
       <Nav.Item><Nav.Link href={`#${HomePageSections.SPEAKERS.name}`}>Speakers</Nav.Link></Nav.Item>
       <Nav.Item><Nav.Link href={`#${HomePageSections.SPONSORS.name}`}>Sponsors</Nav.Link></Nav.Item>
       <Nav.Item><Nav.Link href={`/${HomePageSections.TEAM.name}`}>Our Team</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href={`/resources`}>Resources</Nav.Link></Nav.Item>
+      <Nav.Item><Nav.Link href={`/resources`}>exploretech.la 2021</Nav.Link></Nav.Item>
     </Nav>
   );
 
