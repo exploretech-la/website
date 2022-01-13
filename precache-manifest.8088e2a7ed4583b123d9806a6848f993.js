@@ -1,35 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ab0fa8c498a83f70f4b33d20003e681c",
+    "revision": "ffe8fe4a5a25f5b87649ec6ae54f1ded",
     "url": "/index.html"
   },
   {
-    "revision": "8eb4ab48d86977b4746a",
+    "revision": "1a5823d5c1a59f16935e",
     "url": "/static/css/2.f3cffc9e.chunk.css"
   },
   {
-    "revision": "f1ce87f4a8df2b4df0c2",
+    "revision": "e03e41a31d42367efb04",
     "url": "/static/css/main.4ff9c9f8.chunk.css"
   },
   {
-    "revision": "8eb4ab48d86977b4746a",
-    "url": "/static/js/2.6efdc417.chunk.js"
+    "revision": "1a5823d5c1a59f16935e",
+    "url": "/static/js/2.1fd24d2e.chunk.js"
   },
   {
     "revision": "176c1a1a28b19c611d9701905d8d60b7",
-    "url": "/static/js/2.6efdc417.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.1fd24d2e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f1ce87f4a8df2b4df0c2",
-    "url": "/static/js/main.a12f0885.chunk.js"
+    "revision": "e03e41a31d42367efb04",
+    "url": "/static/js/main.24a9e36d.chunk.js"
   },
   {
     "revision": "068310cf975a011c792f",
     "url": "/static/js/runtime-main.026b2492.js"
-  },
-  {
-    "revision": "fb7a5272e10fd6690444dbb3745c80d2",
-    "url": "/static/media/ace-mentor.fb7a5272.png"
   },
   {
     "revision": "6119e83ccd99a4982730a5efb8561a84",
@@ -108,10 +104,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/conner-ching.35098146.png"
   },
   {
-    "revision": "cc1c112eb77951a960f911782221c386",
-    "url": "/static/media/csta.cc1c112e.png"
-  },
-  {
     "revision": "61ad5db86e1181b7118941385e77e468",
     "url": "/static/media/defne-yazicioglu.61ad5db8.png"
   },
@@ -126,10 +118,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b49592745ed95b226903880a84fae3ac",
     "url": "/static/media/disney.b4959274.png"
-  },
-  {
-    "revision": "526c397d85947e5a4df84d877814e2b6",
-    "url": "/static/media/diy-girls.526c397d.png"
   },
   {
     "revision": "6aa5a42f55715959ed52d4ada9ffcab0",
@@ -302,18 +290,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "adea72bd5f6ddc1807873ddf206bf294",
     "url": "/static/media/team-photo-2020.adea72bd.jpg"
-  },
-  {
-    "revision": "5f2f2fac7bf67c4b32e9431ef19e9c87",
-    "url": "/static/media/technovation.5f2f2fac.png"
-  },
-  {
-    "revision": "e015c3bf1ecb3491da442f4f34296f8a",
-    "url": "/static/media/tie-ins.e015c3bf.jpg"
-  },
-  {
-    "revision": "eef4a2416a852477ec223dc35fc917a5",
-    "url": "/static/media/txt.eef4a241.png"
   },
   {
     "revision": "665983d47832ba9cc7d2be0a5fa29326",
