@@ -1,17 +1,18 @@
 // Resources Component Styles
-@import 'components/Footer.scss';
-@import 'components/Resources/Ceremonies.scss';
-@import 'components/Resources/Workshops.scss';
+@import "components/Footer.scss";
+@import "components/Resources/Ceremonies.scss";
+@import "components/Resources/Workshops.scss";
+@import "components/Resources/Maps.scss";
 
 .Resources {
   .resources-title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: $section-width;
-      margin: auto;
-      padding-top: 32px;
-      padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: $section-width;
+    margin: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .resources-text {
@@ -23,7 +24,7 @@
   }
 
   .banner {
-      width: 100vw;
-      height: auto;
+    width: 100vw;
+    height: auto;
   }
 }

@@ -21,7 +21,7 @@ export const homeNavItems = [
       href: "/our_team",
     }, {
       key: 6,
-      name: "exploretech.la 2021",
+      name: "Resources",
       href: '/resources',
     },
 ]
