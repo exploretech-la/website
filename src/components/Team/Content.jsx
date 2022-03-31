@@ -23,7 +23,7 @@ export default class ContentComponent extends Component {
     render() {
         const classNames = classnames('Section', 'Content', this.props.className);
         return (
-            <section className={classNames}>
+            <section className={classNames} id="content">
                 <div className="content-container">
                     <div className="content-header">
                         <h3>Content</h3>

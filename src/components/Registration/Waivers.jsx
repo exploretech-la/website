@@ -4,9 +4,9 @@ import classnames from 'classnames';
 
 import Button from 'react-bootstrap/Button';
 
-import LiabilityWaiver from 'static/pdf/exploretech.la 2021 Liability Waiver.pdf';
-import MultimediaRelease from 'static/pdf/exploretech.la 2021 Multimedia Release Form.pdf';
-import StudentVerification from 'static/pdf/exploretech.la 2021 Student Verification Form.pdf';
+import LiabilityWaiver from 'static/pdf/exploretech_la_2022_Liability_Waiver.pdf';
+import MultimediaRelease from 'static/pdf/exploretech_la_2022_Multimedia_Release_Form.pdf';
+import StudentVerification from 'static/pdf/exploretech_la_2022_Student_Verification_Form.pdf';
 
 export default class Waivers extends Component {
 

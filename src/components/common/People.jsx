@@ -39,10 +39,10 @@ export default class People extends Component {
             return null;
         }
 
-        const { name, title, descriptions, image, link } = person;
+        const { key, name, title, descriptions, image, link } = person;
         if (link) {
             return (
-                <ReactGA.OutboundLink to={link} target="_blank" eventLabel={name} key={name}>
+                <ReactGA.OutboundLink to={link} target="_blank" eventLabel={name} key={key}>
                     <div className="person">
                         <img src={image} className="person-image" alt={name} />
                         <h5 className="person-name">{name}</h5>
@@ -53,7 +53,7 @@ export default class People extends Component {
             );
         }
         return (
-            <div className="person">
+            <div className="person" key={key}>
                 <img src={image} className="person-image" alt={name} />
                 <h5 className="person-name">{name}</h5>
                 {title ? <p className="person-title">{title}</p> : null}

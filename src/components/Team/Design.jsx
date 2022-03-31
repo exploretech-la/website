@@ -23,7 +23,7 @@ export default class DesignComponent extends Component {
     render() {
         const classNames = classnames('Section', 'Design', this.props.className);
         return (
-            <section className={classNames}>
+            <section className={classNames} id="design">
                 <div className="design-container">
                     <div className="design-header">
                         <h3>Design</h3>
