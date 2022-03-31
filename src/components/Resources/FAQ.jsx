@@ -32,7 +32,7 @@ export default class FAQ extends Component {
                   <div className="pill-divider" />
                   <p>
                     If your question is not answered below, please reach out to us 
-                    at <a href="mailto:exploretechla@cs.ucla.edu" target="_blank">exploretechla@cs.ucla.edu</a> for 
+                    at <a href="mailto:exploretechla@cs.ucla.edu" target="_blank" rel="noopener noreferrer">exploretechla@cs.ucla.edu</a> for 
                     more information!
                   </p>
                 </div>
