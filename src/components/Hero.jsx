@@ -12,11 +12,11 @@ export default class Hero extends Component {
             <section className="Section Hero">
                 <img src={LogoWithIconGroup} className="logo-with-icon-group" alt="logo-with-icon-group" />
                 <div className="hero-content">
-                    <h1 className="h1-title">Inspire the Future&nbsp;of&nbsp;Tech</h1>
-                    <h2 className="h2-title">Inspire the Future&nbsp;of&nbsp;Tech</h2>
-                    <p>When: April 1, 2022</p>
-                    <p>Where: Ackerman Grand Ballroom</p>
-                    <p>University of California, Los Angeles</p>
+                    <h1 className="h1-title">Welcome to exploretech.la!</h1>
+                    <p className = "h1-title"> <b>Any questions? Contact our executive directors:</b> </p>
+                    <p>Alex Walsh: <a href = "mailto:alexandrew@ucla.edu" target = "_blank" rel = "noopener noreferrer">alexandrew@ucla.edu</a> </p>
+                    <p>Haley Zhang: <a href = "mailto:xiaohe@g.ucla.edu" target = "_blank" rel = "noopener noreferrer">xiaohe@g.ucla.edu</a>  </p>
+                
                     <div className="hero-cta">
                         {/* <Button variant="info" href={`/exploretechla2021`} onClick={this._trackRegisterTodayClick}>
                             Event Info
