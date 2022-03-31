@@ -4,9 +4,9 @@ import classnames from 'classnames';
 
 import Button from 'react-bootstrap/Button';
 
-import LiabilityWaiver from 'static/pdf/exploretech.la 2021 Liability Waiver.pdf';
-import MultimediaRelease from 'static/pdf/exploretech.la 2021 Multimedia Release Form.pdf';
-import StudentVerification from 'static/pdf/exploretech.la 2021 Student Verification Form.pdf';
+import LiabilityWaiver from 'static/pdf/exploretech_la_2022_Liability_Waiver.pdf';
+import MultimediaRelease from 'static/pdf/exploretech_la_2022_Multimedia_Release_Form.pdf';
+import StudentVerification from 'static/pdf/exploretech_la_2022_Student_Verification_Form.pdf';
 
 export default class Waivers extends Component {
 
@@ -51,15 +51,6 @@ export default class Waivers extends Component {
                 <div className="button">
                   <Button variant="info" href={StudentVerification} size="lg">
                     Student Verification Form
-                  </Button>
-                </div>
-              </div>
-              <div className="waivers-text">
-                <p><b>All forms can also be found here, in both PDF and Google Docs formats (for easier editing):</b></p>
-                <p>To edit the Google Docs, please make a copy of the waiver into your own Drive and fill it out there. Simply save as PDF to upload to the registration form.</p>
-                <div className="button">
-                  <Button variant="outline-info" href={`https://tinyurl.com/exploretechla2021-waivers`} size="lg">
-                    All Forms (PDFs and Google Docs)
                   </Button>
                 </div>
               </div>

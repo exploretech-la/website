@@ -1,4 +1,4 @@
-@import 'components/common/YoutubeEmbed.scss';
+@import "components/common/YoutubeEmbed.scss";
 
 .Workshops {
   .workshops-content {
@@ -21,12 +21,23 @@
       padding-bottom: 32px;
       flex-direction: column;
       align-items: center;
-    } 
+    }
 
     .card-row {
       padding-top: 15px;
       padding-bottom: 15px;
     }
-  
+
+    .panelists-container {
+      max-width: $section-width;
+      margin: auto;
+
+      .panelists-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }

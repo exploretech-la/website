@@ -7,8 +7,9 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import ListGroup from 'react-bootstrap/ListGroup';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import YoutubeEmbed from "components/common/YoutubeEmbed";
+import People from 'components/common/People';
 
-import { WORKSHOPS } from 'constants/workshops';
+import { WORKSHOPS, PANELS } from 'constants/workshops';
 
 export default class Workshops extends Component {
 
@@ -38,7 +39,7 @@ export default class Workshops extends Component {
                 </div>
                 <div className="workshops-content">
                     <div className="workshops-title">
-                      <h2>Panels</h2>
+                      <h2>Panels &amp; Panelists</h2>
                       <div className="pill-divider" />
                     </div>
                     {this._getPanelCards()}
@@ -57,13 +58,11 @@ export default class Workshops extends Component {
                                 return (<Card className="text-center">
                                     <Card.Body>
                                         <Card.Title><b>{workshop.name}</b></Card.Title>
-                                        {/* <YoutubeEmbed embedId="WaZ2bN8t2cc" />   */}
+                                        <img src={workshop.logo} alt={`${workshop.name} Logo`} />  
                                         <Card.Text>{workshop.session}</Card.Text>
+                                        <Card.Text>{workshop.location}</Card.Text>
                                     </Card.Body>
                                     <ListGroup className="list-group-flush">
-                                        <ListGroupItem>
-                                            <Card.Text>{workshop.location}</Card.Text>
-                                        </ListGroupItem>
                                         {workshop.resources.map(resource => {
                                             return <ListGroupItem>
                                                 <Card.Link href={resource.link}>{resource.name}</Card.Link>
@@ -83,29 +82,17 @@ export default class Workshops extends Component {
     _getPanelCards() {
         return (
             <div className="workshops-cards">
-                <CardDeck className="card-row">
-                    <Card className="text-center">
-                        <Card.Body>
-                        <Card.Title><b>Diverse Careers in Computer Science</b></Card.Title>
-                        <YoutubeEmbed embedId="xzZzhmeo9_Y" />  
-                        </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroupItem><Card.Link href="https://docs.google.com/presentation/d/18H8XdlIscdZdeLiOUCPtAfu0tuhukW1EfDBH8uDkUXE/edit#slide=id.gc5794a6fcc_0_12">Slides</Card.Link></ListGroupItem>
-                            <ListGroupItem><Card.Link href="https://padlet.com/bonniebonnielee/nm6pc2j59e5hhigl">Padlet</Card.Link></ListGroupItem>
-                            <ListGroupItem><Card.Link href="https://docs.google.com/document/d/1hG6YO9epajDiYqma-j882qRzmUITZdlTFWvvjrTTy44/edit?usp=sharing">Panelist Info and Resources</Card.Link></ListGroupItem>
-                        </ListGroup>
-                    </Card>
-                    <Card className="text-center">
-                        <Card.Body>
-                        <Card.Title><b>Representation in Computer Science</b></Card.Title>
-                        <YoutubeEmbed embedId="vrPl7EmwV9A" />
-                        </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroupItem><Card.Link href="https://docs.google.com/presentation/d/16KnUGORLcdWsVqfCFgGzkqFniVPzHvtL2WyoY22Mgv4/edit#slide=id.gc7ccf7fc99_0_0">Slides</Card.Link></ListGroupItem>
-                            <ListGroupItem><Card.Link href="https://padlet.com/wsu315/a9fa6pk1k3iodi7o">Padlet</Card.Link></ListGroupItem>
-                        </ListGroup>
-                    </Card>
-                </CardDeck>
+                {PANELS.map(panel => {
+                    return (
+                        <div className="panelists-container">
+                            <div className="panelists-header">
+                                <h3>{panel.name}</h3>
+                                <div className="pill-divider" />
+                            </div>
+                            <People people={panel.panelists} />
+                        </div>
+                    )
+                })}
             </div>
         );
     }
