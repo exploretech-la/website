@@ -6,7 +6,6 @@ import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import ListGroup from 'react-bootstrap/ListGroup';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
-import YoutubeEmbed from "components/common/YoutubeEmbed";
 import People from 'components/common/People';
 
 import { WORKSHOPS, PANELS } from 'constants/workshops';

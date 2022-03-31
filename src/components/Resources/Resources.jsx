@@ -39,7 +39,7 @@ function Resources() {
               Or maybe just curious about what workshops are happening and when? This webpage contains 
               important resources you need for the exploretech.la 2022 event! If you can't find what 
               you need, feel free to 
-              contact <a href="mailto:exploretechla@cs.ucla.edu" target="_blank">exploretechla@cs.ucla.edu</a> for more questions.
+              contact <a href="mailto:exploretechla@cs.ucla.edu" target="_blank" rel="noopener noreferrer">exploretechla@cs.ucla.edu</a> for more questions.
             </h5>
           </div>
           <div className='Section event-program-button'>
@@ -61,7 +61,7 @@ function Resources() {
                 Group 2 (blue) during Session 2, and Group 3 (red) during Session 3.
               </h5>
             </div>
-            <img style={{marginTop: '50px'}} src={wristbands} alt="Image of the wristband coordination" />
+            <img style={{marginTop: '50px'}} src={wristbands} alt="Wristband coordination" />
           </div>
           <Workshops />
           <FAQ />
