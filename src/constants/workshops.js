@@ -84,12 +84,9 @@ const WORKSHOPS_ALL = [
             {
                 name: "Slides",
                 link: "https://docs.google.com/presentation/d/1i0ASCMTT1k2pRxd-2ilYqi3E1587Rt5DpHaJcPKU57A/edit?usp=sharing",
-<<<<<<< HEAD
             }, {
                 name: "Resources",
                 link: "https://docs.google.com/document/d/1Lu7-zxKIxXzutHIE-JI5yiiEO2qU9qlPdDbmw6VLfcM/edit?usp=sharing",
-=======
->>>>>>> 970dc035a5d75980a86992547a92a312c437a78a
             },
         ]
     }, {
