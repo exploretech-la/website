@@ -160,7 +160,7 @@ const WORKSHOPS_ALL = [
         name: "Diversity 101 Panel",
         logo: require("static/workshop-logos/diversity-101.png"),
         session: "Session 2",
-        location: "TBA",
+        location: "Room 3517",
         resources: [
             {
                 name: "Slides",
