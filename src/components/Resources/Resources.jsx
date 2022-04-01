@@ -42,7 +42,7 @@ function Resources() {
               contact <a href="mailto:exploretechla@cs.ucla.edu" target="_blank" rel="noopener noreferrer">exploretechla@cs.ucla.edu</a> for more questions.
             </h5>
           </div>
-          <div className='Section event-program-button'>
+          <div className='Section full-length-button'>
             <Button size="lg" variant="outline-info" href={EventProgram} target="_blank">
               Click here to view the full event program
             </Button>
@@ -66,6 +66,18 @@ function Resources() {
           <Workshops />
           <FAQ />
           <Waivers />
+          <div className='Section resources-title'>
+            <h2>Wristbands</h2>
+            <div className="pill-divider" />
+            <div className="resources-text">
+              <h5><b>Thanks for coming to our event! Got feedback? Let us know by filling out this form below!</b></h5>
+            </div>
+          </div>
+          <div className='Section full-length-button'>
+            <Button size="lg" variant="info" href={"https://tinyurl.com/exploretechla2022feedback"} target="_blank">
+              Feedback Form
+            </Button>
+          </div>
       </div>
       <Footer />
     </div>
