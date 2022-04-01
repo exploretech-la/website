@@ -5,16 +5,24 @@ import classnames from 'classnames';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-import HomePageSections from 'constants/HomePageSections';
+import { homeNavItems, ourTeamNavItems, resourcesNavItems } from 'constants/navigation';
 
 import LogoWithIcons from 'static/svg/logo-with-icons-navy.svg';
 import CompassLogo from 'static/svg/logo-compass.svg';
 
 function Header() {
+  let navItems = [];
   let isHomePage = false;
   const location = useLocation();
   if (location.pathname === '/') {
+    navItems = homeNavItems;
     isHomePage = true;
+  }
+  if (location.pathname === '/our_team') {
+    navItems = ourTeamNavItems;
+  }
+  if (location.pathname === '/resources') {
+    navItems = resourcesNavItems;
   }
 
   const classNames = classnames(
@@ -22,29 +30,6 @@ function Header() {
     'Header',
     { 'Home': isHomePage },
   );
-
-  const generalNavItems = (
-    <Nav>
-      <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
-      {/* <Nav.Item><Nav.Link href="/exploretechla2021">Event Info</Nav.Link></Nav.Item> */}
-      <Nav.Item><Nav.Link href={`/${HomePageSections.TEAM.name}`}>Our Team</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href="/resources">exploretech.la 2021</Nav.Link></Nav.Item>
-    </Nav>
-  );
-
-  const homeNavItems = (
-    <Nav>
-      <Nav.Item><Nav.Link href={`#${HomePageSections.ABOUT.name}`}>About</Nav.Link></Nav.Item>
-      {/* <Nav.Item><Nav.Link href={`/exploretechla2021`}>Event Info</Nav.Link></Nav.Item> */}
-      <Nav.Item><Nav.Link href={`#${HomePageSections.GET_INVOLVED.name}`}>Get Involved</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href={`#${HomePageSections.SPEAKERS.name}`}>Speakers</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href={`#${HomePageSections.SPONSORS.name}`}>Sponsors</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href={`/${HomePageSections.TEAM.name}`}>Our Team</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href={`/resources`}>exploretech.la 2021</Nav.Link></Nav.Item>
-    </Nav>
-  );
-
-  const navItems = isHomePage ? homeNavItems : generalNavItems;
 
   return (
     <Navbar className={classNames} collapseOnSelect expand="sm">
@@ -54,7 +39,11 @@ function Header() {
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        {navItems}
+        <Nav>
+          {navItems.map(item => {
+            return <Nav.Item key={item.key}><Nav.Link href={item.href}>{item.name}</Nav.Link></Nav.Item>
+          })}
+        </Nav>
       </Navbar.Collapse>
     </Navbar>
   );
