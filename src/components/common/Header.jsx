@@ -2,8 +2,8 @@ import React from 'react';
 import { useLocation } from 'react-router-dom'
 import classnames from 'classnames';
 
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+//import { LinkContainer } from 'react-router-bootstrap';
 
 import HomePageSections from 'constants/HomePageSections';
 
@@ -23,28 +23,25 @@ function Header() {
     { 'Home': isHomePage },
   );
 
-  const generalNavItems = (
+  const navItems = (
     <Nav>
-      <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
-      {/* <Nav.Item><Nav.Link href="/exploretechla2021">Event Info</Nav.Link></Nav.Item> */}
-      <Nav.Item><Nav.Link href={`/${HomePageSections.TEAM.name}`}>Our Team</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href="/resources">exploretech.la 2021</Nav.Link></Nav.Item>
-    </Nav>
-  );
 
-  const homeNavItems = (
-    <Nav>
-      <Nav.Item><Nav.Link href={`#${HomePageSections.ABOUT.name}`}>About</Nav.Link></Nav.Item>
-      {/* <Nav.Item><Nav.Link href={`/exploretechla2021`}>Event Info</Nav.Link></Nav.Item> */}
-      <Nav.Item><Nav.Link href={`#${HomePageSections.GET_INVOLVED.name}`}>Get Involved</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href={`#${HomePageSections.SPEAKERS.name}`}>Speakers</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href={`#${HomePageSections.SPONSORS.name}`}>Sponsors</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href={`/${HomePageSections.TEAM.name}`}>Our Team</Nav.Link></Nav.Item>
-      <Nav.Item><Nav.Link href={`/resources`}>exploretech.la 2021</Nav.Link></Nav.Item>
-    </Nav>
-  );
+      <NavDropdown title="Home" id="navbarScrollingDropdown" href="/">
+          <NavDropdown.Item href="/">Home</NavDropdown.Item>
+          <NavDropdown.Item href={`/#${HomePageSections.ABOUT.name}`}>About</NavDropdown.Item>
+          <NavDropdown.Item href={`/#${HomePageSections.GET_INVOLVED.name}`}> Get Involved </NavDropdown.Item>         
+          <NavDropdown.Item href={`/#${HomePageSections.SPEAKERS.name}`}> Speakers </NavDropdown.Item>
+          <NavDropdown.Item href={`/#${HomePageSections.SPONSORS.name}`}> Sponsors </NavDropdown.Item>
+        </NavDropdown>
 
-  const navItems = isHomePage ? homeNavItems : generalNavItems;
+        <Nav.Item>  <Nav.Link href="/our_team">Our Team</Nav.Link> </Nav.Item>
+      
+        <NavDropdown title="Resources" id="navbarScrollingDropdown">
+          <NavDropdown.Item href={`/resources`}>exploretech.la 2021</NavDropdown.Item>
+        </NavDropdown>
+    </Nav>
+  
+  );
 
   return (
     <Navbar className={classNames} collapseOnSelect expand="sm">
@@ -57,7 +54,10 @@ function Header() {
         {navItems}
       </Navbar.Collapse>
     </Navbar>
+
+
   );
 };
+
 
 export default Header;
