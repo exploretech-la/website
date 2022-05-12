@@ -1,101 +1,101 @@
 .Hero {
-    height: 560px;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $color-aqua;
+  color: $color-navy;
+
+  .logo-with-icon-group {
+    width: 20rem;
+    height: auto;
+    margin-bottom: 2rem;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: $color-aqua;
-    color: $color-navy;
+    text-align: center;
 
-    .logo-with-icon-group {
-        width: 20rem;
-        height: auto;
-        margin-bottom: 2rem;
-        padding-left: 24px;
-        padding-right: 24px;
+    .h1-title {
+      display: none;
     }
 
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        .h1-title {
-            display: none;
-        }
-
-        .h2-title {
-            display: block;
-        }
-
-        .hero-cta {
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: row;
-
-            .btn:not(:last-child) {
-                margin-right: 1rem;
-            }
-        }
-    }
-    
-    .expand-icon {
-        position: absolute;
-        bottom: 2rem;
-        cursor: pointer;
-        animation: bobble 1s infinite alternate;
+    .h2-title {
+      display: block;
     }
 
-    p {
-        margin: 0;
+    .hero-cta {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+
+      .btn:not(:last-child) {
+        margin-right: 1rem;
+      }
     }
+  }
+
+  .expand-icon {
+    position: absolute;
+    bottom: 2rem;
+    cursor: pointer;
+    animation: bobble 1s infinite alternate;
+  }
+
+  p {
+    margin: 0;
+  }
 }
 
 @include media-breakpoint-up(sm) {
-    .Hero {
-        .logo-with-icon-group {
-            width: 25rem;
-        }
-
-        .hero-content {
-            .h1-title {
-                display: block;
-            }
-
-            .h2-title {
-                display: none;
-            }
-        }
+  .Hero {
+    .logo-with-icon-group {
+      width: 25rem;
     }
+
+    .hero-content {
+      .h1-title {
+        display: block;
+      }
+
+      .h2-title {
+        display: none;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(md) {
-    .Hero {
-        flex-direction: row;
+  .Hero {
+    flex-direction: row;
 
-        .logo-with-icon-group {
-            margin-right: 3rem;
-            margin-bottom: 0;
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .hero-content {
-            justify-content: flex-start;
-            align-items: flex-start;
-            text-align: left;
-            max-width: 300px;
-        }
+    .logo-with-icon-group {
+      margin-right: 3rem;
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
+
+    .hero-content {
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+      max-width: 300px;
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
-    .Hero {
-        .logo-with-icon-group {
-            width: 30rem;
-            margin-right: 4rem;
-        }
+  .Hero {
+    .logo-with-icon-group {
+      width: 30rem;
+      margin-right: 4rem;
     }
+  }
 }

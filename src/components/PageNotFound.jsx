@@ -1,20 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import LinkWithArrow from 'components/common/LinkWithArrow';
+import LinkWithArrow from "components/common/LinkWithArrow";
 
 function PageNotFound() {
   useEffect(() => {
-    document.title = 'Page Not Found • exploretech.la';
+    document.title = "Page Not Found • exploretech.la";
   });
 
   return (
     <section className="PageNotFound">
       <h3>Sorry, this page isn't available.</h3>
-      <p>The link you followed may be broken, or the page may have been removed.</p>
+      <p>
+        The link you followed may be broken, or the page may have been removed.
+      </p>
       <LinkWithArrow text="Go back to exploretech.la" to="/" />
     </section>
   );
 }
 
-PageNotFound.displayName = 'PageNotFound';
+PageNotFound.displayName = "PageNotFound";
 export default PageNotFound;

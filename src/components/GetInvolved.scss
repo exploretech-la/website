@@ -1,308 +1,334 @@
 .GetInvolved {
-    background-color: #F5F5F5;
+  background-color: #f5f5f5;
 
-    .cards-container {
-        margin: 0 auto;
-        max-width: $section-width;
+  .cards-container {
+    margin: 0 auto;
+    max-width: $section-width;
 
-        .team-application {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 2rem;
+    .team-application {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2rem;
 
-            p {
-                margin-bottom: 0.5rem;
-            }
+      p {
+        margin-bottom: 0.5rem;
+      }
 
-            .team-application-cta {
-                a {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    text-decoration: none;
-                    color: $color-muted-blue;
-                }
-
-                &:hover {
-                    .MdKeyboardArrowRight {
-                        fill: white;
-                        background-color: $color-muted-blue;
-                        border: 2px solid $color-muted-blue;
-                    }
-                }
-
-                p {
-                    margin-bottom: 0;
-                    margin-right: 0.5rem;
-                }
-
-                .MdKeyboardArrowRight {
-                    fill: $color-muted-blue;
-                    border: 2px solid #E2E2E2;
-                    border-radius: 50%;
-                    width: 1.5rem;
-                    min-width: 1.5rem;
-                    height: 1.5rem;
-                    transition: all 0.3s ease-in-out;
-                    -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
-                    -moz-transition: all 0.3s ease-in-out; /** Firefox **/
-                    -o-transition: all 0.3s ease-in-out; /** Opera **/
-                }
-            }
+      .team-application-cta {
+        a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          text-decoration: none;
+          color: $color-muted-blue;
         }
 
-        .cards-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 1rem;
+        &:hover {
+          .MdKeyboardArrowRight {
+            fill: white;
+            background-color: $color-muted-blue;
+            border: 2px solid $color-muted-blue;
+          }
         }
 
-        .card-deck {
-            overflow-x: scroll;
-            white-space: nowrap;
-            padding-bottom: 1.5rem;
-            transform: scaleX(-1) rotateZ(180deg);
-        };
-
-        .card {
-            display: inline-block;
-            width: 18rem;
-            margin-bottom: 0;
-            transform: scaleX(-1) rotateZ(180deg);
-
-            @include media-breakpoint-down(xs) {
-                &:not(:last-child) {
-                    margin-right: 0.5rem;
-                }
-            }
-
-            &.high-schools {
-                .card-img-top {
-                    object-position: 25% 80%;
-                }
-            }
-
-            &.companies {
-                .card-img-top {
-                    object-position: 44% 50%;
-                }
-            }
-
-            &.ucla-students {
-                .card-img-top {
-                    object-position: 15% 50%;
-                }
-            }
-
-            .card-img-top {
-                height: 512px;
-                object-fit: cover;
-            }
-
-            .card-img-overlay {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                color: $color-white;
-    
-                .card-content {
-                    z-index: 2;
-
-                    .card-title {
-                        margin-bottom: 0.25rem;
-                    }
-                    
-                    .card-text {
-                        margin-bottom: 0.4rem;
-                    }
-
-                    .get-involved-cta {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-    
-                        .cta-text {
-                            opacity: 1;
-                            margin-bottom: 0;
-                            margin-left: 8px;
-                            transition: all 0.3s ease-in-out;
-                            -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
-                            -moz-transition: all 0.3s ease-in-out; /** Firefox **/
-                            -o-transition: all 0.3s ease-in-out; /** Opera **/
-                        }
-                    }
-
-                    .short-content {
-                        display: none;
-                    }
-
-                    .full-content {
-                        display: block;
-                    }
-                }
-    
-                .gradient-back {
-                    position: absolute;
-                    bottom: 0px;
-                    left: 0px;
-                    width: 100%;
-                    height: 224px;
-                    z-index: 1;
-                    background: -moz-linear-gradient(top,  rgba(137,255,241,0) 0%, rgba(0,0,0,0.75) 100%); /* FF3.6+ */
-                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(137,255,241,0)), color-stop(100%,rgba(0,0,0,0.75))); /* Chrome,Safari4+ */
-                    background: -webkit-linear-gradient(top,  rgba(137,255,241,0) 0%,rgba(0,0,0,0.75) 100%); /* Chrome10+,Safari5.1+ */
-                    background: -o-linear-gradient(top,  rgba(137,255,241,0) 0%,rgba(0,0,0,0.75) 100%); /* Opera 11.10+ */
-                    background: -ms-linear-gradient(top,  rgba(137,255,241,0) 0%,rgba(0,0,0,0.75) 100%); /* IE10+ */
-                    background: linear-gradient(to bottom,  rgba(137,255,241,0) 0%,rgba(0,0,0,0.75) 100%); /* W3C */
-                }
-            }
-
-            .MdKeyboardArrowRight {
-                fill: $color-white;
-                background-color: $color-muted-blue;
-                border: 2px solid $color-muted-blue;
-                border-radius: 50%;
-                width: 1.5rem;
-                min-width: 1.5rem;
-                height: 1.5rem;
-                transition: all 0.3s ease-in-out;
-                -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
-                -moz-transition: all 0.3s ease-in-out; /** Firefox **/
-                -o-transition: all 0.3s ease-in-out; /** Opera **/
-            }
+        p {
+          margin-bottom: 0;
+          margin-right: 0.5rem;
         }
+
+        .MdKeyboardArrowRight {
+          fill: $color-muted-blue;
+          border: 2px solid #e2e2e2;
+          border-radius: 50%;
+          width: 1.5rem;
+          min-width: 1.5rem;
+          height: 1.5rem;
+          transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
+          -moz-transition: all 0.3s ease-in-out; /** Firefox **/
+          -o-transition: all 0.3s ease-in-out; /** Opera **/
+        }
+      }
     }
+
+    .cards-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .card-deck {
+      overflow-x: scroll;
+      white-space: nowrap;
+      padding-bottom: 1.5rem;
+      transform: scaleX(-1) rotateZ(180deg);
+    }
+
+    .card {
+      display: inline-block;
+      width: 18rem;
+      margin-bottom: 0;
+      transform: scaleX(-1) rotateZ(180deg);
+
+      @include media-breakpoint-down(xs) {
+        &:not(:last-child) {
+          margin-right: 0.5rem;
+        }
+      }
+
+      &.high-schools {
+        .card-img-top {
+          object-position: 25% 80%;
+        }
+      }
+
+      &.companies {
+        .card-img-top {
+          object-position: 44% 50%;
+        }
+      }
+
+      &.ucla-students {
+        .card-img-top {
+          object-position: 15% 50%;
+        }
+      }
+
+      .card-img-top {
+        height: 512px;
+        object-fit: cover;
+      }
+
+      .card-img-overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: $color-white;
+
+        .card-content {
+          z-index: 2;
+
+          .card-title {
+            margin-bottom: 0.25rem;
+          }
+
+          .card-text {
+            margin-bottom: 0.4rem;
+          }
+
+          .get-involved-cta {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .cta-text {
+              opacity: 1;
+              margin-bottom: 0;
+              margin-left: 8px;
+              transition: all 0.3s ease-in-out;
+              -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
+              -moz-transition: all 0.3s ease-in-out; /** Firefox **/
+              -o-transition: all 0.3s ease-in-out; /** Opera **/
+            }
+          }
+
+          .short-content {
+            display: none;
+          }
+
+          .full-content {
+            display: block;
+          }
+        }
+
+        .gradient-back {
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          width: 100%;
+          height: 224px;
+          z-index: 1;
+          background: -moz-linear-gradient(
+            top,
+            rgba(137, 255, 241, 0) 0%,
+            rgba(0, 0, 0, 0.75) 100%
+          ); /* FF3.6+ */
+          background: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0%, rgba(137, 255, 241, 0)),
+            color-stop(100%, rgba(0, 0, 0, 0.75))
+          ); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(
+            top,
+            rgba(137, 255, 241, 0) 0%,
+            rgba(0, 0, 0, 0.75) 100%
+          ); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(
+            top,
+            rgba(137, 255, 241, 0) 0%,
+            rgba(0, 0, 0, 0.75) 100%
+          ); /* Opera 11.10+ */
+          background: -ms-linear-gradient(
+            top,
+            rgba(137, 255, 241, 0) 0%,
+            rgba(0, 0, 0, 0.75) 100%
+          ); /* IE10+ */
+          background: linear-gradient(
+            to bottom,
+            rgba(137, 255, 241, 0) 0%,
+            rgba(0, 0, 0, 0.75) 100%
+          ); /* W3C */
+        }
+      }
+
+      .MdKeyboardArrowRight {
+        fill: $color-white;
+        background-color: $color-muted-blue;
+        border: 2px solid $color-muted-blue;
+        border-radius: 50%;
+        width: 1.5rem;
+        min-width: 1.5rem;
+        height: 1.5rem;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
+        -moz-transition: all 0.3s ease-in-out; /** Firefox **/
+        -o-transition: all 0.3s ease-in-out; /** Opera **/
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(sm) {
-    .GetInvolved {
-        .cards-container {
-            .card-deck {
-                display: block;
-            }
+  .GetInvolved {
+    .cards-container {
+      .card-deck {
+        display: block;
+      }
 
-            .card {
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                &:hover {
-                    .card-img-overlay {
-                        .card-content {
-                            .get-involved-cta {
-                                .cta-text {
-                                    opacity: 1;
-                                }
-    
-                                .MdKeyboardArrowRight {
-                                    background-color: $color-muted-blue;
-                                    border: 2px solid $color-muted-blue;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &.high-schools {
-                    .card-img-top {
-                        object-position: 20% 80%;
-                    }
-                }
-
-                .card-img-overlay {
-                    .card-content {
-                        .get-involved-cta {
-                            .cta-text {
-                                opacity: 0;
-                            }
-
-                            .MdKeyboardArrowRight {
-                                background-color: transparent;
-                                border: 2px solid rgba(255, 255, 255, 0.3);
-                            }
-                        }
-                    }
-                }
-            }
+      .card {
+        &:first-child {
+          margin-left: 0;
         }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          .card-img-overlay {
+            .card-content {
+              .get-involved-cta {
+                .cta-text {
+                  opacity: 1;
+                }
+
+                .MdKeyboardArrowRight {
+                  background-color: $color-muted-blue;
+                  border: 2px solid $color-muted-blue;
+                }
+              }
+            }
+          }
+        }
+
+        &.high-schools {
+          .card-img-top {
+            object-position: 20% 80%;
+          }
+        }
+
+        .card-img-overlay {
+          .card-content {
+            .get-involved-cta {
+              .cta-text {
+                opacity: 0;
+              }
+
+              .MdKeyboardArrowRight {
+                background-color: transparent;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 @include media-breakpoint-up(md) {
-    .GetInvolved {
-        .cards-container {
-            .card-deck {
-                display: flex;
-                overflow-x: visible;
-            }
+  .GetInvolved {
+    .cards-container {
+      .card-deck {
+        display: flex;
+        overflow-x: visible;
+      }
 
-            .team-application {
-                margin-bottom: 1rem;
-            }
+      .team-application {
+        margin-bottom: 1rem;
+      }
 
-            .card {
-                display: flex;
-                width: 100%;
+      .card {
+        display: flex;
+        width: 100%;
 
-                &.high-schools {
-                    .card-img-top {
-                        object-position: 30% 80%;
-                    }
-                }
-
-                &.companies {
-                    .card-img-top {
-                        object-position: 40% 50%;
-                    }
-                }
-
-                &.ucla-students {
-                    .card-img-top {
-                        object-position: 12% 50%;
-                    }
-                }
-
-                .card-img-overlay {
-                    .card-content {
-                        // Only display short content for medium screens when the cards get too compressed
-                        .short-content {
-                            display: block;
-                        }
-    
-                        .full-content {
-                            display: none;
-                        }
-                    }
-                }
-            }
+        &.high-schools {
+          .card-img-top {
+            object-position: 30% 80%;
+          }
         }
+
+        &.companies {
+          .card-img-top {
+            object-position: 40% 50%;
+          }
+        }
+
+        &.ucla-students {
+          .card-img-top {
+            object-position: 12% 50%;
+          }
+        }
+
+        .card-img-overlay {
+          .card-content {
+            // Only display short content for medium screens when the cards get too compressed
+            .short-content {
+              display: block;
+            }
+
+            .full-content {
+              display: none;
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 @include media-breakpoint-up(lg) {
-    .GetInvolved {
-        .cards-container {
-            .card {
-                .card-img-overlay {
-                    .card-content {
-                        .short-content {
-                            display: none;
-                        }
-    
-                        .full-content {
-                            display: block;
-                        }
-                    }
-                }
+  .GetInvolved {
+    .cards-container {
+      .card {
+        .card-img-overlay {
+          .card-content {
+            .short-content {
+              display: none;
             }
+
+            .full-content {
+              display: block;
+            }
+          }
         }
+      }
     }
+  }
 }

@@ -1,87 +1,87 @@
 .Speakers {
-    p {
-        margin-bottom: 0.25rem;
+  p {
+    margin-bottom: 0.25rem;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .speakers-container {
+    max-width: $section-width;
+    margin: auto;
+
+    .speakers-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
     }
 
-    a {
-        text-decoration: none !important;
+    .speakers-list {
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      padding-bottom: 1rem;
+      transform: scaleX(-1) rotateZ(180deg);
     }
 
-    .speakers-container {
-        max-width: $section-width;
-        margin: auto;
+    .speaker {
+      width: 14rem;
+      height: 100%;
+      padding: 1rem 0.5rem;
+      text-align: center;
+      cursor: pointer;
+      color: black;
+      transition: color 0.5s;
+      transform: scaleX(-1) rotateZ(180deg);
 
-        .speakers-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
+      .speaker-image {
+        width: 10rem;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 1.25rem;
+      }
 
-        .speakers-list {
-            display: flex;
-            flex-direction: row;
-            overflow-x: scroll;
-            padding-bottom: 1rem;
-            transform: scaleX(-1) rotateZ(180deg);
-        }
-
-        .speaker {
-            width: 14rem;
-            height: 100%;
-            padding: 1rem 0.5rem;
-            text-align: center;
-            cursor: pointer;
-            color:  black;
-            transition: color 0.5s;
-            transform: scaleX(-1) rotateZ(180deg);
-
-            .speaker-image {
-                width: 10rem;
-                height: auto;
-                border-radius: 50%;
-                margin-bottom: 1.25rem;
-            }
-
-            .speaker-title {
-                font-size: small;
-            }
-        }
+      .speaker-title {
+        font-size: small;
+      }
     }
+  }
 
-    .speakers-container:not(:last-child) {
-        padding-bottom: 64px;
-    }
+  .speakers-container:not(:last-child) {
+    padding-bottom: 64px;
+  }
 }
 
 @include media-breakpoint-up(sm) {
-    .Speakers {
-        .speakers-container {
-            .speaker:hover {
-                color:  $color-muted-blue;
-                transition: color 0.5s;
-            }
-        }
+  .Speakers {
+    .speakers-container {
+      .speaker:hover {
+        color: $color-muted-blue;
+        transition: color 0.5s;
+      }
     }
+  }
 }
 
 @include media-breakpoint-up(md) {
-    .Speakers {
-        .speakers-container {
-            .speakers-header {
-                margin-bottom: 0;
-            }
+  .Speakers {
+    .speakers-container {
+      .speakers-header {
+        margin-bottom: 0;
+      }
 
-            .speakers-list {
-                transform: none;
-                justify-content: center;
-                flex-wrap: wrap;
-                padding-bottom: 0;
-            }
+      .speakers-list {
+        transform: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+      }
 
-            .speaker {
-                transform: none;
-            }
-        }
+      .speaker {
+        transform: none;
+      }
     }
+  }
 }

@@ -9,12 +9,12 @@
     margin: auto;
 
     &:not(:last-child) {
-        padding-bottom: 32px;
+      padding-bottom: 32px;
     }
 
     .faq-column-container {
-        flex-direction: row;
-        justify-content: space-between;
+      flex-direction: row;
+      justify-content: space-between;
     }
 
     .faq-centered-title {
@@ -22,37 +22,41 @@
       align-items: center;
     }
 
-    .left-column, .right-column {
-        &.text {
-            padding-top: 32px;
-        }
+    .left-column,
+    .right-column {
+      &.text {
+        padding-top: 32px;
+      }
     }
   }
-  
-  .faq-student, .faq-teacher, .faq-parent {
+
+  .faq-student,
+  .faq-teacher,
+  .faq-parent {
     padding-bottom: 32px;
   }
 }
 
-@include media-breakpoint-up(md) { 
+@include media-breakpoint-up(md) {
   .FAQ {
     .faq-content {
       justify-content: center;
 
       &:not(:last-child) {
-          padding-bottom: 64px;
+        padding-bottom: 64px;
       }
 
       &.faq-column-container {
-          flex-direction: row;
+        flex-direction: row;
       }
 
-      .left-column, .right-column {
-          width: 46%;
+      .left-column,
+      .right-column {
+        width: 46%;
 
-          &.text {
-              padding-top: 0px;
-          }
+        &.text {
+          padding-top: 0px;
+        }
       }
     }
   }
