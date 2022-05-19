@@ -19,6 +19,7 @@ export default class ContentComponent extends Component {
     };
   }
 
+<<<<<<< HEAD
   render() {
     const classNames = classnames("Section", "Content", this.props.className);
     return (
@@ -33,4 +34,26 @@ export default class ContentComponent extends Component {
       </section>
     );
   }
+=======
+    static get defaultProps() {
+        return {
+            className: '',
+        };
+    }
+
+    render() {
+        const classNames = classnames('Section', 'Content', this.props.className);
+        return (
+            <section className={classNames} id="content">
+                <div className="content-container">
+                    <div className="content-header">
+                        <h3>Content</h3>
+                        <div className="pill-divider" />
+                    </div>
+                    <People people={Content}/>
+                </div>
+            </section>
+        );
+    }
+>>>>>>> e6e24e4ca356f4e0333411abf7f99aefc3c5ff1b
 }

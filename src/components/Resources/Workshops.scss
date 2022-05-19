@@ -27,5 +27,20 @@
       padding-top: 15px;
       padding-bottom: 15px;
     }
+<<<<<<< HEAD
+=======
+
+    .panelists-container {
+      max-width: $section-width;
+      margin: auto;
+
+      .panelists-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+    }
+>>>>>>> e6e24e4ca356f4e0333411abf7f99aefc3c5ff1b
   }
 }

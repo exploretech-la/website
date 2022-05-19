@@ -7,6 +7,7 @@ import HomePageSections from "constants/HomePageSections";
 import LogoWithIconGroup from "static/svg/logo-navy-with-icon-group-white.svg";
 
 export default class Hero extends Component {
+<<<<<<< HEAD
   render() {
     return (
       <section className="Section Hero">
@@ -44,6 +45,20 @@ export default class Hero extends Component {
 
           <div className="hero-cta">
             {/* <Button variant="info" href={`/exploretechla2021`} onClick={this._trackRegisterTodayClick}>
+=======
+    render() {
+        return (
+            <section className="Section Hero">
+                <img src={LogoWithIconGroup} className="logo-with-icon-group" alt="logo-with-icon-group" />
+                <div className="hero-content">
+                    <h1 className="h1-title">Inspire the Future&nbsp;of&nbsp;Tech</h1>
+                    <h2 className="h2-title">Inspire the Future&nbsp;of&nbsp;Tech</h2>
+                    <p>When: April 1, 2022</p>
+                    <p>Where: Ackerman Grand Ballroom</p>
+                    <p>University of California, Los Angeles</p>
+                    <div className="hero-cta">
+                        {/* <Button variant="info" href={`/exploretechla2021`} onClick={this._trackRegisterTodayClick}>
+>>>>>>> e6e24e4ca356f4e0333411abf7f99aefc3c5ff1b
                             Event Info
                         </Button> */}
             <Button
