@@ -1,12 +1,13 @@
 .Waivers {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
   padding-bottom: 32px;
 
-  .waivers-title, .waivers-text {
+  .waivers-title,
+  .waivers-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,10 +25,9 @@
       padding-bottom: 10px;
     }
   }
-  
 }
 
-@include media-breakpoint-up(md) { 
+@include media-breakpoint-up(md) {
   .Waivers {
     .buttons {
       flex-direction: row;

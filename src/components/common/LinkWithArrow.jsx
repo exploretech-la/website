@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
 
-import { MdKeyboardArrowRight } from 'react-icons/md';
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const propTypes = {
   className: PropTypes.string,
@@ -11,13 +11,13 @@ const propTypes = {
 };
 
 const defaultProps = {
-  className: '',
+  className: "",
   to: null,
 };
 
 function LinkWithArrow(props) {
   const { className, text, to } = props;
-  const classNames = classnames('LinkWithArrow', className);
+  const classNames = classnames("LinkWithArrow", className);
   return (
     <div className={classNames}>
       <a href={to}>
@@ -28,7 +28,7 @@ function LinkWithArrow(props) {
   );
 }
 
-LinkWithArrow.displayName = 'LinkWithArrow';
+LinkWithArrow.displayName = "LinkWithArrow";
 LinkWithArrow.propTypes = propTypes;
 LinkWithArrow.defaultProps = defaultProps;
 export default LinkWithArrow;

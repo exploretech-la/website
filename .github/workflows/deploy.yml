@@ -4,7 +4,7 @@ name: exploretech.la Continuous Deployment
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,8 +27,8 @@ jobs:
       # Runs the deploy script
       - name: Run the deploy script
         env:
-          USER_NAME: 'exploretech.la'
-          USER_EMAIL: 'exploretechla@cs.ucla.edu'
+          USER_NAME: "exploretech.la"
+          USER_EMAIL: "exploretechla@cs.ucla.edu"
           REPOSITORY: ${{ github.repository }}
           GITHUB_TOKEN: ${{ secrets.DEPLOY_ACCESS_TOKEN }}
           REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GOOGLE_ANALYTICS_TRACKING_ID }}

@@ -1,56 +1,58 @@
-@import 'components/common/YoutubeEmbed.scss';
+@import "components/common/YoutubeEmbed.scss";
 
 .Ceremonies {
   .ceremonies-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $section-width;
+    margin: auto;
+
+    &:not(:last-child) {
+      padding-bottom: 32px;
+    }
+
+    .ceremonies-videos {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
-      max-width: $section-width;
-      margin: auto;
+      justify-content: space-between;
+      width: $section-width;
+    }
 
-      &:not(:last-child) {
-          padding-bottom: 32px;
-      }
+    .ceremonies-title {
+      display: flex;
+      padding-bottom: 32px;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      .ceremonies-videos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        width: $section-width;
-      }
-
-      .ceremonies-title {
-          display: flex;
-          padding-bottom: 32px;
-          flex-direction: column;
-          align-items: center;
-      }
-      
-      .left-column, .right-column {
-          flex-direction: column;
+    .left-column,
+    .right-column {
+      flex-direction: column;
     }
   }
 }
 
-@include media-breakpoint-up(md) { 
+@include media-breakpoint-up(md) {
   .Ceremonies {
-      .ceremonies-content {
-          justify-content: center;
+    .ceremonies-content {
+      justify-content: center;
 
-          &:not(:last-child) {
-              padding-bottom: 64px;
-          }
-
-          .ceremonies-videos {
-              flex-direction: row;
-          }
-
-          .left-column, .right-column {
-              flex-direction: column;
-              width: 46%;
-          }
+      &:not(:last-child) {
+        padding-bottom: 64px;
       }
+
+      .ceremonies-videos {
+        flex-direction: row;
+      }
+
+      .left-column,
+      .right-column {
+        flex-direction: column;
+        width: 46%;
+      }
+    }
   }
 }

@@ -1,11 +1,11 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 // See colors in the exploretech.la Design System in Figma
-$color-aqua: #98D6D6;
+$color-aqua: #98d6d6;
 $color-muted-blue: #448494;
-$color-navy: #0B546F;
-$color-teal: #57ADA3;
-$color-white: #FFFFFF;
+$color-navy: #0b546f;
+$color-teal: #57ada3;
+$color-white: #ffffff;
 
 $section-width: 1040px;
 $section-horizontal-padding-xs: 24px;
@@ -37,7 +37,8 @@ html {
 }
 
 .App {
-  section, .Section {
+  section,
+  .Section {
     padding-top: $section-vertical-padding;
     padding-bottom: $section-vertical-padding;
     padding-left: $section-horizontal-padding-xs;
@@ -70,7 +71,8 @@ html {
 
 @include media-breakpoint-up(sm) {
   .App {
-    section, .Section {
+    section,
+    .Section {
       padding-left: $section-horizontal-padding-sm;
       padding-right: $section-horizontal-padding-sm;
     }
@@ -94,7 +96,8 @@ html {
 
 @include media-breakpoint-up(md) {
   .App {
-    section, .Section {
+    section,
+    .Section {
       padding-left: $section-horizontal-padding-md;
       padding-right: $section-horizontal-padding-md;
     }
@@ -107,7 +110,8 @@ html {
 
 @include media-breakpoint-up(lg) {
   .App {
-    section, .Section {
+    section,
+    .Section {
       padding-left: $section-horizontal-padding-lg;
       padding-right: $section-horizontal-padding-lg;
     }
@@ -115,19 +119,19 @@ html {
 }
 
 // Common Component Styles
-@import 'components/common/Header.scss';
-@import 'components/common/LinkWithArrow.scss';
-@import 'components/common/UnorderedItemList.scss';
-@import 'components/common/People.scss';
+@import "components/common/Header.scss";
+@import "components/common/LinkWithArrow.scss";
+@import "components/common/UnorderedItemList.scss";
+@import "components/common/People.scss";
 
 // Page Styles
-@import 'components/Home.scss';
-@import 'components/PageNotFound.scss';
-@import 'components/Registration/Register.scss';
-@import 'components/Resources/Resources.scss';
-@import 'components/Team/Team.scss';
-@import 'components/Team/Leadership.scss';
-@import 'components/Team/Content.scss';
-@import 'components/Team/Design.scss';
-@import 'components/Team/Operations.scss';
-@import 'components/Team/External.scss';
+@import "components/Home.scss";
+@import "components/PageNotFound.scss";
+@import "components/Registration/Register.scss";
+@import "components/Resources/Resources.scss";
+@import "components/Team/Team.scss";
+@import "components/Team/Leadership.scss";
+@import "components/Team/Content.scss";
+@import "components/Team/Design.scss";
+@import "components/Team/Operations.scss";
+@import "components/Team/External.scss";

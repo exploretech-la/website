@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import RegistrationAlert from './RegistrationAlert';
+import RegistrationAlert from "./RegistrationAlert";
 // import RegistrationTop from './RegistrationTop';
 // import Eligibility from './Eligibility';
-import Waivers from './Waivers';
-import ImportantLinks from './ImportantLinks';
-import FAQ from './FAQ';
-import Footer from '../Footer';
-import Schedule from './Schedule';
+import Waivers from "./Waivers";
+import ImportantLinks from "./ImportantLinks";
+import FAQ from "./FAQ";
+import Footer from "../Footer";
+import Schedule from "./Schedule";
 
-import Banner from 'static/images/banner.png';
+import Banner from "static/images/banner.png";
 
 function Register() {
   return (
@@ -19,7 +19,7 @@ function Register() {
       </div>
       <RegistrationAlert />
       <div className="registration-title">
-          <h1>Event Information</h1>
+        <h1>Event Information</h1>
       </div>
       {/* <RegistrationTop /> */}
       <Schedule />
@@ -32,5 +32,5 @@ function Register() {
   );
 }
 
-Register.displayName = 'Register';
+Register.displayName = "Register";
 export default Register;

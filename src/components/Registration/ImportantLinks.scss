@@ -1,5 +1,5 @@
 .ImportantLinks {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,10 +31,9 @@
       padding-bottom: 10px;
     }
   }
-  
 }
 
-@include media-breakpoint-up(md) { 
+@include media-breakpoint-up(md) {
   .ImportantLinks {
     .buttons {
       flex-direction: row;

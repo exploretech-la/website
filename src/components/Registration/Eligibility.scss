@@ -1,36 +1,37 @@
 .Eligibility {
   .eligibility-content {
-      display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: $section-width;
+    margin: auto;
+
+    &:not(:last-child) {
+      padding-bottom: 32px;
+    }
+
+    .eligibility-column-container {
       flex-direction: column;
       justify-content: space-between;
-      max-width: $section-width;
-      margin: auto;
+    }
 
-      &:not(:last-child) {
-          padding-bottom: 32px;
-      }
+    .eligibility-centered-title {
+      flex-direction: column;
+      align-items: center;
+    }
 
-      .eligibility-column-container {
-          flex-direction: column;
-          justify-content: space-between;
+    .left-column,
+    .right-column {
+      &.text {
+        padding-top: 32px;
       }
+    }
 
-      .eligibility-centered-title {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .left-column, .right-column {
-          &.text {
-              padding-top: 32px;
-          }
-      }
-
-      img {
-          max-width: 100%;
-          max-height: 100vh;
-          height: auto;
-      }
+    img {
+      max-width: 100%;
+      max-height: 100vh;
+      height: auto;
+    }
   }
 
   ul {
@@ -38,26 +39,27 @@
   }
 }
 
-@include media-breakpoint-up(md) { 
+@include media-breakpoint-up(md) {
   .Eligibility {
-      .eligibility-content {
-          justify-content: center;
+    .eligibility-content {
+      justify-content: center;
 
-          &:not(:last-child) {
-              padding-bottom: 64px;
-          }
-
-          &.eligibility-column-container {
-              flex-direction: row;
-          }
-
-          .left-column, .right-column {
-              width: 46%;
-
-              &.text {
-                  padding-top: 0px;
-              }
-          }
+      &:not(:last-child) {
+        padding-bottom: 64px;
       }
+
+      &.eligibility-column-container {
+        flex-direction: row;
+      }
+
+      .left-column,
+      .right-column {
+        width: 46%;
+
+        &.text {
+          padding-top: 0px;
+        }
+      }
+    }
   }
 }

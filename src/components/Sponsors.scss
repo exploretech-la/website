@@ -1,116 +1,118 @@
 .Sponsors {
-    background-color: #F5F5F5;
+  background-color: #f5f5f5;
 
-    .sponsors-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: $section-width;
-        margin: auto;
+  .sponsors-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: $section-width;
+    margin: auto;
 
-        .sponsors-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .logo-container {
-            margin: 1rem;
-        }
-
-        .large-logos, .small-logos {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .large-logos, .small-logos {
-            padding-bottom: 32px;
-        }
-
-        .large-logos {
-            .logo {
-                width: 14rem;
-                height: auto;
-            }
-        }
-
-        .small-logos {
-            .logo {
-                width: 8rem;
-                height: auto;
-            }
-        }
-
-        .sponsor-contact {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            h5 {
-                margin-bottom: 1rem;
-            }
-
-            .sponsor-cta {
-                a {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    text-decoration: none;
-                    color: $color-muted-blue;
-                }
-
-                &:hover {
-                    .MdKeyboardArrowRight {
-                        fill: white;
-                        background-color: $color-muted-blue;
-                        border: 2px solid $color-muted-blue;
-                    }
-                }
-
-                p {
-                    margin-bottom: 0;
-                    margin-right: 0.5rem;
-                }
-            }
-        }
+    .sponsors-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .MdKeyboardArrowRight {
-        fill: $color-muted-blue;
-        border: 2px solid #E2E2E2;
-        border-radius: 50%;
-        width: 1.5rem;
-        min-width: 1.5rem;
-        height: 1.5rem;
-        transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
-        -moz-transition: all 0.3s ease-in-out; /** Firefox **/
-        -o-transition: all 0.3s ease-in-out; /** Opera **/
+    .logo-container {
+      margin: 1rem;
     }
+
+    .large-logos,
+    .small-logos {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .large-logos,
+    .small-logos {
+      padding-bottom: 32px;
+    }
+
+    .large-logos {
+      .logo {
+        width: 14rem;
+        height: auto;
+      }
+    }
+
+    .small-logos {
+      .logo {
+        width: 8rem;
+        height: auto;
+      }
+    }
+
+    .sponsor-contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h5 {
+        margin-bottom: 1rem;
+      }
+
+      .sponsor-cta {
+        a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          text-decoration: none;
+          color: $color-muted-blue;
+        }
+
+        &:hover {
+          .MdKeyboardArrowRight {
+            fill: white;
+            background-color: $color-muted-blue;
+            border: 2px solid $color-muted-blue;
+          }
+        }
+
+        p {
+          margin-bottom: 0;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .MdKeyboardArrowRight {
+    fill: $color-muted-blue;
+    border: 2px solid #e2e2e2;
+    border-radius: 50%;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 0.3s ease-in-out; /** Firefox **/
+    -o-transition: all 0.3s ease-in-out; /** Opera **/
+  }
 }
 
 @include media-breakpoint-up(md) {
-    .Sponsors {
-        .sponsors-container {
-            .logo-container {
-                margin: 2rem;
-            }
+  .Sponsors {
+    .sponsors-container {
+      .logo-container {
+        margin: 2rem;
+      }
 
-            .large-logos {
-                .logo {
-                    width: 16rem;
-                }
-            }
-
-            .small-logos {
-                .logo {
-                    width: 12rem;
-                }
-            }
+      .large-logos {
+        .logo {
+          width: 16rem;
         }
+      }
+
+      .small-logos {
+        .logo {
+          width: 12rem;
+        }
+      }
     }
+  }
 }

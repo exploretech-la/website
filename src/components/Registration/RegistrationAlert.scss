@@ -4,12 +4,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
+
   margin: auto;
   padding-top: 32px;
   padding-bottom: 32px;
 
-  h3, h5 {
+  h3,
+  h5 {
     color: white;
     padding-right: 10px;
     padding-left: 10px;
@@ -30,10 +31,9 @@
   .notes {
     padding-top: 10px;
   }
-
 }
 
-@include media-breakpoint-up(md) { 
+@include media-breakpoint-up(md) {
   .RegistrationAlert {
     .buttons {
       flex-direction: row;
