@@ -19,7 +19,6 @@ export default class OperationsComponent extends Component {
     };
   }
 
-<<<<<<< HEAD
   render() {
     const classNames = classnames(
       "Section",
@@ -38,26 +37,4 @@ export default class OperationsComponent extends Component {
       </section>
     );
   }
-=======
-    static get defaultProps() {
-        return {
-            className: '',
-        };
-    }
-
-    render() {
-        const classNames = classnames('Section', 'Operations', this.props.className);
-        return (
-            <section className={classNames} id="operations">
-                <div className="operations-container">
-                    <div className="operations-header">
-                        <h3>Operations</h3>
-                        <div className="pill-divider" />
-                    </div>
-                    <People people={Operations}/>
-                </div>
-            </section>
-        );
-    }
->>>>>>> e6e24e4ca356f4e0333411abf7f99aefc3c5ff1b
 }
