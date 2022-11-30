@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from "react";
+
+import Ceremonies from "./Ceremonies";
+import Workshops from "./Workshops";
+import Footer from "../Footer";
+=======
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 
@@ -13,6 +20,7 @@ import ackerman_union_2F from "static/maps/su_map_ack_2.jpeg"
 import ackerman_union_3F from "static/maps/su_map_ack_3.jpeg"
 import wristbands from "static/maps/wristband_coordination.png"
 import EventProgram from "static/pdf/Event_Program.pdf"
+>>>>>>> e6e24e4ca356f4e0333411abf7f99aefc3c5ff1b
 
 function Resources() {
   const maps = [
@@ -31,6 +39,21 @@ function Resources() {
   return (
     <div className="Resources">
       <div className="resources-title">
+<<<<<<< HEAD
+        <h1>Resources</h1>
+        <div className="pill-divider" />
+        <div className="Section resources-text">
+          <h5>
+            Welcome students! This webpage contains the recordings and resources
+            of all of our workshops and panels for the exploretech.la 2021
+            event! For each workshop or panel, please watch the recording first
+            and check back on this page to access the appropriate resources for
+            the activity.
+          </h5>
+        </div>
+        <Ceremonies />
+        <Workshops />
+=======
           <h1>Resources</h1>
           <div className="pill-divider" />
           <div className="Section resources-text">
@@ -78,6 +101,7 @@ function Resources() {
               Feedback Form
             </Button>
           </div>
+>>>>>>> e6e24e4ca356f4e0333411abf7f99aefc3c5ff1b
       </div>
       <Footer />
     </div>

@@ -1,5 +1,13 @@
 import React from "react";
 
+<<<<<<< HEAD
+import Hero from "./Hero";
+import About from "./About";
+import GetInvolved from "./GetInvolved";
+import Speakers from "./Speakers";
+import Sponsors from "./Sponsors";
+import Footer from "./Footer";
+=======
 import Hero from './Hero';
 import Alerts from './common/Alerts'
 import About from './About';
@@ -8,6 +16,7 @@ import Speakers from './Speakers';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 import RegistrationAlert from './Registration/RegistrationAlert';
+>>>>>>> e6e24e4ca356f4e0333411abf7f99aefc3c5ff1b
 
 function Home() {
   return (
