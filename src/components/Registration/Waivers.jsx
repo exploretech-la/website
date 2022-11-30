@@ -4,9 +4,15 @@ import classnames from "classnames";
 
 import Button from "react-bootstrap/Button";
 
+<<<<<<< HEAD
+import LiabilityWaiver from "static/pdf/exploretech.la 2021 Liability Waiver.pdf";
+import MultimediaRelease from "static/pdf/exploretech.la 2021 Multimedia Release Form.pdf";
+import StudentVerification from "static/pdf/exploretech.la 2021 Student Verification Form.pdf";
+=======
 import LiabilityWaiver from 'static/pdf/exploretech_la_2022_Liability_Waiver.pdf';
 import MultimediaRelease from 'static/pdf/exploretech_la_2022_Multimedia_Release_Form.pdf';
 import StudentVerification from 'static/pdf/exploretech_la_2022_Student_Verification_Form.pdf';
+>>>>>>> e6e24e4ca356f4e0333411abf7f99aefc3c5ff1b
 
 export default class Waivers extends Component {
   static get propTypes() {
