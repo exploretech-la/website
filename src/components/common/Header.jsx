@@ -72,9 +72,10 @@ function Header() {
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
         <Nav>
-          {navBarItems.map(item => {
+          {navBarItems}
+          {/* {navBarItems.map(item => {
             return <Nav.Item key={item.key}><Nav.Link href={item.href}>{item.name}</Nav.Link></Nav.Item>
-          })}
+          })} */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
