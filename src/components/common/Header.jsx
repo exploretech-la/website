@@ -10,18 +10,18 @@ import LogoWithIcons from "static/svg/logo-with-icons-navy.svg";
 import CompassLogo from "static/svg/logo-compass.svg";
 
 function Header() {
-  let navItems = [];
+  // let navItems = [];
   let isHomePage = false;
   const location = useLocation();
   if (location.pathname === "/") {
     isHomePage = true;
   }
-  if (location.pathname === '/our_team') {
-    navItems = ourTeamNavItems;
-  }
-  if (location.pathname === '/resources') {
-    navItems = resourcesNavItems;
-  }
+  // if (location.pathname === '/our_team') {
+  //   navItems = ourTeamNavItems;
+  // }
+  // if (location.pathname === '/resources') {
+  //   navItems = resourcesNavItems;
+  // }
 
   const classNames = classnames("Section", "Header", { Home: isHomePage });
 

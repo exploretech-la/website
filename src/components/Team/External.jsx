@@ -19,7 +19,6 @@ export default class ExternalComponent extends Component {
     };
   }
 
-<<<<<<< HEAD
   render() {
     const classNames = classnames("Section", "External", this.props.className);
     return (
@@ -34,26 +33,4 @@ export default class ExternalComponent extends Component {
       </section>
     );
   }
-=======
-    static get defaultProps() {
-        return {
-            className: '',
-        };
-    }
-
-    render() {
-        const classNames = classnames('Section', 'External', this.props.className);
-        return (
-            <section className={classNames} id="external">
-                <div className="external-container">
-                    <div className="external-header">
-                        <h3>External</h3>
-                        <div className="pill-divider" />
-                    </div>
-                    <People people={External}/>
-                </div>
-            </section>
-        );
-    }
->>>>>>> e6e24e4ca356f4e0333411abf7f99aefc3c5ff1b
 }
