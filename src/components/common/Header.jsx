@@ -16,15 +16,8 @@ function Header() {
   if (location.pathname === "/") {
     isHomePage = true;
   }
-  // if (location.pathname === '/our_team') {
-  //   navItems = ourTeamNavItems;
-  // }
-  // if (location.pathname === '/resources') {
-  //   navItems = resourcesNavItems;
-  // }
 
   const classNames = classnames("Section", "Header", { Home: isHomePage });
-
   const navBarItems = (
     <Nav>
       <NavDropdown title="Home" id="navbarScrollingDropdown" href="/">
