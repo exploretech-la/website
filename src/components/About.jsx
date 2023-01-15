@@ -51,16 +51,12 @@ export default class About extends Component {
                 through our panels, interactive workshops, and exhibition hall.
               </p>
               <p>
-                Last year saw exploretech.la adapt to an online format in
-                response to COVID-19, where we hosted about 200 students over
-                our virtual platform.
+                Last year, exploretech.la welcomed over 500 students back in-person 
+                after a year online due to COVID-19 and we are looking forward to hosting 
+                exploretech.la in person once again this year.
               </p>
               <p>
-                This year, we are returning to Ackerman Grand Ballroom at UCLA
-                as we return to hosting exploretech.la in person.
-              </p>
-              <p>
-                The event will take place <b>April 1, 2022</b>, and we would
+                The event will take place <b>April 23, 2023</b>, and we would
                 love for you to{" "}
                 <a className="in-text-link" href="#get-involved">
                   attend
@@ -122,7 +118,7 @@ export default class About extends Component {
           </div>
           <p>
             While continuing to follow the guidance of government and school
-            officials, exploretech.la 2022 is currently planned for in person.
+            officials, exploretech.la 2023 is currently planned for in person.
             We will continue to monitor and adjust as the situation requires,
             but are optimistic in our ability to bring back high schoolers
             safely to UCLA campus in April.
