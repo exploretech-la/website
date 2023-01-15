@@ -19,26 +19,16 @@ export default class Hero extends Component {
           <h1 className="h1-title">Welcome to exploretech.la!</h1>
           <p className="h1-title">
             {" "}
-            <b>Any questions? Contact our executive directors:</b>{" "}
+            <b>Any questions? Contact our executive director:</b>{" "}
           </p>
           <p>
-            Alex Walsh:{" "}
+            Melody Chen:{" "}
             <a
-              href="mailto:alexandrew@ucla.edu"
+              href="mailto:melody8686@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              alexandrew@ucla.edu
-            </a>{" "}
-          </p>
-          <p>
-            Haley Zhang:{" "}
-            <a
-              href="mailto:xiaohe@g.ucla.edu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              xiaohe@g.ucla.edu
+              melody8686@gmail.com
             </a>{" "}
           </p>
 
