@@ -8,18 +8,21 @@ import Sponsors from './Sponsors';
 import Footer from './Footer';
 import RegistrationAlert from './Registration/RegistrationAlert';
 
+// "Applications are due on Friday, February 18 at 11:59 PM PST"
+
 function Home() {
   return (
     <div className="Home">
       <Hero />
       <Alerts 
-        title="Want to get involved? Apply to volunteer at exploretech.la 2022!"
+        title="Want to get involved? Apply to volunteer at exploretech.la 2023!"
         messages={[
           "Volunteers will be responsible for providing mentorship for high school students through a group mentorship session, facilitating workshops, and helping with logistics. All majors and backgrounds are welcome, no prior knowledge in engineering or tech is required! Lunch and a free t-shirt will be provided.",
-          "Applications are due on Friday, February 18 at 11:59 PM PST"
+          "Stay Tuned for Volunteer Applications!"
         ]}
-        primaryLink="https://tinyurl.com/exploretech2022volunteer"
-        primaryText="Apply now!"
+        // primaryLink="https://tinyurl.com/exploretech2022volunteer"
+        // primaryText="Apply now!"
+        primaryText="Applications out soon!"
       />
       <RegistrationAlert />
       <About />
