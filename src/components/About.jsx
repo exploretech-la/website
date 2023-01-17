@@ -9,7 +9,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import HomePageSections from "constants/HomePageSections";
 import CaourselImages from "constants/carousel";
 
-import TeamPhoto from "static/images/team-photo-2020.jpg";
+import TeamPhoto from "static/images/explore-tech-2022.jpg";
 
 const FoundingStoryLink =
   "https://medium.com/techatucla/exploretechla-founding-story-3bb8a947f931";
