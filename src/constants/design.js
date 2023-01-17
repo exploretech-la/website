@@ -1,27 +1,33 @@
 export const Design = [
     {
         key: 1,
-        name: 'Andy Shen',
+        name: 'Belle Lerdworatawee',
         image: require('static/team/design/andy-shen.png'),
-        link: 'https://www.linkedin.com/in/thantzinoo-andy/',
+        link: '',
     }, {
         key: 2,
-        name: 'Joyce Mok',
+        name: 'David Xiong',
         image: require('static/team/design/joyce-mok.png'),
-        link: 'https://www.linkedin.com/in/joycemok8/',
+        link: '',
     }, {
         key: 3,
-        name: 'Kyle Icban',
+        name: 'Deanna Gee',
         image: require('static/team/design/kyle-icban.png'),
-        link: 'https://www.linkedin.com/in/kyle-icban/',
+        link: '',
     }, {
         key: 4,
-        name: 'Raphael Gatchalian',
+        name: 'Emily Poon',
         image: require('static/team/design/raphael-gatchalian.png'),
-        link: 'https://www.linkedin.com/in/raphaelg09/',
+        link: '',
     }, {
         key: 5,
-        name: 'Vy Truong',
+        name: 'Raphael Gatchalian',
         image: require('static/team/design/vy-truong.png'),
+        link: '',
+    }, {
+        key: 6,
+        name: 'Samantha Chou',
+        image: require('static/team/design/vy-truong.png'),
+        link: '',
     },
 ];
