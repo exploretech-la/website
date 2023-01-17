@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c144a7934c249dad7fdd6302fd6eeddb",
+    "revision": "768c618ce11f69d3e04cda77ece55ca8",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.9d2f89eb.chunk.css"
   },
   {
-    "revision": "2053b6b7cdea51eb9765",
+    "revision": "37e9435f730cae77d851",
     "url": "/static/css/main.c50436d5.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.6abd085d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2053b6b7cdea51eb9765",
-    "url": "/static/js/main.688d78c8.chunk.js"
+    "revision": "37e9435f730cae77d851",
+    "url": "/static/js/main.35f2a78a.chunk.js"
   },
   {
     "revision": "068310cf975a011c792f",
@@ -146,6 +146,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a4b13c91eabd238ffd8763fa89b5702b",
     "url": "/static/media/evan-wang.a4b13c91.png"
+  },
+  {
+    "revision": "26312fd263592b71328fdbe5e7f3600c",
+    "url": "/static/media/explore-tech-2022.26312fd2.jpg"
   },
   {
     "revision": "d6809e1c0c3fc42cbc581249e5bc3597",
@@ -302,10 +306,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "61658ddae191c3ca1c25995a824c0453",
     "url": "/static/media/teals-vr.61658dda.jpg"
-  },
-  {
-    "revision": "adea72bd5f6ddc1807873ddf206bf294",
-    "url": "/static/media/team-photo-2020.adea72bd.jpg"
   },
   {
     "revision": "665983d47832ba9cc7d2be0a5fa29326",
