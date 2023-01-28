@@ -56,7 +56,7 @@ export default class About extends Component {
                 exploretech.la in person once again this year.
               </p>
               <p>
-                The event will take place <b>April 23, 2023</b>, and we would
+                The event will take place <b>April 21, 2023</b>, and we would
                 love for you to{" "}
                 <a className="in-text-link" href="#get-involved">
                   attend
