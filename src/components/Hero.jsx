@@ -17,7 +17,7 @@ export default class Hero extends Component {
         />
         <div className="hero-content">
           <h1 className="h1-title">Event Day:</h1>
-          <h1 className="h1-title">23 April 2023</h1>
+          <h1 className="h1-title">21 April 2023</h1>
           <h5 className="h1-title">Ackerman Grand Ballroom</h5>
           <p className="h1-title">
             {" "}
