@@ -17,12 +17,11 @@ function Home() {
       <Alerts 
         title="Want to get involved? Apply to volunteer at exploretech.la 2023!"
         messages={[
-          "Volunteers will be responsible for providing mentorship for high school students through a group mentorship session, facilitating workshops, and helping with logistics. All majors and backgrounds are welcome, no prior knowledge in engineering or tech is required! Lunch and a free t-shirt will be provided.",
-          "Stay Tuned for Volunteer Applications!"
+          "Volunteers will be responsible for providing mentorship for high school students through a group mentorship session, facilitating workshops, and helping with logistics. All majors and backgrounds are welcome, no prior knowledge in engineering or tech is required! Lunch and a free t-shirt will be provided."
         ]}
-        // primaryLink="https://tinyurl.com/exploretech2022volunteer"
-        // primaryText="Apply now!"
-        primaryText="Applications out soon!"
+        primaryLink="https://forms.gle/yX983EuDFWG1DPSo9"
+        primaryText="Apply now!"
+        // primaryText="Applications out soon!"
       />
       <RegistrationAlert />
       <About />
