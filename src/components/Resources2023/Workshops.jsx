@@ -52,7 +52,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Fundamentals of Data Science</b>
               </Card.Title>
-              <Card.Text>Instuctors: Takao Oba and Riya Bhatla</Card.Text>
+              <Card.Text>Instructors: Takao Oba and Riya Bhatla</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -70,7 +70,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Game Development</b>
               </Card.Title>
-              <Card.Text>Instuctors: Michael Bunte and Grace Mao</Card.Text>
+              <Card.Text>Instructors: Michael Bunte and Grace Mao</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -90,7 +90,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Python Turtle</b>
               </Card.Title>
-              <Card.Text>Instuctors: Aparna Hariharan and Isha Rajput</Card.Text>
+              <Card.Text>Instructors: Aparna Hariharan and Isha Rajput</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -108,7 +108,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>SCRATCHing the Surface of Coding</b>
               </Card.Title>
-              <Card.Text>Instuctors: Michael Bunte and Jason Lozada</Card.Text>
+              <Card.Text>Instructors: Michael Bunte and Jason Lozada</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -128,7 +128,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>CS Operations in Minecraft</b>
               </Card.Title>
-              <Card.Text>Instuctors: Grace Mao and Kelly Zhang</Card.Text>
+              <Card.Text>Instructors: Grace Mao and Kelly Zhang</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -146,7 +146,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Are you Related to a Strawberry?</b>
               </Card.Title>
-              <Card.Text>Instuctors: Wendy Su and Krisha Chokshi</Card.Text>
+              <Card.Text>Instructors: Wendy Su and Krisha Chokshi</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -166,7 +166,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Basics of Encryption</b>
               </Card.Title>
-              <Card.Text>Instuctors: Ashish Basetty and Takao Oba</Card.Text>
+              <Card.Text>Instructors: Ashish Basetty and Takao Oba</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -184,7 +184,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Intro to Web Development</b>
               </Card.Title>
-              <Card.Text>Instuctors: Emily Nham and Jazlin Ong</Card.Text>
+              <Card.Text>Instructors: Emily Nham and Jazlin Ong</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -204,7 +204,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Internet of Things</b>
               </Card.Title>
-              <Card.Text>Instuctors: Kunal Patil and Krisha Chokshi</Card.Text>
+              <Card.Text>Instructors: Kunal Patil and Krisha Chokshi</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -222,7 +222,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Natural Language Proccessing</b>
               </Card.Title>
-              <Card.Text>Instuctors: Ashish Basetty and Jazlin Ong</Card.Text>
+              <Card.Text>Instructors: Ashish Basetty and Jazlin Ong</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -242,7 +242,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Machines Learn How to Learn</b>
               </Card.Title>
-              <Card.Text>Instuctors: Michael Song and Kelly Zhang</Card.Text>
+              <Card.Text>Instructors: Michael Song and Kelly Zhang</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -260,7 +260,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Making Your Own Shazam</b>
               </Card.Title>
-              <Card.Text>Instuctors: Riya Bhatla and Joe Lin</Card.Text>
+              <Card.Text>Instructors: Riya Bhatla and Joe Lin</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
@@ -280,7 +280,7 @@ export default class Workshops extends Component {
               <Card.Title>
                 <b>Introduction to Autonomous Vehicles</b>
               </Card.Title>
-              <Card.Text>Instuctors: Michael Song and Joe Lin</Card.Text>
+              <Card.Text>Instructors: Michael Song and Joe Lin</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
