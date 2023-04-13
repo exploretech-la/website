@@ -1,0 +1,43 @@
+@import "components/common/YoutubeEmbed.scss";
+
+.Workshops {
+  .workshops-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $section-width;
+    margin: auto;
+
+    .workshops-cards {
+      display: flex;
+      flex-direction: column;
+      width: 75vw;
+      padding-bottom: 50px;
+    }
+
+    .workshops-title {
+      display: flex;
+      padding-bottom: 32px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card-row {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .panelists-container {
+      max-width: $section-width;
+      margin: auto;
+
+      .panelists-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

@@ -52,8 +52,11 @@ function Header() {
       </Nav.Item>
 
       <NavDropdown title="Resources" id="navbarScrollingDropdown">
+        <NavDropdown.Item href={`/resources2023`}>
+          exploretech 2023
+        </NavDropdown.Item>
         <NavDropdown.Item href={`/resources`}>
-          exploretech.la 2021
+          exploretech 2021
         </NavDropdown.Item>
       </NavDropdown>
     </Nav>

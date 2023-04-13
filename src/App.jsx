@@ -7,6 +7,7 @@ import Header from "components/common/Header";
 import Home from "components/Home";
 import Register from "components/Registration/Register";
 import Resources from "components/Resources/Resources";
+import Resources2023 from "components/Resources2023/Resources";
 import Team from "components/Team/Team";
 import PageNotFound from "components/PageNotFound";
 
@@ -29,6 +30,7 @@ class App extends Component {
           <Route exact path="/register" component={Register} />
           {/* <Route exact path="/exploretechla2021" component={Register} /> */}
           <Route exact path="/resources" component={Resources} />
+          <Route exact path="/resources2023" component={Resources2023} />
           <Route exact path="/our_team" component={Team} />
           <Route component={PageNotFound} />
         </Switch>
