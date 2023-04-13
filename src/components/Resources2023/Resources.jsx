@@ -2,17 +2,17 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 
 import Workshops from './Workshops';
-import FAQ from 'components/Resources/FAQ';
+// import FAQ from 'components/Resources/FAQ';
 import Footer from '../Footer';
 import Maps from 'components/Resources/Maps';
 import Schedule from 'components/Resources/Schedule';
-import Waivers from 'components/Resources/Waivers';
+// import Waivers from 'components/Resources/Waivers';
 
 import busRoutes from "static/maps/bus_routes.jpg"
 import ackerman_union_2F from "static/maps/su_map_ack_2.jpeg"
 import ackerman_union_3F from "static/maps/su_map_ack_3.jpeg"
-import wristbands from "static/maps/wristband_coordination.png"
-import EventProgram from "static/pdf/Event_Program.pdf"
+// import wristbands from "static/maps/wristband_coordination.png"
+// import EventProgram from "static/pdf/Event_Program.pdf"
 
 function Resources() {
   const maps = [
@@ -43,11 +43,15 @@ function Resources() {
             </h5>
           </div>
           <div className='Section full-length-button'>
-            <Button size="lg" variant="outline-info" href={EventProgram} target="_blank">
+            {/* <Button size="lg" variant="outline-info" href={EventProgram} target="_blank">
               Click here to view the full event program
+            </Button> */}
+            <Button size="lg" variant="outline-info" target="_blank">
+              Click here to view the full event program (Coming Soon)
             </Button>
           </div>
           <Schedule />
+          <Workshops />
           <Maps maps={maps} />
           <div className='Section resources-title'>
             <h2>Wristbands</h2>
@@ -61,21 +65,23 @@ function Resources() {
                 Group 2 (blue) during Session 2, and Group 3 (red) during Session 3.
               </h5>
             </div>
-            <img style={{marginTop: '50px'}} src={wristbands} alt="Wristband coordination" />
+            {/* <img style={{marginTop: '50px'}} src={wristbands} alt="Wristband coordination" /> */}
           </div>
-          <Workshops />
-          <FAQ />
-          <Waivers />
+          {/* <FAQ /> */}
+          {/* <Waivers /> */}
           <div className='Section resources-title'>
-            <h2>Wristbands</h2>
+            {/* <h2>Wristbands</h2> */}
             <div className="pill-divider" />
             <div className="resources-text">
               <h5><b>Thanks for coming to our event! Got feedback? Let us know by filling out this form below!</b></h5>
             </div>
           </div>
           <div className='Section full-length-button'>
-            <Button size="lg" variant="info" href={"https://tinyurl.com/exploretechla2022feedback"} target="_blank">
+            {/* <Button size="lg" variant="info" href={"https://tinyurl.com/exploretechla2022feedback"} target="_blank">
               Feedback Form
+            </Button> */}
+            <Button size="lg" variant="info" target="_blank">
+              Feedback Form (Coming Soon)
             </Button>
           </div>
       </div>

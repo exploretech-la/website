@@ -6,8 +6,6 @@ import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
-import YoutubeEmbed from "components/common/YoutubeEmbed";
-
 
 export default class Workshops extends Component {
   static get propTypes() {
@@ -76,20 +74,13 @@ export default class Workshops extends Component {
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
+                <Card.Text>Ever wonder how your favorite games are created? How do artists, programmers, composers, and others work together to create an amazing final product? Come find out at the game development workshop!</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
                 <Card.Link href="https://docs.google.com/presentation/d/1p-yarwAOKpz6IMsHkZAFFdjfmZ_G1qHaT_1XrrDNEzY/edit?usp=sharing">
                   Slides
                 </Card.Link>
               </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/document/d/1zAbuNQzRgHYhH9E9sdJudYQ96FJYfXcqfO4qJv736K4/edit">
-                  Review Sheet
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://codepen.io/raphaeling/pen/VwmjxzJ">
-                  Codepen
-                </Card.Link>
-              </ListGroupItem>
             </ListGroup>
           </Card>
         </CardDeck>
@@ -97,19 +88,17 @@ export default class Workshops extends Component {
           <Card className="text-center">
             <Card.Body>
               <Card.Title>
-                <b>Operating Systems</b>
+                <b>Python Turtle</b>
               </Card.Title>
-              <YoutubeEmbed embedId="u-X1K9Rz75U" />
+              <Card.Text>Instuctors: Aparna Hariharan and Isha Rajput</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/17Dl1hE1kUmffXtlF8aC_CMuXNvFgTp3IgLADvT9pJmw/edit#slide=id.g7cb5bbd26d_0_20">
-                  Slides
-                </Card.Link>
+                <Card.Text>Come learn how to code in Python using Python's fun art library called Python Turtle! By the end, you'll have created a customized digital sticker that you can design!</Card.Text>
               </ListGroupItem>
               <ListGroupItem>
-                <Card.Link href="http://copy.sh/v86/?profile=linux26">
-                  Linux Emulator
+                <Card.Link href="https://docs.google.com/presentation/d/16Ip1fP3i4CPrJL6g_jn22DaIsZH1nY_a4OiTXoTkMp4/edit?usp=sharing">
+                  Slides
                 </Card.Link>
               </ListGroupItem>
             </ListGroup>
@@ -117,191 +106,16 @@ export default class Workshops extends Component {
           <Card className="text-center">
             <Card.Body>
               <Card.Title>
-                <b>Draw with Code</b>
+                <b>SCRATCHing the Surface of Coding</b>
               </Card.Title>
-              <YoutubeEmbed embedId="oTzUKgOTEGE" />
+              <Card.Text>Instuctors: Michael Bunte and Jason Lozada</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/1yKOG-eBJveoCHa0XX0-JhGSxVLSJ6x4d993uWdySm_I/edit?usp=sharing">
-                  Slides
-                </Card.Link>
+                <Card.Text>Want to learn how to code but don’t know where to start? Come join us as we introduce you to Scratch, a visual programming language that allows you to create your own interactive animations, stories, and games.</Card.Text>
               </ListGroupItem>
               <ListGroupItem>
-                <Card.Link href="https://repl.it/@AlyssaSchimm/Python-Graphics-Skeleton">
-                  Repl.it Project
-                </Card.Link>
-              </ListGroupItem>
-            </ListGroup>
-          </Card>
-        </CardDeck>
-        <CardDeck className="card-row">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>
-                <b>Less Quantum More Computing</b>
-              </Card.Title>
-              <YoutubeEmbed embedId="rC-llUnQt88" />
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/1ceW21j9s6EwD4MtMN8gytIH_ku-sZLy0JnAuQ4pmrlQ/edit#slide=id.gc204a219fe_1_10">
-                  Slides
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/document/d/1dbcPxbjI50PYgRMoLolfNP3FGHvBojHuFfYHRtzGNv4/edit?usp=sharing">
-                  Definitions Doc
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://colab.research.google.com/drive/1jViSXWVgbFK6GeU2z7VrSxx8PjOF8dOk">
-                  Google Colab
-                </Card.Link>
-              </ListGroupItem>
-            </ListGroup>
-          </Card>
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>
-                <b>Crack the Code with Cryptography</b>
-              </Card.Title>
-              <YoutubeEmbed embedId="HCrLnfs5yqU" />
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/1Z2GZoJtq2IwqjO2Akr9vIv6km_Pc_a1h_0b98HMQNIA/edit?usp=sharing">
-                  Slides
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://forms.gle/bmewxDNqbuXENENf8">
-                  Escape Room Google Form
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/document/d/14P2cz0_CLCPlWJFjyXICMdhN_YfoRlUiPSZW0wxvf1w/edit">
-                  Escape Room Questions and Solutions
-                </Card.Link>
-              </ListGroupItem>
-            </ListGroup>
-          </Card>
-        </CardDeck>
-        <CardDeck className="card-row">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>
-                <b>Escaping Reality with Game Development</b>
-              </Card.Title>
-              <YoutubeEmbed embedId="PiDWtEGfgiM" />
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/1-FAlSMU2WDh_qZVjUSUV6bNSShXxCP5IAzx9y3guXW8/edit">
-                  Slides
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://codepen.io/catpls/pen/QWdgpwe">
-                  Codepen Activity
-                </Card.Link>
-              </ListGroupItem>
-            </ListGroup>
-          </Card>
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>
-                <b>Murder Mystery!</b>
-              </Card.Title>
-              <YoutubeEmbed embedId="RPZqYD4KX9I" />
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/17QCnC1LfixiFyfCSMTwE-6VUC-NyznB3UHs3Szrx3HQ/edit#slide=id.g7cb5bbd26d_0_20">
-                  Slides
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/document/d/1R0Ne_90c7aRuzvtkA5HSPAgBw70GJfwiH6i1-1BCxh0/copy">
-                  Worksheet
-                </Card.Link>
-              </ListGroupItem>
-            </ListGroup>
-          </Card>
-        </CardDeck>
-        <CardDeck className="card-row">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>
-                <b>AI Adventures</b>
-              </Card.Title>
-              <YoutubeEmbed embedId="YemyR8KdDe0" />
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/1rq2lxcW1MK1pSZZP2bl1-kz5JkvRN0kJ-GpzIXxm1UY/edit#slide=id.g7cb5bbd26d_0_20">
-                  Slides
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/document/d/1KQi86CtI4OG2cgEoZLQCDeQk8a_204Ek_yESjdlAAaM/edit?usp=sharing">
-                  Worksheet
-                </Card.Link>
-              </ListGroupItem>
-            </ListGroup>
-          </Card>
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>
-                <b>Digital Design</b>
-              </Card.Title>
-              <YoutubeEmbed embedId="sjHU3FDty68" />
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/1SzxLUCi8xBJRQC4uGt9fIk-gZvdqeS-_HdIG0ToaQpU/edit?usp=sharing">
-                  Slides
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://miro.com/app/board/o9J_lMyUL1U=/">
-                  Miro Whiteboard
-                </Card.Link>
-              </ListGroupItem>
-            </ListGroup>
-          </Card>
-        </CardDeck>
-        <CardDeck className="card-row">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>
-                <b>Data Science</b>
-              </Card.Title>
-              <YoutubeEmbed embedId="OlKpWAwA32Q" />
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/1WonMzMY2AaReC5yPW94akZaSKOuBV2ci2iYswWIEG5U/edit#slide=id.g7cb5bbd26d_0_20">
-                  Slides
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/spreadsheets/d/1E6mFcAMfeSlz1B61lInOuTVO1tvR7ggYzXTeqxCxkQQ/edit#gid=1207580287">
-                  Spreadsheet
-                </Card.Link>
-              </ListGroupItem>
-            </ListGroup>
-          </Card>
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>
-                <b>Tech & Society</b>
-              </Card.Title>
-              <YoutubeEmbed embedId="b-bgVV-aEKI" />
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/15Kcr7BihmCtBo-l2CxGelzLGCglmXhx0-3L-YtonyDo/edit#slide=id.g7cb5bbd26d_0_20">
+                <Card.Link href="https://docs.google.com/presentation/d/1f8GMGnJuTECpuWZ1JYiYT5e-qf_SXuyY_x3WqQ5VsmQ/edit?usp=sharing">
                   Slides
                 </Card.Link>
               </ListGroupItem>
@@ -312,38 +126,169 @@ export default class Workshops extends Component {
           <Card className="text-center">
             <Card.Body>
               <Card.Title>
-                <b>Bot Buddy</b>
+                <b>CS Operations in Minecraft</b>
               </Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">
-                Hosted by DIY Girls
-              </Card.Subtitle>
-              <YoutubeEmbed embedId="b2ijVF2aLQs" />
-              <Card.Text>(Session 1 Recording)</Card.Text>
+              <Card.Text>Instuctors: Grace Mao and Kelly Zhang</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
-                <Card.Link href="https://youtu.be/jhGA1TZG9PA">
-                  Session 2 Recording
-                </Card.Link>
+                <Card.Text>Logic gates, circuits, game dev...in Minecraft ?!?! Come to our workshop to learn about Minecraft's amazing redstone system and how it connects to engineering :0</Card.Text>
               </ListGroupItem>
               <ListGroupItem>
-                <Card.Link href="https://drive.google.com/drive/folders/1aaPdABZMsORNaRHP7EZKMbfST2x6j_bt">
-                  Skin Templates
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://www.youtube.com/watch?v=JKoLj8lmkfM">
-                  Youtube Tutorial
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/1XNH37Cw5P7_tEWqWckaev5vxETBVVapTIbJXXr-6uNs/edit#slide=id.p">
+                <Card.Link href="https://docs.google.com/presentation/d/1QgNJpiJEAx07bN88bUnQjo8nLJvXR26ivJB7x3J2p2Q/edit?usp=sharing">
                   Slides
                 </Card.Link>
               </ListGroupItem>
+            </ListGroup>
+          </Card>
+          <Card className="text-center">
+            <Card.Body>
+              <Card.Title>
+                <b>Are you Related to a Strawberry?</b>
+              </Card.Title>
+              <Card.Text>Instuctors: Wendy Su and Krisha Chokshi</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
               <ListGroupItem>
-                <Card.Link href="https://docs.google.com/document/d/1xSpGUjHA2qL8DJjGagBPAolmfcHAdcHvuTpl_lC67po/edit">
-                  Follow Up Instructions
+                <Card.Text>Are you related to a strawberry? Are you the plant parent? Learn about the intersection of biology and computer science in what we call bioinformatics. Come for a hands-on experience in extracting DNA!</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
+                <Card.Link href="https://docs.google.com/presentation/d/1dH1imIjo3ZSOoGxk3vyewLHc5G3JQufePPGY-5pxriE/edit?usp=sharing">
+                  Slides
+                </Card.Link>
+              </ListGroupItem>
+            </ListGroup>
+          </Card>
+        </CardDeck>
+        <CardDeck className="card-row">
+          <Card className="text-center">
+            <Card.Body>
+              <Card.Title>
+                <b>Basics of Encryption</b>
+              </Card.Title>
+              <Card.Text>Instuctors: Ashish Basetty and Takao Oba</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroupItem>
+                <Card.Text>You’ve heard of hackers, but do you know about the people who stop them? Join us as we learn about how we keep our data secure. Work together to solve codes and puzzles, and learn how we can keep passwords and personal information private.</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
+                <Card.Link href="https://docs.google.com/presentation/d/1Rpj6HeWxVXUPhcaeAA8StKu5Vkv6zR8Di1hQegGkHag/edit?usp=sharing">
+                  Slides
+                </Card.Link>
+              </ListGroupItem>
+            </ListGroup>
+          </Card>
+          <Card className="text-center">
+            <Card.Body>
+              <Card.Title>
+                <b>Intro to Web Development</b>
+              </Card.Title>
+              <Card.Text>Instuctors: Emily Nham and Jazlin Ong</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroupItem>
+                <Card.Text>Have you ever wondered how websites are made? Join us to learn the basics of HTML and CSS, the coding languages of the web. By the end of our session, you’ll walk out with the ability to make your own website!</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
+                <Card.Link href="https://docs.google.com/presentation/d/139VY0bVt_-fYPsUwpGKRgFs7QJVkpEg1FoHmVEuksiI/edit?usp=sharing">
+                  Slides
+                </Card.Link>
+              </ListGroupItem>
+            </ListGroup>
+          </Card>
+        </CardDeck>
+        <CardDeck className="card-row">
+          <Card className="text-center">
+            <Card.Body>
+              <Card.Title>
+                <b>Internet of Things</b>
+              </Card.Title>
+              <Card.Text>Instuctors: Kunal Patil and Krisha Chokshi</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroupItem>
+                <Card.Text>Explore the Internet of Things, its evolution, and its relevance to today’s society! Students will learn about cybersecurity protocols and get a chance to demo and test IoT products. While brainstorming daily uses of IoT, they will discover its widespread impact on each of our lives.</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
+                <Card.Link href="https://docs.google.com/presentation/d/1dv_L1bAyp3XUmvUKLUO70yvJec7yGDDqHjTltZckrMk/edit?usp=sharing">
+                  Slides
+                </Card.Link>
+              </ListGroupItem>
+            </ListGroup>
+          </Card>
+          <Card className="text-center">
+            <Card.Body>
+              <Card.Title>
+                <b>Natural Language Proccessing</b>
+              </Card.Title>
+              <Card.Text>Instuctors: Ashish Basetty and Jazlin Ong</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroupItem>
+                <Card.Text>Every used Siri? ChatGPT? Google Translate? Come to this workshop to learn how a computer thinking in 0’s and 1’s can learn to speak like a human. Learn more about how human language works, and how we can come up with rules to teach it to a machine.</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
+                <Card.Link href="https://docs.google.com/presentation/d/1OUdQO-sLEhkZEgIDItNT-2VPtL_DmPZjz43SiW1GYXo/edit?usp=sharing">
+                  Slides
+                </Card.Link>
+              </ListGroupItem>
+            </ListGroup>
+          </Card>
+        </CardDeck>
+        <CardDeck className="card-row">
+          <Card className="text-center">
+            <Card.Body>
+              <Card.Title>
+                <b>Machines Learn How to Learn</b>
+              </Card.Title>
+              <Card.Text>Instuctors: Michael Song and Kelly Zhang</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroupItem>
+                <Card.Text>As technology advances and we get smarter devices, we are also collecting more and more data. All of this data is meaningless without the help of machine learning. In this workshop we’ll delve into how machines use data to predict and answer questions.</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
+                <Card.Link href="https://docs.google.com/presentation/d/1kp-5c-YiCRJOgF6xbcHn7mzWIFt9eBSVZTwLsQVhz7o/edit?usp=sharing">
+                  Slides
+                </Card.Link>
+              </ListGroupItem>
+            </ListGroup>
+          </Card>
+          <Card className="text-center">
+            <Card.Body>
+              <Card.Title>
+                <b>Making Your Own Shazam</b>
+              </Card.Title>
+              <Card.Text>Instuctors: Riya Bhatla and Joe Lin</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroupItem>
+                <Card.Text>Ever heard a song at a party that you didn’t recognize? Shazam is the solution. In this workshop, you’ll get hands-on experience to build your own song recognizer. You’ll learn about the basics of audio processing and analysis and much more!</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
+                <Card.Link href="https://docs.google.com/presentation/d/1DzbhxN7w5s9n2F7jyAOIv4ZvDkF-ILkaamgSqM98gvU/edit?usp=sharing">
+                  Slides
+                </Card.Link>
+              </ListGroupItem>
+            </ListGroup>
+          </Card>
+        </CardDeck>
+        <CardDeck className="card-row">
+          <Card className="text-center">
+            <Card.Body>
+              <Card.Title>
+                <b>Introduction to Autonomous Vehicles</b>
+              </Card.Title>
+              <Card.Text>Instuctors: Michael Song and Joe Lin</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroupItem>
+                <Card.Text>Ever wondered how a Tesla or Waymo car navigates itself through a seemingly countless number of road scenarios? Join us in this workshop to learn about the fundamental building blocks of autonomous vehicle technology and even get a chance to witness object detection models in action!</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
+                <Card.Link href="https://docs.google.com/presentation/d/11jR37NzXGQYdFi_RJgtd7LBzPaSyA31vdjlfSBxEj1k/edit?usp=sharing">
+                  Slides
                 </Card.Link>
               </ListGroupItem>
             </ListGroup>
@@ -360,24 +305,22 @@ export default class Workshops extends Component {
           <Card className="text-center">
             <Card.Body>
               <Card.Title>
-                <b>Diverse Careers in Computer Science</b>
+                <b>Careers in Computer Science</b>
               </Card.Title>
-              <YoutubeEmbed embedId="xzZzhmeo9_Y" />
+              <Card.Text>Moderators: Isha Rajput and Emily Nham</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/18H8XdlIscdZdeLiOUCPtAfu0tuhukW1EfDBH8uDkUXE/edit#slide=id.gc5794a6fcc_0_12">
+                <Card.Text>Want to know what it's like working in tech? Meetcurrent students and graduates pursuing Computer Science at places like Google, Facebook, Atlassian, and CreditKarma! Come learn about what they do and how they ended up where they are!</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
+                <Card.Link href="https://docs.google.com/presentation/d/1mVDXX-o_0BZO19UC-kFXJVUkMU7wvUfgaNii9bxDxNE/edit?usp=sharing">
                   Slides
                 </Card.Link>
               </ListGroupItem>
               <ListGroupItem>
-                <Card.Link href="https://padlet.com/bonniebonnielee/nm6pc2j59e5hhigl">
-                  Padlet
-                </Card.Link>
-              </ListGroupItem>
-              <ListGroupItem>
-                <Card.Link href="https://docs.google.com/document/d/1hG6YO9epajDiYqma-j882qRzmUITZdlTFWvvjrTTy44/edit?usp=sharing">
-                  Panelist Info and Resources
+                <Card.Link href="https://docs.google.com/document/d/1_a-basdjuWGzqQe_9g3LwmtLoQhuPX_Bmhpx-llbyZo/edit?usp=sharing">
+                  Panelist Info
                 </Card.Link>
               </ListGroupItem>
             </ListGroup>
@@ -385,19 +328,22 @@ export default class Workshops extends Component {
           <Card className="text-center">
             <Card.Body>
               <Card.Title>
-                <b>Representation in Computer Science</b>
+                <b>Divieristy 101</b>
               </Card.Title>
-              <YoutubeEmbed embedId="vrPl7EmwV9A" />
+              <Card.Text>Moderators: Aparna Hariharan and Jason Lozada</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>
-                <Card.Link href="https://docs.google.com/presentation/d/16KnUGORLcdWsVqfCFgGzkqFniVPzHvtL2WyoY22Mgv4/edit#slide=id.gc7ccf7fc99_0_0">
+              <Card.Text>Join the conversation with our esteemed guests regarding Diversity in Computer Science and what their experiences are like as minorities in this field.</Card.Text>
+              </ListGroupItem>
+              <ListGroupItem>
+                <Card.Link href="https://docs.google.com/presentation/d/1LPeMr3cr28CYTaLrrDpeh3EMlx5tyaZ1HzyRoLDaqOw/edit?usp=sharing">
                   Slides
                 </Card.Link>
               </ListGroupItem>
               <ListGroupItem>
-                <Card.Link href="https://padlet.com/wsu315/a9fa6pk1k3iodi7o">
-                  Padlet
+                <Card.Link href="https://docs.google.com/document/d/1BvEGkB0tGuW9C-pyQFqqC_f-rgnLe8NEEccIaj5-NnU/edit?usp=sharing">
+                  Panelist Info
                 </Card.Link>
               </ListGroupItem>
             </ListGroup>
