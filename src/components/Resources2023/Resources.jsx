@@ -46,8 +46,8 @@ function Resources() {
             {/* <Button size="lg" variant="outline-info" href={EventProgram} target="_blank">
               Click here to view the full event program
             </Button> */}
-            <Button size="lg" variant="outline-info" target="_blank">
-              Click here to view the full event program (Coming Soon)
+            <Button size="lg" variant="outline-info" href = {"https://drive.google.com/file/d/1QBPh_9WEnlVxcw18xKHrCtPD4Wv9tfrj/view?usp=sharing"}  target="_blank">
+              Click here to view the full event program
             </Button>
           </div>
           <Schedule />
