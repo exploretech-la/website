@@ -16,9 +16,8 @@ export default class Hero extends Component {
           alt="logo-with-icon-group"
         />
         <div className="hero-content">
-          <h1 className="h1-title">Event Day:</h1>
-          <h1 className="h1-title">21 April 2023</h1>
-          <h5 className="h1-title">Ackerman Grand Ballroom</h5>
+          <h1 className="h1-title">Recruiting Now!</h1>
+          <h5 className="h1-title">Design and External Team</h5>
           <p className="h1-title">
             {" "}
             <b>Any questions? Contact our executive director:</b>{" "}
