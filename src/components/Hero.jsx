@@ -16,20 +16,20 @@ export default class Hero extends Component {
           alt="logo-with-icon-group"
         />
         <div className="hero-content">
-          <h1 className="h1-title">Recruiting Now!</h1>
-          <h5 className="h1-title">Design and External Team</h5>
+          <h1 className="h1-title">Recruiting In Fall!</h1>
+          <h5 className="h1-title">Content and Operations Teams</h5>
           <p className="h1-title">
             {" "}
-            <b>Any questions? Contact our executive director:</b>{" "}
+            <b>Any questions or partnerships? Contact our executive directors:</b>{" "}
           </p>
           <p>
-            Melody Chen:{" "}
+            Jared and Matthew:{" "}
             <a
-              href="mailto:melody8686@gmail.com"
+              href="mailto:exploretechla@cs.ucla.edu"
               target="_blank"
               rel="noopener noreferrer"
             >
-              melody8686@gmail.com
+              exploretechla@cs.ucla.edu
             </a>{" "}
           </p>
 
