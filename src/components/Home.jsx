@@ -17,7 +17,7 @@ function Home() {
       <Alerts 
         title="Want to get involved? Apply to join us as a staff for exploretech.la 23/24!"
         messages={[
-          "exploretech will be recruiting in Fall, catch us at the Enormous Activities Fair (EAF) and at our infomation sessions."
+          "exploretech will be recruiting in Fall, catch us at the Enormous Activities Fair (EAF) on 9/26 and at our infomation sessions."
         ]}
         primaryLink=""
         primaryText="Applications out soon"
