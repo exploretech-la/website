@@ -1,23 +1,29 @@
 export const External = [
     {
         key: 1,
-        name: 'Alexander Chien',
-        image: require('static/team/external/alexander-chien.jpg'),
-        link: '',
+
     }, {
         key: 2,
-        name: 'Anushka Sikdar',
-        image: require('static/team/external/anushka.jpg'),
+        name: 'Krish Patel',
+        image: require('static/team/external/krish-patel.jpg'),
         link: '',
     }, {
         key: 3,
-        name: 'Evy Nguyen',
-        image: require('static/team/external/evy-nguyen.jpg'),
+        name: 'Samuel Perrott',
+        image: require('static/team/external/samuel-perrott.jpg'),
         link: '',
     }, {
         key: 4,
-        name: 'Maggie Li',
-        image: require('static/team/external/maggie-li.jpg'),
+        name: 'Megha Ravi',
+        image: require('static/team/external/megha-ravi.jpg'),
         link: '',
-    }, 
+    }, {
+        key: 5,
+
+    }, {
+        key: 6, 
+        name: 'Madhavan Venkatesh',
+        image: require('static/team/external/madhavan-venkatesh.jpg'),
+        link: '',
+    },
 ];
