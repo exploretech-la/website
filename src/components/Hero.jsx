@@ -17,7 +17,7 @@ export default class Hero extends Component {
         />
         <div className="hero-content">
           <h1 className="h1-title">Recruiting In Fall!</h1>
-          <h5 className="h1-title">Content and Operations Teams</h5>
+          <h5 className="h1-title">Content, Design, and Operations Teams</h5>
           <p className="h1-title">
             {" "}
             <b>Any questions or partnerships? Contact our executive directors:</b>{" "}

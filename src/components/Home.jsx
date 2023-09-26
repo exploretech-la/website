@@ -8,20 +8,20 @@ import Sponsors from './Sponsors';
 import Footer from './Footer';
 import RegistrationAlert from './Registration/RegistrationAlert';
 
-// "Applications are due on Friday, February 18 at 11:59 PM PST"
+// "Applications are due on Friday, October 7 at 11:59 PM PST"
 
 function Home() {
   return (
     <div className="Home">
       <Hero />
       <Alerts 
-        title="Want to get involved? Apply to join us as a staff for exploretech.la 23/24!"
+        title="Want to get involved? Apply to join us as a staff member for exploretech.la 23/24!"
         messages={[
-          "exploretech will be recruiting in Fall, catch us at the Enormous Activities Fair (EAF) on 9/26 and at our infomation sessions."
+          "exploretech will be recruiting in Fall! Catch us at the Enormous Activities Fair (EAF) on 9/26 and Engineering Welcome Day (EWD) on 9/27. For even more information and conversations with current exploretech members, join us for our info session on 10/5 from 7-8 pm at Engineering VI Rm 289!"
         ]}
         primaryLink=""
         primaryText="Applications out soon"
-        // title="Want to get involved? Apply to volunteer at exploretech.la 2023!"
+        // title="Want to get involved? Apply to volunteer at exploretech.la 2024!"
         // messages={[
         //   "Volunteers will be responsible for providing mentorship for high school students through a group mentorship session, facilitating workshops, and helping with logistics. All majors and backgrounds are welcome, no prior knowledge in engineering or tech is required! Lunch and a free t-shirt will be provided."
         // ]}
