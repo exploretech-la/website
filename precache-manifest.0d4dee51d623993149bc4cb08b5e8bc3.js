@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4c31858f634eb208dcf4ee04e5e02a63",
+    "revision": "c730192ddc352391fc62357f87975998",
     "url": "/index.html"
   },
   {
-    "revision": "3b4f07b503b2d5b02912",
+    "revision": "4c2562a587dd9f05f941",
     "url": "/static/css/2.9d2f89eb.chunk.css"
   },
   {
-    "revision": "f0b72d832666279b80bc",
-    "url": "/static/css/main.e0e73028.chunk.css"
+    "revision": "2b5ed888782f89d767a7",
+    "url": "/static/css/main.67347afc.chunk.css"
   },
   {
-    "revision": "3b4f07b503b2d5b02912",
-    "url": "/static/js/2.e62770dc.chunk.js"
+    "revision": "4c2562a587dd9f05f941",
+    "url": "/static/js/2.7ccb8c7a.chunk.js"
   },
   {
     "revision": "176c1a1a28b19c611d9701905d8d60b7",
-    "url": "/static/js/2.e62770dc.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.7ccb8c7a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f0b72d832666279b80bc",
-    "url": "/static/js/main.a611e5f7.chunk.js"
+    "revision": "2b5ed888782f89d767a7",
+    "url": "/static/js/main.0b1db27e.chunk.js"
   },
   {
     "revision": "068310cf975a011c792f",
@@ -44,20 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/alfredo-ayala.7806ab3f.jpg"
   },
   {
-    "revision": "01f312b7fabe9f10fa8de1ca10e4698f",
-    "url": "/static/media/anushka.01f312b7.jpg"
-  },
-  {
     "revision": "87200b94364489b613e77e34662aa473",
     "url": "/static/media/aparna-hariharan.87200b94.jpg"
-  },
-  {
-    "revision": "c3c0041537f1862cd0e60565d2501d00",
-    "url": "/static/media/arnav-doshi.c3c00415.jpg"
-  },
-  {
-    "revision": "9ce397b0e6ae0cc010d71d095ee1d7e4",
-    "url": "/static/media/ashely-chang.9ce397b0.jpg"
   },
   {
     "revision": "3d4e7f4a34d37a46f4c9cbb7666fbf1d",
@@ -70,14 +58,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1e1ee397d2049f315dc03027fab2343f",
     "url": "/static/media/banner.1e1ee397.png"
-  },
-  {
-    "revision": "c2213962b7222b7d981ee5a18858bab1",
-    "url": "/static/media/belle-lerdworatawee.c2213962.jpg"
-  },
-  {
-    "revision": "1e103f45f5277f45296b45fe29ab203c",
-    "url": "/static/media/bowen-zhang.1e103f45.jpg"
   },
   {
     "revision": "6b4e26291b0a009f24fb31187f0127c0",
@@ -108,10 +88,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/demo-microsoft-vr.a19c8447.jpg"
   },
   {
-    "revision": "c7fd3bcabed9cf5a21a2b40e7bee1560",
-    "url": "/static/media/dharma-shah.c7fd3bca.jpg"
-  },
-  {
     "revision": "b49592745ed95b226903880a84fae3ac",
     "url": "/static/media/disney.b4959274.png"
   },
@@ -126,10 +102,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2b32d4d7ce1e236e93220ed230e4717b",
     "url": "/static/media/emily-zhang.2b32d4d7.jpg"
-  },
-  {
-    "revision": "b98788f6d8c01f2ed3ac075733ad0776",
-    "url": "/static/media/evy-nguyen.b98788f6.jpg"
   },
   {
     "revision": "26312fd263592b71328fdbe5e7f3600c",
@@ -176,12 +148,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/joe-lin.84961487.jpg"
   },
   {
-    "revision": "ebd1c91ba239cf478972e627c67cf63d",
-    "url": "/static/media/joyce-mok.ebd1c91b.jpg"
-  },
-  {
     "revision": "8ab7e5ebf44e953596d3b1ff6f7c2060",
     "url": "/static/media/justin-brezhnev.8ab7e5eb.png"
+  },
+  {
+    "revision": "c309f746259b9033bccd77d4637f19c2",
+    "url": "/static/media/krish-patel.c309f746.jpg"
   },
   {
     "revision": "d38deea5e574ca30e669ef4e41ad7e84",
@@ -204,12 +176,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo-with-icons-white.3aea7cbc.svg"
   },
   {
-    "revision": "40aa5207afdefcea588e3605d7c0a4d3",
-    "url": "/static/media/maggie-li.40aa5207.jpg"
-  },
-  {
-    "revision": "a058a39c048390727ec5f62af002c348",
-    "url": "/static/media/mandy-lu.a058a39c.jpg"
+    "revision": "6a4bb958087ddd723a3a5e3fb099d606",
+    "url": "/static/media/madhavan-venkatesh.6a4bb958.jpg"
   },
   {
     "revision": "b61056362237cb2fa35811c5d8943119",
@@ -220,8 +188,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/matthew-teo.f029e883.jpg"
   },
   {
-    "revision": "be050c1750a80ee63cfe0060e89e857f",
-    "url": "/static/media/megan-pham.be050c17.png"
+    "revision": "7978a4e8f5e908e8f2cb59539bc5316f",
+    "url": "/static/media/megha-ravi.7978a4e8.jpg"
   },
   {
     "revision": "fe96069dcf14a1cba2f5a88e69b66f37",
@@ -244,10 +212,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/northrop-grumman.28a461fa.png"
   },
   {
-    "revision": "314366ee1c8edfb632b6faf76502df57",
-    "url": "/static/media/raphael-gatchalian.314366ee.jpg"
-  },
-  {
     "revision": "cbb78ab679d8ff4545f2c08aeb4d7d4a",
     "url": "/static/media/riya-bhatia.cbb78ab6.jpg"
   },
@@ -256,16 +220,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/ruth-johnson.8a284de7.jpeg"
   },
   {
-    "revision": "784f40f09eccdb2210d363ace62af356",
-    "url": "/static/media/samantha-chou.784f40f0.jpg"
+    "revision": "923a655ec3d1a2697456e62ee60936a0",
+    "url": "/static/media/samantha-chou.923a655e.jpg"
   },
   {
-    "revision": "d199d07c970ea1c16034c661e48a9cdb",
-    "url": "/static/media/shiyu-ye.d199d07c.jpg"
-  },
-  {
-    "revision": "43734cd0489204c15c314ab3a1c5bb18",
-    "url": "/static/media/shovanne-zhuang.43734cd0.jpg"
+    "revision": "be27542b3667c17341381ee4928fc903",
+    "url": "/static/media/samuel-perrott.be27542b.jpg"
   },
   {
     "revision": "e6f61a67b7da2af30e06f3fffd8d4577",
@@ -338,10 +298,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3d6fb16e2282b7303471c8cd9e9236f6",
     "url": "/static/media/wristband_coordination.3d6fb16e.png"
-  },
-  {
-    "revision": "ceafbdaae8023bbf9e1fd095e859bb39",
-    "url": "/static/media/yash-goyal.ceafbdaa.jpg"
   },
   {
     "revision": "0c97847a8fa8d7dcb7edb4c17d2b2fbb",
