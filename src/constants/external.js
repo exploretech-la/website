@@ -1,7 +1,9 @@
 export const External = [
     {
         key: 1,
-
+        name: 'Tammy Dinh',
+        image: require('static/team/external/tammy-dinh.jpg'),
+        link: '',
     }, {
         key: 2,
         name: 'Krish Patel',
@@ -19,7 +21,9 @@ export const External = [
         link: '',
     }, {
         key: 5,
-
+        name: 'Vivien Truong',
+        image: require('static/team/external/vivien-truong.jpg'),
+        link: '',
     }, {
         key: 6, 
         name: 'Madhavan Venkatesh',
