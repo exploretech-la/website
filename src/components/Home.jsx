@@ -30,6 +30,14 @@ function Home() {
         primaryText="Apply now!"
         // primaryText="Applications out soon!"
       />
+      <Alerts 
+        title="Info Session Zoom Link"
+        messages={[
+          "Can't join us on in-person? Watch the information session on Zoom!"
+        ]}
+        primaryLink="https://ucla.zoom.us/j/97325104031"
+        primaryText="Zoom Link"
+      />
       <RegistrationAlert />
       <About />
       <GetInvolved />
