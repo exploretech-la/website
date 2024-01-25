@@ -19,9 +19,8 @@ function Team() {
       <Design />
       <External />
       <Operations />
-      <div className="team-text">
-        <h3>More to come in Fall 2023...</h3>
-      </div>
+      {/* <div className="team-text">
+      </div> */}
       <Footer />
     </div>
   );

@@ -15,7 +15,7 @@ export const Leadership = [
         key: 3,
         name: 'Joe Lin',
         title: 'Co-Content Director',
-        image: require('static/team/leadership/joe-lin.jpg'),
+        image: require('static/team/leadership/joe-lin.png'),
     }, {
         key: 4,
         name: 'Michael Song',
@@ -50,7 +50,7 @@ export const Leadership = [
         key: 10,
         name: 'Melody Chen',
         title: 'Advisor',
-        image: require('static/team/leadership/melody-chen.jpg'),
+        image: require('static/team/leadership/melody-chen.png'),
     }, {
         key: 11,
         name: 'Takao Oba',
