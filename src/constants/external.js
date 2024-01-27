@@ -11,21 +11,16 @@ export const External = [
         link: '',
     }, {
         key: 3,
-        name: 'Samuel Perrott',
-        image: require('static/team/external/samuel-perrott.jpg'),
-        link: '',
-    }, {
-        key: 4,
         name: 'Megha Ravi',
         image: require('static/team/external/megha-ravi.jpg'),
         link: '',
     }, {
-        key: 5,
+        key: 4,
         name: 'Vivien Truong',
         image: require('static/team/external/vivien-truong.jpg'),
         link: '',
     }, {
-        key: 6, 
+        key: 5, 
         name: 'Madhavan Venkatesh',
         image: require('static/team/external/madhavan-venkatesh.jpg'),
         link: '',

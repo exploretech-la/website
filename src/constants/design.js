@@ -17,7 +17,7 @@ export const Design = [
     }, {
         key: 4,
         name: 'Tam Vo',
-        image: require('static/team/design/emily-poon.png'),
+        image: require('static/team/design/tam-vo.png'),
         link: '',
     }, {
         key: 5, 
