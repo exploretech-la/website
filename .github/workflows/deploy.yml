@@ -1,39 +1,31 @@
-name: exploretech.la Continuous Deployment
+name: Deploy to GitHub Pages
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
-    branches: [master]
+    branches:
+      - main  # Change this to your default branch
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   deploy:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      # Installs node on the runner, giving access to the npm command
-      - uses: actions/setup-node@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16  # Use the appropriate Node.js version
 
-      - name: Install packages
-        run: npm ci
+      - name: Install dependencies
+        run: npm install
 
-      # Runs the deploy script
-      - name: Run the deploy script
-        env:
-          USER_NAME: "exploretech.la"
-          USER_EMAIL: "exploretechla@cs.ucla.edu"
-          REPOSITORY: ${{ github.repository }}
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_ACCESS_TOKEN }}
-          REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GOOGLE_ANALYTICS_TRACKING_ID }}
-        run: |
-          git config --global user.name $USER_NAME
-          git config --global user.email $USER_EMAIL
-          git remote set-url origin https://${GITHUB_TOKEN}@github.com/${REPOSITORY}
-          npm run deploy
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}  # Use the secret here
+          publish_dir: ./build
