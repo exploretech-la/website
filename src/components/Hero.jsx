@@ -26,7 +26,7 @@ export default class Hero extends Component {
             <b>Any questions or partnerships? Contact our executive directors:</b>{" "}
           </p>
           <p>
-            Joe and Michael:{" "}
+            Jason Lozada and Meghan Ravi:{" "}
             <a
               href="mailto:exploretechla@cs.ucla.edu"
               target="_blank"
