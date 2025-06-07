@@ -41,9 +41,8 @@ export default class RegistrationTop extends Component {
                   computer science, engineering, and technology.
                 </p>
                 <p>
-                  With the ongoing pandemic, our team has decided to move
-                  exploretech.la 2021 to a virtual format for the safety of our
-                  attendees, partners, and staff members.
+                  Join us for an exciting day of learning, networking, and
+                  inspiration at UCLA campus.
                 </p>
                 <ul className="no-style">
                   <li>
@@ -53,7 +52,7 @@ export default class RegistrationTop extends Component {
                     <b>Time:</b> 10:00AM - 1:30PM PDT
                   </li>
                   <li>
-                    <b>Location:</b> Held virtually
+                    <b>Location:</b> UCLA Campus
                   </li>
                 </ul>
                 <p>

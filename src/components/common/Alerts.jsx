@@ -22,7 +22,6 @@ export default class Alerts extends Component {
         {this.props.messages.map((message) => (
           <p>{message}</p>
         ))}
-        <hr />
         <div className="buttons">
           <div className="button">
             <Button

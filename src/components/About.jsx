@@ -51,9 +51,9 @@ export default class About extends Component {
                 through our panels, interactive workshops, and exhibition hall.
               </p>
               <p>
-                Last year, exploretech.la welcomed over 500 students back in-person 
-                after a year online due to COVID-19 and we are looking forward to hosting 
-                exploretech.la in person once again this year.
+                Last year, exploretech.la welcomed over 500 students in person,
+                and we are excited to host exploretech.la in person once again
+                this year.
               </p>
               <p>
                 The event will take place <b>in early April</b>, and we would
@@ -103,28 +103,7 @@ export default class About extends Component {
             </div>
           </div>
         </div>
-        {this._getCovid19Update()}
       </section>
-    );
-  }
-
-  _getCovid19Update() {
-    return (
-      <div className="about-content covid19-update">
-        <div className="text">
-          <div className="section-title">
-            <h3 className="title">COVID-19 Update</h3>
-            <div className="pill-divider" />
-          </div>
-          <p>
-            While continuing to follow the guidance of government and school
-            officials, exploretech.la 2023 is currently planned for in person.
-            We will continue to monitor and adjust as the situation requires,
-            but are optimistic in our ability to bring back high schoolers
-            safely to UCLA campus in April.
-          </p>
-        </div>
-      </div>
     );
   }
 

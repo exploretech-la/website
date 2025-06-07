@@ -1,6 +1,6 @@
 import React from "react";
 
-import RegistrationAlert from "./RegistrationAlert";
+// import RegistrationAlert from "./RegistrationAlert";
 // import RegistrationTop from './RegistrationTop';
 // import Eligibility from './Eligibility';
 import Waivers from "./Waivers";
@@ -17,7 +17,6 @@ function Register() {
       <div className="banner">
         <img src={Banner} className="banner" alt="banner" />
       </div>
-      <RegistrationAlert />
       <div className="registration-title">
         <h1>Event Information</h1>
       </div>

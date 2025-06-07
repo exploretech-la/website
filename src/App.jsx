@@ -10,6 +10,9 @@ import Resources from "components/Resources/Resources";
 import Resources2023 from "components/Resources2023/Resources";
 import Team from "components/Team/Team";
 import PageNotFound from "components/PageNotFound";
+import AnnualEvent from "components/AnnualEvent/AnnualEvent";
+import IgniteProgram from "components/IgniteProgram/IgniteProgram";
+import GetInvolved from "components/GetInvolved/GetInvolved";
 
 import "./App.scss";
 
@@ -32,6 +35,9 @@ class App extends Component {
           <Route exact path="/resources" component={Resources} />
           <Route exact path="/resources2023" component={Resources2023} />
           <Route exact path="/our_team" component={Team} />
+          <Route exact path="/annual-event" component={AnnualEvent} />
+          <Route exact path="/ignite-program" component={IgniteProgram} />
+          <Route exact path="/get-involved" component={GetInvolved} />
           <Route component={PageNotFound} />
         </Switch>
       </div>

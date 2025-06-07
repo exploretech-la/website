@@ -1,0 +1,239 @@
+@import "../../App.scss";
+
+// Variables
+$primary-color: $color-navy;
+$secondary-color: $color-aqua;
+$accent-color: $color-teal;
+$text-color: $color-navy;
+$border-color: rgba($color-muted-blue, 0.2);
+$shadow: 0 2px 8px rgba($color-navy, 0.1);
+$transition: all 0.3s ease;
+
+.annual-event {
+  padding: 3rem 0;
+  background-color: $color-white;
+  min-height: 100vh;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      color: $primary-color;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .year-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      button {
+        min-width: 200px;
+        font-weight: 500;
+        padding: 0.75rem 1.5rem;
+        transition: $transition;
+        border-radius: 8px;
+        border-color: $color-teal;
+        color: $color-teal;
+
+        &.active {
+          background-color: $color-teal;
+          color: $color-white;
+          transform: translateY(-2px);
+          box-shadow: $shadow;
+        }
+
+        &:hover {
+          background-color: $color-teal;
+          color: $color-white;
+          transform: translateY(-2px);
+          box-shadow: $shadow;
+        }
+      }
+    }
+  }
+
+  .content {
+    .resources {
+      .resources-content {
+        background-color: $color-white;
+        border-radius: 12px;
+        box-shadow: $shadow;
+        overflow: hidden;
+
+        .resources-header {
+          padding: 2.5rem 2rem;
+          text-align: center;
+          background-color: $color-white;
+          border-bottom: 1px solid $border-color;
+
+          h2 {
+            color: $primary-color;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+          }
+
+          .pill-divider {
+            width: 60px;
+            height: 4px;
+            background-color: $color-aqua;
+            margin: 1rem auto;
+            border-radius: 2px;
+          }
+
+          .resources-intro {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: $text-color;
+          }
+        }
+
+        .resources-sections {
+          padding: 2rem;
+
+          section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: rgba($color-aqua, 0.1);
+            border-radius: 8px;
+            transition: $transition;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            h3 {
+              color: $primary-color;
+              font-size: 1.5rem;
+              margin-bottom: 1rem;
+              font-weight: 600;
+            }
+
+            p {
+              color: $text-color;
+              line-height: 1.6;
+              margin-bottom: 1.5rem;
+            }
+          }
+
+          .workshops-section {
+            background: $color-white;
+            box-shadow: $shadow;
+            padding: 0;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px;
+            max-width: 100%;
+            overflow-x: auto;
+
+            .CardDeck, .card-deck {
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 2rem 1.5rem;
+            }
+
+            .card {
+              margin-bottom: 2rem;
+            }
+          }
+
+          .feedback-section {
+            text-align: center;
+            background-color: $color-white;
+            border: 1px solid $border-color;
+
+            button {
+              min-width: 200px;
+              transition: $transition;
+              background-color: $color-teal;
+              border-color: $color-teal;
+
+              &:hover {
+                background-color: $color-muted-blue;
+                border-color: $color-muted-blue;
+                transform: translateY(-2px);
+                box-shadow: $shadow;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .annual-event {
+    padding: 2rem 0;
+
+    .page-header {
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .year-toggle {
+        flex-direction: column;
+        align-items: center;
+
+        button {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+
+    .content {
+      .resources {
+        .resources-content {
+          .resources-header {
+            padding: 2rem 1rem;
+
+            h2 {
+              font-size: 1.75rem;
+            }
+          }
+
+          .resources-sections {
+            padding: 1rem;
+
+            section {
+              padding: 1.5rem;
+              margin-bottom: 2rem;
+            }
+
+            .workshops-section {
+              padding: 0;
+
+              .CardDeck, .card-deck {
+                flex-direction: column;
+                gap: 1.5rem 0;
+              }
+
+              .card {
+                margin-bottom: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 

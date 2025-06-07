@@ -18,8 +18,7 @@ export default class Hero extends Component {
         <div className="hero-content">
           <h2 className="h1-title">Stay Tuned for 2026</h2>
           <h5 className="h1-title">
-            We are currently working on the 2026 event. Stay tuned for more
-            information!
+            We are currently working on the 2026 event.
           </h5>
           <p className="h1-title">
             {" "}

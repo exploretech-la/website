@@ -12,6 +12,36 @@
     padding-bottom: 32px;
   }
 
+  .team-selector {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    padding: 0 16px;
+
+    .team-button {
+      padding: 8px 24px;
+      border: 2px solid $color-navy;
+      border-radius: 24px;
+      background: transparent;
+      color: $color-navy;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba($color-navy, 0.1);
+      }
+
+      &.active {
+        background: $color-navy;
+        color: $color-white;
+      }
+    }
+  }
+
   .team-text {
     display: flex;
     flex-direction: column;

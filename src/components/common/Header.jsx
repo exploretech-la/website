@@ -47,18 +47,21 @@ function Header() {
       </NavDropdown>
 
       <Nav.Item>
+        <Nav.Link href="/annual-event">Annual Event</Nav.Link>
+      </Nav.Item>
+
+      <Nav.Item>
+        <Nav.Link href="/ignite-program">IGNITE Program</Nav.Link>
+      </Nav.Item>
+
+      <Nav.Item>
         {" "}
         <Nav.Link href="/our_team">Our Team</Nav.Link>{" "}
       </Nav.Item>
 
-      <NavDropdown title="Resources" id="navbarScrollingDropdown">
-        <NavDropdown.Item href={`/resources2023`}>
-          exploretech 2023
-        </NavDropdown.Item>
-        <NavDropdown.Item href={`/resources`}>
-          exploretech 2021
-        </NavDropdown.Item>
-      </NavDropdown>
+      <Nav.Item>
+        <Nav.Link href="/get-involved">Get Involved</Nav.Link>
+      </Nav.Item>
     </Nav>
   );
 
