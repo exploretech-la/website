@@ -1,3 +1,20 @@
+// Variables
+$color-white: #ffffff;
+$section-width: 1200px;
+
+// Media breakpoint mixins
+@mixin media-breakpoint-up($size) {
+  @if $size == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+}
+
 .Footer {
   padding: 48px 0;
   color: $color-white;
