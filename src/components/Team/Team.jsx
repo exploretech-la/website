@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import Leadership from "./Leadership";
-import Content from "./Content";
-import Design from "./Design";
-import Operations from "./Operations";
-import External from "./External";
+// import _Leadership from "./Leadership";
+// import _Content from "./Content";
+// import _Design from "./Design";
+// import _Operations from "./Operations";
+// import _External from "./External";
 import Footer from "../Footer";
 import "./Team.scss";
 
