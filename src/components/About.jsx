@@ -40,24 +40,19 @@ export default class About extends Component {
             </div>
             <div className="about-description">
               <p>
-                exploretech.la is an annual event hosted by UCLA students that
-                aims to inspire high school students from underserved
-                communities in the Greater Los Angeles Area to explore computer
-                science, engineering, and technology.
+                exploretech.la is a UCLA Samueli School of Engineering student 
+                organization that hosts an annual event that aims to inspire high 
+                school students from underserved communities in the Greater Los Angeles 
+                Area to explore computer science, engineering, and technology.
               </p>
               <p>
-                In partnership with industry and academic organizations, our
-                event introduces students to the various applications of tech
-                through our panels, interactive workshops, and exhibition hall.
+                In partnership with industry and academic organizations, our event 
+                introduces students to the various applications of tech through our 
+                panels, interactive workshops, and exhibition hall.
               </p>
               <p>
-                Last year, exploretech.la welcomed over 500 students back in-person 
-                after a year online due to COVID-19 and we are looking forward to hosting 
-                exploretech.la in person once again this year.
-              </p>
-              <p>
-                The event will take place <b>in early April</b>, and we would
-                love for you to{" "}
+                Every year, exploretech.la welcomes around 500 students to our in-person 
+                event. The event will take place in early April, and we would love for you to{" "}
                 <a className="in-text-link" href="#get-involved">
                   attend
                 </a>

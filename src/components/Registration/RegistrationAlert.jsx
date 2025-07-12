@@ -29,8 +29,7 @@ export default class RegistrationAlert extends Component {
         </h3>
         <div className="notes">
           <h5>
-            Check out recordings and resources from exploretech.la 2021 on our
-            Resources page!
+            Checkout our past workshops and resources from previous exploretech.la main events on our Resources Page.
           </h5>
         </div>
         <div className="buttons">
@@ -41,7 +40,7 @@ export default class RegistrationAlert extends Component {
               size="lg"
               onClick={this._trackResourcesClick}
             >
-              exploretech.la 2021 Recordings and Resources
+              exploretech.la Recordings and Resources
             </Button>
           </div>
         </div>
