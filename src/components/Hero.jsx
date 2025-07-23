@@ -23,10 +23,10 @@ export default class Hero extends Component {
           </h5>
           <p className="h1-title">
             {" "}
-            <b>Any questions or partnerships? Contact our executive directors:</b>{" "}
+            <b>Any questions or partnerships?</b>{" "}
           </p>
           <p>
-            Jason Lozada and Megha Ravi:{" "}
+          Contact our executive directors Jason Lozada and Megha Ravi:{" "}
             <a
               href="mailto:exploretechla@cs.ucla.edu"
               target="_blank"
