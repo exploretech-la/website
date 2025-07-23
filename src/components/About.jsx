@@ -40,19 +40,21 @@ export default class About extends Component {
             </div>
             <div className="about-description">
               <p>
-                exploretech.la is a UCLA Samueli School of Engineering student 
-                organization that hosts an annual event that aims to inspire high 
-                school students from underserved communities in the Greater Los Angeles 
-                Area to explore computer science, engineering, and technology.
+                exploretech.la is a UCLA Samueli School of Engineering student
+                organization that hosts an annual event that aims to inspire
+                high school students from underserved communities in the Greater
+                Los Angeles Area to explore computer science, engineering, and
+                technology.
               </p>
               <p>
-                In partnership with industry and academic organizations, our event 
-                introduces students to the various applications of tech through our 
-                panels, interactive workshops, and exhibition hall.
+                In partnership with industry and academic organizations, our
+                event introduces students to the various applications of tech
+                through our panels, interactive workshops, and exhibition hall.
               </p>
               <p>
-                Every year, exploretech.la welcomes around 500 students to our in-person 
-                event. The event will take place in early April, and we would love for you to{" "}
+                Every year, exploretech.la welcomes around 500 students to our
+                in-person event. The event will take place in early April, and
+                we would love for you to{" "}
                 <a className="in-text-link" href="#get-involved">
                   attend
                 </a>
@@ -98,28 +100,7 @@ export default class About extends Component {
             </div>
           </div>
         </div>
-        {this._getCovid19Update()}
       </section>
-    );
-  }
-
-  _getCovid19Update() {
-    return (
-      <div className="about-content covid19-update">
-        <div className="text">
-          <div className="section-title">
-            <h3 className="title">COVID-19 Update</h3>
-            <div className="pill-divider" />
-          </div>
-          <p>
-            While continuing to follow the guidance of government and school
-            officials, exploretech.la 2023 is currently planned for in person.
-            We will continue to monitor and adjust as the situation requires,
-            but are optimistic in our ability to bring back high schoolers
-            safely to UCLA campus in April.
-          </p>
-        </div>
-      </div>
     );
   }
 

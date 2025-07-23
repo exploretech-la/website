@@ -17,8 +17,8 @@ function Home() {
       <Alerts 
         title="UCLA Students: Want to get involved? Apply to be in our team!"
         messages={[
-          // "exploretech will be recruiting in Fall! Catch us at the Enormous Activities Fair (EAF) on 9/26 and Engineering Welcome Day (EWD) on 9/27. For even more information and conversations with current exploretech members, join us for our info session on 10/5 from 7-8 pm at Engineering VI Rm 289!"
-          "exploretech.la is recruiting members throughout Summer! If you would like to join us in inspiring high school students, apply by 07/14/2025! All MAJORS welcome. For more information, check out the link below!"
+          "exploretech will begin recruiting in Fall. Stay tuned for more information!"
+          // "exploretech.la is recruiting members throughout Summer! If you would like to join us in inspiring high school students, apply by 07/14/2025! All MAJORS welcome. For more information, check out the link below!"
         ]}
         primaryLink="https://forms.gle/mT2T6QYNXBJHpAAc9"
         // primaryText="Applications out soon"
@@ -27,7 +27,7 @@ function Home() {
         //   "Volunteers will be responsible for providing mentorship for high school students through a group mentorship session, facilitating workshops, and helping with logistics. All majors and backgrounds are welcome, no prior knowledge in engineering or tech is required! Lunch and a free t-shirt will be provided."
         // ]}
         // primaryLink="https://forms.gle/yX983EuDFWG1DPSo9"
-        primaryText="Sign up here!"
+        primaryText="Apply here!"
         // primaryText="Applications out soon!"
       />
       <RegistrationAlert />
