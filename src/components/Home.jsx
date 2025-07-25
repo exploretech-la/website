@@ -8,7 +8,6 @@ import Sponsors from './Sponsors';
 import Footer from './Footer';
 import RegistrationAlert from './Registration/RegistrationAlert';
 
-// "Applications are due on Friday, October 7 at 11:59 PM PST"
 
 function Home() {
   return (
