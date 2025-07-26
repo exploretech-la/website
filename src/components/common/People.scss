@@ -24,9 +24,12 @@
 
     .person-image {
       width: 10rem;
-      height: auto;
+      height: 10rem;
       border-radius: 50%;
       margin-bottom: 1.25rem;
+      object-fit: cover;
+      object-position: center;
+      transition: filter 0.3s ease;
     }
 
     .person-title {
