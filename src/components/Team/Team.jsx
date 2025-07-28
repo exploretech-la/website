@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-// import _Leadership from "./Leadership";
-// import _Content from "./Content";
-// import _Design from "./Design";
-// import _Operations from "./Operations";
-// import _External from "./External";
+import _Leadership from "./Leadership";
+import _Content from "./Content";
+import _Design from "./Design";
+import _Operations from "./Operations";
+import _External from "./External";
 import Footer from "../Footer";
 import "./Team.scss";
 
@@ -12,7 +12,40 @@ function Team() {
   const [activeSection, setActiveSection] = useState("leadership");
 
   const renderTeamSection = () => {
-    return <div className="team-section">{/* Content removed */}</div>;
+    switch (activeSection) {
+      case "leadership":
+        return <_Leadership />;
+      case "content":
+        return (
+          <div className="coming-soon-section">
+            <h2>Coming Soon!</h2>
+            <p>Content team information will be available soon.</p>
+          </div>
+        );
+      case "design":
+        return (
+          <div className="coming-soon-section">
+            <h2>Coming Soon!</h2>
+            <p>Design team information will be available soon.</p>
+          </div>
+        );
+      case "operations":
+        return (
+          <div className="coming-soon-section">
+            <h2>Coming Soon!</h2>
+            <p>Operations team information will be available soon.</p>
+          </div>
+        );
+      case "external":
+        return (
+          <div className="coming-soon-section">
+            <h2>Coming Soon!</h2>
+            <p>External team information will be available soon.</p>
+          </div>
+        );
+      default:
+        return <_Leadership />;
+    }
   };
 
   return (
@@ -56,9 +89,6 @@ function Team() {
       </div>
 
       <div className="team-content">
-        <div className="coming-soon-overlay">
-          <h2>Coming Soon...</h2>
-        </div>
         {renderTeamSection()}
       </div>
 
