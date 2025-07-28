@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import _Leadership from "./Leadership";
-import _Content from "./Content";
-import _Design from "./Design";
-import _Operations from "./Operations";
-import _External from "./External";
+import Leadership from "./Leadership";
+// import _Content from "./Content";
+// import _Design from "./Design";
+// import _Operations from "./Operations";
+// import _External from "./External";
 import Footer from "../Footer";
 import "./Team.scss";
 
@@ -14,7 +14,7 @@ function Team() {
   const renderTeamSection = () => {
     switch (activeSection) {
       case "leadership":
-        return <_Leadership />;
+        return <Leadership />;
       case "content":
         return (
           <div className="coming-soon-section">
@@ -44,7 +44,7 @@ function Team() {
           </div>
         );
       default:
-        return <_Leadership />;
+        return <Leadership />;
     }
   };
 
