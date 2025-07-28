@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a9f8088c2f328da022a64fba5d4b28a3",
+    "revision": "8cf0f5b24425b1beb2421277a7979c0b",
     "url": "/index.html"
   },
   {
-    "revision": "7c5f8f5d9514144fd204",
+    "revision": "ba98197e1de438c3a589",
     "url": "/static/css/2.b7c36454.chunk.css"
   },
   {
-    "revision": "d7909fd73d96f5ab6948",
-    "url": "/static/css/main.cca56e48.chunk.css"
+    "revision": "ebbceeb6e73b008463c9",
+    "url": "/static/css/main.63df59c0.chunk.css"
   },
   {
-    "revision": "7c5f8f5d9514144fd204",
-    "url": "/static/js/2.26d28658.chunk.js"
+    "revision": "ba98197e1de438c3a589",
+    "url": "/static/js/2.c7868312.chunk.js"
   },
   {
     "revision": "176c1a1a28b19c611d9701905d8d60b7",
-    "url": "/static/js/2.26d28658.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.c7868312.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d7909fd73d96f5ab6948",
-    "url": "/static/js/main.245416e8.chunk.js"
+    "revision": "ebbceeb6e73b008463c9",
+    "url": "/static/js/main.ed12f5b6.chunk.js"
   },
   {
     "revision": "ae3b8d3e9533d58eb305",
@@ -32,8 +32,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Event_Program.fea3e246.pdf"
   },
   {
+    "revision": "b6a9223785e25c97043930131b539c40",
+    "url": "/static/media/aileen-chen.b6a92237.jpg"
+  },
+  {
     "revision": "7806ab3fbbcc7f0a82ee95e5a6d9c851",
     "url": "/static/media/alfredo-ayala.7806ab3f.jpg"
+  },
+  {
+    "revision": "eefd4276d2b25e756d0d43c16b538795",
+    "url": "/static/media/annika-renganathan.eefd4276.jpg"
   },
   {
     "revision": "36cf0fc67049e2a1849d47d7ec14a906",
@@ -54,6 +62,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0fbeaea472f367ec55f86c71d6297e11",
     "url": "/static/media/carey-nachenberg.0fbeaea4.png"
+  },
+  {
+    "revision": "1b054511a30330b593fe98f36fc83199",
+    "url": "/static/media/clara-zhang.1b054511.jpg"
   },
   {
     "revision": "9f4ccc14c2ab7393b9edbc92dade9532",
@@ -84,6 +96,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/exploretech_la_2022_Student_Verification_Form.6c1cc606.pdf"
   },
   {
+    "revision": "957b7735c6fb7fea438010a0313b26b9",
+    "url": "/static/media/jason-lozada.957b7735.jpg"
+  },
+  {
     "revision": "6111a0dc58c96d5e31e039decd6380f1",
     "url": "/static/media/jayathi-murthy.6111a0dc.png"
   },
@@ -108,6 +124,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo-with-icons-white.3aea7cbc.svg"
   },
   {
+    "revision": "eccd76ec4d516199cfb95c638b9dd2e0",
+    "url": "/static/media/megha-ravi.eccd76ec.jpg"
+  },
+  {
     "revision": "1cf19b81367144cfb3f1dfd46fa86af4",
     "url": "/static/media/nick-corral.1cf19b81.jpg"
   },
@@ -116,8 +136,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/northrop-grumman.28a461fa.png"
   },
   {
+    "revision": "9bba55ea47bc60bccb4fac77f0cffa8b",
+    "url": "/static/media/paige-wu.9bba55ea.jpg"
+  },
+  {
+    "revision": "680306fb3dbe1a1925f3c6eac46202b9",
+    "url": "/static/media/rhea-jain.680306fb.jpg"
+  },
+  {
     "revision": "8a284de7845039414194e40dc5366704",
     "url": "/static/media/ruth-johnson.8a284de7.jpeg"
+  },
+  {
+    "revision": "c3c44392810cae2023e0ade822b29fa8",
+    "url": "/static/media/sandra-pan.c3c44392.jpg"
+  },
+  {
+    "revision": "6f62984295149b548f6d32a0175a5229",
+    "url": "/static/media/shaina-grover.6f629842.jpg"
   },
   {
     "revision": "e6f61a67b7da2af30e06f3fffd8d4577",
@@ -126,6 +162,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a2e04b80dd0c054095001c8858c10673",
     "url": "/static/media/speaker-connie.a2e04b80.jpg"
+  },
+  {
+    "revision": "d43c271ab2abdd734e8225053a6505d9",
+    "url": "/static/media/spoorthy-nalumachu.d43c271a.jpg"
   },
   {
     "revision": "1842d49735a60899f6d8d16ca3618e4e",
