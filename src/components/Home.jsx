@@ -16,8 +16,7 @@ function Home() {
       <Alerts 
         title="UCLA Students: Want to get involved? Apply to be in our team!"
         messages={[
-          "exploretech will begin recruiting in Fall. Stay tuned for more information!"
-          // "exploretech.la is recruiting members throughout Summer! If you would like to join us in inspiring high school students, apply by 07/14/2025! All MAJORS welcome. For more information, check out the link below!"
+          "exploretech.la is recruiting members during Fall. All MAJORS welcome! Apply by Thursday, October 2 at 11:59 PM. Click the link below to apply!"
         ]}
         primaryLink="https://forms.gle/mT2T6QYNXBJHpAAc9"
         // primaryText="Applications out soon"
