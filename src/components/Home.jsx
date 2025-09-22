@@ -18,7 +18,7 @@ function Home() {
         messages={[
           "exploretech.la is recruiting members during Fall. All MAJORS welcome! Apply by Thursday, October 2 at 11:59 PM. Click the link below to apply!"
         ]}
-        primaryLink="https://forms.gle/mT2T6QYNXBJHpAAc9"
+        primaryLink="https://forms.gle/HZobjRRuj8rCkFc8A"
         // primaryText="Applications out soon"
         // title="Want to get involved? Apply to volunteer at exploretech.la 2024!"
         // messages={[
