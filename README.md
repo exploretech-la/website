@@ -1,4 +1,4 @@
-# exploretech.la
+# exploretech.la test
 
 The website for [exploretech.la](https://www.exploretech.la/)
 
