@@ -1,5 +1,10 @@
 export const LargeLogoSponsors = [
   {
+    name: "google-logo",
+    src: require("static/sponsors/google-logo.png"),
+    website: "https://about.google/",
+  },
+  {
     name: "ucla-cs",
     src: require("static/sponsors/ucla-cs.png"),
     website: "https://www.cs.ucla.edu/",
