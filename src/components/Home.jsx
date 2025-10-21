@@ -13,7 +13,7 @@ function Home() {
   return (
     <div className="Home">
       <Hero />
-      <Alerts 
+      {/* <Alerts 
         title="UCLA Students: Want to get involved? Apply to be in our team!"
         messages={[
           "exploretech.la is recruiting members during Fall. All MAJORS welcome! Apply by Thursday, October 2 at 11:59 PM. Click the link below to apply!"
@@ -27,8 +27,8 @@ function Home() {
         // primaryLink="https://forms.gle/yX983EuDFWG1DPSo9"
         primaryText="Apply here!"
         // primaryText="Applications out soon!"
-      />
-      <RegistrationAlert />
+      /> */}
+      {/* <RegistrationAlert /> */}
       <About />
       <GetInvolved />
       <Speakers />
