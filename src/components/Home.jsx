@@ -1,12 +1,12 @@
 import React from "react";
 import Hero from './Hero';
-import Alerts from './common/Alerts'
+// import Alerts from './common/Alerts'
 import About from './About';
 import GetInvolved from './GetInvolved';
 import Speakers from './Speakers';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
-import RegistrationAlert from './Registration/RegistrationAlert';
+// import RegistrationAlert from './Registration/RegistrationAlert';
 
 
 function Home() {
