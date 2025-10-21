@@ -1,17 +1,22 @@
 export const LargeLogoSponsors = [
   {
+    name: "google-logo",
+    src: require("static/sponsors/google-logo.png"),
+    website: "https://about.google/",
+  },
+  {
     name: "ucla-cs",
     src: require("static/sponsors/ucla-cs.png"),
     website: "https://www.cs.ucla.edu/",
   },
+];
+
+export const SmallLogoSponsors = [
   {
     name: "balsamiq",
     src: require("static/sponsors/balsamiq.png"),
     website: "https://balsamiq.com/",
   },
-];
-
-export const SmallLogoSponsors = [
   {
     name: "ucla_samueli_engineering",
     src: require("static/sponsors/ucla-samueli-engineering.png"),
