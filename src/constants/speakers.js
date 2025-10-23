@@ -23,7 +23,7 @@ export const PastSpeakers = [
     name: "Justin Brezhnev",
     title: "President & CEO, Hacker Fund",
     image: require("static/speakers/justin-brezhnev.png"),
-    link: "https://www.linkedin.com/in/justinbrezhnev/",
+    link: "https://www.linkedin.com/in/brezh/",
   },
   {
     name: "Tyler Menezes",
