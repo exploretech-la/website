@@ -42,7 +42,7 @@ export default class GetInvolved extends Component {
             <Card className="high-schools">
               <Card.Img variant="top" src={TEALS_VR} />
               <ReactGA.OutboundLink
-                to={HighSchoolInterestForm}
+                // to={HighSchoolInterestForm}
                 target="_blank"
                 eventLabel="high_school_interest_form"
               >
