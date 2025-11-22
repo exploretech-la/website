@@ -10,6 +10,7 @@ import Resources from "components/Resources/Resources";
 import Resources2023 from "components/Resources2023/Resources";
 import Team from "components/Team/Team";
 import PageNotFound from "components/PageNotFound";
+import Ignite from "components/Ignite/Ignite";
 
 import "./App.scss";
 
@@ -32,6 +33,7 @@ class App extends Component {
           <Route exact path="/resources" component={Resources} />
           <Route exact path="/resources2023" component={Resources2023} />
           <Route exact path="/our_team" component={Team} />
+          <Route exact path="/ignite" component={Ignite} />
           <Route component={PageNotFound} />
         </Switch>
       </div>

@@ -1,0 +1,386 @@
+// Variables for the gradient and layout
+$ignite-teal-dark: #2ca6bc;
+$ignite-teal-light: #ddf6f8;
+$ignite-white: #ffffff;
+$ignite-text-dark: #06546e;
+$max-content-width: 1140px;
+
+.Ignite {
+  width: 100%;
+  min-height: 100vh;
+
+  .large-wireframe-display {
+    width: 100%;
+
+    .display-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #333;
+      color: #aaa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      font-size: 1.5rem;
+      border: 2px solid #555;
+    }
+  }
+
+  // General Section Layout
+  .ignite-section {
+    width: 100%;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+
+    .content-wrapper {
+      width: 100%;
+      max-width: $max-content-width;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  // 1. Header Section Styles
+  .header-section {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    color: white;
+
+    /* NEW — solid blue background */
+    background: $ignite-teal-dark;
+
+    .ignite-title {
+      font-size: 7rem;
+      font-weight: 700;
+      letter-spacing: -2px;
+      margin-bottom: 42px;
+      line-height: 1;
+    }
+
+    .ignite-description {
+      max-width: 800px;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin-bottom: 40px;
+      font-weight: 400;
+      color: #d0ecf0;
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 20px;
+
+      .btn-apply {
+        background-color: #07556f;
+        border: none;
+        padding: 12px 18px;
+        font-size: 1.1rem;
+        font-weight: 400;
+        border-radius: 1rem;
+      }
+
+      .btn-previous {
+        border: 2px solid #06546f;
+        color: #06546f;
+        padding: 12px 18px;
+        font-size: 1.1rem;
+        background: transparent;
+        border-radius: 1rem;
+        font-weight: 400;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+  }
+
+  // 2. Structure Section
+  .structure-section {
+
+    /* NEW — blue → white gradient */
+    background: linear-gradient(
+      to bottom,
+      $ignite-teal-dark 0%,
+      $ignite-teal-light 100%
+    );
+
+    .section-header {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #d9e6e7;
+    }
+
+    .card-grid.four-columns {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 20px;
+    }
+
+    .wireframe-card.structure-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 20px;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .card-header {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: $ignite-text-dark;
+        margin-bottom: 15px;
+      }
+
+      .card-body-placeholder {
+        flex-grow: 1;
+        width: 100%;
+        background: #eee;
+        border-radius: 12px;
+        border: 2px dashed #ccc;
+      }
+    }
+  }
+
+  // 3 & 4. Workshop Sections (Light Background Area)
+  .workshop-section {
+
+    /* NEW — solid light background */
+    background: $ignite-teal-light;
+
+    .section-header {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #06546f;
+    }
+
+    .card-grid.three-columns {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 30px;
+    }
+
+    .wireframe-card.workshop-card {
+      background-color: #1cb0c6;
+      color: white;
+      border-radius: 20px;
+      padding: 25px;
+      min-height: 400px;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .text-placeholder {
+        height: 80px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .image-placeholder {
+        width: 100%;
+        height: 200px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+      }
+    }
+  }
+
+  // 5. Capstone Section
+  .capstone-section {
+
+    /* NEW — white → teal gradient */
+    background: linear-gradient(
+      to bottom,
+      $ignite-teal-light 0%,
+      $ignite-teal-dark 100%
+    );
+
+    .section-header {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #06546f;
+    }
+
+    .section-subtitle {
+      color: #6796a5;
+      margin-bottom: 30px;
+    }
+  }
+
+  // 6. Apply Section (Bottom Dark Gradient)
+  .footer-apply-section {
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    /* NEW — solid teal */
+    background: $ignite-teal-dark;
+
+    .content-wrapper {
+      flex-direction: column;
+
+      @media (min-width: 768px) {
+        flex-direction: row !important;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+    }
+
+    .split-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    .left-text-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+
+      .align-left {
+        text-align: left;
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1;
+        color: $ignite-white;
+      }
+
+      .section-subtitle-small {
+        font-size: 1.1rem;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: #06546f;
+      }
+
+      .btn-apply-large {
+        background-color: #07556f;
+        border: none;
+        padding: 12px 40px;
+        font-size: 1.1rem;
+        font-weight: 400;
+        border-radius: 8px;
+        margin-top: 10px;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+      }
+    }
+
+    .right-image-col {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .image-placeholder-large {
+        width: 100%;
+        aspect-ratio: 1.5;
+        background: #333;
+        color: #aaa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        border: 2px solid #555;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  /* DESKTOP FIX — PURE CSS, ALWAYS APPLIES */
+  @media (min-width: 768px) {
+    .footer-apply-section .left-text-col {
+      width: 50% !important;
+    }
+
+    .footer-apply-section .right-image-col {
+      width: 50% !important;
+    }
+
+    .footer-apply-section .btn-apply-large {
+      width: 100% !important;
+    }
+
+    .Ignite .footer-apply-section .split-layout {
+      flex-direction: row !important;
+      gap: 60px;
+      align-items: stretch;
+    }
+
+    .Ignite .footer-apply-section .left-text-col {
+      width: 40% !important;
+    }
+
+    .Ignite .footer-apply-section .right-image-col {
+      width: 55% !important;
+    }
+  }
+
+  // 7. Gallery Section
+  .gallery-section {
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 100px;
+
+    /* NEW — solid teal background */
+    background: $ignite-teal-dark;
+
+    .section-header {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+      opacity: 0.85;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+
+      .gallery-item {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+
+        &.tall {
+          grid-row: span 2;
+        }
+
+        &.wide {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+}
