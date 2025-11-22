@@ -10,6 +10,13 @@
 
   .navbar-nav {
     padding-top: 0.5rem;
+
+    .nav-item,
+    .nav-link,
+    .dropdown {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
   }
 
   .logo-compass {
@@ -43,4 +50,13 @@
       display: block;
     }
   }
+}
+
+.Header.IgniteHeader {
+  background-color: #2da6bc !important;
+}
+
+.Header.IgniteHeader .navbar,
+.Header.IgniteHeader.navbar {
+  background-color: #2da6bc !important;
 }

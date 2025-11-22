@@ -12,10 +12,18 @@ import CompassLogo from "static/svg/logo-compass.svg";
 function Header() {
   // let navItems = [];
   let isHomePage = false;
+  let isIgnitePage = false;
+
   const location = useLocation();
   if (location.pathname === "/") {
     isHomePage = true;
   }
+
+  if (location.pathname === "/ignite") {
+    isIgnitePage = true;
+  }
+
+  
   // if (location.pathname === '/our_team') {
   //   navItems = ourTeamNavItems;
   // }
@@ -23,7 +31,10 @@ function Header() {
   //   navItems = resourcesNavItems;
   // }
 
-  const classNames = classnames("Section", "Header", { Home: isHomePage });
+  const classNames = classnames("Section", "Header", {
+    Home: isHomePage,
+    IgniteHeader: isIgnitePage,
+  });
 
   const navBarItems = (
     <Nav>
@@ -50,6 +61,10 @@ function Header() {
         {" "}
         <Nav.Link href="/our_team">Our Team</Nav.Link>{" "}
       </Nav.Item>
+
+      <NavDropdown title="Events" id="navbarScrollingDropdown">
+        <NavDropdown.Item href={`/ignite`}>Ignite</NavDropdown.Item>
+      </NavDropdown>
 
       <NavDropdown title="Resources" id="navbarScrollingDropdown">
         <NavDropdown.Item href={`/resources2023`}>

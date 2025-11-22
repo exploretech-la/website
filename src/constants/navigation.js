@@ -24,6 +24,11 @@ export const homeNavItems = [
       name: "Resources",
       href: '/resources',
     },
+    {
+      key: 7,
+      name: "Ignite",
+      href: "/ignite"
+    }
 ]
 
 export const ourTeamNavItems = [
