@@ -144,10 +144,8 @@ export default class Ignite extends Component {
             <p className="section-subtitle">
               The program culminates in a capstone project...
             </p>
-            <div className="large-wireframe-display">
-              <div className="display-placeholder">
-                Capstone Project Projection Area
-              </div>
+            <div className="capstone-image-container">
+              <img src="/placeholder.png" alt="Capstone Project Presentation" />
             </div>
           </div>
         </section>
@@ -157,7 +155,7 @@ export default class Ignite extends Component {
             <div className="left-text-col">
               <h1 className="section-header align-left">Apply Now!</h1>
               <p className="section-subtitle-small">
-                Applications for the next IGNITE are open ....
+                Applications for the next IGNITE are open...
               </p>
               <Button variant="primary" className="btn-apply-large">
                 Apply
@@ -165,8 +163,8 @@ export default class Ignite extends Component {
             </div>
 
             <div className="right-image-col">
-              <div className="image-placeholder-large">
-                Students Workshop Photo
+              <div className="apply-image">
+                <img src="/placeholder.png" alt="Students Workshop" />
               </div>
             </div>
           </div>
@@ -176,9 +174,24 @@ export default class Ignite extends Component {
           <div className="content-wrapper">
             <h2 className="section-header">Gallery</h2>
             <p className="section-subtitle">Captures from previous workshops</p>
-            <div className="large-wireframe-display">
-              <div className="display-placeholder">
-                Gallery Images
+            <div className="gallery-grid">
+              <div className="gallery-item">
+                <img src="/placeholder.png" alt="Workshop capture 1" />
+              </div>
+              <div className="gallery-item">
+                <img src="/placeholder.png" alt="Workshop capture 2" />
+              </div>
+              <div className="gallery-item">
+                <img src="/placeholder.png" alt="Workshop capture 3" />
+              </div>
+              <div className="gallery-item">
+                <img src="/placeholder.png" alt="Workshop capture 4" />
+              </div>
+              <div className="gallery-item">
+                <img src="/placeholder.png" alt="Workshop capture 5" />
+              </div>
+              <div className="gallery-item">
+                <img src="/placeholder.png" alt="Workshop capture 6" />
               </div>
             </div>
           </div>

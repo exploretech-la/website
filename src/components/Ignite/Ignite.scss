@@ -289,12 +289,8 @@ $max-content-width: 1140px;
   // 5. Capstone Section
   .capstone-section {
 
-    /* NEW — white → teal gradient */
-    background: linear-gradient(
-      to bottom,
-      $ignite-teal-light 0%,
-      $ignite-teal-dark 100%
-    );
+    /* NEW — light grey background */
+    background: #f5f5f5;
 
     .section-header {
       font-size: 3rem;
@@ -307,6 +303,19 @@ $max-content-width: 1140px;
       color: #6796a5;
       margin-bottom: 30px;
     }
+
+    .capstone-image-container {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
   }
 
   // 6. Apply Section (Bottom Dark Gradient)
@@ -315,8 +324,12 @@ $max-content-width: 1140px;
     padding-top: 80px;
     padding-bottom: 60px;
 
-    /* NEW — solid teal */
-    background: $ignite-teal-dark;
+    /* NEW — gradient from light blue to darker teal */
+    background: linear-gradient(
+      to bottom,
+      #a8d8e8 0%,
+      $ignite-teal-dark 100%
+    );
 
     .content-wrapper {
       flex-direction: column;
@@ -355,7 +368,7 @@ $max-content-width: 1140px;
         font-size: 1.1rem;
         margin-top: 15px;
         margin-bottom: 30px;
-        color: #06546f;
+        color: white;
       }
 
       .btn-apply-large {
@@ -378,17 +391,17 @@ $max-content-width: 1140px;
       align-items: center;
       justify-content: center;
 
-      .image-placeholder-large {
+      .apply-image {
         width: 100%;
-        aspect-ratio: 1.5;
-        background: #333;
-        color: #aaa;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border-radius: 20px;
-        border: 2px solid #555;
-        font-size: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
       }
     }
   }
@@ -447,24 +460,29 @@ $max-content-width: 1140px;
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       width: 100%;
 
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+
       .gallery-item {
-        background: rgba(255, 255, 255, 0.15);
-        border-radius: 16px;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-        aspect-ratio: 4 / 3;
+        border-radius: 12px;
         overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        aspect-ratio: 4 / 3;
 
-        &.tall {
-          grid-row: span 2;
-        }
-
-        &.wide {
-          grid-column: span 2;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
       }
     }
