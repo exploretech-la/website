@@ -83,8 +83,28 @@ export default class Ignite extends Component {
         <section className="ignite-section workshop-section theme-light">
           <div className="content-wrapper">
             <h2 className="section-header">2025 Workshops</h2>
-            <div className="large-wireframe-display">
-              <div className="display-placeholder">2025 Workshops</div>
+            <div className="workshop-cards-container">
+              <div className="workshop-card">
+                <h3 className="card-title">Introduction to Python</h3>
+                <p className="card-description">Dive into one of the most versatile and widely used programming languages. This track will teach you essential Python concepts and guide you through practical projects, perfect for beginners.</p>
+                <div className="card-image">
+                  <img src="/placeholder.png" alt="Introduction to Python" />
+                </div>
+              </div>
+              <div className="workshop-card">
+                <h3 className="card-title">Game Development with Roblox</h3>
+                <p className="card-description">Design and develop an exciting speed run parkour game using Roblox Studio. From building dynamic levels to scripting game mechanics with Lua, you'll gain hands-on experience in game creation.</p>
+                <div className="card-image">
+                  <img src="/placeholder.png" alt="Game Development with Roblox" />
+                </div>
+              </div>
+              <div className="workshop-card">
+                <h3 className="card-title">Web Development</h3>
+                <p className="card-description">Learn how websites are built using HTML and CSS. Build your skills throughout the sessions and create your very own custom website as a capstone project.</p>
+                <div className="card-image">
+                  <img src="/placeholder.png" alt="Web Development" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -92,8 +112,28 @@ export default class Ignite extends Component {
         <section className="ignite-section workshop-section theme-light">
           <div className="content-wrapper">
             <h2 className="section-header">2024 Workshops</h2>
-            <div className="large-wireframe-display">
-              <div className="display-placeholder">2024 Workshops</div>
+            <div className="workshop-cards-container">
+              <div className="workshop-card">
+                <h3 className="card-title">Introduction to Python</h3>
+                <p className="card-description">Dive into one of the most versatile and widely used programming languages. This track will teach you essential Python concepts and guide you through practical projects, perfect for beginners.</p>
+                <div className="card-image">
+                  <img src="/placeholder.png" alt="Introduction to Python" />
+                </div>
+              </div>
+              <div className="workshop-card">
+                <h3 className="card-title">Game Development with Unity</h3>
+                <p className="card-description">Design and develop an exciting speed run parkour game using Roblox Studio. From building dynamic levels to scripting game mechanics with Lua, you'll gain hands-on experience in game creation.</p>
+                <div className="card-image">
+                  <img src="/placeholder.png" alt="Game Development with Unity" />
+                </div>
+              </div>
+              <div className="workshop-card">
+                <h3 className="card-title">Machine Learning</h3>
+                <p className="card-description">Learn how websites are built using HTML and CSS. Build your skills throughout the sessions and create your very own custom website as a capstone project.</p>
+                <div className="card-image">
+                  <img src="/placeholder.png" alt="Machine Learning" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
