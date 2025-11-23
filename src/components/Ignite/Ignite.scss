@@ -112,39 +112,89 @@ $max-content-width: 1140px;
       font-size: 3.5rem;
       font-weight: 700;
       margin-bottom: 40px;
-      color: #d9e6e7;
+      color: white;
     }
 
-    .card-grid.four-columns {
+    .program-cards-container {
       display: flex;
       flex-direction: column;
-      width: 100%;
       gap: 20px;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 14px;
+      }
     }
 
-    .wireframe-card.structure-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 20px;
+    .program-card {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
       padding: 20px;
-      min-height: 250px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      flex: 1;
+      min-height: 450px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      opacity: 1;
 
-      .card-header {
+      .card-title {
+        font-size: 1.5rem;
         font-weight: 700;
-        font-size: 1.2rem;
-        color: $ignite-text-dark;
-        margin-bottom: 15px;
+        color: white;
+        margin-bottom: 10px;
+        line-height: 1.2;
       }
 
-      .card-body-placeholder {
-        flex-grow: 1;
-        width: 100%;
-        background: #eee;
-        border-radius: 12px;
-        border: 2px dashed #ccc;
+      .card-description {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 8px;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 3em; // Ensures consistent height for 2 lines
       }
+
+      .card-image {
+        width: 100%;
+        height: 240px; // Fixed height for consistent image size
+        border-radius: 12px;
+        overflow: hidden;
+        margin-top: auto;
+        background: rgba(0, 0, 0, 0.1);
+        border: 3px solid white;
+        flex-shrink: 0; // Prevent image from shrinking
+        margin-top: 0; // Remove auto margin to bring image closer to text
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+
+    // Hover effect: highlight hovered card, dull others
+    .program-cards-container:hover .program-card {
+      opacity: 0.6;
+      transform: scale(0.98);
+    }
+
+    .program-cards-container .program-card:hover {
+      opacity: 1;
+      transform: translateY(-8px) scale(1.02);
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      z-index: 10;
+      position: relative;
     }
   }
 
@@ -161,54 +211,86 @@ $max-content-width: 1140px;
       color: #06546f;
     }
 
-    .card-grid.three-columns {
+    .workshop-cards-container {
       display: flex;
       flex-direction: column;
+      gap: 20px;
       width: 100%;
-      gap: 30px;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 14px;
+      }
     }
 
-    .wireframe-card.workshop-card {
-      background-color: #1cb0c6;
-      color: white;
-      border-radius: 20px;
-      padding: 25px;
-      min-height: 400px;
-      text-align: left;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    .workshop-card {
+      background: #1cb0c6;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-height: 450px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      opacity: 1;
 
-      h3 {
+      .card-title {
         font-size: 1.5rem;
         font-weight: 700;
-        margin-bottom: 20px;
+        color: white;
+        margin-bottom: 10px;
+        line-height: 1.2;
       }
 
-      .text-placeholder {
-        height: 80px;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        margin-bottom: 20px;
+      .card-description {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 8px;
+        line-height: 1.5;
       }
 
-      .image-placeholder {
+      .card-image {
         width: 100%;
-        height: 200px;
-        background: rgba(0, 0, 0, 0.2);
+        height: 240px; // Fixed height for consistent image size
         border-radius: 12px;
+        overflow: hidden;
+        margin-top: auto;
+        background: rgba(0, 0, 0, 0.1);
+        border: 3px solid white;
+        flex-shrink: 0; // Prevent image from shrinking
+        margin-top: 0; // Remove auto margin to bring image closer to text
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
       }
+    }
+
+    // Hover effect: highlight hovered card, dull others
+    .workshop-cards-container:hover .workshop-card {
+      opacity: 0.6;
+      transform: scale(0.98);
+    }
+
+    .workshop-cards-container .workshop-card:hover {
+      opacity: 1;
+      transform: translateY(-8px) scale(1.02);
+      background: #2ca6bc;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      z-index: 10;
+      position: relative;
     }
   }
 
   // 5. Capstone Section
   .capstone-section {
 
-    /* NEW — white → teal gradient */
-    background: linear-gradient(
-      to bottom,
-      $ignite-teal-light 0%,
-      $ignite-teal-dark 100%
-    );
+    /* NEW — light grey background */
+    background: #f5f5f5;
 
     .section-header {
       font-size: 3rem;
@@ -221,6 +303,19 @@ $max-content-width: 1140px;
       color: #6796a5;
       margin-bottom: 30px;
     }
+
+    .capstone-image-container {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
   }
 
   // 6. Apply Section (Bottom Dark Gradient)
@@ -229,8 +324,12 @@ $max-content-width: 1140px;
     padding-top: 80px;
     padding-bottom: 60px;
 
-    /* NEW — solid teal */
-    background: $ignite-teal-dark;
+    /* NEW — gradient from light blue to darker teal */
+    background: linear-gradient(
+      to bottom,
+      #a8d8e8 0%,
+      $ignite-teal-dark 100%
+    );
 
     .content-wrapper {
       flex-direction: column;
@@ -269,7 +368,7 @@ $max-content-width: 1140px;
         font-size: 1.1rem;
         margin-top: 15px;
         margin-bottom: 30px;
-        color: #06546f;
+        color: white;
       }
 
       .btn-apply-large {
@@ -292,17 +391,17 @@ $max-content-width: 1140px;
       align-items: center;
       justify-content: center;
 
-      .image-placeholder-large {
+      .apply-image {
         width: 100%;
-        aspect-ratio: 1.5;
-        background: #333;
-        color: #aaa;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border-radius: 20px;
-        border: 2px solid #555;
-        font-size: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
       }
     }
   }
@@ -361,24 +460,29 @@ $max-content-width: 1140px;
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       width: 100%;
 
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+
       .gallery-item {
-        background: rgba(255, 255, 255, 0.15);
-        border-radius: 16px;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-        aspect-ratio: 4 / 3;
+        border-radius: 12px;
         overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        aspect-ratio: 4 / 3;
 
-        &.tall {
-          grid-row: span 2;
-        }
-
-        &.wide {
-          grid-column: span 2;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
       }
     }
