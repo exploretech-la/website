@@ -47,9 +47,34 @@ export default class Ignite extends Component {
         <section className="ignite-section structure-section">
           <div className="content-wrapper">
             <h2 className="section-header">Program Structure</h2>
-            <div className="large-wireframe-display">
-              <div className="display-placeholder">
-                Week 1, Week 2, Week 3, Week 4
+            <div className="program-cards-container">
+              <div className="program-card">
+                <h3 className="card-title">Week 1: Foundation</h3>
+                <p className="card-description">Building core skills and understanding key concepts.</p>
+                <div className="card-image">
+                  <img src="/placeholder.png" alt="Week 1: Foundation" />
+                </div>
+              </div>
+              <div className="program-card">
+                <h3 className="card-title">Week 2: Development</h3>
+                <p className="card-description">Hands-on learning and practical application.</p>
+                <div className="card-image">
+                  <img src="/placeholder.png" alt="Week 2: Development" />
+                </div>
+              </div>
+              <div className="program-card">
+                <h3 className="card-title">Week 3: Integration</h3>
+                <p className="card-description">Advanced concepts and team collaboration.</p>
+                <div className="card-image">
+                  <img src="/placeholder.png" alt="Week 3: Integration" />
+                </div>
+              </div>
+              <div className="program-card">
+                <h3 className="card-title">Week 4:<br />Capstone</h3>
+                <p className="card-description">Project development and final presentation.</p>
+                <div className="card-image">
+                  <img src="/placeholder.png" alt="Week 4: Capstone" />
+                </div>
               </div>
             </div>
           </div>

@@ -112,39 +112,89 @@ $max-content-width: 1140px;
       font-size: 3.5rem;
       font-weight: 700;
       margin-bottom: 40px;
-      color: #d9e6e7;
+      color: white;
     }
 
-    .card-grid.four-columns {
+    .program-cards-container {
       display: flex;
       flex-direction: column;
-      width: 100%;
       gap: 20px;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 14px;
+      }
     }
 
-    .wireframe-card.structure-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 20px;
+    .program-card {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
       padding: 20px;
-      min-height: 250px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      flex: 1;
+      min-height: 450px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      opacity: 1;
 
-      .card-header {
+      .card-title {
+        font-size: 1.5rem;
         font-weight: 700;
-        font-size: 1.2rem;
-        color: $ignite-text-dark;
-        margin-bottom: 15px;
+        color: white;
+        margin-bottom: 10px;
+        line-height: 1.2;
       }
 
-      .card-body-placeholder {
-        flex-grow: 1;
-        width: 100%;
-        background: #eee;
-        border-radius: 12px;
-        border: 2px dashed #ccc;
+      .card-description {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 8px;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 3em; // Ensures consistent height for 2 lines
       }
+
+      .card-image {
+        width: 100%;
+        height: 240px; // Fixed height for consistent image size
+        border-radius: 12px;
+        overflow: hidden;
+        margin-top: auto;
+        background: rgba(0, 0, 0, 0.1);
+        border: 3px solid white;
+        flex-shrink: 0; // Prevent image from shrinking
+        margin-top: 0; // Remove auto margin to bring image closer to text
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+
+    // Hover effect: highlight hovered card, dull others
+    .program-cards-container:hover .program-card {
+      opacity: 0.6;
+      transform: scale(0.98);
+    }
+
+    .program-cards-container .program-card:hover {
+      opacity: 1;
+      transform: translateY(-8px) scale(1.02);
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      z-index: 10;
+      position: relative;
     }
   }
 
