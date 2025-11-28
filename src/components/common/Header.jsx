@@ -9,6 +9,8 @@ import HomePageSections from "constants/HomePageSections";
 import LogoWithIcons from "static/svg/logo-with-icons-navy.svg";
 import CompassLogo from "static/svg/logo-compass.svg";
 
+const IGNITE_ENABLED = false;
+
 function Header() {
   // let navItems = [];
   let isHomePage = false;
@@ -18,12 +20,11 @@ function Header() {
   if (location.pathname === "/") {
     isHomePage = true;
   }
-
-  if (location.pathname === "/ignite") {
+  
+  if (location.pathname === "/ignite" && IGNITE_ENABLED) {
     isIgnitePage = true;
   }
 
-  
   // if (location.pathname === '/our_team') {
   //   navItems = ourTeamNavItems;
   // }
