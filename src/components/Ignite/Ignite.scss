@@ -134,7 +134,7 @@ $max-content-width: 1140px;
       display: flex;
       flex-direction: column;
       flex: 1;
-      min-height: 450px;
+      min-height: 0;
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
       transition: all 0.3s ease;
@@ -305,7 +305,9 @@ $max-content-width: 1140px;
     }
 
     .capstone-image-container {
-      width: 100%;
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
