@@ -4,8 +4,16 @@ import classnames from "classnames";
 import Button from "react-bootstrap/Button";
 import Footer from "components/Footer";
 import PageNotFound from "components/PageNotFound";
+import PythonImg from "static/images/ignite/python.jpg";
+import WebdevImg from "static/images/ignite/webdev.jpg";
+import GameDevRobloxImg from "static/images/ignite/gamedevroblox.jpg";
+import GameDevImg from "static/images/ignite/gamdev.jpeg";
+import MLImg from "static/images/ignite/ML.png";
+import Collab1 from "static/images/ignite/collab1.jpg";
+import Collab2 from "static/images/ignite/cllab2.jpg";
+import PythonWorkshop from "static/images/ignite/PXL_20250215_212102361.MP.jpg";
 
-const IGNITE_ENABLED = false; // gate
+const IGNITE_ENABLED = true; // gate
 
 export default class Ignite extends Component {
   static get propTypes() {
@@ -60,27 +68,18 @@ export default class Ignite extends Component {
                 <p className="card-description">
                   Building core skills and understanding key concepts.
                 </p>
-                <div className="card-image">
-                  <img src="/placeholder.png" alt="Week 1: Foundation" />
-                </div>
               </div>
               <div className="program-card">
                 <h3 className="card-title">Week 2: Development</h3>
                 <p className="card-description">
                   Hands-on learning and practical application.
                 </p>
-                <div className="card-image">
-                  <img src="/placeholder.png" alt="Week 2: Development" />
-                </div>
               </div>
               <div className="program-card">
                 <h3 className="card-title">Week 3: Integration</h3>
                 <p className="card-description">
                   Advanced concepts and team collaboration.
                 </p>
-                <div className="card-image">
-                  <img src="/placeholder.png" alt="Week 3: Integration" />
-                </div>
               </div>
               <div className="program-card">
                 <h3 className="card-title">
@@ -91,9 +90,6 @@ export default class Ignite extends Component {
                 <p className="card-description">
                   Project development and final presentation.
                 </p>
-                <div className="card-image">
-                  <img src="/placeholder.png" alt="Week 4: Capstone" />
-                </div>
               </div>
             </div>
           </div>
@@ -112,7 +108,7 @@ export default class Ignite extends Component {
                   perfect for beginners.
                 </p>
                 <div className="card-image">
-                  <img src="/placeholder.png" alt="Introduction to Python" />
+                  <img src={PythonImg} alt="Introduction to Python" />
                 </div>
               </div>
               <div className="workshop-card">
@@ -125,7 +121,7 @@ export default class Ignite extends Component {
                 </p>
                 <div className="card-image">
                   <img
-                    src="/placeholder.png"
+                    src={GameDevRobloxImg}
                     alt="Game Development with Roblox"
                   />
                 </div>
@@ -138,7 +134,7 @@ export default class Ignite extends Component {
                   website as a capstone project.
                 </p>
                 <div className="card-image">
-                  <img src="/placeholder.png" alt="Web Development" />
+                  <img src={WebdevImg} alt="Web Development" />
                 </div>
               </div>
             </div>
@@ -158,7 +154,7 @@ export default class Ignite extends Component {
                   perfect for beginners.
                 </p>
                 <div className="card-image">
-                  <img src="/placeholder.png" alt="Introduction to Python" />
+                  <img src={PythonWorkshop} alt="Introduction to Python" />
                 </div>
               </div>
               <div className="workshop-card">
@@ -171,7 +167,7 @@ export default class Ignite extends Component {
                 </p>
                 <div className="card-image">
                   <img
-                    src="/placeholder.png"
+                    src={GameDevImg}
                     alt="Game Development with Unity"
                   />
                 </div>
@@ -184,7 +180,7 @@ export default class Ignite extends Component {
                   website as a capstone project.
                 </p>
                 <div className="card-image">
-                  <img src="/placeholder.png" alt="Machine Learning" />
+                  <img src={MLImg} alt="Machine Learning" />
                 </div>
               </div>
             </div>
@@ -198,7 +194,7 @@ export default class Ignite extends Component {
               The program culminates in a capstone project...
             </p>
             <div className="capstone-image-container">
-              <img src="/placeholder.png" alt="Capstone Project Presentation" />
+              <img src={Collab1} alt="Capstone Project Presentation" />
             </div>
           </div>
         </section>
@@ -217,38 +213,12 @@ export default class Ignite extends Component {
 
             <div className="right-image-col">
               <div className="apply-image">
-                <img src="/placeholder.png" alt="Students Workshop" />
+                <img src={Collab2} alt="Students Workshop" />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="ignite-section gallery-section">
-          <div className="content-wrapper">
-            <h2 className="section-header">Gallery</h2>
-            <p className="section-subtitle">Captures from previous workshops</p>
-            <div className="gallery-grid">
-              <div className="gallery-item">
-                <img src="/placeholder.png" alt="Workshop capture 1" />
-              </div>
-              <div className="gallery-item">
-                <img src="/placeholder.png" alt="Workshop capture 2" />
-              </div>
-              <div className="gallery-item">
-                <img src="/placeholder.png" alt="Workshop capture 3" />
-              </div>
-              <div className="gallery-item">
-                <img src="/placeholder.png" alt="Workshop capture 4" />
-              </div>
-              <div className="gallery-item">
-                <img src="/placeholder.png" alt="Workshop capture 5" />
-              </div>
-              <div className="gallery-item">
-                <img src="/placeholder.png" alt="Workshop capture 6" />
-              </div>
-            </div>
-          </div>
-        </section>
         <Footer />
       </div>
     );
