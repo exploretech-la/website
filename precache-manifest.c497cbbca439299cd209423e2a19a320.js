@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3cce30636b4a8f453874c43ed1ee7aba",
+    "revision": "25d0d2f0e70b6d1f868fb098bac4e3a7",
     "url": "/index.html"
   },
   {
-    "revision": "d36c9e4448197921684d",
+    "revision": "e0314bc445f3ca95cc6e",
     "url": "/static/css/2.b7c36454.chunk.css"
   },
   {
-    "revision": "8590d5f27af546f0f3fe",
-    "url": "/static/css/main.e2149a98.chunk.css"
+    "revision": "9a976e797abc91736837",
+    "url": "/static/css/main.1b0f03f5.chunk.css"
   },
   {
-    "revision": "d36c9e4448197921684d",
-    "url": "/static/js/2.dcb80202.chunk.js"
+    "revision": "e0314bc445f3ca95cc6e",
+    "url": "/static/js/2.0c2eaa2c.chunk.js"
   },
   {
     "revision": "176c1a1a28b19c611d9701905d8d60b7",
-    "url": "/static/js/2.dcb80202.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.0c2eaa2c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8590d5f27af546f0f3fe",
-    "url": "/static/js/main.1cebf364.chunk.js"
+    "revision": "9a976e797abc91736837",
+    "url": "/static/js/main.2c59fdb9.chunk.js"
   },
   {
     "revision": "ae3b8d3e9533d58eb305",
@@ -30,6 +30,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fea3e24610fb4faa0d9521ab0321af6b",
     "url": "/static/media/Event_Program.fea3e246.pdf"
+  },
+  {
+    "revision": "d0bfb3cd95f4082abe8b168fba1227f8",
+    "url": "/static/media/ML.d0bfb3cd.png"
+  },
+  {
+    "revision": "e29a4004cd3e3fd76aece9252bdbb444",
+    "url": "/static/media/PXL_20250215_212102361.MP.e29a4004.jpg"
   },
   {
     "revision": "b6a9223785e25c97043930131b539c40",
@@ -68,8 +76,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/clara-zhang.1b054511.jpg"
   },
   {
+    "revision": "4d74af822d2d32cb3471324c7a93c6c9",
+    "url": "/static/media/cllab2.4d74af82.jpg"
+  },
+  {
     "revision": "9f4ccc14c2ab7393b9edbc92dade9532",
     "url": "/static/media/cloud-girls.9f4ccc14.png"
+  },
+  {
+    "revision": "e86bccb128fcf096d9f67385ee2b9c22",
+    "url": "/static/media/collab1.e86bccb1.jpg"
   },
   {
     "revision": "a19c84474e5db1b55eb3d6ad99271a8c",
@@ -94,6 +110,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6c1cc60686f3781e6ef2143b3390d8e2",
     "url": "/static/media/exploretech_la_2022_Student_Verification_Form.6c1cc606.pdf"
+  },
+  {
+    "revision": "fedeb7c15325c42f8bb2d7b45c5c73d4",
+    "url": "/static/media/gamdev.fedeb7c1.jpeg"
+  },
+  {
+    "revision": "94e72afd5c6ae92b07135b335da2aa4a",
+    "url": "/static/media/gamedevroblox.94e72afd.jpg"
   },
   {
     "revision": "32da7549bea1bd0924920902fd9ee1dc",
@@ -142,6 +166,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9bba55ea47bc60bccb4fac77f0cffa8b",
     "url": "/static/media/paige-wu.9bba55ea.jpg"
+  },
+  {
+    "revision": "eeac698e7d166afeed505a8ed0b658f0",
+    "url": "/static/media/python.eeac698e.jpg"
   },
   {
     "revision": "680306fb3dbe1a1925f3c6eac46202b9",
@@ -198,6 +226,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a1880337ae61ab6852992ab1ad776d6b",
     "url": "/static/media/ucla-samueli-engineering.a1880337.png"
+  },
+  {
+    "revision": "94ac39c85d5b6d760e6c4279cab58eb2",
+    "url": "/static/media/webdev.94ac39c8.jpg"
   },
   {
     "revision": "7b502e3dd0e2ff24dd5d8403da208100",
