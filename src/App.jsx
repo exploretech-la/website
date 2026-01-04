@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 import GA from "util/GoogleAnalytics";
 
@@ -32,7 +32,8 @@ class App extends Component {
           {/* <Route exact path="/exploretechla2021" component={Register} /> */}
           <Route exact path="/resources" component={Resources} />
           <Route exact path="/resources2023" component={Resources2023} />
-          <Route exact path="/our_team" component={Team} />
+          <Route exact path="/our_team" render={() => <Redirect to="/our_team/leadership" />} />
+          <Route exact path="/our_team/:section" component={Team} />
           <Route exact path="/ignite" component={Ignite} />
           <Route component={PageNotFound} />
         </Switch>

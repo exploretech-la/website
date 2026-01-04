@@ -1,44 +1,38 @@
 export const Operations = [
     {
         key: 1,
-        name: 'Mahima Bhella',
-        image: require('static/team/operations/mahima-bhella.png'),
+        name: 'Aansh Singh',
+        image: require('static/team/operations/aansh-singh.jpeg'),
         link: '',
-    }, 
-    {
+    }, {
         key: 2,
-        name: 'Amanda Chan',
-        image: require('static/team/operations/amanda-chan.png'),
+        name: 'Angeleena Poothavelil',
+        image: require('static/team/operations/angeleena-poothavelil.png'),
         link: '',
-    }, 
-    {
+    }, {
         key: 3,
-        name: 'Luisa Chen',
-        image: require('static/team/operations/luisa-chen.png'),
+        name: 'Christina Uong',
+        image: require('static/team/operations/christina-uong-headshot.jpg'),
         link: '',
-    }, 
-    {
+    }, {
         key: 4,
-        name: 'Krisha Chokshi',
-        image: require('static/team/operations/krisha-chokshi.jpg'),
+        name: 'Eric Chen',
+        image: require('static/team/operations/eric-chen-headshot.jpg'),
         link: '',
-    }, 
-    {
+    }, {
         key: 5,
-        name: 'Rishik Durvasula',
-        image: require('static/team/operations/rishik-durvasula.png'),
+        name: 'Esther Yao',
+        image: require('static/team/operations/esther-yao-headshot.jpg'),
         link: '',
-    }, 
-    {
+    }, {
         key: 6,
-        name: 'Keanu Villagonzalo',
-        image: require('static/team/operations/keanu-villagonzalo.png'),
+        name: 'Joy Szeto',
+        image: require('static/team/operations/joy-szeto-headshot.jpeg'),
         link: '',
-    }, 
-    {
+    }, {
         key: 7,
-        name: 'Sydnie Yu',
-        image: require('static/team/operations/sydnie-yu.png'),
+        name: 'Tammy Sujaritchai',
+        image: require('static/team/operations/tammy-sujaritchai.jpg'),
         link: '',
-    }, 
+    },
 ];
