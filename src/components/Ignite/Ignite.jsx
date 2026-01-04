@@ -49,10 +49,23 @@ export default class Ignite extends Component {
               </p>
             </div>
             <div className="header-buttons">
-              <Button variant="primary" className="btn-apply">
+              <Button 
+                variant="primary" 
+                className="btn-apply"
+                onClick={() => window.open('https://forms.gle/DKUZARUPjWoxrUif6', '_blank')}
+              >
                 Apply Now!
               </Button>
-              <Button variant="outline-light" className="btn-previous">
+              <Button 
+                variant="outline-light" 
+                className="btn-previous"
+                onClick={() => {
+                  const element = document.getElementById('workshops-2025');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 Previous Workshop
               </Button>
             </div>
@@ -95,7 +108,7 @@ export default class Ignite extends Component {
           </div>
         </section>
 
-        <section className="ignite-section workshop-section theme-light">
+        <section id="workshops-2025" className="ignite-section workshop-section theme-light">
           <div className="content-wrapper">
             <h2 className="section-header">2025 Workshops</h2>
             <div className="workshop-cards-container">
@@ -206,7 +219,11 @@ export default class Ignite extends Component {
               <p className="section-subtitle-small">
                 Applications for the next IGNITE are open...
               </p>
-              <Button variant="primary" className="btn-apply-large">
+              <Button 
+                variant="primary" 
+                className="btn-apply-large"
+                onClick={() => window.open('https://forms.gle/DKUZARUPjWoxrUif6', '_blank')}
+              >
                 Apply
               </Button>
             </div>
