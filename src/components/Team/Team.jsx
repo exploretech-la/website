@@ -1,48 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
+import { useLocation, Link } from "react-router-dom";
 
 import Leadership from "./Leadership";
-// import _Content from "./Content";
-// import _Design from "./Design";
-// import _Operations from "./Operations";
-// import _External from "./External";
+import Content from "./Content";
+import Design from "./Design";
+import Operations from "./Operations";
+import External from "./External";
 import Footer from "../Footer";
 import "./Team.scss";
 
 function Team() {
-  const [activeSection, setActiveSection] = useState("leadership");
+  const location = useLocation();
+  
+  // Extract section from URL path
+  const pathParts = location.pathname.split('/').filter(Boolean);
+  const activeSection = pathParts[pathParts.length - 1] === 'our_team' 
+    ? 'leadership' 
+    : pathParts[pathParts.length - 1] || 'leadership';
 
   const renderTeamSection = () => {
     switch (activeSection) {
       case "leadership":
         return <Leadership />;
       case "content":
-        return (
-          <div className="coming-soon-section">
-            <h2>Coming Soon!</h2>
-            <p>Content team information will be available soon.</p>
-          </div>
-        );
+        return <Content />;
       case "design":
-        return (
-          <div className="coming-soon-section">
-            <h2>Coming Soon!</h2>
-            <p>Design team information will be available soon.</p>
-          </div>
-        );
+        return <Design />;
       case "operations":
-        return (
-          <div className="coming-soon-section">
-            <h2>Coming Soon!</h2>
-            <p>Operations team information will be available soon.</p>
-          </div>
-        );
+        return <Operations />;
       case "external":
-        return (
-          <div className="coming-soon-section">
-            <h2>Coming Soon!</h2>
-            <p>External team information will be available soon.</p>
-          </div>
-        );
+        return <External />;
       default:
         return <Leadership />;
     }
@@ -56,36 +43,36 @@ function Team() {
       </div>
 
       <div className="team-navigation">
-        <button
+        <Link
+          to="/our_team/leadership"
           className={activeSection === "leadership" ? "active" : ""}
-          onClick={() => setActiveSection("leadership")}
         >
           Leadership
-        </button>
-        <button
+        </Link>
+        <Link
+          to="/our_team/content"
           className={activeSection === "content" ? "active" : ""}
-          onClick={() => setActiveSection("content")}
         >
           Content
-        </button>
-        <button
+        </Link>
+        <Link
+          to="/our_team/design"
           className={activeSection === "design" ? "active" : ""}
-          onClick={() => setActiveSection("design")}
         >
           Design
-        </button>
-        <button
+        </Link>
+        <Link
+          to="/our_team/operations"
           className={activeSection === "operations" ? "active" : ""}
-          onClick={() => setActiveSection("operations")}
         >
           Operations
-        </button>
-        <button
+        </Link>
+        <Link
+          to="/our_team/external"
           className={activeSection === "external" ? "active" : ""}
-          onClick={() => setActiveSection("external")}
         >
           External
-        </button>
+        </Link>
       </div>
 
       <div className="team-content">
