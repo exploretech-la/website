@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "931ff1e9ba112ff0d2b834c36e1ec0c0",
+    "revision": "741066af93ae5b2a36aa7644091678a9",
     "url": "/index.html"
   },
   {
-    "revision": "3010b12c73998ed1e9fd",
+    "revision": "500790ccea9e552d0d48",
     "url": "/static/css/2.b7c36454.chunk.css"
   },
   {
-    "revision": "7764bbace76f428ec96c",
-    "url": "/static/css/main.11b1abd7.chunk.css"
+    "revision": "88ba4fc478d482ef230a",
+    "url": "/static/css/main.2fd03ab3.chunk.css"
   },
   {
-    "revision": "3010b12c73998ed1e9fd",
-    "url": "/static/js/2.c0c28e4c.chunk.js"
+    "revision": "500790ccea9e552d0d48",
+    "url": "/static/js/2.4376fd43.chunk.js"
   },
   {
     "revision": "176c1a1a28b19c611d9701905d8d60b7",
-    "url": "/static/js/2.c0c28e4c.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.4376fd43.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7764bbace76f428ec96c",
-    "url": "/static/js/main.d4e2b998.chunk.js"
+    "revision": "88ba4fc478d482ef230a",
+    "url": "/static/js/main.4ccb28da.chunk.js"
   },
   {
     "revision": "ae3b8d3e9533d58eb305",
@@ -132,6 +132,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/disney.b4959274.png"
   },
   {
+    "revision": "995ecf7fba090935ebe48d701f0a3a35",
+    "url": "/static/media/ela_defne_erkan.995ecf7f.png"
+  },
+  {
     "revision": "ce9d995d6c46a05e8e9e25a26cb2dfa4",
     "url": "/static/media/eli-drewry-headshot.ce9d995d.jpeg"
   },
@@ -178,6 +182,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "597fd47aeb5761602a104562b73dbef1",
     "url": "/static/media/isabelle-chang.597fd47a.png"
+  },
+  {
+    "revision": "71ff4163737c4a837b472cf7835fd7d4",
+    "url": "/static/media/jacqueline_nguyen.71ff4163.png"
   },
   {
     "revision": "f92c00432d541f0c308827f116a60028",

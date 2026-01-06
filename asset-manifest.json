@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.11b1abd7.chunk.css",
-    "main.js": "/static/js/main.d4e2b998.chunk.js",
-    "main.js.map": "/static/js/main.d4e2b998.chunk.js.map",
+    "main.css": "/static/css/main.2fd03ab3.chunk.css",
+    "main.js": "/static/js/main.4ccb28da.chunk.js",
+    "main.js.map": "/static/js/main.4ccb28da.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3509d3f3.js",
     "runtime-main.js.map": "/static/js/runtime-main.3509d3f3.js.map",
     "static/css/2.b7c36454.chunk.css": "/static/css/2.b7c36454.chunk.css",
-    "static/js/2.c0c28e4c.chunk.js": "/static/js/2.c0c28e4c.chunk.js",
-    "static/js/2.c0c28e4c.chunk.js.map": "/static/js/2.c0c28e4c.chunk.js.map",
+    "static/js/2.4376fd43.chunk.js": "/static/js/2.4376fd43.chunk.js",
+    "static/js/2.4376fd43.chunk.js.map": "/static/js/2.4376fd43.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.89d7c85bdf3b2ac3854b3508cebe2c8d.js": "/precache-manifest.89d7c85bdf3b2ac3854b3508cebe2c8d.js",
+    "precache-manifest.defdac79038e9c4bc397f4952dc11787.js": "/precache-manifest.defdac79038e9c4bc397f4952dc11787.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.b7c36454.chunk.css.map": "/static/css/2.b7c36454.chunk.css.map",
-    "static/css/main.11b1abd7.chunk.css.map": "/static/css/main.11b1abd7.chunk.css.map",
-    "static/js/2.c0c28e4c.chunk.js.LICENSE.txt": "/static/js/2.c0c28e4c.chunk.js.LICENSE.txt",
+    "static/css/main.2fd03ab3.chunk.css.map": "/static/css/main.2fd03ab3.chunk.css.map",
+    "static/js/2.4376fd43.chunk.js.LICENSE.txt": "/static/js/2.4376fd43.chunk.js.LICENSE.txt",
     "static/media/Event_Program.pdf": "/static/media/Event_Program.fea3e246.pdf",
     "static/media/ML.png": "/static/media/ML.d0bfb3cd.png",
     "static/media/PXL_20250215_212102361.MP.jpg": "/static/media/PXL_20250215_212102361.MP.e29a4004.jpg",
@@ -40,6 +40,7 @@
     "static/media/collab1.jpg": "/static/media/collab1.e86bccb1.jpg",
     "static/media/demo-microsoft-vr.jpg": "/static/media/demo-microsoft-vr.a19c8447.jpg",
     "static/media/disney.png": "/static/media/disney.b4959274.png",
+    "static/media/ela_defne_erkan.png": "/static/media/ela_defne_erkan.995ecf7f.png",
     "static/media/eli-drewry-headshot.jpeg": "/static/media/eli-drewry-headshot.ce9d995d.jpeg",
     "static/media/emma-qiu-headshot.jpg": "/static/media/emma-qiu-headshot.5f73d020.jpg",
     "static/media/eric-chen-headshot.jpg": "/static/media/eric-chen-headshot.9740a611.jpg",
@@ -52,6 +53,7 @@
     "static/media/gamedevroblox.jpg": "/static/media/gamedevroblox.94e72afd.jpg",
     "static/media/google-logo.png": "/static/media/google-logo.32da7549.png",
     "static/media/isabelle-chang.png": "/static/media/isabelle-chang.597fd47a.png",
+    "static/media/jacqueline_nguyen.png": "/static/media/jacqueline_nguyen.71ff4163.png",
     "static/media/jasmine-aiemarreerat-headshot.jpg": "/static/media/jasmine-aiemarreerat-headshot.f92c0043.jpg",
     "static/media/jason-lozada.jpg": "/static/media/jason-lozada.957b7735.jpg",
     "static/media/jayathi-murthy.png": "/static/media/jayathi-murthy.6111a0dc.png",
@@ -104,8 +106,8 @@
   "entrypoints": [
     "static/js/runtime-main.3509d3f3.js",
     "static/css/2.b7c36454.chunk.css",
-    "static/js/2.c0c28e4c.chunk.js",
-    "static/css/main.11b1abd7.chunk.css",
-    "static/js/main.d4e2b998.chunk.js"
+    "static/js/2.4376fd43.chunk.js",
+    "static/css/main.2fd03ab3.chunk.css",
+    "static/js/main.4ccb28da.chunk.js"
   ]
 }
