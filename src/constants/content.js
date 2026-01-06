@@ -46,7 +46,7 @@ export const Content = [
         link: '',
     },     {
         key: 10,
-        name: 'Paul',
+        name: 'Paul Macapinlac',
         image: require('static/team/content/paul-headshot.png'),
         link: '',
     },     {

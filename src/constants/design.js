@@ -20,4 +20,16 @@ export const Design = [
         image: require('static/team/design/tiffany-cho.png'),
         link: '',
     },
+    {
+        key: 5,
+        name: 'Ela Defne Erkan',
+        image: require('static/team/design/ela_defne_erkan.png'),
+        link: '',
+    },
+    {
+        key: 6,
+        name: 'Jacqueline Nguyen',
+        image: require('static/team/design/jacqueline_nguyen.png'),
+        link: '',
+    },
 ];
