@@ -26,7 +26,7 @@ export const External = [
         link: '',
     },     {
         key: 6,
-        name: 'Yu Jubilee',
+        name: 'Jubilee Yu',
         image: require('static/team/external/yu-jubilee.png'),
         link: '',
     },
