@@ -34,5 +34,10 @@ export const Operations = [
         name: 'Tammy Sujaritchai',
         image: require('static/team/operations/tammy-sujaritchai.jpg'),
         link: '',
-    },
+    }, {
+        key : 8,
+        name : 'Kayla Wai',
+        image: require('static/team/operations/kayla-wai.jpg'),
+        link: '',
+    }
 ];
