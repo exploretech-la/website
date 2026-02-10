@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.2fd03ab3.chunk.css",
-    "main.js": "/static/js/main.4ccb28da.chunk.js",
-    "main.js.map": "/static/js/main.4ccb28da.chunk.js.map",
+    "main.js": "/static/js/main.8c6409b4.chunk.js",
+    "main.js.map": "/static/js/main.8c6409b4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3509d3f3.js",
     "runtime-main.js.map": "/static/js/runtime-main.3509d3f3.js.map",
     "static/css/2.b7c36454.chunk.css": "/static/css/2.b7c36454.chunk.css",
-    "static/js/2.4376fd43.chunk.js": "/static/js/2.4376fd43.chunk.js",
-    "static/js/2.4376fd43.chunk.js.map": "/static/js/2.4376fd43.chunk.js.map",
+    "static/js/2.1f9a46cf.chunk.js": "/static/js/2.1f9a46cf.chunk.js",
+    "static/js/2.1f9a46cf.chunk.js.map": "/static/js/2.1f9a46cf.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.defdac79038e9c4bc397f4952dc11787.js": "/precache-manifest.defdac79038e9c4bc397f4952dc11787.js",
+    "precache-manifest.9a7bee674a3bc86f67a842304d9f8993.js": "/precache-manifest.9a7bee674a3bc86f67a842304d9f8993.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.b7c36454.chunk.css.map": "/static/css/2.b7c36454.chunk.css.map",
     "static/css/main.2fd03ab3.chunk.css.map": "/static/css/main.2fd03ab3.chunk.css.map",
-    "static/js/2.4376fd43.chunk.js.LICENSE.txt": "/static/js/2.4376fd43.chunk.js.LICENSE.txt",
+    "static/js/2.1f9a46cf.chunk.js.LICENSE.txt": "/static/js/2.1f9a46cf.chunk.js.LICENSE.txt",
     "static/media/Event_Program.pdf": "/static/media/Event_Program.fea3e246.pdf",
     "static/media/ML.png": "/static/media/ML.d0bfb3cd.png",
     "static/media/PXL_20250215_212102361.MP.jpg": "/static/media/PXL_20250215_212102361.MP.e29a4004.jpg",
@@ -60,6 +60,7 @@
     "static/media/joshua-jin-headshot.png": "/static/media/joshua-jin-headshot.06e8c058.png",
     "static/media/joy-szeto-headshot.jpeg": "/static/media/joy-szeto-headshot.fe034a52.jpeg",
     "static/media/justin-brezhnev.png": "/static/media/justin-brezhnev.8ab7e5eb.png",
+    "static/media/kayla-wai.jpg": "/static/media/kayla-wai.a87eb888.jpg",
     "static/media/logo-compass.svg": "/static/media/logo-compass.0df0021f.svg",
     "static/media/logo-navy-with-icon-group-white.svg": "/static/media/logo-navy-with-icon-group-white.8e728268.svg",
     "static/media/logo-with-icons-navy.svg": "/static/media/logo-with-icons-navy.b86757b2.svg",
@@ -106,8 +107,8 @@
   "entrypoints": [
     "static/js/runtime-main.3509d3f3.js",
     "static/css/2.b7c36454.chunk.css",
-    "static/js/2.4376fd43.chunk.js",
+    "static/js/2.1f9a46cf.chunk.js",
     "static/css/main.2fd03ab3.chunk.css",
-    "static/js/main.4ccb28da.chunk.js"
+    "static/js/main.8c6409b4.chunk.js"
   ]
 }
