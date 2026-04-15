@@ -1,0 +1,41 @@
+.Waivers {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 32px;
+
+  .waivers-title, .waivers-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+
+    .button {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  
+}
+
+@include media-breakpoint-up(md) { 
+  .Waivers {
+    .buttons {
+      flex-direction: row;
+
+      .button {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}

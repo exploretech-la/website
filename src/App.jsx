@@ -8,6 +8,7 @@ import Home from "components/Home";
 import Register from "components/Registration/Register";
 import Resources from "components/Resources/Resources";
 import Resources2023 from "components/Resources2023/Resources";
+import Resources2026 from "components/Resources2026/Resources"
 import Team from "components/Team/Team";
 import PageNotFound from "components/PageNotFound";
 import Ignite from "components/Ignite/Ignite";
@@ -32,6 +33,7 @@ class App extends Component {
           {/* <Route exact path="/exploretechla2021" component={Register} /> */}
           <Route exact path="/resources" component={Resources} />
           <Route exact path="/resources2023" component={Resources2023} />
+          <Route exact path = "/resources2026" component = {Resources2026} />
           <Route exact path="/our_team" render={() => <Redirect to="/our_team/leadership" />} />
           <Route exact path="/our_team/:section" component={Team} />
           <Route exact path="/ignite" component={Ignite} />

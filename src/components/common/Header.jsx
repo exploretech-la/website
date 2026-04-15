@@ -20,7 +20,7 @@ function Header() {
   if (location.pathname === "/") {
     isHomePage = true;
   }
-  
+
   if (location.pathname === "/ignite" && IGNITE_ENABLED) {
     isIgnitePage = true;
   }
@@ -68,6 +68,9 @@ function Header() {
       </NavDropdown>
 
       <NavDropdown title="Resources" id="navbarScrollingDropdown">
+        <NavDropdown.Item href={`/resources2026`}>
+          exploretech 2026
+        </NavDropdown.Item>
         <NavDropdown.Item href={`/resources2023`}>
           exploretech 2023
         </NavDropdown.Item>
