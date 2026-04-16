@@ -16,17 +16,16 @@ export default class Hero extends Component {
           alt="logo-with-icon-group"
         />
         <div className="hero-content">
-          <h2 className="h1-title">Stay Tuned for 2026</h2>
+          <h2 className="h1-title">Schedule is out now!</h2>
           <h5 className="h1-title">
-            We are currently working on the 2026 event. Stay tuned for more
-            information!
+            Check out our 2026 schedule page for the latest event details and
+            updates.
           </h5>
           <p className="h1-title">
-            {" "}
-            <b>Any questions or partnerships?</b>{" "}
+            <b>Any questions or partnerships?</b>
           </p>
           <p>
-          Contact our executive directors Jason Lozada and Megha Ravi:{" "}
+            Contact our executive directors Jason Lozada and Megha Ravi:{" "}
             <a
               href="mailto:exploretechla@cs.ucla.edu"
               target="_blank"
@@ -37,9 +36,13 @@ export default class Hero extends Component {
           </p>
 
           <div className="hero-cta">
-            {/* <Button variant="info" href={`/exploretechla2021`} onClick={this._trackRegisterTodayClick}>
-                            Event Info
-                        </Button> */}
+            <Button
+              variant="info"
+              href={`/resources2026`}
+              onClick={this._trackRegisterTodayClick}
+            >
+              Event Info
+            </Button>
             <Button
               variant="info"
               href={`#${HomePageSections.ABOUT.name}`}
