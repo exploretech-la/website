@@ -94,7 +94,7 @@ export const WORKSHOPS2026 = [
     type: "workshop",
     instructors: "Ridhima Seth and Amy Lloyd",
     description: "Want to master Guess Who? with logic and strategy? Learn how decision trees and probability help you ask the smartest questions, minimize guesswork, and consistently win. This session makes algorithmic thinking fun and practical—sharpen your problem-solving skills while gaining a competitive edge in both games and real-world decision-making!",
-    slidesUrl: "",
+    slidesUrl: "https://canva.link/gu84339jr1878xm",
     panelistInfoUrl: "",
   },
   {
@@ -102,7 +102,7 @@ export const WORKSHOPS2026 = [
     type: "workshop",
     instructors: "Arjun Asudani and Alexander Chien",
     description: "What would you do if your success depended on someone else’s choice? This interactive workshop introduces game theory through fast-paced games and real-life scenarios. You’ll explore why people compete, when cooperation fails, and how small incentives can completely change outcomes.",
-    slidesUrl: "",
+    slidesUrl: "https://www.canva.com/design/DAHDlh96pCw/4F5lGBuqGXyBBO1a2Lyutg/edit",
     panelistInfoUrl: "",
   },
   {
@@ -110,7 +110,7 @@ export const WORKSHOPS2026 = [
     type: "panel",
     instructors: "Meet Modi / Tammy Sujaritchai and Sofia Matos",
     description: "Curious about what a career in tech actually looks like? Join us for a discussion with students and professionals as they share their experiences, career paths, and advice for breaking into the industry. Learn about different roles in tech, what skills matter most, and how to start exploring your own path.",
-    slidesUrl: "",
+    slidesUrl: "https://drive.google.com/drive/folders/1ZBMXid-LFwTB84lA5etUmEHMExT9Ee9W",
     panelistInfoUrl: "https://docs.google.com/document/d/1Gaj_cB8Y7RgeDnxmjOmZGS6XhREWHHRYwg-b7EyUBiw/edit?usp=sharing",
   },
   {
