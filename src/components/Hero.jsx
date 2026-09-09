@@ -25,7 +25,7 @@ export default class Hero extends Component {
             <b>Any questions or partnerships?</b>
           </p>
           <p>
-            Contact our executive directors Jason Lozada and Megha Ravi:{" "}
+            Contact our executive directors Spoorthy Nalumachu and Clara Zhang:{" "}
             <a
               href="mailto:exploretechla@cs.ucla.edu"
               target="_blank"

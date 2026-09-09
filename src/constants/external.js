@@ -1,33 +1,33 @@
 export const External = [
     {
         key: 1,
-        name: 'Clara Marcos',
-        image: require('static/team/external/clara-marcos-headshot.jpeg'),
+        name: 'Sadie Scott',
+        title: 'External Director',
+        image: require('static/team/leadership/2027/sadie-scott.jpg'),
         link: '',
     }, {
         key: 2,
-        name: 'Jasmine Aiemarreerat',
-        image: require('static/team/external/jasmine-aiemarreerat-headshot.jpg'),
+        name: 'Jubilee Yul',
+        title: 'External Director',
+        image: require('static/team/leadership/2027/jubilee-yul.jpg'),
         link: '',
     }, {
         key: 3,
-        name: 'Rishik Durvasula',
-        image: require('static/team/external/rishik-durvasula.jpg'),
+        name: 'Shayla Kumaresan',
+        title: 'External Member',
+        image: require('static/team/external/shayla-kumaresan-headshot.jpg'),
         link: '',
     }, {
         key: 4,
-        name: 'Sadie Scott',
-        image: require('static/team/external/sadie-scott-headshot.png'),
+        name: 'Luisa Chen',
+        title: 'External Member',
+        image: require('static/team/operations/luisa-chen.png'),
         link: '',
     }, {
         key: 5,
-        name: 'Shayla Kumaresan',
-        image: require('static/team/external/shayla-kumaresan-headshot.jpg'),
-        link: '',
-    },     {
-        key: 6,
-        name: 'Jubilee Yu',
-        image: require('static/team/external/yu-jubilee.png'),
+        name: 'Kayla Wai',
+        title: 'External Member',
+        image: require('static/team/operations/kayla-wai.jpg'),
         link: '',
     },
 ];

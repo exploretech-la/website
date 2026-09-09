@@ -63,6 +63,13 @@
     }
   }
 
+  .team-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
   .team-content {
     width: 100%;
     max-width: 1200px;
