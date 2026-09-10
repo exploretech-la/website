@@ -7,6 +7,9 @@ import Design from "./Design";
 import Operations from "./Operations";
 import External from "./External";
 import Footer from "../Footer";
+import People from "../common/People";
+import { WebDev } from "constants/webdev";
+import { Marketing } from "constants/marketing";
 import "./Team.scss";
 
 function Team() {
@@ -30,6 +33,26 @@ function Team() {
         return <Operations />;
       case "external":
         return <External />;
+      case "web-dev":
+        return (
+          <section className="Section WebDev">
+            <div className="team-section-header">
+              <h3>Web Dev</h3>
+              <div className="pill-divider" />
+            </div>
+            <People people={WebDev} />
+          </section>
+        );
+      case "marketing":
+        return (
+          <section className="Section Marketing">
+            <div className="team-section-header">
+              <h3>Marketing</h3>
+              <div className="pill-divider" />
+            </div>
+            <People people={Marketing} />
+          </section>
+        );
       default:
         return <Leadership />;
     }
@@ -72,6 +95,18 @@ function Team() {
           className={activeSection === "external" ? "active" : ""}
         >
           External
+        </Link>
+        <Link
+          to="/our_team/web-dev"
+          className={activeSection === "web-dev" ? "active" : ""}
+        >
+          Web Dev
+        </Link>
+        <Link
+          to="/our_team/marketing"
+          className={activeSection === "marketing" ? "active" : ""}
+        >
+          Marketing
         </Link>
       </div>
 

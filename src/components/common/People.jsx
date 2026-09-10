@@ -32,7 +32,7 @@ export default class People extends Component {
   }
 
   _renderPerson(person) {
-    if (!person || !person.name || !person.image) {
+    if (!person || !person.name) {
       return null;
     }
 
@@ -46,7 +46,11 @@ export default class People extends Component {
           key={name}
         >
           <div className="person">
-            <img src={image} className="person-image" alt={name} />
+            {image ? (
+              <img src={image} className="person-image" alt={name} />
+            ) : (
+              <div className="person-image" aria-hidden="true" />
+            )}
             <h5 className="person-name">{name}</h5>
             {title ? <p className="person-title">{title}</p> : null}
             {descriptions
@@ -59,8 +63,12 @@ export default class People extends Component {
       );
     }
     return (
-      <div className="person">
-        <img src={image} className="person-image" alt={name} />
+      <div className="person" key={name}>
+        {image ? (
+          <img src={image} className="person-image" alt={name} />
+        ) : (
+          <div className="person-image" aria-hidden="true" />
+        )}
         <h5 className="person-name">{name}</h5>
         {title ? <p className="person-title">{title}</p> : null}
         {descriptions
