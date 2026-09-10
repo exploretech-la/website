@@ -1,22 +1,25 @@
+import images from "./optimizedImages";
+
+// Each entry spreads straight onto an <img>: src, srcSet, sizes, width, height.
 const CaourselImages = [
   {
-    src: require("static/images/demo-microsoft-vr.jpg"),
+    ...images["images/demo-microsoft-vr.jpg"],
     alt: "VR Demo",
   },
   {
-    src: require("static/images/workshop-dev-tools.jpg"),
+    ...images["images/workshop-dev-tools.jpg"],
     alt: "Dev Tools Workshop",
   },
   {
-    src: require("static/images/workshop-kaylie.jpg"),
+    ...images["images/workshop-kaylie.jpg"],
     alt: "Workshop Speaker",
   },
   {
-    src: require("static/images/workshop-scratch.jpg"),
+    ...images["images/workshop-scratch.jpg"],
     alt: "Scratch Workshop",
   },
   {
-    src: require("static/images/workshop-audience.jpg"),
+    ...images["images/workshop-audience.jpg"],
     alt: "Workshop Audience",
   },
 ];

@@ -8,9 +8,12 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 import HomePageSections from "constants/HomePageSections";
 
-import SpeakerConnie from "static/images/speaker-connie.jpg";
-import TaboolaBooth from "static/images/taboola-booth.jpg";
-import TEALS_VR from "static/images/teals-vr.jpg";
+import images from "constants/optimizedImages";
+
+// Three cards side by side inside the 1040px section on desktop, a single
+// 18rem card in the horizontal scroller below that.
+const CardImageSizes =
+  "(min-width: 1100px) 340px, (min-width: 768px) 33vw, 18rem";
 
 // const HighSchoolInterestForm = "";
 const MailingListSignUp =
@@ -40,7 +43,13 @@ export default class GetInvolved extends Component {
 					</div> */}
           <CardDeck>
             <Card className="high-schools">
-              <Card.Img variant="top" src={TEALS_VR} />
+              <Card.Img
+                variant="top"
+                {...images["images/teals-vr.jpg"]}
+                sizes={CardImageSizes}
+                loading="lazy"
+                decoding="async"
+              />
               <ReactGA.OutboundLink
                 // to={HighSchoolInterestForm}
                 target="_blank"
@@ -62,7 +71,13 @@ export default class GetInvolved extends Component {
               </ReactGA.OutboundLink>
             </Card>
             <Card className="companies">
-              <Card.Img variant="top" src={TaboolaBooth} />
+              <Card.Img
+                variant="top"
+                {...images["images/taboola-booth.jpg"]}
+                sizes={CardImageSizes}
+                loading="lazy"
+                decoding="async"
+              />
               <ReactGA.OutboundLink
                 to="mailto:exploretechla@cs.ucla.edu"
                 target="_blank"
@@ -87,7 +102,13 @@ export default class GetInvolved extends Component {
               </ReactGA.OutboundLink>
             </Card>
             <Card className="ucla-students">
-              <Card.Img variant="top" src={SpeakerConnie} />
+              <Card.Img
+                variant="top"
+                {...images["images/speaker-connie.jpg"]}
+                sizes={CardImageSizes}
+                loading="lazy"
+                decoding="async"
+              />
               <ReactGA.OutboundLink
                 to={MailingListSignUp}
                 target="_blank"

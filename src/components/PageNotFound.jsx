@@ -4,8 +4,12 @@ import LinkWithArrow from "components/common/LinkWithArrow";
 
 function PageNotFound() {
   useEffect(() => {
+    const previousTitle = document.title;
     document.title = "Page Not Found • exploretech.la";
-  });
+    return () => {
+      document.title = previousTitle;
+    };
+  }, []);
 
   return (
     <section className="PageNotFound">

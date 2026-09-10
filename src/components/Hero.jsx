@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import Button from "react-bootstrap/Button";
 
@@ -38,7 +39,8 @@ export default class Hero extends Component {
           <div className="hero-cta">
             <Button
               variant="info"
-              href={`/resources2026`}
+              as={Link}
+              to="/resources2026"
               onClick={this._trackRegisterTodayClick}
             >
               Event Info

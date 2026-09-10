@@ -1,5 +1,11 @@
-import React, { Component } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+import {
+  Switch,
+  Route,
+  Redirect,
+  useHistory,
+  useLocation,
+} from "react-router-dom";
 
 import GA from "util/GoogleAnalytics";
 
@@ -8,40 +14,54 @@ import Home from "components/Home";
 import Register from "components/Registration/Register";
 import Resources from "components/Resources/Resources";
 import Resources2023 from "components/Resources2023/Resources";
-import Resources2026 from "components/Resources2026/Resources"
+import Resources2026 from "components/Resources2026/Resources";
 import Team from "components/Team/Team";
 import PageNotFound from "components/PageNotFound";
 import Ignite from "components/Ignite/Ignite";
 
 import "./App.scss";
 
-class App extends Component {
-  componentDidMount() {
-    const isGAEnabled = GA.init();
-    if (isGAEnabled) {
-      GA.trackPageView();
+export default function App() {
+  const { pathname, search, hash, key } = useLocation();
+  const history = useHistory();
+  const initialNavigation = useRef(true);
+
+  useEffect(() => {
+    if (pathname !== "/our_team" && GA.init()) {
+      GA.trackPageView(pathname + search);
     }
-  }
+  }, [pathname, search]);
 
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/register" component={Register} />
-          {/* <Route exact path="/exploretechla2021" component={Register} /> */}
-          <Route exact path="/resources" component={Resources} />
-          <Route exact path="/resources2023" component={Resources2023} />
-          <Route exact path = "/resources2026" component = {Resources2026} />
-          <Route exact path="/our_team" render={() => <Redirect to="/our_team/leadership" />} />
-          <Route exact path="/our_team/:section" component={Team} />
-          <Route exact path="/ignite" component={Ignite} />
-          <Route component={PageNotFound} />
-        </Switch>
-      </div>
-    );
-  }
+  useEffect(() => {
+    const initial = initialNavigation.current;
+    initialNavigation.current = false;
+    if (!initial && history.action === "POP") return;
+    if (hash) {
+      const target = document.getElementById(hash.slice(1));
+      if (target) target.scrollIntoView();
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash, key, history]);
+
+  return (
+    <div className="App">
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/resources" component={Resources} />
+        <Route exact path="/resources2023" component={Resources2023} />
+        <Route exact path="/resources2026" component={Resources2026} />
+        <Route
+          exact
+          path="/our_team"
+          render={() => <Redirect to="/our_team/leadership" />}
+        />
+        <Route exact path="/our_team/:section" component={Team} />
+        <Route exact path="/ignite" component={Ignite} />
+        <Route component={PageNotFound} />
+      </Switch>
+    </div>
+  );
 }
-
-export default App;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 // import ReactGA from 'react-ga';
 import PropTypes from "prop-types";
 import classnames from "classnames";
@@ -29,14 +30,16 @@ export default class RegistrationAlert extends Component {
         </h3>
         <div className="notes">
           <h5>
-            Checkout our past workshops and resources from previous exploretech.la main events on our Resources Page.
+            Checkout our past workshops and resources from previous
+            exploretech.la main events on our Resources Page.
           </h5>
         </div>
         <div className="buttons">
           <div className="button">
             <Button
               variant="outline-light"
-              href={`/resources`}
+              as={Link}
+              to="/resources"
               size="lg"
               onClick={this._trackResourcesClick}
             >

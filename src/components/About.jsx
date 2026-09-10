@@ -1,18 +1,23 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
+import { Link } from "react-router-dom";
 import ReactGA from "react-ga";
 
 import Carousel from "react-bootstrap/Carousel";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
+import GA from "util/GoogleAnalytics";
 import HomePageSections from "constants/HomePageSections";
 import CaourselImages from "constants/carousel";
-
-import TeamPhoto from "static/images/explore-tech-2022.jpg";
+import images from "constants/optimizedImages";
 
 const FoundingStoryLink =
   "https://medium.com/techatucla/exploretechla-founding-story-3bb8a947f931";
+
+// Match the two-column layout without sending desktop images to narrow screens.
+const AboutImageSizes =
+  "(min-width: 1100px) 480px, (min-width: 768px) 46vw, 100vw";
 
 export default class About extends Component {
   static get propTypes() {
@@ -25,6 +30,16 @@ export default class About extends Component {
     return {
       className: "",
     };
+  }
+
+  constructor(props) {
+    super(props);
+
+    this.state = { activeIndex: 0, primed: false, requestedIndex: null };
+    this.loadedSlides = new Set();
+
+    this._onSelect = this._onSelect.bind(this);
+    this._onSlideLoad = this._onSlideLoad.bind(this);
   }
 
   render() {
@@ -66,7 +81,10 @@ export default class About extends Component {
         </div>
         <div className="about-content about-team">
           <img
-            src={TeamPhoto}
+            {...images["images/explore-tech-2022.jpg"]}
+            sizes={AboutImageSizes}
+            loading="lazy"
+            decoding="async"
             className="team-photo left-column"
             alt="Our Team"
           />
@@ -83,10 +101,19 @@ export default class About extends Component {
               should have equal access to STEM education and opportunities.
             </p>
             <div className="current-team">
-              <ReactGA.OutboundLink to={"/our_team"} eventLabel="current_team">
+              <Link
+                to="/our_team"
+                onClick={() =>
+                  GA.trackEvent({
+                    category: "Outbound",
+                    action: "Click",
+                    label: "current_team",
+                  })
+                }
+              >
                 <p>Check out our current full team</p>
                 <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
-              </ReactGA.OutboundLink>
+              </Link>
             </div>
             <div className="founding-story">
               <ReactGA.OutboundLink
@@ -104,27 +131,67 @@ export default class About extends Component {
     );
   }
 
-  /**
-   * WARNING: CaourselImages with different heights causes the Carousel to be buggy.
-   * As of this comment being written, all the pre-selected images are the same height.
-   * To fix this, we need to use images with all the same height or do some styling with
-   * object-fit.
-   */
-  _renderCarousel({ className }) {
-    const carouselItems = CaourselImages.map((img) =>
-      this._renderCarouselItem(img)
+  _onSelect(index) {
+    this.setState(
+      this.loadedSlides.has(index)
+        ? { activeIndex: index, requestedIndex: null }
+        : { requestedIndex: index }
     );
-    return <Carousel className={className}>{carouselItems}</Carousel>;
   }
 
-  _renderCarouselItem(img) {
+  _onSlideLoad(index) {
+    this.loadedSlides.add(index);
+    this.setState((state) => ({
+      primed: true,
+      ...(state.requestedIndex === index
+        ? { activeIndex: index, requestedIndex: null }
+        : {}),
+    }));
+  }
+
+  // Keep the current slide visible until a requested slide has loaded.
+  _renderCarousel({ className }) {
+    const carouselItems = CaourselImages.map((img, index) =>
+      this._renderCarouselItem(img, index)
+    );
+    return (
+      <Carousel
+        className={className}
+        activeIndex={this.state.activeIndex}
+        onSelect={this._onSelect}
+        interval={this.state.requestedIndex === null ? 5000 : null}
+      >
+        {carouselItems}
+      </Carousel>
+    );
+  }
+
+  _renderCarouselItem(img, index) {
     if (!img || !img.src || !img.alt) {
       return null;
     }
 
+    const { activeIndex, primed, requestedIndex } = this.state;
+    const total = CaourselImages.length;
+    const isNeighbour =
+      index === activeIndex ||
+      index === (activeIndex + 1) % total ||
+      index === (activeIndex + total - 1) % total;
+
     return (
       <Carousel.Item key={img.alt}>
-        <img src={img.src} alt={img.alt} />
+        <img
+          {...img}
+          alt={img.alt}
+          sizes={AboutImageSizes}
+          loading={
+            index === requestedIndex || (primed && isNeighbour)
+              ? "eager"
+              : "lazy"
+          }
+          decoding="async"
+          onLoad={() => this._onSlideLoad(index)}
+        />
       </Carousel.Item>
     );
   }

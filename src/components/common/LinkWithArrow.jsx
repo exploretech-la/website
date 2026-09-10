@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
@@ -20,10 +21,10 @@ function LinkWithArrow(props) {
   const classNames = classnames("LinkWithArrow", className);
   return (
     <div className={classNames}>
-      <a href={to}>
+      <Link to={to}>
         <span className="link-text">{text}</span>
         <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
-      </a>
+      </Link>
     </div>
   );
 }

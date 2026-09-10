@@ -23,8 +23,14 @@ export default class Sponsors extends Component {
   }
 
   render() {
-    const largeLogos = LargeLogoSponsors.map((logo) => this._renderLogo(logo));
-    const smallLogos = SmallLogoSponsors.map((logo) => this._renderLogo(logo));
+    // Sponsor logos live at the bottom of the home page, so they are all
+    // lazy; the two rows are rendered at different widths.
+    const largeLogos = LargeLogoSponsors.map((logo) =>
+      this._renderLogo(logo, "(min-width: 768px) 16rem, 14rem")
+    );
+    const smallLogos = SmallLogoSponsors.map((logo) =>
+      this._renderLogo(logo, "(min-width: 768px) 12rem, 8rem")
+    );
 
     // const commPartnerLogos = CommunityPartners.map(logo => this._renderLogo(logo));
 
@@ -64,13 +70,21 @@ export default class Sponsors extends Component {
     );
   }
 
-  _renderLogo(logo) {
+  _renderLogo(logo, sizes) {
     if (!logo || !logo.name || !logo.src) return null;
-    const { name, src, website } = logo;
+    // Both raster variants and the retained SVG include intrinsic dimensions.
+    const { name, website, ...image } = logo;
     return (
       <div className="logo-container" key={name}>
         <ReactGA.OutboundLink to={website} target="_blank" eventLabel={name}>
-          <img src={src} className="logo" alt={name} />
+          <img
+            {...image}
+            sizes={sizes}
+            loading="lazy"
+            decoding="async"
+            className="logo"
+            alt={name}
+          />
         </ReactGA.OutboundLink>
       </div>
     );

@@ -1,19 +1,61 @@
-.YoutubeEmbed {
-  .video-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
+// Reserve the same 16:9 slot for the button and the activated player.
+.video-responsive {
+  width: 300px;
+  max-width: 100%;
+
+  .video-frame {
     position: relative;
     height: 0;
+    // Percentage padding resolves against the container width.
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    background-color: #000000;
   }
 
-  .video-responsive iframe,
-  .video-responsive object,
-  .video-responsive embed {
+  .video-frame iframe,
+  .video-frame .video-facade {
+    position: absolute;
     left: 0;
     top: 0;
-    height: 100%;
     width: 100%;
-    position: absolute;
+    height: 100%;
+  }
+
+  .video-facade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: radial-gradient(circle at center, #2f2f2f 0%, #000000 100%);
+
+    &:hover,
+    &:focus {
+      .video-facade-play {
+        background-color: #ff0000;
+      }
+    }
+  }
+
+  .video-facade-play {
+    position: relative;
+    display: block;
+    width: 54px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: rgba(33, 33, 33, 0.85);
+    transition: background-color 0.2s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-style: solid;
+      border-width: 9px 0 9px 15px;
+      border-color: transparent transparent transparent #ffffff;
+    }
   }
 }
