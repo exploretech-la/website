@@ -159,7 +159,9 @@ export default class About extends Component {
         className={className}
         activeIndex={this.state.activeIndex}
         onSelect={this._onSelect}
-        interval={this.state.requestedIndex === null ? 5000 : null}
+        interval={
+          this.state.primed && this.state.requestedIndex === null ? 5000 : null
+        }
       >
         {carouselItems}
       </Carousel>
