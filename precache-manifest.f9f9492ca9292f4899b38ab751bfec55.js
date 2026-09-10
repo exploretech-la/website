@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "79da10244e730d9506b6ddc31a5143da",
+    "revision": "051c8336edf5aaf3fc5ef022b61cf320",
     "url": "/index.html"
   },
   {
-    "revision": "4bae4b4a7bbf64dd6ef5",
+    "revision": "4363d13b912fab932b06",
     "url": "/static/css/2.b7c36454.chunk.css"
   },
   {
-    "revision": "60e532ddcf6617876f5b",
-    "url": "/static/css/main.f82742a0.chunk.css"
+    "revision": "3ba6daae2b939c4c79fe",
+    "url": "/static/css/main.4bd539a8.chunk.css"
   },
   {
-    "revision": "4bae4b4a7bbf64dd6ef5",
-    "url": "/static/js/2.795510e0.chunk.js"
+    "revision": "4363d13b912fab932b06",
+    "url": "/static/js/2.dbf0045f.chunk.js"
   },
   {
     "revision": "176c1a1a28b19c611d9701905d8d60b7",
-    "url": "/static/js/2.795510e0.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.dbf0045f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "60e532ddcf6617876f5b",
-    "url": "/static/js/main.9915f931.chunk.js"
+    "revision": "3ba6daae2b939c4c79fe",
+    "url": "/static/js/main.18081689.chunk.js"
   },
   {
     "revision": "ae3b8d3e9533d58eb305",
@@ -48,28 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/aansh-singh.bc9e879b.jpeg"
   },
   {
-    "revision": "b6a9223785e25c97043930131b539c40",
-    "url": "/static/media/aileen-chen.b6a92237.jpg"
-  },
-  {
-    "revision": "41fe3a8927e5b2879b19f2639bef2bbf",
-    "url": "/static/media/alexander-chien.41fe3a89.png"
-  },
-  {
     "revision": "7806ab3fbbcc7f0a82ee95e5a6d9c851",
     "url": "/static/media/alfredo-ayala.7806ab3f.jpg"
-  },
-  {
-    "revision": "9c65c6c6a23652a2c365599aa3f0a506",
-    "url": "/static/media/alice-huang.9c65c6c6.png"
-  },
-  {
-    "revision": "0e9c176b61b688faa60ab932466a268e",
-    "url": "/static/media/amy-lloyd.0e9c176b.jpeg"
-  },
-  {
-    "revision": "344c6307f6a36b8578bd261f9b564317",
-    "url": "/static/media/ana-santana.344c6307.png"
   },
   {
     "revision": "90df0f8ec075a5009c772dc05cccd4b1",
@@ -104,16 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/carey-nachenberg.0fbeaea4.png"
   },
   {
-    "revision": "89ba8ddde2efee67330bd60c3ab1a097",
-    "url": "/static/media/christina-uong-headshot.89ba8ddd.jpg"
+    "revision": "c6d63b5c4606a0d07796ed1333180264",
+    "url": "/static/media/christina-uong.c6d63b5c.jpg"
   },
   {
-    "revision": "fcf64043444b3a90380570cd66e68d85",
-    "url": "/static/media/clara-marcos-headshot.fcf64043.jpeg"
-  },
-  {
-    "revision": "1b054511a30330b593fe98f36fc83199",
-    "url": "/static/media/clara-zhang.1b054511.jpg"
+    "revision": "787e9e3c5c9123b022c0c054f8c96cca",
+    "url": "/static/media/clara-zhang.787e9e3c.jpg"
   },
   {
     "revision": "4d74af822d2d32cb3471324c7a93c6c9",
@@ -140,16 +116,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/ela_defne_erkan.995ecf7f.png"
   },
   {
-    "revision": "ce9d995d6c46a05e8e9e25a26cb2dfa4",
-    "url": "/static/media/eli-drewry-headshot.ce9d995d.jpeg"
+    "revision": "71a7e7a9509d9e8dcfe6bf7ebad498b4",
+    "url": "/static/media/eli-drewry.71a7e7a9.jpg"
   },
   {
-    "revision": "5f73d020f285269b6f1d7ae918382cf9",
-    "url": "/static/media/emma-qiu-headshot.5f73d020.jpg"
-  },
-  {
-    "revision": "9740a611386bea70d003789eb42a3fcb",
-    "url": "/static/media/eric-chen-headshot.9740a611.jpg"
+    "revision": "bf673804d96a102542cb903630953413",
+    "url": "/static/media/eric-chen.bf673804.jpg"
   },
   {
     "revision": "31bdb3486c83b3d37d79e80a0ada6ac8",
@@ -188,28 +160,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/isabelle-chang.597fd47a.png"
   },
   {
-    "revision": "71ff4163737c4a837b472cf7835fd7d4",
-    "url": "/static/media/jacqueline_nguyen.71ff4163.png"
-  },
-  {
-    "revision": "f92c00432d541f0c308827f116a60028",
-    "url": "/static/media/jasmine-aiemarreerat-headshot.f92c0043.jpg"
-  },
-  {
-    "revision": "957b7735c6fb7fea438010a0313b26b9",
-    "url": "/static/media/jason-lozada.957b7735.jpg"
-  },
-  {
     "revision": "6111a0dc58c96d5e31e039decd6380f1",
     "url": "/static/media/jayathi-murthy.6111a0dc.png"
   },
   {
-    "revision": "06e8c058d418e2614a9beced59637bf2",
-    "url": "/static/media/joshua-jin-headshot.06e8c058.png"
-  },
-  {
     "revision": "fe034a52c3874962e2a7fbd9ab96c9d8",
     "url": "/static/media/joy-szeto-headshot.fe034a52.jpeg"
+  },
+  {
+    "revision": "500e3d6deb31cbd3d0f46f11315e3d76",
+    "url": "/static/media/jubilee-yul.500e3d6d.jpg"
   },
   {
     "revision": "8ab7e5ebf44e953596d3b1ff6f7c2060",
@@ -236,16 +196,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo-with-icons-white.3aea7cbc.svg"
   },
   {
-    "revision": "c08c7a99ebd7e648678d271f603de088",
-    "url": "/static/media/matthew-chen.c08c7a99.jpeg"
+    "revision": "8e11a08c18f9df57f8413e8b052e5ff2",
+    "url": "/static/media/luisa-chen.8e11a08c.png"
   },
   {
-    "revision": "b5e2df3b451f769799efc7c86f36dd73",
-    "url": "/static/media/meet-modi.b5e2df3b.png"
-  },
-  {
-    "revision": "eccd76ec4d516199cfb95c638b9dd2e0",
-    "url": "/static/media/megha-ravi.eccd76ec.jpg"
+    "revision": "f0646427da81e5c086eb41522df58a7a",
+    "url": "/static/media/matthew-chen.f0646427.jpg"
   },
   {
     "revision": "1cf19b81367144cfb3f1dfd46fa86af4",
@@ -256,10 +212,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/northrop-grumman.28a461fa.png"
   },
   {
-    "revision": "9bba55ea47bc60bccb4fac77f0cffa8b",
-    "url": "/static/media/paige-wu.9bba55ea.jpg"
-  },
-  {
     "revision": "487739c7827a1b2f8e537ed587374ab3",
     "url": "/static/media/paul-headshot.487739c7.png"
   },
@@ -268,32 +220,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/python.eeac698e.jpg"
   },
   {
-    "revision": "680306fb3dbe1a1925f3c6eac46202b9",
-    "url": "/static/media/rhea-jain.680306fb.jpg"
-  },
-  {
     "revision": "905ed6a3a9d01bbad372a4bea7ace473",
     "url": "/static/media/ridhima-seth.905ed6a3.png"
-  },
-  {
-    "revision": "df54774e50a7c5d5380f1f34bce9b544",
-    "url": "/static/media/rishik-durvasula.df54774e.jpg"
   },
   {
     "revision": "8a284de7845039414194e40dc5366704",
     "url": "/static/media/ruth-johnson.8a284de7.jpeg"
   },
   {
-    "revision": "e38ad62ead71a87f5c3d1101d27e33f0",
-    "url": "/static/media/sadie-scott-headshot.e38ad62e.png"
+    "revision": "c67f2b85938a4f73fb7f7bbc1d266554",
+    "url": "/static/media/sadie-scott.c67f2b85.jpg"
   },
   {
     "revision": "c3c44392810cae2023e0ade822b29fa8",
     "url": "/static/media/sandra-pan.c3c44392.jpg"
   },
   {
-    "revision": "6516095ff5e95739e6802eff0291e6fd",
-    "url": "/static/media/sarah-zhao.6516095f.jpg"
+    "revision": "0ef184ac866875e2a990c83a51612696",
+    "url": "/static/media/sarah-zhao.0ef184ac.jpg"
   },
   {
     "revision": "6f62984295149b548f6d32a0175a5229",
@@ -316,8 +260,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/speaker-connie.a2e04b80.jpg"
   },
   {
-    "revision": "d43c271ab2abdd734e8225053a6505d9",
-    "url": "/static/media/spoorthy-nalumachu.d43c271a.jpg"
+    "revision": "83db34198dad4f48be8f23bbdc5ef0be",
+    "url": "/static/media/spoorthy-nalumachu.83db3419.jpg"
   },
   {
     "revision": "1842d49735a60899f6d8d16ca3618e4e",
@@ -332,16 +276,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/taboola-booth.530245ac.jpg"
   },
   {
-    "revision": "1704f00631ebc8488750b4ae697ee4cf",
-    "url": "/static/media/tammy-sujaritchai.1704f006.jpg"
-  },
-  {
     "revision": "61658ddae191c3ca1c25995a824c0453",
     "url": "/static/media/teals-vr.61658dda.jpg"
-  },
-  {
-    "revision": "7993edc729c4bb2b81df3a6fe12a1bbd",
-    "url": "/static/media/tiffany-cho.7993edc7.png"
   },
   {
     "revision": "665983d47832ba9cc7d2be0a5fa29326",
@@ -378,10 +314,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3d6fb16e2282b7303471c8cd9e9236f6",
     "url": "/static/media/wristband_coordination.3d6fb16e.png"
-  },
-  {
-    "revision": "357d2ec22de23f80473d4802802950d4",
-    "url": "/static/media/yu-jubilee.357d2ec2.png"
   },
   {
     "revision": "0c97847a8fa8d7dcb7edb4c17d2b2fbb",
