@@ -1,0 +1,32 @@
+/*
+ * The single stylesheet entry for the app. Nothing else imports CSS.
+ *
+ * Layer order is declared up front so the cascade is explicit:
+ *   theme      Tailwind's design tokens plus ./tokens.css
+ *   base       the site's element-level reset and typography
+ *   components the site's own rules, in the same order the old Sass emitted them
+ *   utilities  Tailwind utilities, which therefore win over component rules
+ *
+ * Preflight is deliberately absent. Tailwind's reset is not Bootstrap's Reboot: it makes
+ * images display:block, strips heading sizes, margins and list styles, and unstyles buttons.
+ * The site's layout depends on the shipped reset, so reset.css carries those values
+ * and preflight.css is never imported. Individual Tailwind stylesheet imports
+ * keep that choice explicit; do not add the full "tailwindcss" import.
+ */
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@import "./tokens.css";
+
+@import "./reset.css" layer(base);
+@import "./base.css" layer(base);
+
+@import "./controls.css" layer(components);
+@import "./app-shell.css" layer(components);
+@import "./shared-ui.css" layer(components);
+@import "./home.css" layer(components);
+@import "./team.css" layer(components);
+@import "./events.css" layer(components);
+@import "./ignite.css" layer(components);

@@ -1,0 +1,173 @@
+/*
+ * Site shell: the divider, document behaviour, section geometry and the two pieces of
+ * chrome that wrap every route. Section padding is the one piece of layout that is exactly
+ * a token lookup at every breakpoint, so it is expressed with Tailwind utilities over the
+ * spacing tokens instead of four hand-written media blocks.
+ */
+
+/*  Shared pill divider  */
+.pill-divider {
+  @apply h-2 w-16 mb-6 rounded-sm bg-aqua;
+}
+
+/*  Document  */
+html {
+  scroll-behavior: smooth;
+}
+
+/*  Section geometry and scrollbars  */
+.App section,
+.App .Section {
+  @apply py-section-y px-section-xs sm:px-section-sm md:px-section-md lg:px-section-lg;
+}
+
+.App ::-webkit-scrollbar {
+  @apply h-[2px];
+}
+
+.App ::-webkit-scrollbar-track {
+  background: #ebebeb;
+  @apply rounded-[1px];
+}
+
+.App ::-webkit-scrollbar-thumb {
+  background: var(--color-aqua);
+  @apply rounded-[1px];
+}
+
+@media (max-width: 575.98px) {
+  .App {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 576px) {
+  .App ::-webkit-scrollbar {
+    @apply h-[4px];
+  }
+
+  .App ::-webkit-scrollbar-track {
+    @apply rounded-[2px];
+  }
+
+  .App ::-webkit-scrollbar-thumb {
+    @apply rounded-[2px];
+  }
+}
+
+@media (min-width: 768px) {
+  .App ::-webkit-scrollbar {
+    @apply hidden;
+  }
+}
+
+/*  Site header  */
+.Header.Home {
+  background-color: var(--color-aqua);
+}
+
+.Header.Section {
+  @apply pt-[1rem];
+  @apply pb-[1rem];
+}
+
+.Header .site-nav-items {
+  @apply pt-[0.5rem];
+}
+
+.Header .site-nav-items .site-nav-item,
+.Header .site-nav-items .site-nav-link,
+.Header .site-nav-items .site-menu {
+  @apply ml-[0.5rem];
+  @apply mr-[0.5rem];
+}
+
+.Header .logo-compass {
+  @apply block w-[2.5rem] h-[auto];
+}
+
+.Header .logo-with-icons {
+  @apply hidden max-w-[14rem] h-[auto];
+}
+
+@media (min-width: 576px) {
+  .Header .site-nav-items {
+    @apply pt-[0];
+  }
+}
+
+@media (min-width: 768px) {
+  .Header .logo-compass {
+    @apply hidden;
+  }
+
+  .Header .logo-with-icons {
+    @apply block;
+  }
+}
+
+/*  Site footer  */
+.Footer {
+  @apply p-[48px_0];
+  color: #ffffff;
+  background-color: var(--color-muted-blue);
+}
+
+.Footer .footer-inner {
+  @apply flex;
+  @apply flex-col justify-between items-center max-w-[1200px] m-[auto];
+}
+
+.Footer .footer-inner .footer-item {
+  @apply text-center;
+}
+
+.Footer .footer-inner .footer-item:not(:last-child) {
+  @apply pb-[2.5rem];
+}
+
+.Footer .footer-inner .footer-item.logo {
+  @apply hidden;
+}
+
+.Footer .footer-inner .footer-item.email p:last-child {
+  @apply mb-[0];
+}
+
+.Footer .footer-inner .footer-item .logo-with-icons {
+  @apply w-[14rem] h-[auto];
+}
+
+.Footer .footer-inner .footer-item .social-media-list {
+  @apply flex justify-center;
+}
+
+.Footer .footer-inner .footer-item .social-media-list .social-media-link {
+  @apply m-[0_8px];
+}
+
+.Footer .footer-inner .footer-item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.Footer .FaHeart {
+  fill: red;
+  @apply mb-[2px];
+}
+
+@media (min-width: 576px) {
+  .Footer .footer-inner {
+    @apply flex-row p-[0_24px];
+  }
+
+  .Footer .footer-inner .footer-item {
+    @apply pb-[0];
+  }
+}
+
+@media (min-width: 992px) {
+  .Footer .footer-inner .footer-item.logo {
+    @apply block;
+  }
+}

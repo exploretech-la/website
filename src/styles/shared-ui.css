@@ -1,0 +1,136 @@
+/* Arrow link */
+.LinkWithArrow {
+  @apply flex;
+  @apply flex-row items-center;
+}
+
+.LinkWithArrow a {
+  @apply flex;
+  @apply flex-row items-center;
+  text-decoration: none;
+}
+
+.LinkWithArrow a:hover {
+  text-decoration: none;
+}
+
+.LinkWithArrow a:hover .MdKeyboardArrowRight {
+  fill: white;
+  background-color: var(--color-muted-blue);
+  border: 2px solid var(--color-muted-blue);
+}
+
+.LinkWithArrow a .link-text {
+  @apply mb-[0];
+  @apply mr-[0.5rem];
+  color: var(--color-muted-blue);
+}
+
+.LinkWithArrow .MdKeyboardArrowRight {
+  fill: var(--color-muted-blue);
+  border: 2px solid #e2e2e2;
+  @apply rounded-[50%] w-[1.5rem] min-w-[1.5rem] h-[1.5rem];
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
+  -moz-transition: all 0.3s ease-in-out; /** Firefox **/
+  -o-transition: all 0.3s ease-in-out; /** Opera **/
+}
+
+/* Person cards */
+.People {
+  @apply flex;
+  @apply flex-row;
+  overflow-x: scroll;
+  @apply pb-[1rem];
+  transform: scaleX(-1) rotateZ(180deg);
+}
+
+.People p {
+  @apply mb-[0.25rem];
+}
+
+.People a {
+  text-decoration: none !important;
+}
+
+.People .person {
+  @apply w-[14rem] h-[100%] p-[1rem_0.5rem] text-center;
+  color: black;
+  transition: color 0.5s;
+  transform: scaleX(-1) rotateZ(180deg);
+}
+
+.People .person .person-image {
+  @apply w-[10rem] h-[10rem] rounded-[50%] mb-[1.25rem] object-cover;
+  object-position: center;
+  transition: filter 0.3s ease;
+}
+
+.People .person .person-title {
+  @apply text-[small];
+}
+
+.People .person .person-description {
+  @apply text-[small];
+}
+
+@media (min-width: 576px) {
+  .People .person:hover {
+    color: var(--color-muted-blue);
+    transition: color 0.5s;
+  }
+}
+
+@media (min-width: 768px) {
+  .People {
+    transform: none;
+    @apply justify-center flex-wrap pb-[0];
+  }
+
+  .People .person {
+    transform: none;
+  }
+}
+
+/* Click-to-load video facade */
+.video-responsive {
+  @apply w-[300px] max-w-[100%];
+}
+
+.video-responsive .video-frame {
+  @apply relative h-[0] pb-[56.25%];
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.video-responsive .video-frame iframe,
+.video-responsive .video-frame .video-facade {
+  @apply absolute left-[0] top-[0] w-[100%] h-[100%];
+}
+
+.video-responsive .video-facade {
+  @apply flex items-center justify-center p-[0];
+  border: 0;
+  cursor: pointer;
+  background: radial-gradient(circle at center, #2f2f2f 0%, #000000 100%);
+}
+
+.video-responsive .video-facade:hover .video-facade-play,
+.video-responsive .video-facade:focus .video-facade-play {
+  background-color: #ff0000;
+}
+
+.video-responsive .video-facade-play {
+  @apply relative block w-[54px] h-[38px] rounded-[10px];
+  background-color: rgba(33, 33, 33, 0.85);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.video-responsive .video-facade-play::after {
+  content: "";
+  @apply absolute top-[50%] left-[50%];
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 9px 0 9px 15px;
+  border-color: transparent transparent transparent #ffffff;
+}

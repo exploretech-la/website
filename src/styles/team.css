@@ -1,0 +1,131 @@
+/*  Team page shell  */
+.Team {
+  @apply flex;
+  @apply flex-col items-center min-h-[100vh];
+  background-color: #f5f5f5;
+}
+
+.Team .team-title {
+  @apply text-center w-[100%];
+  background-color: white;
+  @apply p-[2rem_0] mb-[2rem];
+}
+
+.Team .team-title h1 {
+  @apply text-[2.5rem];
+  color: #333;
+  @apply mb-[1rem];
+}
+
+.Team .team-title .pill-divider {
+  @apply w-[60px] h-[4px];
+  background-color: var(--color-muted-blue);
+  @apply m-[0_auto] rounded-[2px];
+}
+
+.Team .team-navigation {
+  @apply flex gap-[1rem] mb-[2rem];
+  @apply flex-wrap justify-center p-[0_1rem];
+}
+
+.Team .team-navigation a {
+  @apply p-[0.75rem_1.5rem];
+  border: 2px solid var(--color-muted-blue);
+  background-color: transparent;
+  color: var(--color-muted-blue);
+  @apply rounded-[25px] text-[1rem] font-medium;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  @apply inline-block;
+}
+
+.Team .team-navigation a:hover {
+  background-color: var(--color-muted-blue);
+  color: white;
+}
+
+.Team .team-navigation a.active {
+  background-color: var(--color-muted-blue);
+  color: white;
+}
+
+.Team .team-section-header {
+  @apply flex;
+  @apply flex-col items-center mb-[1rem];
+}
+
+.Team .team-content {
+  @apply w-[100%] max-w-[1200px] p-[0_1rem];
+  flex: 1;
+  @apply relative;
+}
+
+.Team > .Footer {
+  align-self: stretch;
+  @apply w-[100%];
+}
+
+@media (max-width: 768px) {
+  .Team .team-navigation a {
+    @apply p-[0.5rem_1rem] text-[0.9rem];
+  }
+}
+
+/*  Department containers  */
+.Leadership {
+  background-color: #f5f5f5;
+}
+
+.Leadership .leadership-container {
+  @apply max-w-[1200px] m-[auto];
+}
+
+.Leadership .leadership-container .leadership-header {
+  @apply flex;
+  @apply flex-col items-center mb-[1rem];
+}
+
+.Content .content-container {
+  @apply max-w-[1200px] m-[auto];
+}
+
+.Content .content-container .content-header {
+  @apply flex;
+  @apply flex-col items-center mb-[1rem];
+}
+
+.Design {
+  background-color: #f5f5f5;
+}
+
+.Design .design-container {
+  @apply max-w-[1200px] m-[auto];
+}
+
+.Design .design-container .design-header {
+  @apply flex;
+  @apply flex-col items-center mb-[1rem];
+}
+
+.Operations {
+  background-color: #f5f5f5;
+}
+
+.Operations .operations-container {
+  @apply max-w-[1200px] m-[auto];
+}
+
+.Operations .operations-container .operations-header {
+  @apply flex;
+  @apply flex-col items-center mb-[1rem];
+}
+
+.External .external-container {
+  @apply max-w-[1200px] m-[auto];
+}
+
+.External .external-container .external-header {
+  @apply flex;
+  @apply flex-col items-center mb-[1rem];
+}

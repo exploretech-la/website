@@ -1,0 +1,9 @@
+node_modules/
+build/
+handoffs/
+playwright-report/
+test-results/
+src/static/
+src/constants/optimizedImages.ts
+src/image.png
+package-lock.json

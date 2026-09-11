@@ -1,0 +1,210 @@
+/*  Not found  */
+.PageNotFound {
+  @apply flex;
+  @apply flex-col items-center text-center;
+}
+
+.PageNotFound h3 {
+  @apply mb-[2rem];
+}
+
+/*  Registration  */
+.RegistrationAlert {
+  background-color: var(--color-muted-blue);
+  @apply flex;
+  @apply flex-col items-center text-center m-[auto] pt-[32px];
+  @apply pb-[32px];
+}
+
+.RegistrationAlert h3,
+.RegistrationAlert h5 {
+  color: white;
+  @apply pr-[10px];
+  @apply pl-[10px];
+}
+
+.RegistrationAlert .buttons {
+  @apply pt-[10px] flex;
+  @apply flex-col items-center;
+}
+
+.RegistrationAlert .buttons .button {
+  @apply pt-[10px];
+  @apply pb-[10px];
+}
+
+.RegistrationAlert .notes {
+  @apply pt-[10px];
+}
+
+.Waivers {
+  background-color: #f5f5f5;
+  @apply flex;
+  @apply flex-col items-center m-[auto] pb-[32px];
+}
+
+.Waivers .waivers-title,
+.Waivers .waivers-text {
+  @apply flex;
+  @apply flex-col items-center;
+}
+
+.Waivers .buttons {
+  @apply pt-[20px] flex;
+  @apply flex-col items-center pb-[20px];
+}
+
+.Waivers .buttons .button {
+  @apply pt-[10px];
+  @apply pb-[10px];
+}
+
+.ImportantLinks {
+  background-color: #f5f5f5;
+  @apply flex;
+  @apply flex-col items-center m-[auto] pb-[32px];
+}
+
+.ImportantLinks .links-title {
+  @apply flex;
+  @apply flex-col items-center;
+}
+
+.ImportantLinks .links-text {
+  @apply flex;
+  @apply flex-col items-center pt-[30px];
+}
+
+.ImportantLinks .buttons {
+  @apply pt-[20px] flex;
+  @apply flex-col items-center pb-[20px];
+}
+
+.ImportantLinks .buttons .button {
+  @apply pt-[10px];
+  @apply pb-[10px];
+}
+
+.FAQ {
+  background-color: white;
+}
+
+.FAQ .faq-content {
+  @apply flex;
+  @apply flex-col justify-between max-w-[1200px] m-[auto];
+}
+
+.FAQ .faq-content:not(:last-child) {
+  @apply pb-[32px];
+}
+
+.FAQ .faq-content .faq-centered-title {
+  @apply flex-col items-center;
+}
+
+.FAQ .faq-content .left-column.text,
+.FAQ .faq-content .right-column.text {
+  @apply pt-[32px];
+}
+
+.FAQ .faq-student {
+  @apply pb-[32px];
+}
+
+.Schedule {
+  background-color: white;
+}
+
+.Schedule .schedule-content {
+  @apply flex;
+  @apply flex-col justify-between max-w-[1200px] m-[auto];
+}
+
+.Schedule .schedule-content:not(:last-child) {
+  @apply pb-[32px];
+}
+
+.Schedule .schedule-content.schedule-column-container {
+  @apply flex-col;
+}
+
+.Schedule .schedule-content .schedule-title {
+  @apply items-center text-center;
+}
+
+.Schedule .schedule-content .left-column.text,
+.Schedule .schedule-content .right-column.text {
+  @apply pt-[32px];
+}
+
+.Register .registration-title {
+  @apply flex;
+  @apply flex-col items-center max-w-[1200px] m-[auto] pt-[32px];
+  @apply pb-[32px];
+}
+
+.Register .banner {
+  @apply w-[100vw] h-[auto];
+}
+
+/*  Resources  */
+.Workshops .workshops-content {
+  @apply flex;
+  @apply flex-col justify-between items-center max-w-[1200px] m-[auto];
+}
+
+.Workshops .workshops-content .workshops-cards {
+  @apply flex;
+  @apply flex-col w-[75vw] pb-[50px];
+}
+
+.Workshops .workshops-content .workshops-title {
+  @apply flex pb-[32px];
+  @apply flex-col items-center;
+}
+
+.Workshops .workshops-content .card-row {
+  @apply pt-[15px];
+  @apply pb-[15px];
+}
+
+.Maps {
+  background-color: #f5f5f5;
+}
+
+.Maps .maps-content {
+  @apply flex;
+  @apply flex-col justify-between items-center max-w-[1200px] m-[auto];
+}
+
+.Maps .maps-content .maps-title {
+  @apply flex pb-[32px];
+  @apply flex-col items-center;
+}
+
+.Maps .maps-content .buttons {
+  @apply pt-[20px] grid gap-y-[10px];
+  grid-template-columns: auto;
+  @apply pb-[20px] w-[60vw];
+}
+
+.Resources .resources-title {
+  @apply flex;
+  @apply flex-col items-center max-w-[1200px] m-[auto] pt-[32px];
+  @apply pb-[32px];
+}
+
+.Resources .resources-text {
+  @apply flex;
+  @apply flex-col items-center text-center pt-[30px];
+}
+
+.Resources .banner {
+  @apply w-[100vw] h-[auto];
+}
+
+.Resources .full-length-button {
+  @apply pt-[20px] grid gap-y-[10px];
+  grid-template-columns: auto;
+  @apply pb-[20px] w-[100%];
+}
