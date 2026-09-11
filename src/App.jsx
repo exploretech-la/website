@@ -27,10 +27,16 @@ export default function App() {
   const initialNavigation = useRef(true);
 
   useEffect(() => {
-    if (pathname !== "/our_team" && GA.init()) {
+    // Redirects can replace history before this render's effect runs.
+    if (
+      history.location.pathname !== pathname ||
+      history.location.search !== search
+    )
+      return;
+    if (GA.init()) {
       GA.trackPageView(pathname + search);
     }
-  }, [pathname, search]);
+  }, [pathname, search, history]);
 
   useEffect(() => {
     const initial = initialNavigation.current;

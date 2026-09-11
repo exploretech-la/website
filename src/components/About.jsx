@@ -37,6 +37,7 @@ export default class About extends Component {
 
     this.state = { activeIndex: 0, primed: false, requestedIndex: null };
     this.loadedSlides = new Set();
+    this.failedSlides = new Set();
 
     this._onSelect = this._onSelect.bind(this);
     this._onSlideLoad = this._onSlideLoad.bind(this);
@@ -132,6 +133,16 @@ export default class About extends Component {
   }
 
   _onSelect(index) {
+    const count = CaourselImages.length;
+    if (this.failedSlides.size === count) {
+      this.setState({ requestedIndex: null, primed: false });
+      return;
+    }
+    const previous = (this.state.activeIndex + count - 1) % count;
+    const direction = index === previous ? -1 : 1;
+    while (this.failedSlides.has(index)) {
+      index = (index + direction + count) % count;
+    }
     this.setState(
       this.loadedSlides.has(index)
         ? { activeIndex: index, requestedIndex: null }
@@ -140,6 +151,7 @@ export default class About extends Component {
   }
 
   _onSlideLoad(index) {
+    this.failedSlides.delete(index);
     this.loadedSlides.add(index);
     this.setState((state) => ({
       primed: true,
@@ -147,6 +159,18 @@ export default class About extends Component {
         ? { activeIndex: index, requestedIndex: null }
         : {}),
     }));
+  }
+
+  _onSlideError(index) {
+    this.failedSlides.add(index);
+    this.loadedSlides.delete(index);
+    const { activeIndex, requestedIndex } = this.state;
+    if (
+      index === requestedIndex ||
+      (requestedIndex === null && index === activeIndex)
+    ) {
+      this._onSelect(index);
+    }
   }
 
   // Keep the current slide visible until a requested slide has loaded.
@@ -193,6 +217,7 @@ export default class About extends Component {
           }
           decoding="async"
           onLoad={() => this._onSlideLoad(index)}
+          onError={() => this._onSlideError(index)}
         />
       </Carousel.Item>
     );
