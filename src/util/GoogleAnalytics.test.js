@@ -1,27 +1,27 @@
-const originalEnv = { ...process.env };
+import { vi } from "vitest";
+
 let GA;
 let readyState;
 
-beforeEach(() => {
-  jest.resetModules();
-  jest.useFakeTimers();
-  process.env.NODE_ENV = "production";
-  process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID = "UA-000000-1";
+beforeEach(async () => {
+  vi.resetModules();
+  vi.useFakeTimers();
+  vi.stubEnv("PROD", true);
+  vi.stubEnv("VITE_GOOGLE_ANALYTICS_TRACKING_ID", "UA-000000-1");
   delete window.ga;
   document.head.innerHTML = "";
-  readyState = jest
+  readyState = vi
     .spyOn(document, "readyState", "get")
     .mockReturnValue("loading");
-  GA = require("./GoogleAnalytics").default;
+  GA = (await import("./GoogleAnalytics")).default;
 });
 
 afterEach(() => {
-  jest.runOnlyPendingTimers();
-  jest.useRealTimers();
+  vi.runOnlyPendingTimers();
+  vi.useRealTimers();
   readyState.mockRestore();
-  process.env = { ...originalEnv };
+  vi.unstubAllEnvs();
   delete window.ga;
-  delete window.requestIdleCallback;
   document.head.innerHTML = "";
 });
 
@@ -34,7 +34,7 @@ it("keeps early pageviews and events in order with their original route", () => 
   expect(document.querySelectorAll("script")).toHaveLength(0);
   const commands = window.ga.q.map((args) => Array.from(args));
   const routeCommands = commands.filter(
-    ([command]) => command === "set" || command === "send"
+    ([command]) => command === "set" || command === "send",
   );
   expect(routeCommands).toEqual([
     ["set", { page: "/our_team/leadership" }],
@@ -59,35 +59,35 @@ it("loads the vendor once when interaction beats idle and the deadline", () => {
   window.dispatchEvent(new Event("pointerdown"));
   window.dispatchEvent(new Event("keydown"));
   window.dispatchEvent(new Event("load"));
-  jest.runAllTimers();
+  vi.runAllTimers();
   expect(
     document.querySelectorAll(
-      'script[src="https://www.google-analytics.com/analytics.js"]'
-    )
+      'script[src="https://www.google-analytics.com/analytics.js"]',
+    ),
   ).toHaveLength(1);
   expect(window.ga.q.filter((args) => args[0] === "create")).toHaveLength(1);
 });
 
 it("eventually requests analytics even when load and interaction never happen", () => {
   GA.init();
-  jest.runAllTimers();
+  vi.runAllTimers();
   expect(
     document.querySelector(
-      'script[src="https://www.google-analytics.com/analytics.js"]'
-    )
+      'script[src="https://www.google-analytics.com/analytics.js"]',
+    ),
   ).not.toBeNull();
 });
 
 it.each(["development", "missing ID"])(
   "does not request analytics for %s",
   (mode) => {
-    if (mode === "development") process.env.NODE_ENV = "development";
-    else delete process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID;
+    if (mode === "development") vi.stubEnv("PROD", false);
+    else vi.stubEnv("VITE_GOOGLE_ANALYTICS_TRACKING_ID", undefined);
     expect(GA.init()).toBe(false);
     GA.trackPageView("/");
     GA.trackEvent({ category: "Test", action: "Click", label: "Disabled" });
-    jest.runAllTimers();
+    vi.runAllTimers();
     expect(window.ga).toBeUndefined();
     expect(document.querySelectorAll("script")).toHaveLength(0);
-  }
+  },
 );

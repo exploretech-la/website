@@ -12,7 +12,7 @@
  * none of them: it re-reads the manifest, hashes the files, and parses WebP
  * headers directly.
  *
- * Node 14 standard library only -- no dependencies.
+ * Node standard library only -- no dependencies.
  */
 "use strict";
 
@@ -178,11 +178,11 @@ function probe(file) {
         "csv=p=0",
         file,
       ],
-      { encoding: "utf8" }
+      { encoding: "utf8" },
     );
   } catch (error) {
     fail(
-      "ffprobe failed on " + file + " (see --help for install instructions)"
+      "ffprobe failed on " + file + " (see --help for install instructions)",
     );
   }
   const parts = out.trim().split(",");
@@ -199,7 +199,7 @@ function requireTool(name, args) {
     fail(
       "generation needs `" +
         name +
-        "` on PATH. Run `node scripts/images.js --help`."
+        "` on PATH. Run `node scripts/images.js --help`.",
     );
   }
 }
@@ -215,13 +215,13 @@ function decodeSource(input) {
   decodeCounter += 1;
   const file = path.join(
     os.tmpdir(),
-    "etla-image-" + process.pid + "-" + decodeCounter + ".png"
+    "etla-image-" + process.pid + "-" + decodeCounter + ".png",
   );
   try {
     execFileSync(
       "ffmpeg",
       ["-v", "error", "-i", input, "-f", "image2", "-c:v", "png", "-y", file],
-      { stdio: ["ignore", "ignore", "pipe"] }
+      { stdio: ["ignore", "ignore", "pipe"] },
     );
   } catch (error) {
     const detail = error.stderr ? String(error.stderr).trim() : error.message;
@@ -262,7 +262,7 @@ function encodeVariant(options) {
         "-near_lossless",
         String(profile.nearLossless),
         "-q",
-        String(quality)
+        String(quality),
       );
     } else {
       args.push("-q", String(quality), "-sharp_yuv");
@@ -273,7 +273,7 @@ function encodeVariant(options) {
         String(crop.x),
         String(crop.y),
         String(crop.width),
-        String(crop.height)
+        String(crop.height),
       );
     args.push("-resize", String(resize.width), String(resize.height));
     args.push(input, "-o", output);
@@ -291,7 +291,7 @@ function encodeVariant(options) {
             ", over the " +
             bytes(profile.maxBytes) +
             " budget. Raise maxBytes for this profile in scripts/image-sources.json " +
-            "deliberately, or narrow the variant widths."
+            "deliberately, or narrow the variant widths.",
         );
       }
       const size = probe(output);
@@ -303,7 +303,7 @@ function encodeVariant(options) {
             quality +
             " to fit the " +
             bytes(profile.maxBytes) +
-            " budget\n"
+            " budget\n",
         );
       }
       return {
@@ -404,7 +404,7 @@ function generate(config, flags) {
     }
 
     process.stdout.write(
-      "  " + source.src + " (" + bytes(sourceBuffer.length) + ")\n"
+      "  " + source.src + " (" + bytes(sourceBuffer.length) + ")\n",
     );
 
     // ffmpeg applies EXIF orientation while decoding, so every measurement and
@@ -423,7 +423,7 @@ function generate(config, flags) {
           decoded.width +
           "x" +
           decoded.height +
-          "\n"
+          "\n",
       );
     }
 
@@ -460,7 +460,7 @@ function generate(config, flags) {
           result.height +
           "  " +
           bytes(result.bytes) +
-          "\n"
+          "\n",
       );
       return {
         path: relative,
@@ -502,18 +502,18 @@ function generate(config, flags) {
   fs.writeFileSync(manifestFile, JSON.stringify(manifest, null, 2) + "\n");
   fs.writeFileSync(
     path.join(ROOT, config.mapPath),
-    renderMap(config, manifest)
+    renderMap(config, manifest),
   );
 
   pruneOrphans(config, manifest);
 
   const totalSource = entries.reduce(
     (sum, entry) => sum + entry.sourceBytes,
-    0
+    0,
   );
   const totalOutput = entries.reduce(
     (sum, entry) => sum + entry.outputs.reduce((s, o) => s + o.bytes, 0),
-    0
+    0,
   );
   process.stdout.write(
     "\n" +
@@ -532,7 +532,7 @@ function generate(config, flags) {
       config.manifestPath +
       " and " +
       config.mapPath +
-      "\n"
+      "\n",
   );
 }
 
@@ -560,7 +560,7 @@ function pruneOrphans(config, manifest) {
   const keep = new Set([path.join(outputRoot, "manifest.json")]);
   manifest.entries.forEach((entry) => {
     entry.outputs.forEach((output) =>
-      keep.add(path.join(outputRoot, output.path))
+      keep.add(path.join(outputRoot, output.path)),
     );
   });
   const walk = (dir) => {
@@ -572,7 +572,7 @@ function pruneOrphans(config, manifest) {
       } else if (!keep.has(file)) {
         fs.unlinkSync(file);
         process.stdout.write(
-          "  removed orphan " + file.slice(ROOT.length + 1) + "\n"
+          "  removed orphan " + file.slice(ROOT.length + 1) + "\n",
         );
       }
     });
@@ -582,50 +582,71 @@ function pruneOrphans(config, manifest) {
 
 // ---------------------------------------------------------------- JS map
 
-function requireExpression(config, outputRelativePath) {
-  // `static` is a webpack resolve root (see config-overrides / jsconfig).
-  return (
-    'require("' +
-    config.outputRoot.replace(/^src\//, "") +
-    "/" +
-    outputRelativePath +
-    '")'
-  );
+/**
+ * A deterministic, collision-free ES import binding for one generated file.
+ * The whole output-relative path goes into the name, so two variants can only
+ * collide when their paths differ by punctuation alone; the numeric suffix
+ * keeps even that case stable, because callers feed paths in sorted order.
+ */
+function importIdentifier(outputRelativePath, taken) {
+  const base =
+    "img_" +
+    outputRelativePath.replace(/\.webp$/, "").replace(/[^A-Za-z0-9]+/g, "_");
+  let name = base;
+  let counter = 2;
+  while (taken.has(name)) {
+    name = base + "_" + counter;
+    counter += 1;
+  }
+  taken.add(name);
+  return name;
 }
 
 function renderMap(config, manifest) {
+  // `static` is a bundler resolve alias (see vite.config.mjs / jsconfig.json).
+  const assetRoot = config.outputRoot.replace(/^src\//, "");
+  const paths = new Set();
+  manifest.entries.forEach((entry) =>
+    entry.outputs.forEach((output) => paths.add(output.path)),
+  );
+  const names = new Map();
+  const taken = new Set();
+  Array.from(paths)
+    .sort()
+    .forEach((file) => names.set(file, importIdentifier(file, taken)));
+
   const lines = [];
   lines.push("// GENERATED by scripts/images.js -- do not edit.");
   lines.push("//");
   lines.push(
-    "// Optimized WebP variants keyed by the ORIGINAL src/static-relative path."
+    "// Optimized WebP variants keyed by the ORIGINAL src/static-relative path.",
   );
   lines.push("// Each value spreads straight onto a native <img>:");
   lines.push("//");
   lines.push('//   import images from "constants/optimizedImages";');
   lines.push(
-    '//   <img {...images["team/leadership/sandra-pan.jpg"]} alt="Sandra Pan" />'
+    '//   <img {...images["team/leadership/sandra-pan.jpg"]} alt="Sandra Pan" />',
   );
   lines.push("//");
   lines.push(
-    "// Regenerate with `npm run images` after editing scripts/image-sources.json."
+    "// Regenerate with `npm run images` after editing scripts/image-sources.json.",
   );
+  lines.push("");
+  names.forEach((name, file) => {
+    lines.push("import " + name + ' from "' + assetRoot + "/" + file + '";');
+  });
   lines.push("");
   lines.push("const images = {");
   manifest.entries.forEach((entry) => {
     const outputs = entry.outputs.slice().sort((a, b) => a.width - b.width);
     const largest = outputs[outputs.length - 1];
     lines.push('  "' + entry.key + '": {');
-    lines.push("    src: " + requireExpression(config, largest.path) + ",");
+    lines.push("    src: " + names.get(largest.path) + ",");
     if (outputs.length > 1) {
       lines.push("    srcSet: [");
       outputs.forEach((output) => {
         lines.push(
-          "      " +
-            requireExpression(config, output.path) +
-            ' + " ' +
-            output.width +
-            'w",'
+          "      " + names.get(output.path) + ' + " ' + output.width + 'w",',
         );
       });
       lines.push('    ].join(", "),');
@@ -699,7 +720,7 @@ function scanReferences(config, keys, problems) {
         let match;
         while ((match = RASTER_REFERENCE.exec(line)) !== null) {
           const key = match[1].slice(
-            match[1].indexOf("static/") + "static/".length
+            match[1].indexOf("static/") + "static/".length,
           );
           if (allowPrefixes.some((prefix) => key.indexOf(prefix) === 0))
             continue;
@@ -710,7 +731,7 @@ function scanReferences(config, keys, problems) {
                 ': raster "' +
                 key +
                 '" is referenced but not in scripts/image-sources.json. ' +
-                "Add it (or allowlist its family under scan.allowUnoptimized) and run `npm run images`."
+                "Add it (or allowlist its family under scan.allowUnoptimized) and run `npm run images`.",
             );
           } else {
             problems.push(
@@ -720,7 +741,7 @@ function scanReferences(config, keys, problems) {
                 '" is optimized -- import the generated map instead ' +
                 '(images["' +
                 key +
-                '"]) so the original megabytes are not shipped.'
+                '"]) so the original megabytes are not shipped.',
             );
           }
         }
@@ -733,7 +754,7 @@ function scanReferences(config, keys, problems) {
                 ': images["' +
                 match[1] +
                 '"] is not a generated key. ' +
-                "Check the path, or add the source to scripts/image-sources.json."
+                "Check the path, or add the source to scripts/image-sources.json.",
             );
           }
         }
@@ -747,7 +768,7 @@ function check(config) {
   const manifest = readManifest(config);
   if (!manifest) {
     fail(
-      "no readable " + config.manifestPath + " -- run `node scripts/images.js`"
+      "no readable " + config.manifestPath + " -- run `node scripts/images.js`",
     );
   }
 
@@ -760,7 +781,7 @@ function check(config) {
     if (!manifestKeys.has(source.src)) {
       problems.push(
         source.src +
-          ": in the inventory but not generated -- run `npm run images`"
+          ": in the inventory but not generated -- run `npm run images`",
       );
     }
   });
@@ -768,7 +789,7 @@ function check(config) {
     if (!inventoryKeys.has(entry.key)) {
       problems.push(
         entry.key +
-          ": generated but no longer in the inventory -- run `npm run images`"
+          ": generated but no longer in the inventory -- run `npm run images`",
       );
     }
   });
@@ -782,7 +803,7 @@ function check(config) {
     if (!fs.existsSync(sourceFile)) {
       problems.push(
         entry.key +
-          ": original is missing -- generation is no longer repeatable"
+          ": original is missing -- generation is no longer repeatable",
       );
     } else {
       const buffer = fs.readFileSync(sourceFile);
@@ -792,7 +813,7 @@ function check(config) {
       ) {
         problems.push(
           entry.key +
-            ": original changed since generation -- run `npm run images`"
+            ": original changed since generation -- run `npm run images`",
         );
       }
     }
@@ -802,7 +823,7 @@ function check(config) {
       if (JSON.stringify(request) !== JSON.stringify(entry.request)) {
         problems.push(
           entry.key +
-            ": profile/focus settings changed since generation -- run `npm run images`"
+            ": profile/focus settings changed since generation -- run `npm run images`",
         );
       }
     }
@@ -812,7 +833,7 @@ function check(config) {
       expectedFiles.add(file);
       if (!fs.existsSync(file)) {
         problems.push(
-          output.path + ": generated file is missing -- run `npm run images`"
+          output.path + ": generated file is missing -- run `npm run images`",
         );
         return;
       }
@@ -820,7 +841,7 @@ function check(config) {
       if (buffer.length !== output.bytes || sha256(buffer) !== output.hash) {
         problems.push(
           output.path +
-            ": generated file does not match the manifest -- run `npm run images`"
+            ": generated file does not match the manifest -- run `npm run images`",
         );
         return;
       }
@@ -832,7 +853,7 @@ function check(config) {
             " exceeds the " +
             source.profile +
             " budget of " +
-            bytes(profile.maxBytes)
+            bytes(profile.maxBytes),
         );
       }
       const size = webpSize(buffer);
@@ -848,7 +869,7 @@ function check(config) {
             " but the manifest says " +
             output.width +
             "x" +
-            output.height
+            output.height,
         );
       } else if (entry.type === "portrait" && size.width !== size.height) {
         problems.push(
@@ -856,7 +877,7 @@ function check(config) {
             ": portrait variants must be square, got " +
             size.width +
             "x" +
-            size.height
+            size.height,
         );
       } else if (size.width > entry.sourceWidth) {
         problems.push(
@@ -865,7 +886,7 @@ function check(config) {
             size.width +
             "px is wider than the " +
             entry.sourceWidth +
-            "px original (upscaled)"
+            "px original (upscaled)",
         );
       }
     });
@@ -876,7 +897,7 @@ function check(config) {
       if (!expectedFiles.has(file)) {
         problems.push(
           file.slice(ROOT.length + 1) +
-            ": orphaned generated file -- run `npm run images`"
+            ": orphaned generated file -- run `npm run images`",
         );
       }
     });
@@ -893,21 +914,21 @@ function check(config) {
 
   if (problems.length) {
     process.stderr.write(
-      "images --check found " + problems.length + " problem(s):\n"
+      "images --check found " + problems.length + " problem(s):\n",
     );
     problems.forEach((problem) =>
-      process.stderr.write("  - " + problem + "\n")
+      process.stderr.write("  - " + problem + "\n"),
     );
     process.exit(1);
   }
 
   const totalOutput = manifest.entries.reduce(
     (sum, entry) => sum + entry.outputs.reduce((s, o) => s + o.bytes, 0),
-    0
+    0,
   );
   const variants = manifest.entries.reduce(
     (sum, entry) => sum + entry.outputs.length,
-    0
+    0,
   );
   process.stdout.write(
     "images --check ok: " +
@@ -916,7 +937,7 @@ function check(config) {
       variants +
       " variants, " +
       bytes(totalOutput) +
-      " generated\n"
+      " generated\n",
   );
 }
 

@@ -8,410 +8,497 @@
 //
 // Regenerate with `npm run images` after editing scripts/image-sources.json.
 
+import img_images_banner_1280w from "static/optimized/images/banner-1280w.webp";
+import img_images_banner_1920w from "static/optimized/images/banner-1920w.webp";
+import img_images_banner_640w from "static/optimized/images/banner-640w.webp";
+import img_images_demo_microsoft_vr_1280w from "static/optimized/images/demo-microsoft-vr-1280w.webp";
+import img_images_demo_microsoft_vr_640w from "static/optimized/images/demo-microsoft-vr-640w.webp";
+import img_images_explore_tech_2022_1280w from "static/optimized/images/explore-tech-2022-1280w.webp";
+import img_images_explore_tech_2022_640w from "static/optimized/images/explore-tech-2022-640w.webp";
+import img_images_ignite_ML_1052w from "static/optimized/images/ignite/ML-1052w.webp";
+import img_images_ignite_ML_640w from "static/optimized/images/ignite/ML-640w.webp";
+import img_images_ignite_PXL_20250215_212102361_MP_1280w from "static/optimized/images/ignite/PXL_20250215_212102361.MP-1280w.webp";
+import img_images_ignite_PXL_20250215_212102361_MP_640w from "static/optimized/images/ignite/PXL_20250215_212102361.MP-640w.webp";
+import img_images_ignite_cllab2_1280w from "static/optimized/images/ignite/cllab2-1280w.webp";
+import img_images_ignite_cllab2_640w from "static/optimized/images/ignite/cllab2-640w.webp";
+import img_images_ignite_collab1_1280w from "static/optimized/images/ignite/collab1-1280w.webp";
+import img_images_ignite_collab1_640w from "static/optimized/images/ignite/collab1-640w.webp";
+import img_images_ignite_gamdev_1280w from "static/optimized/images/ignite/gamdev-1280w.webp";
+import img_images_ignite_gamdev_640w from "static/optimized/images/ignite/gamdev-640w.webp";
+import img_images_ignite_gamedevroblox_1280w from "static/optimized/images/ignite/gamedevroblox-1280w.webp";
+import img_images_ignite_gamedevroblox_640w from "static/optimized/images/ignite/gamedevroblox-640w.webp";
+import img_images_ignite_python_1280w from "static/optimized/images/ignite/python-1280w.webp";
+import img_images_ignite_python_640w from "static/optimized/images/ignite/python-640w.webp";
+import img_images_ignite_webdev_1280w from "static/optimized/images/ignite/webdev-1280w.webp";
+import img_images_ignite_webdev_640w from "static/optimized/images/ignite/webdev-640w.webp";
+import img_images_speaker_connie_1280w from "static/optimized/images/speaker-connie-1280w.webp";
+import img_images_speaker_connie_640w from "static/optimized/images/speaker-connie-640w.webp";
+import img_images_taboola_booth_1280w from "static/optimized/images/taboola-booth-1280w.webp";
+import img_images_taboola_booth_640w from "static/optimized/images/taboola-booth-640w.webp";
+import img_images_teals_vr_640w from "static/optimized/images/teals-vr-640w.webp";
+import img_images_teals_vr_721w from "static/optimized/images/teals-vr-721w.webp";
+import img_images_workshop_audience_1280w from "static/optimized/images/workshop-audience-1280w.webp";
+import img_images_workshop_audience_640w from "static/optimized/images/workshop-audience-640w.webp";
+import img_images_workshop_dev_tools_1280w from "static/optimized/images/workshop-dev-tools-1280w.webp";
+import img_images_workshop_dev_tools_640w from "static/optimized/images/workshop-dev-tools-640w.webp";
+import img_images_workshop_kaylie_1280w from "static/optimized/images/workshop-kaylie-1280w.webp";
+import img_images_workshop_kaylie_640w from "static/optimized/images/workshop-kaylie-640w.webp";
+import img_images_workshop_scratch_1280w from "static/optimized/images/workshop-scratch-1280w.webp";
+import img_images_workshop_scratch_640w from "static/optimized/images/workshop-scratch-640w.webp";
+import img_speakers_alfredo_ayala_320w from "static/optimized/speakers/alfredo-ayala-320w.webp";
+import img_speakers_carey_nachenberg_320w from "static/optimized/speakers/carey-nachenberg-320w.webp";
+import img_speakers_jayathi_murthy_320w from "static/optimized/speakers/jayathi-murthy-320w.webp";
+import img_speakers_justin_brezhnev_320w from "static/optimized/speakers/justin-brezhnev-320w.webp";
+import img_speakers_nick_corral_320w from "static/optimized/speakers/nick-corral-320w.webp";
+import img_speakers_ruth_johnson_320w from "static/optimized/speakers/ruth-johnson-320w.webp";
+import img_speakers_solomon_russell_200w from "static/optimized/speakers/solomon-russell-200w.webp";
+import img_speakers_tyler_menezes_320w from "static/optimized/speakers/tyler-menezes-320w.webp";
+import img_sponsors_balsamiq_192w from "static/optimized/sponsors/balsamiq-192w.webp";
+import img_sponsors_balsamiq_384w from "static/optimized/sponsors/balsamiq-384w.webp";
+import img_sponsors_cloud_girls_192w from "static/optimized/sponsors/cloud-girls-192w.webp";
+import img_sponsors_cloud_girls_384w from "static/optimized/sponsors/cloud-girls-384w.webp";
+import img_sponsors_disney_192w from "static/optimized/sponsors/disney-192w.webp";
+import img_sponsors_disney_384w from "static/optimized/sponsors/disney-384w.webp";
+import img_sponsors_google_logo_256w from "static/optimized/sponsors/google-logo-256w.webp";
+import img_sponsors_google_logo_512w from "static/optimized/sponsors/google-logo-512w.webp";
+import img_sponsors_northrop_grumman_192w from "static/optimized/sponsors/northrop-grumman-192w.webp";
+import img_sponsors_northrop_grumman_384w from "static/optimized/sponsors/northrop-grumman-384w.webp";
+import img_sponsors_ucla_cs_256w from "static/optimized/sponsors/ucla-cs-256w.webp";
+import img_sponsors_ucla_cs_512w from "static/optimized/sponsors/ucla-cs-512w.webp";
+import img_sponsors_ucla_samueli_engineering_192w from "static/optimized/sponsors/ucla-samueli-engineering-192w.webp";
+import img_sponsors_ucla_samueli_engineering_384w from "static/optimized/sponsors/ucla-samueli-engineering-384w.webp";
+import img_sponsors_yubico_192w from "static/optimized/sponsors/yubico-192w.webp";
+import img_sponsors_yubico_384w from "static/optimized/sponsors/yubico-384w.webp";
+import img_team_content_benjamin_garcia_320w from "static/optimized/team/content/benjamin-garcia-320w.webp";
+import img_team_content_paul_headshot_320w from "static/optimized/team/content/paul-headshot-320w.webp";
+import img_team_content_ridhima_seth_320w from "static/optimized/team/content/ridhima-seth-320w.webp";
+import img_team_content_sofia_matos_320w from "static/optimized/team/content/sofia-matos-320w.webp";
+import img_team_design_ela_defne_erkan_320w from "static/optimized/team/design/ela_defne_erkan-320w.webp";
+import img_team_design_isabelle_chang_320w from "static/optimized/team/design/isabelle-chang-320w.webp";
+import img_team_external_shayla_kumaresan_headshot_320w from "static/optimized/team/external/shayla-kumaresan-headshot-320w.webp";
+import img_team_leadership_2027_christina_uong_320w from "static/optimized/team/leadership/2027/christina-uong-320w.webp";
+import img_team_leadership_2027_clara_zhang_320w from "static/optimized/team/leadership/2027/clara-zhang-320w.webp";
+import img_team_leadership_2027_eli_drewry_320w from "static/optimized/team/leadership/2027/eli-drewry-320w.webp";
+import img_team_leadership_2027_eric_chen_320w from "static/optimized/team/leadership/2027/eric-chen-320w.webp";
+import img_team_leadership_2027_jubilee_yul_320w from "static/optimized/team/leadership/2027/jubilee-yul-320w.webp";
+import img_team_leadership_2027_matthew_chen_320w from "static/optimized/team/leadership/2027/matthew-chen-320w.webp";
+import img_team_leadership_2027_sadie_scott_320w from "static/optimized/team/leadership/2027/sadie-scott-320w.webp";
+import img_team_leadership_2027_sarah_zhao_320w from "static/optimized/team/leadership/2027/sarah-zhao-320w.webp";
+import img_team_leadership_2027_spoorthy_nalumachu_320w from "static/optimized/team/leadership/2027/spoorthy-nalumachu-320w.webp";
+import img_team_leadership_annika_renganathan_320w from "static/optimized/team/leadership/annika-renganathan-320w.webp";
+import img_team_leadership_sandra_pan_320w from "static/optimized/team/leadership/sandra-pan-320w.webp";
+import img_team_leadership_shaina_grover_320w from "static/optimized/team/leadership/shaina-grover-320w.webp";
+import img_team_operations_aansh_singh_320w from "static/optimized/team/operations/aansh-singh-320w.webp";
+import img_team_operations_angeleena_poothavelil_320w from "static/optimized/team/operations/angeleena-poothavelil-320w.webp";
+import img_team_operations_esther_yao_headshot_320w from "static/optimized/team/operations/esther-yao-headshot-320w.webp";
+import img_team_operations_joy_szeto_headshot_320w from "static/optimized/team/operations/joy-szeto-headshot-320w.webp";
+import img_team_operations_kayla_wai_320w from "static/optimized/team/operations/kayla-wai-320w.webp";
+import img_team_operations_luisa_chen_320w from "static/optimized/team/operations/luisa-chen-320w.webp";
+
 const images = {
   "images/banner.png": {
-    src: require("static/optimized/images/banner-1920w.webp"),
+    src: img_images_banner_1920w,
     srcSet: [
-      require("static/optimized/images/banner-640w.webp") + " 640w",
-      require("static/optimized/images/banner-1280w.webp") + " 1280w",
-      require("static/optimized/images/banner-1920w.webp") + " 1920w",
+      img_images_banner_640w + " 640w",
+      img_images_banner_1280w + " 1280w",
+      img_images_banner_1920w + " 1920w",
     ].join(", "),
     sizes: "100vw",
     width: 1920,
     height: 731,
   },
   "images/demo-microsoft-vr.jpg": {
-    src: require("static/optimized/images/demo-microsoft-vr-1280w.webp"),
+    src: img_images_demo_microsoft_vr_1280w,
     srcSet: [
-      require("static/optimized/images/demo-microsoft-vr-640w.webp") + " 640w",
-      require("static/optimized/images/demo-microsoft-vr-1280w.webp") + " 1280w",
+      img_images_demo_microsoft_vr_640w + " 640w",
+      img_images_demo_microsoft_vr_1280w + " 1280w",
     ].join(", "),
     sizes: "100vw",
     width: 1280,
     height: 854,
   },
   "images/explore-tech-2022.jpg": {
-    src: require("static/optimized/images/explore-tech-2022-1280w.webp"),
+    src: img_images_explore_tech_2022_1280w,
     srcSet: [
-      require("static/optimized/images/explore-tech-2022-640w.webp") + " 640w",
-      require("static/optimized/images/explore-tech-2022-1280w.webp") + " 1280w",
+      img_images_explore_tech_2022_640w + " 640w",
+      img_images_explore_tech_2022_1280w + " 1280w",
     ].join(", "),
     width: 1280,
     height: 854,
   },
   "images/ignite/ML.png": {
-    src: require("static/optimized/images/ignite/ML-1052w.webp"),
+    src: img_images_ignite_ML_1052w,
     srcSet: [
-      require("static/optimized/images/ignite/ML-640w.webp") + " 640w",
-      require("static/optimized/images/ignite/ML-1052w.webp") + " 1052w",
+      img_images_ignite_ML_640w + " 640w",
+      img_images_ignite_ML_1052w + " 1052w",
     ].join(", "),
     width: 1052,
     height: 782,
   },
   "images/ignite/PXL_20250215_212102361.MP.jpg": {
-    src: require("static/optimized/images/ignite/PXL_20250215_212102361.MP-1280w.webp"),
+    src: img_images_ignite_PXL_20250215_212102361_MP_1280w,
     srcSet: [
-      require("static/optimized/images/ignite/PXL_20250215_212102361.MP-640w.webp") + " 640w",
-      require("static/optimized/images/ignite/PXL_20250215_212102361.MP-1280w.webp") + " 1280w",
+      img_images_ignite_PXL_20250215_212102361_MP_640w + " 640w",
+      img_images_ignite_PXL_20250215_212102361_MP_1280w + " 1280w",
     ].join(", "),
     width: 1280,
     height: 964,
   },
   "images/ignite/cllab2.jpg": {
-    src: require("static/optimized/images/ignite/cllab2-1280w.webp"),
+    src: img_images_ignite_cllab2_1280w,
     srcSet: [
-      require("static/optimized/images/ignite/cllab2-640w.webp") + " 640w",
-      require("static/optimized/images/ignite/cllab2-1280w.webp") + " 1280w",
+      img_images_ignite_cllab2_640w + " 640w",
+      img_images_ignite_cllab2_1280w + " 1280w",
     ].join(", "),
     width: 1280,
     height: 964,
   },
   "images/ignite/collab1.jpg": {
-    src: require("static/optimized/images/ignite/collab1-1280w.webp"),
+    src: img_images_ignite_collab1_1280w,
     srcSet: [
-      require("static/optimized/images/ignite/collab1-640w.webp") + " 640w",
-      require("static/optimized/images/ignite/collab1-1280w.webp") + " 1280w",
+      img_images_ignite_collab1_640w + " 640w",
+      img_images_ignite_collab1_1280w + " 1280w",
     ].join(", "),
     width: 1280,
     height: 964,
   },
   "images/ignite/gamdev.jpeg": {
-    src: require("static/optimized/images/ignite/gamdev-1280w.webp"),
+    src: img_images_ignite_gamdev_1280w,
     srcSet: [
-      require("static/optimized/images/ignite/gamdev-640w.webp") + " 640w",
-      require("static/optimized/images/ignite/gamdev-1280w.webp") + " 1280w",
+      img_images_ignite_gamdev_640w + " 640w",
+      img_images_ignite_gamdev_1280w + " 1280w",
     ].join(", "),
     width: 1280,
     height: 854,
   },
   "images/ignite/gamedevroblox.jpg": {
-    src: require("static/optimized/images/ignite/gamedevroblox-1280w.webp"),
+    src: img_images_ignite_gamedevroblox_1280w,
     srcSet: [
-      require("static/optimized/images/ignite/gamedevroblox-640w.webp") + " 640w",
-      require("static/optimized/images/ignite/gamedevroblox-1280w.webp") + " 1280w",
+      img_images_ignite_gamedevroblox_640w + " 640w",
+      img_images_ignite_gamedevroblox_1280w + " 1280w",
     ].join(", "),
     width: 1280,
     height: 964,
   },
   "images/ignite/python.jpg": {
-    src: require("static/optimized/images/ignite/python-1280w.webp"),
+    src: img_images_ignite_python_1280w,
     srcSet: [
-      require("static/optimized/images/ignite/python-640w.webp") + " 640w",
-      require("static/optimized/images/ignite/python-1280w.webp") + " 1280w",
+      img_images_ignite_python_640w + " 640w",
+      img_images_ignite_python_1280w + " 1280w",
     ].join(", "),
     width: 1280,
     height: 964,
   },
   "images/ignite/webdev.jpg": {
-    src: require("static/optimized/images/ignite/webdev-1280w.webp"),
+    src: img_images_ignite_webdev_1280w,
     srcSet: [
-      require("static/optimized/images/ignite/webdev-640w.webp") + " 640w",
-      require("static/optimized/images/ignite/webdev-1280w.webp") + " 1280w",
+      img_images_ignite_webdev_640w + " 640w",
+      img_images_ignite_webdev_1280w + " 1280w",
     ].join(", "),
     width: 1280,
     height: 964,
   },
   "images/speaker-connie.jpg": {
-    src: require("static/optimized/images/speaker-connie-1280w.webp"),
+    src: img_images_speaker_connie_1280w,
     srcSet: [
-      require("static/optimized/images/speaker-connie-640w.webp") + " 640w",
-      require("static/optimized/images/speaker-connie-1280w.webp") + " 1280w",
+      img_images_speaker_connie_640w + " 640w",
+      img_images_speaker_connie_1280w + " 1280w",
     ].join(", "),
     width: 1280,
     height: 855,
   },
   "images/taboola-booth.jpg": {
-    src: require("static/optimized/images/taboola-booth-1280w.webp"),
+    src: img_images_taboola_booth_1280w,
     srcSet: [
-      require("static/optimized/images/taboola-booth-640w.webp") + " 640w",
-      require("static/optimized/images/taboola-booth-1280w.webp") + " 1280w",
+      img_images_taboola_booth_640w + " 640w",
+      img_images_taboola_booth_1280w + " 1280w",
     ].join(", "),
     width: 1280,
     height: 854,
   },
   "images/teals-vr.jpg": {
-    src: require("static/optimized/images/teals-vr-721w.webp"),
+    src: img_images_teals_vr_721w,
     srcSet: [
-      require("static/optimized/images/teals-vr-640w.webp") + " 640w",
-      require("static/optimized/images/teals-vr-721w.webp") + " 721w",
+      img_images_teals_vr_640w + " 640w",
+      img_images_teals_vr_721w + " 721w",
     ].join(", "),
     width: 721,
     height: 1080,
   },
   "images/workshop-audience.jpg": {
-    src: require("static/optimized/images/workshop-audience-1280w.webp"),
+    src: img_images_workshop_audience_1280w,
     srcSet: [
-      require("static/optimized/images/workshop-audience-640w.webp") + " 640w",
-      require("static/optimized/images/workshop-audience-1280w.webp") + " 1280w",
+      img_images_workshop_audience_640w + " 640w",
+      img_images_workshop_audience_1280w + " 1280w",
     ].join(", "),
     sizes: "100vw",
     width: 1280,
     height: 855,
   },
   "images/workshop-dev-tools.jpg": {
-    src: require("static/optimized/images/workshop-dev-tools-1280w.webp"),
+    src: img_images_workshop_dev_tools_1280w,
     srcSet: [
-      require("static/optimized/images/workshop-dev-tools-640w.webp") + " 640w",
-      require("static/optimized/images/workshop-dev-tools-1280w.webp") + " 1280w",
+      img_images_workshop_dev_tools_640w + " 640w",
+      img_images_workshop_dev_tools_1280w + " 1280w",
     ].join(", "),
     sizes: "100vw",
     width: 1280,
     height: 854,
   },
   "images/workshop-kaylie.jpg": {
-    src: require("static/optimized/images/workshop-kaylie-1280w.webp"),
+    src: img_images_workshop_kaylie_1280w,
     srcSet: [
-      require("static/optimized/images/workshop-kaylie-640w.webp") + " 640w",
-      require("static/optimized/images/workshop-kaylie-1280w.webp") + " 1280w",
+      img_images_workshop_kaylie_640w + " 640w",
+      img_images_workshop_kaylie_1280w + " 1280w",
     ].join(", "),
     sizes: "100vw",
     width: 1280,
     height: 854,
   },
   "images/workshop-scratch.jpg": {
-    src: require("static/optimized/images/workshop-scratch-1280w.webp"),
+    src: img_images_workshop_scratch_1280w,
     srcSet: [
-      require("static/optimized/images/workshop-scratch-640w.webp") + " 640w",
-      require("static/optimized/images/workshop-scratch-1280w.webp") + " 1280w",
+      img_images_workshop_scratch_640w + " 640w",
+      img_images_workshop_scratch_1280w + " 1280w",
     ].join(", "),
     sizes: "100vw",
     width: 1280,
     height: 855,
   },
   "speakers/alfredo-ayala.jpg": {
-    src: require("static/optimized/speakers/alfredo-ayala-320w.webp"),
+    src: img_speakers_alfredo_ayala_320w,
     width: 320,
     height: 320,
   },
   "speakers/carey-nachenberg.png": {
-    src: require("static/optimized/speakers/carey-nachenberg-320w.webp"),
+    src: img_speakers_carey_nachenberg_320w,
     width: 320,
     height: 320,
   },
   "speakers/jayathi-murthy.png": {
-    src: require("static/optimized/speakers/jayathi-murthy-320w.webp"),
+    src: img_speakers_jayathi_murthy_320w,
     width: 320,
     height: 320,
   },
   "speakers/justin-brezhnev.png": {
-    src: require("static/optimized/speakers/justin-brezhnev-320w.webp"),
+    src: img_speakers_justin_brezhnev_320w,
     width: 320,
     height: 320,
   },
   "speakers/nick-corral.jpg": {
-    src: require("static/optimized/speakers/nick-corral-320w.webp"),
+    src: img_speakers_nick_corral_320w,
     width: 320,
     height: 320,
   },
   "speakers/ruth-johnson.jpeg": {
-    src: require("static/optimized/speakers/ruth-johnson-320w.webp"),
+    src: img_speakers_ruth_johnson_320w,
     width: 320,
     height: 320,
   },
   "speakers/solomon-russell.jpeg": {
-    src: require("static/optimized/speakers/solomon-russell-200w.webp"),
+    src: img_speakers_solomon_russell_200w,
     width: 200,
     height: 200,
   },
   "speakers/tyler-menezes.png": {
-    src: require("static/optimized/speakers/tyler-menezes-320w.webp"),
+    src: img_speakers_tyler_menezes_320w,
     width: 320,
     height: 320,
   },
   "sponsors/balsamiq.png": {
-    src: require("static/optimized/sponsors/balsamiq-384w.webp"),
+    src: img_sponsors_balsamiq_384w,
     srcSet: [
-      require("static/optimized/sponsors/balsamiq-192w.webp") + " 192w",
-      require("static/optimized/sponsors/balsamiq-384w.webp") + " 384w",
+      img_sponsors_balsamiq_192w + " 192w",
+      img_sponsors_balsamiq_384w + " 384w",
     ].join(", "),
     width: 384,
     height: 214,
   },
   "sponsors/cloud-girls.png": {
-    src: require("static/optimized/sponsors/cloud-girls-384w.webp"),
+    src: img_sponsors_cloud_girls_384w,
     srcSet: [
-      require("static/optimized/sponsors/cloud-girls-192w.webp") + " 192w",
-      require("static/optimized/sponsors/cloud-girls-384w.webp") + " 384w",
+      img_sponsors_cloud_girls_192w + " 192w",
+      img_sponsors_cloud_girls_384w + " 384w",
     ].join(", "),
     width: 384,
     height: 163,
   },
   "sponsors/disney.png": {
-    src: require("static/optimized/sponsors/disney-384w.webp"),
+    src: img_sponsors_disney_384w,
     srcSet: [
-      require("static/optimized/sponsors/disney-192w.webp") + " 192w",
-      require("static/optimized/sponsors/disney-384w.webp") + " 384w",
+      img_sponsors_disney_192w + " 192w",
+      img_sponsors_disney_384w + " 384w",
     ].join(", "),
     width: 384,
     height: 207,
   },
   "sponsors/google-logo.png": {
-    src: require("static/optimized/sponsors/google-logo-512w.webp"),
+    src: img_sponsors_google_logo_512w,
     srcSet: [
-      require("static/optimized/sponsors/google-logo-256w.webp") + " 256w",
-      require("static/optimized/sponsors/google-logo-512w.webp") + " 512w",
+      img_sponsors_google_logo_256w + " 256w",
+      img_sponsors_google_logo_512w + " 512w",
     ].join(", "),
     width: 512,
     height: 174,
   },
   "sponsors/northrop-grumman.png": {
-    src: require("static/optimized/sponsors/northrop-grumman-384w.webp"),
+    src: img_sponsors_northrop_grumman_384w,
     srcSet: [
-      require("static/optimized/sponsors/northrop-grumman-192w.webp") + " 192w",
-      require("static/optimized/sponsors/northrop-grumman-384w.webp") + " 384w",
+      img_sponsors_northrop_grumman_192w + " 192w",
+      img_sponsors_northrop_grumman_384w + " 384w",
     ].join(", "),
     width: 384,
     height: 86,
   },
   "sponsors/ucla-cs.png": {
-    src: require("static/optimized/sponsors/ucla-cs-512w.webp"),
+    src: img_sponsors_ucla_cs_512w,
     srcSet: [
-      require("static/optimized/sponsors/ucla-cs-256w.webp") + " 256w",
-      require("static/optimized/sponsors/ucla-cs-512w.webp") + " 512w",
+      img_sponsors_ucla_cs_256w + " 256w",
+      img_sponsors_ucla_cs_512w + " 512w",
     ].join(", "),
     width: 512,
     height: 108,
   },
   "sponsors/ucla-samueli-engineering.png": {
-    src: require("static/optimized/sponsors/ucla-samueli-engineering-384w.webp"),
+    src: img_sponsors_ucla_samueli_engineering_384w,
     srcSet: [
-      require("static/optimized/sponsors/ucla-samueli-engineering-192w.webp") + " 192w",
-      require("static/optimized/sponsors/ucla-samueli-engineering-384w.webp") + " 384w",
+      img_sponsors_ucla_samueli_engineering_192w + " 192w",
+      img_sponsors_ucla_samueli_engineering_384w + " 384w",
     ].join(", "),
     width: 384,
     height: 81,
   },
   "sponsors/yubico.png": {
-    src: require("static/optimized/sponsors/yubico-384w.webp"),
+    src: img_sponsors_yubico_384w,
     srcSet: [
-      require("static/optimized/sponsors/yubico-192w.webp") + " 192w",
-      require("static/optimized/sponsors/yubico-384w.webp") + " 384w",
+      img_sponsors_yubico_192w + " 192w",
+      img_sponsors_yubico_384w + " 384w",
     ].join(", "),
     width: 384,
     height: 103,
   },
   "team/content/benjamin-garcia.jpg": {
-    src: require("static/optimized/team/content/benjamin-garcia-320w.webp"),
+    src: img_team_content_benjamin_garcia_320w,
     width: 320,
     height: 320,
   },
   "team/content/paul-headshot.png": {
-    src: require("static/optimized/team/content/paul-headshot-320w.webp"),
+    src: img_team_content_paul_headshot_320w,
     width: 320,
     height: 320,
   },
   "team/content/ridhima-seth.png": {
-    src: require("static/optimized/team/content/ridhima-seth-320w.webp"),
+    src: img_team_content_ridhima_seth_320w,
     width: 320,
     height: 320,
   },
   "team/content/sofia-matos.jpg": {
-    src: require("static/optimized/team/content/sofia-matos-320w.webp"),
+    src: img_team_content_sofia_matos_320w,
     width: 320,
     height: 320,
   },
   "team/design/ela_defne_erkan.png": {
-    src: require("static/optimized/team/design/ela_defne_erkan-320w.webp"),
+    src: img_team_design_ela_defne_erkan_320w,
     width: 320,
     height: 320,
   },
   "team/design/isabelle-chang.png": {
-    src: require("static/optimized/team/design/isabelle-chang-320w.webp"),
+    src: img_team_design_isabelle_chang_320w,
     width: 320,
     height: 320,
   },
   "team/external/shayla-kumaresan-headshot.jpg": {
-    src: require("static/optimized/team/external/shayla-kumaresan-headshot-320w.webp"),
+    src: img_team_external_shayla_kumaresan_headshot_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/2027/christina-uong.jpg": {
-    src: require("static/optimized/team/leadership/2027/christina-uong-320w.webp"),
+    src: img_team_leadership_2027_christina_uong_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/2027/clara-zhang.jpg": {
-    src: require("static/optimized/team/leadership/2027/clara-zhang-320w.webp"),
+    src: img_team_leadership_2027_clara_zhang_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/2027/eli-drewry.jpg": {
-    src: require("static/optimized/team/leadership/2027/eli-drewry-320w.webp"),
+    src: img_team_leadership_2027_eli_drewry_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/2027/eric-chen.jpg": {
-    src: require("static/optimized/team/leadership/2027/eric-chen-320w.webp"),
+    src: img_team_leadership_2027_eric_chen_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/2027/jubilee-yul.jpg": {
-    src: require("static/optimized/team/leadership/2027/jubilee-yul-320w.webp"),
+    src: img_team_leadership_2027_jubilee_yul_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/2027/matthew-chen.jpg": {
-    src: require("static/optimized/team/leadership/2027/matthew-chen-320w.webp"),
+    src: img_team_leadership_2027_matthew_chen_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/2027/sadie-scott.jpg": {
-    src: require("static/optimized/team/leadership/2027/sadie-scott-320w.webp"),
+    src: img_team_leadership_2027_sadie_scott_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/2027/sarah-zhao.jpg": {
-    src: require("static/optimized/team/leadership/2027/sarah-zhao-320w.webp"),
+    src: img_team_leadership_2027_sarah_zhao_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/2027/spoorthy-nalumachu.jpg": {
-    src: require("static/optimized/team/leadership/2027/spoorthy-nalumachu-320w.webp"),
+    src: img_team_leadership_2027_spoorthy_nalumachu_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/annika-renganathan.jpg": {
-    src: require("static/optimized/team/leadership/annika-renganathan-320w.webp"),
+    src: img_team_leadership_annika_renganathan_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/sandra-pan.jpg": {
-    src: require("static/optimized/team/leadership/sandra-pan-320w.webp"),
+    src: img_team_leadership_sandra_pan_320w,
     width: 320,
     height: 320,
   },
   "team/leadership/shaina-grover.jpg": {
-    src: require("static/optimized/team/leadership/shaina-grover-320w.webp"),
+    src: img_team_leadership_shaina_grover_320w,
     width: 320,
     height: 320,
   },
   "team/operations/aansh-singh.jpeg": {
-    src: require("static/optimized/team/operations/aansh-singh-320w.webp"),
+    src: img_team_operations_aansh_singh_320w,
     width: 320,
     height: 320,
   },
   "team/operations/angeleena-poothavelil.png": {
-    src: require("static/optimized/team/operations/angeleena-poothavelil-320w.webp"),
+    src: img_team_operations_angeleena_poothavelil_320w,
     width: 320,
     height: 320,
   },
   "team/operations/esther-yao-headshot.jpg": {
-    src: require("static/optimized/team/operations/esther-yao-headshot-320w.webp"),
+    src: img_team_operations_esther_yao_headshot_320w,
     width: 320,
     height: 320,
   },
   "team/operations/joy-szeto-headshot.jpeg": {
-    src: require("static/optimized/team/operations/joy-szeto-headshot-320w.webp"),
+    src: img_team_operations_joy_szeto_headshot_320w,
     width: 320,
     height: 320,
   },
   "team/operations/kayla-wai.jpg": {
-    src: require("static/optimized/team/operations/kayla-wai-320w.webp"),
+    src: img_team_operations_kayla_wai_320w,
     width: 320,
     height: 320,
   },
   "team/operations/luisa-chen.png": {
-    src: require("static/optimized/team/operations/luisa-chen-320w.webp"),
+    src: img_team_operations_luisa_chen_320w,
     width: 320,
     height: 320,
   },
