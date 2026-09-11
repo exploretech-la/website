@@ -1,5 +1,5 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import classnames from "classnames";
 
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
@@ -17,6 +17,13 @@ function Header() {
   let isIgnitePage = false;
 
   const location = useLocation();
+  const history = useHistory();
+  const pendingHash = useRef(null);
+  const [expanded, setExpanded] = useState(false);
+  useEffect(() => {
+    pendingHash.current = history.action === "POP" ? null : location.hash;
+    setExpanded(false);
+  }, [location.key, location.hash, history]);
   if (location.pathname === "/") {
     isHomePage = true;
   }
@@ -39,20 +46,25 @@ function Header() {
 
   const navBarItems = (
     <Nav>
-      <NavDropdown title="Home" id="navbarScrollingDropdown" href="/">
-        <NavDropdown.Item href="/">Home</NavDropdown.Item>
-        <NavDropdown.Item href={`/#${HomePageSections.ABOUT.name}`}>
+      <NavDropdown title="Home" id="navbar-home">
+        <NavDropdown.Item as={Link} to="/">
+          Home
+        </NavDropdown.Item>
+        <NavDropdown.Item as={Link} to={`/#${HomePageSections.ABOUT.name}`}>
           About
         </NavDropdown.Item>
-        <NavDropdown.Item href={`/#${HomePageSections.GET_INVOLVED.name}`}>
+        <NavDropdown.Item
+          as={Link}
+          to={`/#${HomePageSections.GET_INVOLVED.name}`}
+        >
           {" "}
           Get Involved{" "}
         </NavDropdown.Item>
-        <NavDropdown.Item href={`/#${HomePageSections.SPEAKERS.name}`}>
+        <NavDropdown.Item as={Link} to={`/#${HomePageSections.SPEAKERS.name}`}>
           {" "}
           Speakers{" "}
         </NavDropdown.Item>
-        <NavDropdown.Item href={`/#${HomePageSections.SPONSORS.name}`}>
+        <NavDropdown.Item as={Link} to={`/#${HomePageSections.SPONSORS.name}`}>
           {" "}
           Sponsors{" "}
         </NavDropdown.Item>
@@ -60,21 +72,25 @@ function Header() {
 
       <Nav.Item>
         {" "}
-        <Nav.Link href="/our_team">Our Team</Nav.Link>{" "}
+        <Nav.Link as={Link} to="/our_team">
+          Our Team
+        </Nav.Link>{" "}
       </Nav.Item>
 
-      <NavDropdown title="Events" id="navbarScrollingDropdown">
-        <NavDropdown.Item href={`/ignite`}>Ignite</NavDropdown.Item>
+      <NavDropdown title="Events" id="navbar-events">
+        <NavDropdown.Item as={Link} to="/ignite">
+          Ignite
+        </NavDropdown.Item>
       </NavDropdown>
 
-      <NavDropdown title="Resources" id="navbarScrollingDropdown">
-        <NavDropdown.Item href={`/resources2026`}>
+      <NavDropdown title="Resources" id="navbar-resources">
+        <NavDropdown.Item as={Link} to="/resources2026">
           exploretech 2026
         </NavDropdown.Item>
-        <NavDropdown.Item href={`/resources2023`}>
+        <NavDropdown.Item as={Link} to="/resources2023">
           exploretech 2023
         </NavDropdown.Item>
-        <NavDropdown.Item href={`/resources`}>
+        <NavDropdown.Item as={Link} to="/resources">
           exploretech 2021
         </NavDropdown.Item>
       </NavDropdown>
@@ -82,8 +98,16 @@ function Header() {
   );
 
   return (
-    <Navbar className={classNames} collapseOnSelect expand="sm">
-      <Navbar.Brand href="/">
+    <Navbar
+      className={classNames}
+      expanded={expanded}
+      onToggle={(next) => {
+        pendingHash.current = null;
+        setExpanded(next);
+      }}
+      expand="sm"
+    >
+      <Navbar.Brand as={Link} to="/">
         <img src={CompassLogo} className="logo-compass" alt="logo-compass" />
         <img
           src={LogoWithIcons}
@@ -92,7 +116,16 @@ function Header() {
         />
       </Navbar.Brand>
       <Navbar.Toggle />
-      <Navbar.Collapse className="justify-content-end">
+      <Navbar.Collapse
+        className="justify-content-end"
+        onExited={() => {
+          const target =
+            pendingHash.current &&
+            document.getElementById(pendingHash.current.slice(1));
+          pendingHash.current = null;
+          if (target) target.scrollIntoView();
+        }}
+      >
         <Nav>
           {navBarItems}
           {/* {navBarItems.map(item => {

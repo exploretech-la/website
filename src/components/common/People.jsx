@@ -8,6 +8,7 @@ export default class People extends Component {
     return {
       className: PropTypes.string,
       people: PropTypes.array.isRequired,
+      eagerCount: PropTypes.number,
     };
   }
 
@@ -15,6 +16,7 @@ export default class People extends Component {
     return {
       className: "",
       people: [],
+      eagerCount: 2,
     };
   }
 
@@ -23,15 +25,15 @@ export default class People extends Component {
       return null;
     }
 
-    const peopleElements = this.props.people.map((person) =>
-      this._renderPerson(person)
+    const peopleElements = this.props.people.map((person, index) =>
+      this._renderPerson(person, index)
     );
     const classNames = classnames("People", this.props.className);
 
     return <div className={classNames}>{peopleElements}</div>;
   }
 
-  _renderPerson(person) {
+  _renderPerson(person, index) {
     if (!person || !person.name) {
       return null;
     }
@@ -47,7 +49,15 @@ export default class People extends Component {
         >
           <div className="person">
             {image ? (
-              <img src={image} className="person-image" alt={name} />
+              <img
+                src={image}
+                className="person-image"
+                alt={name}
+                width="160"
+                height="160"
+                loading={index < this.props.eagerCount ? "eager" : "lazy"}
+                decoding="async"
+              />
             ) : (
               <div className="person-image" aria-hidden="true" />
             )}
@@ -65,7 +75,15 @@ export default class People extends Component {
     return (
       <div className="person" key={name}>
         {image ? (
-          <img src={image} className="person-image" alt={name} />
+          <img
+            src={image}
+            className="person-image"
+            alt={name}
+            width="160"
+            height="160"
+            loading={index < this.props.eagerCount ? "eager" : "lazy"}
+            decoding="async"
+          />
         ) : (
           <div className="person-image" aria-hidden="true" />
         )}

@@ -51,7 +51,7 @@ export default class Speakers extends Component {
           <h3>{speakerType.name} Speakers</h3>
           <div className="pill-divider" />
         </div>
-        <People people={speakers} />
+        <People people={speakers} eagerCount={0} />
       </div>
     );
   }

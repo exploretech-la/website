@@ -4,14 +4,21 @@ import classnames from "classnames";
 import Button from "react-bootstrap/Button";
 import Footer from "components/Footer";
 import PageNotFound from "components/PageNotFound";
-import PythonImg from "static/images/ignite/python.jpg";
-import WebdevImg from "static/images/ignite/webdev.jpg";
-import GameDevRobloxImg from "static/images/ignite/gamedevroblox.jpg";
-import GameDevImg from "static/images/ignite/gamdev.jpeg";
-import MLImg from "static/images/ignite/ML.png";
-import Collab1 from "static/images/ignite/collab1.jpg";
-import Collab2 from "static/images/ignite/cllab2.jpg";
-import PythonWorkshop from "static/images/ignite/PXL_20250215_212102361.MP.jpg";
+import images from "constants/optimizedImages";
+
+// Workshop cards sit three-up on desktop; the capstone and apply photos are
+// single large images inside their own containers.
+const WorkshopImageSizes = "(min-width: 992px) 33vw, 100vw";
+const CapstoneImageSizes = "(min-width: 1000px) 900px, 90vw";
+const ApplyImageSizes = "(min-width: 992px) 50vw, 100vw";
+
+// Every image on this page is below the header section, so they are all lazy.
+const lazyPhoto = (key, sizes) => ({
+  ...images[key],
+  sizes,
+  loading: "lazy",
+  decoding: "async",
+});
 
 const IGNITE_ENABLED = true; // gate
 
@@ -49,20 +56,22 @@ export default class Ignite extends Component {
               </p>
             </div>
             <div className="header-buttons">
-              <Button 
-                variant="primary" 
+              <Button
+                variant="primary"
                 className="btn-apply"
-                onClick={() => window.open('https://forms.gle/DKUZARUPjWoxrUif6', '_blank')}
+                onClick={() =>
+                  window.open("https://forms.gle/DKUZARUPjWoxrUif6", "_blank")
+                }
               >
                 Apply Now!
               </Button>
-              <Button 
-                variant="outline-light" 
+              <Button
+                variant="outline-light"
                 className="btn-previous"
                 onClick={() => {
-                  const element = document.getElementById('workshops-2025');
+                  const element = document.getElementById("workshops-2025");
                   if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
+                    element.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >
@@ -108,7 +117,10 @@ export default class Ignite extends Component {
           </div>
         </section>
 
-        <section id="workshops-2025" className="ignite-section workshop-section theme-light">
+        <section
+          id="workshops-2025"
+          className="ignite-section workshop-section theme-light"
+        >
           <div className="content-wrapper">
             <h2 className="section-header">2025 Workshops</h2>
             <div className="workshop-cards-container">
@@ -121,7 +133,13 @@ export default class Ignite extends Component {
                   perfect for beginners.
                 </p>
                 <div className="card-image">
-                  <img src={PythonImg} alt="Introduction to Python" />
+                  <img
+                    {...lazyPhoto(
+                      "images/ignite/python.jpg",
+                      WorkshopImageSizes
+                    )}
+                    alt="Introduction to Python"
+                  />
                 </div>
               </div>
               <div className="workshop-card">
@@ -134,7 +152,10 @@ export default class Ignite extends Component {
                 </p>
                 <div className="card-image">
                   <img
-                    src={GameDevRobloxImg}
+                    {...lazyPhoto(
+                      "images/ignite/gamedevroblox.jpg",
+                      WorkshopImageSizes
+                    )}
                     alt="Game Development with Roblox"
                   />
                 </div>
@@ -147,7 +168,13 @@ export default class Ignite extends Component {
                   website as a capstone project.
                 </p>
                 <div className="card-image">
-                  <img src={WebdevImg} alt="Web Development" />
+                  <img
+                    {...lazyPhoto(
+                      "images/ignite/webdev.jpg",
+                      WorkshopImageSizes
+                    )}
+                    alt="Web Development"
+                  />
                 </div>
               </div>
             </div>
@@ -167,7 +194,13 @@ export default class Ignite extends Component {
                   perfect for beginners.
                 </p>
                 <div className="card-image">
-                  <img src={PythonWorkshop} alt="Introduction to Python" />
+                  <img
+                    {...lazyPhoto(
+                      "images/ignite/PXL_20250215_212102361.MP.jpg",
+                      WorkshopImageSizes
+                    )}
+                    alt="Introduction to Python"
+                  />
                 </div>
               </div>
               <div className="workshop-card">
@@ -180,7 +213,10 @@ export default class Ignite extends Component {
                 </p>
                 <div className="card-image">
                   <img
-                    src={GameDevImg}
+                    {...lazyPhoto(
+                      "images/ignite/gamdev.jpeg",
+                      WorkshopImageSizes
+                    )}
                     alt="Game Development with Unity"
                   />
                 </div>
@@ -193,7 +229,10 @@ export default class Ignite extends Component {
                   website as a capstone project.
                 </p>
                 <div className="card-image">
-                  <img src={MLImg} alt="Machine Learning" />
+                  <img
+                    {...lazyPhoto("images/ignite/ML.png", WorkshopImageSizes)}
+                    alt="Machine Learning"
+                  />
                 </div>
               </div>
             </div>
@@ -207,7 +246,10 @@ export default class Ignite extends Component {
               The program culminates in a capstone project...
             </p>
             <div className="capstone-image-container">
-              <img src={Collab1} alt="Capstone Project Presentation" />
+              <img
+                {...lazyPhoto("images/ignite/collab1.jpg", CapstoneImageSizes)}
+                alt="Capstone Project Presentation"
+              />
             </div>
           </div>
         </section>
@@ -219,10 +261,12 @@ export default class Ignite extends Component {
               <p className="section-subtitle-small">
                 Applications for the next IGNITE are open...
               </p>
-              <Button 
-                variant="primary" 
+              <Button
+                variant="primary"
                 className="btn-apply-large"
-                onClick={() => window.open('https://forms.gle/DKUZARUPjWoxrUif6', '_blank')}
+                onClick={() =>
+                  window.open("https://forms.gle/DKUZARUPjWoxrUif6", "_blank")
+                }
               >
                 Apply
               </Button>
@@ -230,7 +274,10 @@ export default class Ignite extends Component {
 
             <div className="right-image-col">
               <div className="apply-image">
-                <img src={Collab2} alt="Students Workshop" />
+                <img
+                  {...lazyPhoto("images/ignite/cllab2.jpg", ApplyImageSizes)}
+                  alt="Students Workshop"
+                />
               </div>
             </div>
           </div>

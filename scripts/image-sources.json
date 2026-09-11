@@ -1,0 +1,174 @@
+{
+  "_comment": [
+    "Inventory of every raster image actively rendered by the site, plus the",
+    "encoding profile used to produce its optimized WebP variants.",
+    "Edit this file (never src/static/optimized/** or src/constants/optimizedImages.js)",
+    "and re-run `node scripts/images.js`. See `node scripts/images.js --help`.",
+    "Keys are the ORIGINAL path relative to src/static; the originals stay in the",
+    "repository so generation is repeatable."
+  ],
+  "sourceRoot": "src/static",
+  "outputRoot": "src/static/optimized",
+  "manifestPath": "src/static/optimized/manifest.json",
+  "mapPath": "src/constants/optimizedImages.js",
+  "profiles": {
+    "portrait": {
+      "_comment": "People.jsx renders headshots in a fixed 160x160 box; 320px square covers 2x displays. Deliberate square crop, centered unless the source needs a focus override.",
+      "type": "portrait",
+      "size": 320,
+      "quality": 82,
+      "minQuality": 60,
+      "maxBytes": 102400
+    },
+    "content": {
+      "_comment": "Photos rendered at layout width (carousel, About, GetInvolved, Ignite, registration banner). Aspect ratio preserved, never upscaled.",
+      "type": "content",
+      "widths": [640, 1280],
+      "quality": 76,
+      "minQuality": 55,
+      "maxBytes": 307200
+    },
+    "logoLarge": {
+      "_comment": "Sponsors .large-logos render at 14-16rem (224-256px). Near-lossless WebP preserves transparency and keeps flat artwork compact.",
+      "type": "logo",
+      "widths": [256, 512],
+      "nearLossless": 60,
+      "quality": 95,
+      "maxBytes": 61440
+    },
+    "logoSmall": {
+      "_comment": "Sponsors .small-logos render at 8-12rem (128-192px).",
+      "type": "logo",
+      "widths": [192, 384],
+      "nearLossless": 60,
+      "quality": 95,
+      "maxBytes": 40960
+    }
+  },
+  "scan": {
+    "_comment": [
+      "`--check` scans these trees for quoted `static/<path>.<ext>` raster references",
+      "and for `images[\"<key>\"]` lookups, so a newly added photo cannot ship",
+      "unoptimized or under a key that does not exist. Comment lines are ignored.",
+      "Asset families listed in allowUnoptimized are deliberately out of scope:",
+      "vector art stays vector, and maps/PDFs are click-only downloads."
+    ],
+    "roots": ["src/components", "src/constants"],
+    "extensions": [".js", ".jsx"],
+    "allowUnoptimized": [
+      "svg/",
+      "maps/",
+      "pdf/",
+      "workshop-logos/",
+      "panelists/",
+      "community-partners/",
+      "optimized/"
+    ],
+    "allowUnoptimizedPaths": []
+  },
+  "sources": [
+    {
+      "src": "team/leadership/2027/spoorthy-nalumachu.jpg",
+      "profile": "portrait"
+    },
+    { "src": "team/leadership/2027/clara-zhang.jpg", "profile": "portrait" },
+    { "src": "team/leadership/2027/eli-drewry.jpg", "profile": "portrait" },
+    { "src": "team/leadership/2027/matthew-chen.jpg", "profile": "portrait" },
+    { "src": "team/leadership/2027/sarah-zhao.jpg", "profile": "portrait" },
+    { "src": "team/leadership/2027/eric-chen.jpg", "profile": "portrait" },
+    {
+      "src": "team/leadership/2027/christina-uong.jpg",
+      "profile": "portrait",
+      "focus": { "y": 0.28 },
+      "_comment": "600x900 with the head high in the frame; a centred square crop clips the top of her hair, so pin the crop to the top edge."
+    },
+    { "src": "team/leadership/2027/sadie-scott.jpg", "profile": "portrait" },
+    { "src": "team/leadership/2027/jubilee-yul.jpg", "profile": "portrait" },
+    { "src": "team/leadership/annika-renganathan.jpg", "profile": "portrait" },
+    { "src": "team/leadership/shaina-grover.jpg", "profile": "portrait" },
+    { "src": "team/leadership/sandra-pan.jpg", "profile": "portrait" },
+    { "src": "team/design/isabelle-chang.png", "profile": "portrait" },
+    { "src": "team/design/ela_defne_erkan.png", "profile": "portrait" },
+    { "src": "team/content/benjamin-garcia.jpg", "profile": "portrait" },
+    { "src": "team/content/ridhima-seth.png", "profile": "portrait" },
+    { "src": "team/content/sofia-matos.jpg", "profile": "portrait" },
+    { "src": "team/content/paul-headshot.png", "profile": "portrait" },
+    { "src": "team/operations/joy-szeto-headshot.jpeg", "profile": "portrait" },
+    {
+      "src": "team/operations/angeleena-poothavelil.png",
+      "profile": "portrait"
+    },
+    { "src": "team/operations/aansh-singh.jpeg", "profile": "portrait" },
+    { "src": "team/operations/esther-yao-headshot.jpg", "profile": "portrait" },
+    { "src": "team/operations/luisa-chen.png", "profile": "portrait" },
+    { "src": "team/operations/kayla-wai.jpg", "profile": "portrait" },
+    {
+      "src": "team/external/shayla-kumaresan-headshot.jpg",
+      "profile": "portrait"
+    },
+    { "src": "speakers/alfredo-ayala.jpg", "profile": "portrait" },
+    { "src": "speakers/carey-nachenberg.png", "profile": "portrait" },
+    { "src": "speakers/jayathi-murthy.png", "profile": "portrait" },
+    { "src": "speakers/justin-brezhnev.png", "profile": "portrait" },
+    { "src": "speakers/tyler-menezes.png", "profile": "portrait" },
+    { "src": "speakers/solomon-russell.jpeg", "profile": "portrait" },
+    { "src": "speakers/ruth-johnson.jpeg", "profile": "portrait" },
+    { "src": "speakers/nick-corral.jpg", "profile": "portrait" },
+
+    {
+      "src": "images/demo-microsoft-vr.jpg",
+      "profile": "content",
+      "sizes": "100vw"
+    },
+    {
+      "src": "images/workshop-dev-tools.jpg",
+      "profile": "content",
+      "sizes": "100vw"
+    },
+    {
+      "src": "images/workshop-kaylie.jpg",
+      "profile": "content",
+      "sizes": "100vw"
+    },
+    {
+      "src": "images/workshop-scratch.jpg",
+      "profile": "content",
+      "sizes": "100vw"
+    },
+    {
+      "src": "images/workshop-audience.jpg",
+      "profile": "content",
+      "sizes": "100vw"
+    },
+    { "src": "images/explore-tech-2022.jpg", "profile": "content" },
+    { "src": "images/speaker-connie.jpg", "profile": "content" },
+    { "src": "images/taboola-booth.jpg", "profile": "content" },
+    { "src": "images/teals-vr.jpg", "profile": "content" },
+    {
+      "src": "images/banner.png",
+      "profile": "content",
+      "widths": [640, 1280, 1920],
+      "sizes": "100vw"
+    },
+    { "src": "images/ignite/python.jpg", "profile": "content" },
+    { "src": "images/ignite/webdev.jpg", "profile": "content" },
+    { "src": "images/ignite/gamedevroblox.jpg", "profile": "content" },
+    { "src": "images/ignite/gamdev.jpeg", "profile": "content" },
+    { "src": "images/ignite/ML.png", "profile": "content" },
+    { "src": "images/ignite/collab1.jpg", "profile": "content" },
+    { "src": "images/ignite/cllab2.jpg", "profile": "content" },
+    {
+      "src": "images/ignite/PXL_20250215_212102361.MP.jpg",
+      "profile": "content"
+    },
+
+    { "src": "sponsors/google-logo.png", "profile": "logoLarge" },
+    { "src": "sponsors/ucla-cs.png", "profile": "logoLarge" },
+    { "src": "sponsors/balsamiq.png", "profile": "logoSmall" },
+    { "src": "sponsors/ucla-samueli-engineering.png", "profile": "logoSmall" },
+    { "src": "sponsors/yubico.png", "profile": "logoSmall" },
+    { "src": "sponsors/northrop-grumman.png", "profile": "logoSmall" },
+    { "src": "sponsors/disney.png", "profile": "logoSmall" },
+    { "src": "sponsors/cloud-girls.png", "profile": "logoSmall" }
+  ]
+}

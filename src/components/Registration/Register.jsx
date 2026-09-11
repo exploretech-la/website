@@ -9,13 +9,23 @@ import FAQ from "./FAQ";
 import Footer from "../Footer";
 import Schedule from "./Schedule";
 
-import Banner from "static/images/banner.png";
+import images from "constants/optimizedImages";
 
 function Register() {
   return (
     <div className="Register">
       <div className="banner">
-        <img src={Banner} className="banner" alt="banner" />
+        {/*
+          The banner is the first thing on the page, so it stays eager and
+          keeps its intrinsic dimensions to reserve the space it needs.
+        */}
+        <img
+          {...images["images/banner.png"]}
+          sizes="100vw"
+          decoding="async"
+          className="banner"
+          alt="banner"
+        />
       </div>
       <RegistrationAlert />
       <div className="registration-title">
