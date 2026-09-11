@@ -28,7 +28,7 @@ Baseline: `origin/master` at `f435aca007fbaf3bc2726c8239bdd784d56b8d6d`, the ind
 | Feature and content ownership | done | README ownership table and edit-person/roster/event/image instructions |
 | Strict TS and compatible stable runtime | done | No application JS/JSX; strict typecheck, lint, cold Vite startup and live JSX HMR without document reload |
 | Tailwind cutover and small shared UI canon | done | No Bootstrap/React Bootstrap/Sass dependencies or application imports; semantic selectors, explicit reset/tokens, shared ActionLink/OutboundLink/Collapse |
-| Proven dead code removed | done | Unreachable annual copies, inactive components, old constants, all 59 Sass files and unused scaffold removed; original assets retained |
+| Proven dead code removed | done | Unreachable annual copies, inactive components, old constants, all Sass files and unused scaffold removed; original assets retained |
 | Shipped image loading and regressions preserved | done | 12 Vitest tests, including the original failed/stale carousel and analytics assertions; browser slow/failing-image cases |
 | Public binary URLs and bytes retained | done | `asset-parity.cjs`: all 102 public image/PDF/icon URLs and SHA-256 hashes unchanged; `404.html` and `CNAME` byte-identical |
 | CI content checks and browser smoke | done | Existing read-only `verify` extended with types, lint, formatting, content, image/build and 34 Chromium cases; no deployment secrets |
@@ -37,7 +37,7 @@ Baseline: `origin/master` at `f435aca007fbaf3bc2726c8239bdd784d56b8d6d`, the ind
 | Responsive and interaction parity | done | 210 final geometry/style/content cells; 34 WebKit plus 34 Firefox scenarios; 25 hover/focus/video/carousel states; autoplay, pause/resume, interrupted menu and keyboard probes |
 | Analytics semantics retained | done | Dummy-ID build with real retained `analytics.js`: one tracker/script, resolved-only alias pageview, query changes, no hash-only pageview, correct outbound attribution; collection blocked |
 | Independent findings resolved | done | Runtime and content/style reviews, followed by targeted approvals after the two fixes below |
-| Reviewable pull request without merge/deploy | pending | Open after committing the verified artifact; no authorization to merge or deploy |
+| Reviewable pull request without merge/deploy | done | [PR #108](https://github.com/exploretech-la/website/pull/108) is open against master; no merge or deployment performed |
 
 ## Demonstrated regressions and fixes
 
