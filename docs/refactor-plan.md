@@ -54,7 +54,7 @@ Machine-readable results: [verification/refactor-parity.json](verification/refac
 - Final PNG comparison: 210 pairs, no dimension changes, 121 byte-identical pairs, 142 with no flagged pixels. The largest flagged fraction is 0.005645%, using pixelmatch threshold 0.1 with antialiasing excluded. Screenshots are not universally pixel-identical. Sampled residual differences are in text rasterization; diff bounds and counts are in the committed summary.
 - All 25 measured hover/focus/video/carousel states match. Slide motion has observed intermediate transforms and the same 600ms easing. Autoplay advances, pauses on hover, and resumes on both baseline and candidate. Interrupted menu operations settle correctly; intermediate samples depend on frame scheduling.
 - WebKit and Firefox each pass 34 scenarios, including actual Back reading-position restoration. Chromium's durable test separately proves that the app does not override POP scrolling.
-- CSS gzip changed from 28.23KB to 8.43KB. Application JS gzip changed from 99.60KB to 112.98KB with the newer runtime. These are build sizes, not field-performance claims.
+- CSS gzip changed from 28.23KB to 8.41KB after removing the unused resource-list active states. Application JS gzip changed from 99.60KB to 112.98KB with the newer runtime. These are build sizes, not field-performance claims.
 - Browser viewports are emulated. Playwright WebKit is not native Safari or a physical iPhone. External links are syntax-checked, not all contacted. Analytics testing proves local vendor processing, not production-property ingestion.
 
 Before is on the left and after is on the right in these representative, unscaled viewport crops:

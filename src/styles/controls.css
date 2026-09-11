@@ -561,20 +561,8 @@
   border-bottom-left-radius: inherit;
 }
 
-.resource-list-item.active {
-  @apply z-[2];
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
 .resource-list-item + .resource-list-item {
   border-top-width: 0;
-}
-
-.resource-list-item + .resource-list-item.active {
-  @apply mt-[-1px];
-  border-top-width: 1px;
 }
 
 .resource-list-flush {
