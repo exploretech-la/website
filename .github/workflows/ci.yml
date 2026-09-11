@@ -1,0 +1,47 @@
+name: exploretech.la Continuous Integration
+
+# Verifies every pull request targeting master. Runs the same install, test,
+# image-manifest check (via prebuild) and production build that deployment uses,
+# without any access to deployment secrets.
+on:
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+# Pull request code is untrusted: the job only ever needs to read the checkout.
+permissions:
+  contents: read
+
+# Superseded runs for the same pull request (or dispatch ref) are cancelled.
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Do not leave the workflow token in .git/config for build scripts.
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run the tests
+        run: npm test
+
+      # prebuild runs npm run images:check, so the generated image map is
+      # verified against scripts/image-sources.json before bundling.
+      - name: Build the site
+        run: npm run build

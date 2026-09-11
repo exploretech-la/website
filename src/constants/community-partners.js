@@ -1,37 +1,45 @@
+import aceMentor from "static/community-partners/ace-mentor.png";
+import csta from "static/community-partners/csta.png";
+import diyGirls from "static/community-partners/diy-girls.png";
+import girlsWhoCode from "static/community-partners/girls-who-code.png";
+import technovation from "static/community-partners/technovation.png";
+import tieIns from "static/community-partners/tie-ins.jpg";
+import txt from "static/community-partners/txt.png";
+
 export const CommunityPartners = [
   {
     name: "ace-mentor",
-    src: require("static/community-partners/ace-mentor.png"),
+    src: aceMentor,
     website: "https://www.acementor.org/",
   },
   {
     name: "csta",
-    src: require("static/community-partners/csta.png"),
+    src: csta,
     website: "https://www.csteachers.org/",
   },
   {
     name: "diy-girls",
-    src: require("static/community-partners/diy-girls.png"),
+    src: diyGirls,
     website: "https://www.diygirls.org/",
   },
   {
     name: "girls-who-code",
-    src: require("static/community-partners/girls-who-code.png"),
+    src: girlsWhoCode,
     website: "https://girlswhocode.com/",
   },
   {
     name: "technovation",
-    src: require("static/community-partners/technovation.png"),
+    src: technovation,
     website: "https://www.technovation.org/",
   },
   {
     name: "tie-ins",
-    src: require("static/community-partners/tie-ins.jpg"),
+    src: tieIns,
     website: "https://tie-ins.gseis.ucla.edu/",
   },
   {
     name: "txt",
-    src: require("static/community-partners/txt.png"),
+    src: txt,
     website: "https://exploringtech.org/home",
   },
 ];

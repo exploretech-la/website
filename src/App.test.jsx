@@ -1,3 +1,4 @@
+import { vi } from "vitest";
 import React from "react";
 import ReactDOM from "react-dom";
 import { act } from "react-dom/test-utils";
@@ -6,10 +7,12 @@ import { createMemoryHistory } from "history";
 import App from "./App";
 import GA from "util/GoogleAnalytics";
 
-jest.mock("util/GoogleAnalytics", () => ({
-  init: jest.fn(() => true),
-  trackPageView: jest.fn(),
-  trackEvent: jest.fn(),
+vi.mock("util/GoogleAnalytics", () => ({
+  default: {
+    init: vi.fn(() => true),
+    trackPageView: vi.fn(),
+    trackEvent: vi.fn(),
+  },
 }));
 
 let container;
@@ -17,11 +20,11 @@ let scrollTo;
 const originalScrollIntoView = Element.prototype.scrollIntoView;
 
 beforeEach(() => {
-  jest.clearAllMocks();
+  vi.clearAllMocks();
   container = document.createElement("div");
   document.body.appendChild(container);
-  scrollTo = jest.spyOn(window, "scrollTo").mockImplementation(() => {});
-  Element.prototype.scrollIntoView = jest.fn();
+  scrollTo = vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+  Element.prototype.scrollIntoView = vi.fn();
 });
 
 afterEach(() => {
@@ -44,12 +47,12 @@ it.each(["/our_team", "/our_team/"])(
         <Router history={history}>
           <App />
         </Router>,
-        container
+        container,
       );
     });
     expect(history.location.pathname).toBe("/our_team/leadership");
     expect(GA.trackPageView.mock.calls).toEqual([["/our_team/leadership"]]);
-  }
+  },
 );
 
 it("records a new route with its query but not another view for an anchor", () => {
@@ -59,7 +62,7 @@ it("records a new route with its query but not another view for an anchor", () =
       <Router history={history}>
         <App />
       </Router>,
-      container
+      container,
     );
   });
   act(() => history.push("/our_team/leadership?source=local"));

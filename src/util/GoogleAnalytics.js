@@ -28,7 +28,7 @@ const scheduleVendorLoad = () => {
   };
   const deadline = window.setTimeout(load, 4000);
   events.forEach((event) =>
-    window.addEventListener(event, load, { capture: true, passive: true })
+    window.addEventListener(event, load, { capture: true, passive: true }),
   );
   if (document.readyState === "complete") {
     whenIdle();
@@ -40,10 +40,9 @@ const scheduleVendorLoad = () => {
 const init = () => {
   if (initialized) return enabled;
   initialized = true;
-  const trackingId = process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID;
+  const trackingId = import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID;
   enabled =
-    process.env.NODE_ENV === "production" &&
-    Boolean(trackingId && trackingId.trim());
+    import.meta.env.PROD === true && Boolean(trackingId && trackingId.trim());
   if (!enabled) return false;
 
   if (!window.ga) {

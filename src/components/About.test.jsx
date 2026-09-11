@@ -1,3 +1,4 @@
+import { vi } from "vitest";
 import React from "react";
 import ReactDOM from "react-dom";
 import { act, Simulate } from "react-dom/test-utils";
@@ -10,18 +11,18 @@ const activeImage = () => container.querySelector(".carousel-item.active img");
 const select = (index) => {
   act(() => {
     Simulate.click(
-      container.querySelectorAll(".carousel-indicators li")[index]
+      container.querySelectorAll(".carousel-indicators li")[index],
     );
   });
 };
 const settle = () => {
   act(() => {
-    jest.advanceTimersByTime(700);
+    vi.advanceTimersByTime(700);
   });
 };
 
 beforeEach(() => {
-  jest.useFakeTimers();
+  vi.useFakeTimers();
   container = document.createElement("div");
   document.body.appendChild(container);
   act(() => {
@@ -29,7 +30,7 @@ beforeEach(() => {
       <MemoryRouter>
         <About />
       </MemoryRouter>,
-      container
+      container,
     );
   });
   images = Array.from(container.querySelectorAll(".carousel-item img"));
@@ -40,7 +41,7 @@ afterEach(() => {
     ReactDOM.unmountComponentAtNode(container);
   });
   container.remove();
-  jest.useRealTimers();
+  vi.useRealTimers();
 });
 
 it("skips a failed selected image and keeps backward navigation usable", () => {

@@ -1,4 +1,5 @@
 import images from "./optimizedImages";
+import capcomLogo from "static/sponsors/capcom.svg";
 
 // Raster logos spread the generated metadata (src, srcSet, width, height) so the
 // browser can pick a variant and reserve the box. capcom stays vector.
@@ -43,7 +44,7 @@ export const SmallLogoSponsors = [
   },
   {
     name: "capcom",
-    src: require("static/sponsors/capcom.svg"),
+    src: capcomLogo,
     width: 5592,
     height: 1024,
     website: "https://www.capcom.com/us/",
