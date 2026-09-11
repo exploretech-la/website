@@ -15,6 +15,8 @@ npm start
 
 The development server runs at `http://127.0.0.1:3000`. It fails clearly if that port is already occupied. JSX and stylesheet edits update through Vite's development server.
 
+React 16.13 uses classic JSX in both application transforms and dependency scanning. The development config removes the plugin's automatic-runtime pre-bundles, which do not exist in that React version.
+
 ## Checks and production builds
 
 ```sh
@@ -86,4 +88,4 @@ Use `npm run images -- --only <path-fragment>` for a narrow update, or `npm run 
 - Initially visible images stay eager; offscreen content uses lazy loading with reserved dimensions. The carousel waits for selected images and skips failures. Archived videos load only after activation.
 - GitHub Pages' cache headers and the hosting configuration are unchanged. Longer immutable caching would require a separate hosting/CDN decision.
 
-npm install-script decisions are version-scoped in `package.json`. Review `npm install-scripts ls` before approving scripts introduced by a dependency update.
+npm install-script decisions are version-scoped in `package.json`. The optional watcher source-build hooks are denied; supported platforms use their prebuilt packages. Review `npm install-scripts ls` before changing these decisions for a dependency update.

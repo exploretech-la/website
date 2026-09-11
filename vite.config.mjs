@@ -8,8 +8,23 @@ import autoprefixer from "autoprefixer";
 const src = fileURLToPath(new URL("./src/", import.meta.url));
 
 export default defineConfig({
-  plugins: [react({ jsxRuntime: "classic" })],
+  plugins: [
+    react({ jsxRuntime: "classic" }),
+    {
+      name: "react-16-classic-dependencies",
+      apply: "serve",
+      configResolved(config) {
+        // The plugin includes these even in classic mode; React 16.13 has neither.
+        config.optimizeDeps.include = config.optimizeDeps.include.filter(
+          (id) => id !== "react/jsx-runtime" && id !== "react/jsx-dev-runtime",
+        );
+      },
+    },
+  ],
   server: { strictPort: true },
+  optimizeDeps: {
+    rolldownOptions: { transform: { jsx: { runtime: "classic" } } },
+  },
   resolve: {
     alias: [
       {

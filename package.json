@@ -41,7 +41,7 @@
     "deploy": "gh-pages -d build"
   },
   "allowScripts": {
-    "@parcel/watcher@2.6.0": true,
+    "@parcel/watcher@2.6.0": false,
     "fsevents@2.3.3": false
   },
   "browserslist": {
