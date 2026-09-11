@@ -1,0 +1,69 @@
+import images from "../../../constants/optimizedImages";
+import capcomLogo from "../../../static/sponsors/capcom.svg";
+
+/**
+ * Raster logos spread the generated metadata (src, srcSet, width, height) so the
+ * browser can pick a variant and reserve the box. capcom stays vector, so it has
+ * no srcSet.
+ */
+export interface SponsorLogo {
+  readonly name: string;
+  readonly website: string;
+  readonly src: string;
+  readonly srcSet?: string;
+  readonly width: number;
+  readonly height: number;
+}
+
+export const LargeLogoSponsors: readonly SponsorLogo[] = [
+  {
+    name: "google-logo",
+    ...images["sponsors/google-logo.png"],
+    website: "https://about.google/",
+  },
+  {
+    name: "ucla-cs",
+    ...images["sponsors/ucla-cs.png"],
+    website: "https://www.cs.ucla.edu/",
+  },
+];
+
+export const SmallLogoSponsors: readonly SponsorLogo[] = [
+  {
+    name: "balsamiq",
+    ...images["sponsors/balsamiq.png"],
+    website: "https://balsamiq.com/",
+  },
+  {
+    name: "ucla_samueli_engineering",
+    ...images["sponsors/ucla-samueli-engineering.png"],
+    website: "https://samueli.ucla.edu/",
+  },
+  {
+    name: "yubico",
+    ...images["sponsors/yubico.png"],
+    website: "https://www.yubico.com/",
+  },
+  {
+    name: "northrop-grumman",
+    ...images["sponsors/northrop-grumman.png"],
+    website: "https://www.northropgrumman.com/",
+  },
+  {
+    name: "disney",
+    ...images["sponsors/disney.png"],
+    website: "https://thewaltdisneycompany.com/",
+  },
+  {
+    name: "capcom",
+    src: capcomLogo,
+    width: 5592,
+    height: 1024,
+    website: "https://www.capcom.com/us/",
+  },
+  {
+    name: "cloud-girls",
+    ...images["sponsors/cloud-girls.png"],
+    website: "https://cloudgirls.org/",
+  },
+];

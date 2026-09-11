@@ -2,7 +2,7 @@
   "_comment": [
     "Inventory of every raster image actively rendered by the site, plus the",
     "encoding profile used to produce its optimized WebP variants.",
-    "Edit this file (never src/static/optimized/** or src/constants/optimizedImages.js)",
+    "Edit this file (never src/static/optimized/** or src/constants/optimizedImages.ts)",
     "and re-run `node scripts/images.js`. See `node scripts/images.js --help`.",
     "Keys are the ORIGINAL path relative to src/static; the originals stay in the",
     "repository so generation is repeatable."
@@ -10,10 +10,10 @@
   "sourceRoot": "src/static",
   "outputRoot": "src/static/optimized",
   "manifestPath": "src/static/optimized/manifest.json",
-  "mapPath": "src/constants/optimizedImages.js",
+  "mapPath": "src/constants/optimizedImages.ts",
   "profiles": {
     "portrait": {
-      "_comment": "People.jsx renders headshots in a fixed 160x160 box; 320px square covers 2x displays. Deliberate square crop, centered unless the source needs a focus override.",
+      "_comment": "People.tsx renders headshots in a fixed 160x160 box; 320px square covers 2x displays. Deliberate square crop, centered unless the source needs a focus override.",
       "type": "portrait",
       "size": 320,
       "quality": 82,
@@ -53,8 +53,8 @@
       "Asset families listed in allowUnoptimized are deliberately out of scope:",
       "vector art stays vector, and maps/PDFs are click-only downloads."
     ],
-    "roots": ["src/components", "src/constants"],
-    "extensions": [".js", ".jsx"],
+    "roots": ["src"],
+    "extensions": [".ts", ".tsx"],
     "allowUnoptimized": [
       "svg/",
       "maps/",

@@ -1,43 +1,15 @@
-import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { basename, extname } from "node:path";
 import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import autoprefixer from "autoprefixer";
-
-const src = fileURLToPath(new URL("./src/", import.meta.url));
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [
-    react({ jsxRuntime: "classic" }),
-    {
-      name: "react-16-classic-dependencies",
-      apply: "serve",
-      configResolved(config) {
-        // The plugin includes these even in classic mode; React 16.13 has neither.
-        config.optimizeDeps.include = config.optimizeDeps.include.filter(
-          (id) => id !== "react/jsx-runtime" && id !== "react/jsx-dev-runtime",
-        );
-      },
-    },
-  ],
+  plugins: [react(), tailwindcss()],
   server: { strictPort: true },
-  optimizeDeps: {
-    rolldownOptions: { transform: { jsx: { runtime: "classic" } } },
-  },
-  resolve: {
-    alias: [
-      {
-        find: /^(components|constants|static|util)\//,
-        replacement: `${src}$1/`,
-      },
-    ],
-  },
   css: {
     postcss: { plugins: [autoprefixer()] },
-    preprocessorOptions: {
-      scss: { loadPaths: [src] },
-    },
   },
   build: {
     outDir: "build",
@@ -62,6 +34,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    include: ["src/**/*.test.{js,jsx}"],
+    include: ["src/**/*.test.{ts,tsx}"],
+    setupFiles: ["./src/test-setup.ts"],
   },
 });

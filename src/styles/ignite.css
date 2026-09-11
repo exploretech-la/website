@@ -1,0 +1,310 @@
+/*  Ignite page shell  */
+.Ignite {
+  @apply w-[100%] min-h-[100vh];
+}
+
+.Ignite .ignite-section {
+  @apply w-[100%] p-[80px_20px] flex justify-center;
+}
+
+.Ignite .ignite-section .content-wrapper {
+  @apply w-[100%] max-w-[1140px] flex;
+  @apply flex-col items-center text-center;
+}
+
+/*  Header  */
+.Ignite .header-section {
+  @apply pt-[100px];
+  @apply pb-[80px];
+  color: white;
+  /* NEW — solid blue background */
+  background: #2ca6bc;
+}
+
+.Ignite .header-section .ignite-title {
+  @apply text-[7rem] font-bold;
+  letter-spacing: -2px;
+  @apply mb-[42px] leading-[1];
+}
+
+.Ignite .header-section .ignite-description {
+  @apply max-w-[800px] text-[1.25rem] leading-[1.5] mb-[40px] font-normal;
+  color: #d0ecf0;
+}
+
+.Ignite .header-section .header-buttons {
+  @apply flex gap-[20px];
+}
+
+.Ignite .header-section .header-buttons .btn-apply {
+  background-color: #07556f;
+  border: none;
+  @apply p-[12px_18px] text-[1.1rem] font-normal rounded-[1rem];
+}
+
+.Ignite .header-section .header-buttons .btn-previous {
+  border: 2px solid #06546f;
+  color: #06546f;
+  @apply p-[12px_18px] text-[1.1rem];
+  background: transparent;
+  @apply rounded-[1rem] font-normal;
+}
+
+.Ignite .header-section .header-buttons .btn-previous:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/*  Program structure  */
+.Ignite .structure-section {
+  /* NEW — blue → white gradient */
+  background: linear-gradient(to bottom, #2ca6bc 0%, #ddf6f8 100%);
+}
+
+.Ignite .structure-section .section-header {
+  @apply text-[3.5rem] font-bold mb-[40px];
+  color: white;
+}
+
+.Ignite .structure-section .program-cards-container {
+  @apply flex;
+  @apply flex-col gap-[20px] w-[100%];
+}
+
+@media (min-width: 768px) {
+  .Ignite .structure-section .program-cards-container {
+    @apply flex-row gap-[14px];
+  }
+}
+
+.Ignite .structure-section .program-card {
+  background: rgba(255, 255, 255, 0.2);
+  @apply rounded-[16px] p-[20px] flex;
+  @apply flex-col;
+  flex: 1;
+  @apply min-h-[0];
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.Ignite .structure-section .program-card .content-card-title {
+  @apply text-[1.5rem] font-bold;
+  color: white;
+  @apply mb-[10px] leading-[1.2];
+}
+
+.Ignite .structure-section .program-card .card-description {
+  @apply text-[1rem];
+  color: rgba(255, 255, 255, 0.9);
+  @apply mb-[8px] leading-[1.5];
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @apply min-h-[3em];
+}
+
+.Ignite .structure-section .program-card .card-image {
+  @apply w-[100%] h-[240px] rounded-[12px];
+  overflow: hidden;
+  @apply mt-[auto];
+  background: rgba(0, 0, 0, 0.1);
+  border: 3px solid white;
+  @apply shrink-[0] mt-[0];
+}
+
+.Ignite .structure-section .program-card .card-image img {
+  @apply w-[100%] h-[100%] object-cover block;
+}
+
+.Ignite .structure-section .program-cards-container:hover .program-card {
+  opacity: 0.6;
+  transform: scale(0.98);
+}
+
+.Ignite .structure-section .program-cards-container .program-card:hover {
+  opacity: 1;
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  @apply z-[10] relative;
+}
+
+/*  Archived workshops  */
+.Ignite .workshop-section {
+  /* NEW — solid light background */
+  background: #ddf6f8;
+}
+
+.Ignite .workshop-section .section-header {
+  @apply text-[3rem] font-bold mb-[40px];
+  color: #06546f;
+}
+
+.Ignite .workshop-section .workshop-cards-container {
+  @apply flex;
+  @apply flex-col gap-[20px] w-[100%];
+}
+
+@media (min-width: 768px) {
+  .Ignite .workshop-section .workshop-cards-container {
+    @apply flex-row gap-[14px];
+  }
+}
+
+.Ignite .workshop-section .workshop-card {
+  background: #1cb0c6;
+  @apply rounded-[16px] p-[20px] flex;
+  @apply flex-col;
+  flex: 1;
+  @apply min-h-[450px];
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.Ignite .workshop-section .workshop-card .content-card-title {
+  @apply text-[1.5rem] font-bold;
+  color: white;
+  @apply mb-[10px] leading-[1.2];
+}
+
+.Ignite .workshop-section .workshop-card .card-description {
+  @apply text-[1rem];
+  color: rgba(255, 255, 255, 0.9);
+  @apply mb-[8px] leading-[1.5];
+}
+
+.Ignite .workshop-section .workshop-card .card-image {
+  @apply w-[100%] h-[240px] rounded-[12px];
+  overflow: hidden;
+  @apply mt-[auto];
+  background: rgba(0, 0, 0, 0.1);
+  border: 3px solid white;
+  @apply shrink-[0] mt-[0];
+}
+
+.Ignite .workshop-section .workshop-card .card-image img {
+  @apply w-[100%] h-[100%] object-cover block;
+}
+
+.Ignite .workshop-section .workshop-cards-container:hover .workshop-card {
+  opacity: 0.6;
+  transform: scale(0.98);
+}
+
+.Ignite .workshop-section .workshop-cards-container .workshop-card:hover {
+  opacity: 1;
+  transform: translateY(-8px) scale(1.02);
+  background: #2ca6bc;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  @apply z-[10] relative;
+}
+
+/*  Capstone  */
+.Ignite .capstone-section {
+  /* NEW — light grey background */
+  background: #f5f5f5;
+}
+
+.Ignite .capstone-section .section-header {
+  @apply text-[3rem] font-bold mb-[10px];
+  color: #06546f;
+}
+
+.Ignite .capstone-section .section-subtitle {
+  color: #6796a5;
+  @apply mb-[30px];
+}
+
+.Ignite .capstone-section .capstone-image-container {
+  @apply w-[90%] max-w-[900px] m-[0_auto] rounded-[16px];
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.Ignite .capstone-section .capstone-image-container img {
+  @apply w-[100%] h-[auto] block;
+}
+
+/*  Apply  */
+.Ignite .footer-apply-section {
+  color: white;
+  @apply pt-[80px];
+  @apply pb-[60px];
+  /* NEW — gradient from light blue to darker teal */
+  background: linear-gradient(to bottom, #a8d8e8 0%, #2ca6bc 100%);
+}
+
+.Ignite .footer-apply-section .content-wrapper {
+  @apply flex-col;
+}
+
+@media (min-width: 768px) {
+  .Ignite .footer-apply-section .content-wrapper {
+    flex-direction: row !important;
+    @apply items-start justify-between;
+  }
+}
+
+.Ignite .footer-apply-section .split-layout {
+  @apply flex;
+  @apply flex-col gap-[40px] items-stretch;
+}
+
+.Ignite .footer-apply-section .left-text-col {
+  @apply flex;
+  @apply flex-col justify-start items-start text-left;
+}
+
+.Ignite .footer-apply-section .left-text-col .align-left {
+  @apply text-left;
+  @apply text-[4rem] font-bold mb-[15px] leading-[1];
+  color: #ffffff;
+}
+
+.Ignite .footer-apply-section .left-text-col .section-subtitle-small {
+  @apply text-[1.1rem] mt-[15px];
+  @apply mb-[30px];
+  color: white;
+}
+
+.Ignite .footer-apply-section .left-text-col .btn-apply-large {
+  background-color: #07556f;
+  border: none;
+  @apply p-[12px_40px] text-[1.1rem] font-normal rounded-[8px] mt-[10px];
+  color: white;
+  cursor: pointer;
+  @apply w-[100%];
+}
+
+.Ignite .footer-apply-section .right-image-col {
+  @apply w-[100%] flex items-center justify-center;
+}
+
+.Ignite .footer-apply-section .right-image-col .apply-image {
+  @apply w-[100%] rounded-[20px];
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.Ignite .footer-apply-section .right-image-col .apply-image img {
+  @apply w-[100%] h-[auto] block;
+}
+
+@media (min-width: 768px) {
+  .Ignite .footer-apply-section .left-text-col {
+    width: 50% !important;
+  }
+
+  .Ignite .footer-apply-section .right-image-col {
+    width: 50% !important;
+  }
+
+  .Ignite .footer-apply-section .btn-apply-large {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,17 @@
+/* Observed site values, not Tailwind's default breakpoints or palette. */
+@theme {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --color-aqua: #98d6d6;
+  --color-muted-blue: #448494;
+  --color-navy: #0b546f;
+  --color-teal: #57ada3;
+  --font-site: "Poppins", sans-serif;
+  --spacing-section-y: 64px;
+  --spacing-section-xs: 24px;
+  --spacing-section-sm: 40px;
+  --spacing-section-md: 52px;
+  --spacing-section-lg: 64px;
+}

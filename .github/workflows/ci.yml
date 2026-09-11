@@ -1,8 +1,8 @@
 name: exploretech.la Continuous Integration
 
-# Verifies every pull request targeting master. Runs the same install, test,
-# image-manifest check (via prebuild) and production build that deployment uses,
-# without any access to deployment secrets.
+# Verifies every pull request targeting master. Runs the same install, checks,
+# image-manifest check (via prebuild) and production build that deployment
+# uses, plus the browser smoke suite, without any access to deployment secrets.
 on:
   pull_request:
     branches: [master]
@@ -20,7 +20,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Check out the repository
@@ -38,6 +38,20 @@ jobs:
       - name: Install packages
         run: npm ci
 
+      - name: Check types
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Check formatting
+        run: npm run format:check
+
+      # References between people, teams and event content, and the assets
+      # they point at. Loads the content modules; makes no network requests.
+      - name: Check content
+        run: npm run content:check
+
       - name: Run the tests
         run: npm test
 
@@ -45,3 +59,25 @@ jobs:
       # verified against scripts/image-sources.json before bundling.
       - name: Build the site
         run: npm run build
+
+      # Only Chromium: the smoke suite gates behaviour, not cross-engine
+      # rendering. Browsers are not in the npm cache, so this is a real
+      # download on every run.
+      - name: Install the Chromium test browser
+        run: npx playwright install --with-deps chromium
+
+      # Serves the build through scripts/serve-built-site.cjs, which reproduces
+      # GitHub Pages' 404-to-root restoration.
+      - name: Run the browser smoke suite
+        run: npm run test:browser
+
+      - name: Upload the browser smoke report
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
+          retention-days: 7
+          if-no-files-found: ignore

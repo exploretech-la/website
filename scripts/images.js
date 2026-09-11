@@ -3,7 +3,7 @@
  * Image pipeline for exploretech.la.
  *
  * `node scripts/images.js`          regenerate the optimized WebP assets, the
- *                                   manifest and src/constants/optimizedImages.js
+ *                                   manifest and src/constants/optimizedImages.ts
  * `node scripts/images.js --check`   validate the checked-in outputs (no external
  *                                   tools required -- safe for CI / npm scripts)
  * `node scripts/images.js --help`    usage, including how to install cwebp/ffprobe
@@ -49,7 +49,7 @@ Inputs / outputs
   src/static/optimized/manifest.json
                                  generated record of every variant: dimensions,
                                  byte size, sha256, source sha256, quality used
-  src/constants/optimizedImages.js
+  src/constants/optimizedImages.ts
                                  generated explicit map, default export, keyed by
                                  the ORIGINAL src/static-relative path:
                                    images['team/leadership/sandra-pan.jpg']
@@ -57,7 +57,7 @@ Inputs / outputs
                                    { src, width, height, srcSet?, sizes? }
 
 Profiles
-  portrait    deliberate square crop then a single <=320x320 variant (People.jsx
+  portrait    deliberate square crop then a single <=320x320 variant (People.tsx
               renders a fixed 160x160 box, so 320 covers 2x displays). Sources
               smaller than 320px are never upscaled.
   content     responsive variants at the profile widths (640/1280 by default),
@@ -603,8 +603,11 @@ function importIdentifier(outputRelativePath, taken) {
 }
 
 function renderMap(config, manifest) {
-  // `static` is a bundler resolve alias (see vite.config.mjs / jsconfig.json).
-  const assetRoot = config.outputRoot.replace(/^src\//, "");
+  // Relative imports work in both Vite and editor/type resolution.
+  const assetRoot = path
+    .relative(path.dirname(config.mapPath), config.outputRoot)
+    .split(path.sep)
+    .join("/");
   const paths = new Set();
   manifest.entries.forEach((entry) =>
     entry.outputs.forEach((output) => paths.add(output.path)),
@@ -623,7 +626,7 @@ function renderMap(config, manifest) {
   );
   lines.push("// Each value spreads straight onto a native <img>:");
   lines.push("//");
-  lines.push('//   import images from "constants/optimizedImages";');
+  lines.push('//   import images from "../constants/optimizedImages";');
   lines.push(
     '//   <img {...images["team/leadership/sandra-pan.jpg"]} alt="Sandra Pan" />',
   );
@@ -697,7 +700,7 @@ const MAP_LOOKUP = /images\[\s*["'`]([^"'`\n]+)["'`]\s*\]/g;
 function scanReferences(config, keys, problems) {
   const scan = config.scan || {};
   const roots = scan.roots || [];
-  const extensions = scan.extensions || [".js", ".jsx"];
+  const extensions = scan.extensions || [".ts", ".tsx"];
   const allowPrefixes = scan.allowUnoptimized || [];
   const allowPaths = scan.allowUnoptimizedPaths || [];
 
