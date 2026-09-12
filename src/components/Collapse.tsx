@@ -15,11 +15,8 @@ const STATUS_CLASS: Record<Status, string> = {
   exited: "disclosure",
 };
 
-/**
- * Bootstrap animates `.collapsing` height over 350ms, but React Bootstrap also armed a
- * 300ms fallback timer and settled on whichever finished first — so the panel snapped
- * to its final height at 300ms. Both are kept so the motion is unchanged.
- */
+// Normal motion settles on transitionend, with a bounded safety timeout.
+// Without a transition, visibility and focus completion must settle immediately.
 const FALLBACK_MS = 300;
 
 function outerHeight(node: HTMLElement): number {
@@ -99,6 +96,13 @@ export default function Collapse({
       if (event.target === node) finish();
     };
 
+    const durations = window
+      .getComputedStyle(node)
+      .transitionDuration.split(",");
+    if (durations.every((duration) => (parseFloat(duration) || 0) === 0)) {
+      finish();
+      return;
+    }
     timer = window.setTimeout(finish, FALLBACK_MS);
     node.addEventListener("transitionend", handleTransitionEnd);
 

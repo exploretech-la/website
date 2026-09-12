@@ -1,28 +1,46 @@
 import type { ScheduleEntry } from "../../content/events/types";
 
+export function Timetable({
+  items,
+  caption,
+}: {
+  items: readonly ScheduleEntry[];
+  caption: string;
+}) {
+  return (
+    <table className="event-timetable">
+      <caption className="visually-hidden">{caption}</caption>
+      <thead>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((entry) => (
+          <tr key={entry.key}>
+            <th scope="row">{entry.time}</th>
+            <td>{entry.name}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
 export default function Schedule({
   items,
 }: {
   items: readonly ScheduleEntry[];
 }) {
   return (
-    <section className="Section Schedule">
-      <div className="schedule-content">
-        <div className="schedule-content schedule-title">
-          <h2 className="title">Schedule</h2>
-          <div className="pill-divider" />
-        </div>
-        <div className="schedule-text">
-          <p>
-            {items.map((entry) => (
-              <h4 key={entry.key}>
-                <b>{entry.time} </b>
-                {entry.name}
-              </h4>
-            ))}
-          </p>
-        </div>
-      </div>
+    <section
+      id="schedule"
+      className="event-section Schedule"
+      aria-labelledby="schedule-heading"
+    >
+      <h2 id="schedule-heading">Schedule</h2>
+      <Timetable items={items} caption="Archived event schedule" />
     </section>
   );
 }

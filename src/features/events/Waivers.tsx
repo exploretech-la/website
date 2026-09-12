@@ -1,46 +1,24 @@
-import type { ReactNode } from "react";
+import type { DocumentLink as Document } from "../../content/types";
+import DocumentLink from "../../components/DocumentLink";
 
-import type { DocumentLink } from "../../content/types";
-import ActionLink from "../../components/ActionLink";
-
-/**
- * Shared by /resources and /register. `children` carries the extra
- * "all forms" block that only the registration page shows.
- */
-export default function Waivers({
-  forms,
-  intro,
-  note,
-  children,
-}: {
-  forms: readonly DocumentLink[];
-  intro: string;
-  note: string;
-  children?: ReactNode;
-}) {
+export default function Waivers({ forms }: { forms: readonly Document[] }) {
   return (
-    <section className="Waivers">
-      <div className="waivers-title">
-        <h2 className="title">Waivers</h2>
-        <div className="pill-divider" />
-        <p>{intro}</p>
-        <p>
-          <em>{note}</em>
-        </p>
-      </div>
-      <div className="buttons">
+    <section
+      className="event-section Waivers"
+      aria-labelledby="waivers-heading"
+    >
+      <h2 id="waivers-heading">Archived waiver documents</h2>
+      <p>
+        Historical reference only. Do not submit these forms to register for a
+        future event.
+      </p>
+      <ul className="document-list">
         {forms.map((form) => (
-          <div className="button" key={form.name}>
-            <ActionLink
-              href={form.src}
-              className="action action-info action-large"
-            >
-              {form.name}
-            </ActionLink>
-          </div>
+          <li key={form.name}>
+            <DocumentLink document={form} />
+          </li>
         ))}
-      </div>
-      {children}
+      </ul>
     </section>
   );
 }

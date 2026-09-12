@@ -10,8 +10,10 @@ import type { EventContent } from "./types";
  */
 export const EVENT_2023: EventContent = {
   year: "2023",
-  programHref:
-    "https://drive.google.com/file/d/1QBPh_9WEnlVxcw18xKHrCtPD4Wv9tfrj/view?usp=sharing",
+  program: {
+    name: "2023 event program",
+    src: "https://drive.google.com/file/d/1QBPh_9WEnlVxcw18xKHrCtPD4Wv9tfrj/view?usp=sharing",
+  },
   schedule: [
     { key: 1, name: "Opening Ceremony", time: "9:00AM - 9:30AM" },
     { key: 2, name: "Session 1", time: "9:30AM - 10:15AM" },
@@ -21,11 +23,22 @@ export const EVENT_2023: EventContent = {
     { key: 6, name: "Closing Ceremony", time: "1:00PM - 1:30PM" },
   ],
   maps: [
-    { name: "Bus Routes", src: busRoutes },
-    { name: "Ackerman Union 2F", src: ackermanUnion2F },
-    { name: "Ackerman Union 3F", src: ackermanUnion3F },
+    {
+      name: "Bus Routes",
+      src: busRoutes,
+      file: { format: "JPG", bytes: 59864 },
+    },
+    {
+      name: "Ackerman Union 2F",
+      src: ackermanUnion2F,
+      file: { format: "JPG", bytes: 46939 },
+    },
+    {
+      name: "Ackerman Union 3F",
+      src: ackermanUnion3F,
+      file: { format: "JPG", bytes: 18761 },
+    },
   ],
-  workshopsPlacement: "before-maps",
   workshops: [
     {
       heading: "Workshops",
@@ -149,10 +162,10 @@ export const EVENT_2023: EventContent = {
         },
         {
           kind: "described",
-          title: "Natural Language Proccessing",
+          title: "Natural Language Processing",
           instructors: "Ashish Basetty and Jazlin Ong",
           description:
-            "Every used Siri? ChatGPT? Google Translate? Come to this workshop to learn how a computer thinking in 0’s and 1’s can learn to speak like a human. Learn more about how human language works, and how we can come up with rules to teach it to a machine.",
+            "Ever used Siri? ChatGPT? Google Translate? Come to this workshop to learn how a computer thinking in 0’s and 1’s can learn to speak like a human. Learn more about how human language works, and how we can come up with rules to teach it to a machine.",
           links: [
             {
               name: "Slides",
@@ -209,7 +222,7 @@ export const EVENT_2023: EventContent = {
           title: "Careers in Computer Science",
           instructors: "Isha Rajput and Emily Nham",
           description:
-            "Want to know what it's like working in tech? Meetcurrent students and graduates pursuing Computer Science at places like Google, Facebook, Atlassian, and CreditKarma! Come learn about what they do and how they ended up where they are!",
+            "Want to know what it's like working in tech? Meet current students and graduates pursuing Computer Science at places like Google, Facebook, Atlassian, and CreditKarma! Come learn about what they do and how they ended up where they are!",
           links: [
             {
               name: "Slides",
@@ -223,7 +236,7 @@ export const EVENT_2023: EventContent = {
         },
         {
           kind: "described",
-          title: "Divieristy 101",
+          title: "Diversity 101",
           instructors: "Aparna Hariharan and Jason Lozada",
           description:
             "Join the conversation with our esteemed guests regarding Diversity in Computer Science and what their experiences are like as minorities in this field.",
@@ -241,5 +254,4 @@ export const EVENT_2023: EventContent = {
       ],
     },
   ],
-  feedback: { kind: "coming-soon", disabled: false },
 };

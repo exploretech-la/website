@@ -1,70 +1,74 @@
+import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin, FaHeart } from "react-icons/fa";
-
 import OutboundLink from "./OutboundLink";
 import LogoWithIcons from "../static/svg/logo-with-icons-white.svg";
-
-const facebookLink = "https://www.facebook.com/exploretech.la/";
-const instagramLink = "https://www.instagram.com/exploretech.la/";
-const linkedinLink = "https://www.linkedin.com/company/exploretech-la/";
+import { CONTACT_EMAIL } from "../content/participation";
 
 export default function Footer() {
   return (
-    <section className="Section Footer">
-      <div className="footer-inner">
-        <div className="footer-item logo">
-          <img
-            src={LogoWithIcons}
-            className="logo-with-icons"
-            alt="logo-with-icons"
-          />
+    <footer className="Footer on-dark">
+      <div className="page-container footer-inner">
+        <div className="footer-brand">
+          <Link to="/" aria-label="exploretech.la home">
+            <img src={LogoWithIcons} className="logo-with-icons" alt="" />
+          </Link>
+          <p>Technology outreach led by UCLA students.</p>
+          <p className="footer-credit">
+            Made with <FaHeart aria-label="love" role="img" /> in LA
+          </p>
         </div>
-        <div className="footer-item social-media">
-          <p>FIND US ON</p>
+        <nav aria-label="Footer programs">
+          <h2>Programs</h2>
+          <Link to="/events">Annual event and archives</Link>
+          <Link to="/ignite">Ignite workshops</Link>
+          <Link to="/our_team/leadership">Meet the team</Link>
+        </nav>
+        <nav aria-label="Footer participation">
+          <h2>Get involved</h2>
+          <Link to="/get-involved#schools">Schools and students</Link>
+          <Link to="/get-involved#volunteer">UCLA volunteers</Link>
+          <Link to="/get-involved#partners">Partners and sponsors</Link>
+        </nav>
+        <div className="footer-contact">
+          <h2>Contact us</h2>
+          <OutboundLink
+            className="contact-address"
+            href={`mailto:${CONTACT_EMAIL}`}
+            eventLabel="Footer Email"
+          >
+            {CONTACT_EMAIL}
+          </OutboundLink>
           <div className="social-media-list">
             <OutboundLink
               className="social-media-link"
-              href={facebookLink}
+              href="https://www.facebook.com/exploretech.la/"
               target="_blank"
-              eventLabel="facebook"
+              aria-label="exploretech.la on Facebook (opens in a new tab)"
+              eventLabel="Facebook"
             >
-              <FaFacebook size="2em" />
+              <FaFacebook size="1.5em" aria-hidden="true" focusable="false" />
             </OutboundLink>
             <OutboundLink
               className="social-media-link"
-              href={instagramLink}
+              href="https://www.instagram.com/exploretech.la/"
               target="_blank"
-              eventLabel="instagram"
+              aria-label="exploretech.la on Instagram (opens in a new tab)"
+              eventLabel="Instagram"
             >
-              <FaInstagram size="2em" />
+              <FaInstagram size="1.5em" aria-hidden="true" focusable="false" />
             </OutboundLink>
             <OutboundLink
               className="social-media-link"
-              href={linkedinLink}
+              href="https://www.linkedin.com/company/exploretech-la/"
               target="_blank"
-              eventLabel="linkedin"
+              aria-label="exploretech.la on LinkedIn (opens in a new tab)"
+              eventLabel="LinkedIn"
             >
-              <FaLinkedin size="2em" />
+              <FaLinkedin size="1.5em" aria-hidden="true" focusable="false" />
             </OutboundLink>
           </div>
         </div>
-        <div className="footer-item email">
-          <p>REACH US AT</p>
-          <p>
-            <OutboundLink
-              href="mailto:exploretechla@cs.ucla.edu"
-              target="_blank"
-              eventLabel="email_us_footer"
-            >
-              exploretechla@cs.ucla.edu
-            </OutboundLink>
-          </p>
-        </div>
-        <div className="footer-item">
-          <p>
-            Made with <FaHeart className="FaHeart" /> in LA
-          </p>
-        </div>
       </div>
-    </section>
+    </footer>
   );
 }

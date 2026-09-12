@@ -1,136 +1,119 @@
-/* Arrow link */
-.LinkWithArrow {
-  @apply flex;
-  @apply flex-row items-center;
+.People .person-profile:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 3px;
 }
 
-.LinkWithArrow a {
-  @apply flex;
-  @apply flex-row items-center;
-  text-decoration: none;
-}
-
-.LinkWithArrow a:hover {
-  text-decoration: none;
-}
-
-.LinkWithArrow a:hover .MdKeyboardArrowRight {
-  fill: white;
-  background-color: var(--color-muted-blue);
-  border: 2px solid var(--color-muted-blue);
-}
-
-.LinkWithArrow a .link-text {
-  @apply mb-[0];
-  @apply mr-[0.5rem];
-  color: var(--color-muted-blue);
-}
-
-.LinkWithArrow .MdKeyboardArrowRight {
-  fill: var(--color-muted-blue);
-  border: 2px solid #e2e2e2;
-  @apply rounded-[50%] w-[1.5rem] min-w-[1.5rem] h-[1.5rem];
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
-  -moz-transition: all 0.3s ease-in-out; /** Firefox **/
-  -o-transition: all 0.3s ease-in-out; /** Opera **/
-}
-
-/* Person cards */
+/* Every person is visible without horizontal scrolling, including on phones. */
 .People {
-  @apply flex;
-  @apply flex-row;
-  overflow-x: scroll;
-  @apply pb-[1rem];
-  transform: scaleX(-1) rotateZ(180deg);
-}
-
-.People p {
-  @apply mb-[0.25rem];
-}
-
-.People a {
-  text-decoration: none !important;
+  @apply grid gap-x-4 gap-y-6 p-0 m-0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
 }
 
 .People .person {
-  @apply w-[14rem] h-[100%] p-[1rem_0.5rem] text-center;
-  color: black;
-  transition: color 0.5s;
-  transform: scaleX(-1) rotateZ(180deg);
+  @apply text-center;
+  min-width: 0;
+  color: var(--color-navy);
+  overflow-wrap: anywhere;
 }
 
-.People .person .person-image {
-  @apply w-[10rem] h-[10rem] rounded-[50%] mb-[1.25rem] object-cover;
+.People .person-profile {
+  @apply block h-full rounded-md;
+  color: inherit;
+  text-decoration: none;
+}
+
+.People .person-profile:hover .person-name {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.People .person-image {
+  @apply block w-full h-auto rounded-full object-cover mx-auto mb-3;
+  max-width: 160px;
+  aspect-ratio: 1;
   object-position: center;
-  transition: filter 0.3s ease;
 }
 
-.People .person .person-title {
-  @apply text-[small];
+.People .person-initials {
+  @apply flex items-center justify-center font-semibold;
+  background: #e0f1f3;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
-.People .person .person-description {
-  @apply text-[small];
+.People .person-name {
+  @apply text-base leading-snug mb-1;
 }
 
-@media (min-width: 576px) {
-  .People .person:hover {
-    color: var(--color-muted-blue);
-    transition: color 0.5s;
-  }
+.People .person-title,
+.People .person-description {
+  @apply text-sm leading-normal mb-1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .People {
-    transform: none;
-    @apply justify-center flex-wrap pb-[0];
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    @apply gap-6;
   }
 
-  .People .person {
-    transform: none;
+  .People .person-name {
+    @apply text-lg;
   }
 }
 
-/* Click-to-load video facade */
+@media (min-width: 992px) {
+  .People {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* The facade reserves the player's exact geometry without loading YouTube. */
 .video-responsive {
-  @apply w-[300px] max-w-[100%];
+  @apply w-full;
 }
 
 .video-responsive .video-frame {
-  @apply relative h-[0] pb-[56.25%];
-  overflow: hidden;
-  background-color: #000000;
+  @apply relative;
+  aspect-ratio: 16 / 9;
+  background: #111;
 }
 
 .video-responsive .video-frame iframe,
 .video-responsive .video-frame .video-facade {
-  @apply absolute left-[0] top-[0] w-[100%] h-[100%];
+  @apply absolute left-0 top-0 w-full h-full;
+  border: 0;
 }
 
 .video-responsive .video-facade {
-  @apply flex items-center justify-center p-[0];
-  border: 0;
+  @apply flex items-center justify-center p-0;
+  min-height: 44px;
+  min-width: 44px;
   cursor: pointer;
-  background: radial-gradient(circle at center, #2f2f2f 0%, #000000 100%);
+  background: #202020;
 }
 
-.video-responsive .video-facade:hover .video-facade-play,
-.video-responsive .video-facade:focus .video-facade-play {
-  background-color: #ff0000;
+.video-responsive .video-facade:focus-visible,
+.video-responsive iframe:focus-visible {
+  outline: 3px solid white;
+  outline-offset: -6px;
+}
+
+.video-responsive .video-facade:hover .video-facade-play {
+  background: #c00;
 }
 
 .video-responsive .video-facade-play {
-  @apply relative block w-[54px] h-[38px] rounded-[10px];
-  background-color: rgba(33, 33, 33, 0.85);
-  transition: background-color 0.2s ease-in-out;
+  @apply relative block rounded-lg;
+  width: 60px;
+  height: 44px;
+  background: #c00;
 }
 
 .video-responsive .video-facade-play::after {
   content: "";
-  @apply absolute top-[50%] left-[50%];
+  @apply absolute top-1/2 left-1/2;
   transform: translate(-50%, -50%);
   border-style: solid;
   border-width: 9px 0 9px 15px;
-  border-color: transparent transparent transparent #ffffff;
+  border-color: transparent transparent transparent white;
 }

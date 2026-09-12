@@ -1,4 +1,6 @@
-# Contributor refactor plan and acceptance ledger
+# PR #108 refactor verification, historical record
+
+This records the original parity refactor against `f435aca`. PR #108 subsequently merged as `b57ae7d` and was deployed. The tables below retain that effort's original scope and measurements; they are not a current UI specification or working-tree status. For current controls, layouts, participation workflows, and checks, use the [README](../README.md) and [UI canon](ui-canon.md). The later UX pass intentionally replaces several preserved legacy behaviors.
 
 ## Mission
 

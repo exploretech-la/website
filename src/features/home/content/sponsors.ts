@@ -17,12 +17,12 @@ export interface SponsorLogo {
 
 export const LargeLogoSponsors: readonly SponsorLogo[] = [
   {
-    name: "google-logo",
+    name: "Google",
     ...images["sponsors/google-logo.png"],
     website: "https://about.google/",
   },
   {
-    name: "ucla-cs",
+    name: "UCLA Computer Science",
     ...images["sponsors/ucla-cs.png"],
     website: "https://www.cs.ucla.edu/",
   },
@@ -30,39 +30,39 @@ export const LargeLogoSponsors: readonly SponsorLogo[] = [
 
 export const SmallLogoSponsors: readonly SponsorLogo[] = [
   {
-    name: "balsamiq",
+    name: "Balsamiq",
     ...images["sponsors/balsamiq.png"],
     website: "https://balsamiq.com/",
   },
   {
-    name: "ucla_samueli_engineering",
+    name: "UCLA Samueli School of Engineering",
     ...images["sponsors/ucla-samueli-engineering.png"],
     website: "https://samueli.ucla.edu/",
   },
   {
-    name: "yubico",
+    name: "Yubico",
     ...images["sponsors/yubico.png"],
     website: "https://www.yubico.com/",
   },
   {
-    name: "northrop-grumman",
+    name: "Northrop Grumman",
     ...images["sponsors/northrop-grumman.png"],
     website: "https://www.northropgrumman.com/",
   },
   {
-    name: "disney",
+    name: "Disney",
     ...images["sponsors/disney.png"],
     website: "https://thewaltdisneycompany.com/",
   },
   {
-    name: "capcom",
+    name: "Capcom",
     src: capcomLogo,
     width: 5592,
     height: 1024,
     website: "https://www.capcom.com/us/",
   },
   {
-    name: "cloud-girls",
+    name: "Cloud Girls",
     ...images["sponsors/cloud-girls.png"],
     website: "https://cloudgirls.org/",
   },

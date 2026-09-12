@@ -74,6 +74,36 @@ function checkLinks(where, links, options) {
     if (link.name.trim() === "")
       report(at, "name is empty; it is the visible link text");
     checkUrl(`${at}.src`, link.src, options);
+    if (link.file) {
+      const clean = link.src.split(/[?#]/)[0];
+      const onDisk = clean.startsWith("/@fs/")
+        ? clean.slice(4)
+        : path.join(repoRoot, clean);
+      if (fs.existsSync(onDisk)) {
+        const bytes = fs.statSync(onDisk).size;
+        if (bytes !== link.file.bytes)
+          report(
+            at,
+            `file size label is ${link.file.bytes} bytes; asset is ${bytes}`,
+          );
+        const extension = path
+          .extname(onDisk)
+          .slice(1)
+          .toUpperCase()
+          .replace(/^JPEG$/, "JPG");
+        if (extension !== link.file.format)
+          report(
+            at,
+            `format label ${link.file.format} does not match ${extension}`,
+          );
+      }
+    } else if (
+      options?.local ||
+      link.src.startsWith("/src/") ||
+      link.src.startsWith("/@fs/")
+    ) {
+      report(at, "local downloads need file format and byte size labels");
+    }
     if (seen.has(link.src))
       report(at, `same target as ${where}[${seen.get(link.src)}]`);
     else seen.set(link.src, index);
@@ -153,17 +183,14 @@ function checkEvent(year, event) {
   const where = `EVENTS["${year}"]`;
   if (event.year !== year)
     report(where, `year field "${event.year}" does not match its key`);
-  checkUrl(`${where}.programHref`, event.programHref);
+  checkLinks(`${where}.program`, [event.program]);
   checkLinks(`${where}.maps`, event.maps, { local: true });
   if (event.waivers)
     checkLinks(`${where}.waivers`, event.waivers, { local: true });
-  if (event.wristbandImage) {
-    checkUrl(`${where}.wristbandImage.src`, event.wristbandImage.src, {
+  if (event.wristbandImage)
+    checkLinks(`${where}.wristbandImage`, [event.wristbandImage], {
       local: true,
     });
-  }
-  if (event.feedback.kind === "link")
-    checkUrl(`${where}.feedback.href`, event.feedback.href);
 
   const scheduleKeys = new Set();
   for (const entry of event.schedule) {
@@ -203,15 +230,6 @@ function checkEvent(year, event) {
     const keys = new Set(event.faq.items.map((item) => item.key));
     if (keys.size !== event.faq.items.length)
       report(`${where}.faq`, "duplicate FAQ keys");
-    if (
-      event.faq.initialOpenKey !== null &&
-      !keys.has(event.faq.initialOpenKey)
-    ) {
-      report(
-        `${where}.faq.initialOpenKey`,
-        `${event.faq.initialOpenKey} matches no entry`,
-      );
-    }
     for (const item of event.faq.items) {
       if (item.question.trim() === "" || item.answer.trim() === "") {
         report(
@@ -238,7 +256,12 @@ function checkEvents(events, eventRoutes, registration) {
       report("EVENT_ROUTES", `route "${route}" is not an absolute path`);
     if (navLabel.trim() === "")
       report("EVENT_ROUTES", `"${route}" has no menu label`);
-    else if (labels.has(navLabel))
+    if (!navLabel.includes(year))
+      report(
+        "EVENT_ROUTES",
+        `"${route}" label does not identify its ${year} archive`,
+      );
+    if (labels.has(navLabel))
       report("EVENT_ROUTES", `duplicate menu label "${navLabel}"`);
     labels.add(navLabel);
     if (!Object.hasOwn(events, year))
@@ -250,26 +273,37 @@ function checkEvents(events, eventRoutes, registration) {
       report(`EVENTS["${year}"]`, "no EVENT_ROUTES entry reaches it");
   }
 
-  if (!registration.alert.to.startsWith("/")) {
-    report(
-      "REGISTRATION_2021.alert.to",
-      `must be an in-app route, got "${registration.alert.to}"`,
-    );
+  checkLinks("REGISTRATION_2021.documents", registration.documents);
+  checkLinks("REGISTRATION_2021.waivers", registration.waivers);
+}
+
+function checkParticipation({
+  PROGRAMS,
+  AUDIENCES,
+  CONTACT_EMAIL,
+  UCLA_UPDATES_URL,
+}) {
+  for (const [id, entry] of Object.entries({ ...PROGRAMS, ...AUDIENCES })) {
+    const where = `participation.${id}`;
+    const inquiry = new URL(entry.inquiryHref);
+    if (inquiry.protocol !== "mailto:" || inquiry.pathname !== CONTACT_EMAIL)
+      report(where, "inquiry must reach the shared contact email");
+    if (!inquiry.searchParams.get("subject")?.trim())
+      report(where, "inquiry needs a useful subject");
+    if (!entry.actionLabel.trim()) report(where, "inquiry link has no label");
   }
-  for (const [field, value] of Object.entries(registration.importantLinks)) {
-    if (Array.isArray(value))
-      checkLinks(`REGISTRATION_2021.importantLinks.${field}`, value);
-    else if (value?.src)
-      checkUrl(`REGISTRATION_2021.importantLinks.${field}.src`, value.src);
+  for (const [id, program] of Object.entries(PROGRAMS)) {
+    if (!program.status.trim())
+      report(`PROGRAMS.${id}`, "missing published-status notice");
   }
-  checkLinks("REGISTRATION_2021.waivers.forms", registration.waivers.forms, {
-    local: true,
-  });
-  // The combined-forms link is an external short URL, not a bundled PDF.
-  checkUrl(
-    "REGISTRATION_2021.waivers.allForms.src",
-    registration.waivers.allForms.src,
-  );
+  for (const [id, audience] of Object.entries(AUDIENCES)) {
+    if (audience.path !== `/get-involved#${id}`)
+      report(
+        `AUDIENCES.${id}`,
+        "audience path must reach its participation section",
+      );
+  }
+  checkUrl("UCLA_UPDATES_URL", UCLA_UPDATES_URL);
 }
 
 async function loadContent() {
@@ -294,7 +328,10 @@ async function loadContent() {
       "/src/content/speakers.ts",
     );
     const events = await server.ssrLoadModule("/src/content/events/index.ts");
-    return { people, teamSections, pastSpeakers, ...events };
+    const participation = await server.ssrLoadModule(
+      "/src/content/participation.ts",
+    );
+    return { people, teamSections, pastSpeakers, ...events, ...participation };
   } finally {
     await server.close();
   }
@@ -312,6 +349,7 @@ try {
 checkPeople(content.people);
 checkTeams(content.teamSections, content.people, content.pastSpeakers);
 checkEvents(content.EVENTS, content.EVENT_ROUTES, content.REGISTRATION_2021);
+checkParticipation(content);
 
 if (problems.length > 0) {
   console.error(`Content check failed with ${problems.length} problem(s):\n`);

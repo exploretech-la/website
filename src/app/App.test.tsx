@@ -63,3 +63,35 @@ it("records a new route with its query but not another view for an anchor", asyn
     ["/our_team/leadership?source=local"],
   ]);
 });
+
+it("groups static directory URLs and client routes without duplicate pageviews", async () => {
+  await renderPath("/events/");
+  await act(async () => {
+    await router.navigate("/events");
+  });
+  await act(async () => {
+    await router.navigate("/events?source=school");
+  });
+  expect(vi.mocked(GA.trackPageView).mock.calls).toEqual([
+    ["/events"],
+    ["/events?source=school"],
+  ]);
+});
+
+it("keeps metadata consistent with the unknown-team leadership fallback", async () => {
+  await renderPath("/our_team/leadership");
+  const title = document.title;
+  const canonical = document.head.querySelector<HTMLLinkElement>(
+    'link[rel="canonical"]',
+  )?.href;
+  await act(async () => {
+    await router.navigate("/our_team/not-a-department");
+  });
+  expect(container.querySelector(".team-content h2")?.textContent).toBe(
+    "Leadership",
+  );
+  expect(document.title).toBe(title);
+  expect(
+    document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href,
+  ).toBe(canonical);
+});

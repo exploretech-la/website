@@ -1,131 +1,79 @@
-/*  Team page shell  */
 .Team {
-  @apply flex;
-  @apply flex-col items-center min-h-[100vh];
-  background-color: #f5f5f5;
+  @apply pb-12;
 }
 
 .Team .team-title {
-  @apply text-center w-[100%];
-  background-color: white;
-  @apply p-[2rem_0] mb-[2rem];
+  @apply mb-5;
 }
 
-.Team .team-title h1 {
-  @apply text-[2.5rem];
-  color: #333;
-  @apply mb-[1rem];
+.Team .team-title p {
+  @apply mb-0;
 }
 
-.Team .team-title .pill-divider {
-  @apply w-[60px] h-[4px];
-  background-color: var(--color-muted-blue);
-  @apply m-[0_auto] rounded-[2px];
+.Team .team-department-picker {
+  @apply mb-6;
+}
+
+.Team .team-department-picker label {
+  @apply block font-semibold mb-2;
+}
+
+.Team .team-department-picker select {
+  @apply w-full rounded-md px-3 py-2 text-base;
+  min-height: 44px;
+  border: 1px solid #536d77;
+  background: white;
+  color: var(--color-navy);
+  appearance: none;
+  padding-right: 36px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%230b546f' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
 }
 
 .Team .team-navigation {
-  @apply flex gap-[1rem] mb-[2rem];
-  @apply flex-wrap justify-center p-[0_1rem];
+  @apply hidden;
 }
 
-.Team .team-navigation a {
-  @apply p-[0.75rem_1.5rem];
-  border: 2px solid var(--color-muted-blue);
-  background-color: transparent;
-  color: var(--color-muted-blue);
-  @apply rounded-[25px] text-[1rem] font-medium;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  @apply inline-block;
+.Team .team-content > h2 {
+  @apply mb-4;
 }
 
-.Team .team-navigation a:hover {
-  background-color: var(--color-muted-blue);
-  color: white;
+.Team .team-navigation a,
+.Team .team-department-picker select {
+  scroll-margin-top: 6rem;
 }
 
-.Team .team-navigation a.active {
-  background-color: var(--color-muted-blue);
-  color: white;
+.Team .team-navigation a:focus-visible,
+.Team .team-department-picker select:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 3px;
 }
 
-.Team .team-section-header {
-  @apply flex;
-  @apply flex-col items-center mb-[1rem];
-}
-
-.Team .team-content {
-  @apply w-[100%] max-w-[1200px] p-[0_1rem];
-  flex: 1;
-  @apply relative;
-}
-
-.Team > .Footer {
-  align-self: stretch;
-  @apply w-[100%];
-}
-
-@media (max-width: 768px) {
-  .Team .team-navigation a {
-    @apply p-[0.5rem_1rem] text-[0.9rem];
+@media (min-width: 768px) {
+  .Team .team-department-picker {
+    @apply hidden;
   }
-}
 
-/*  Department containers  */
-.Leadership {
-  background-color: #f5f5f5;
-}
+  .Team .team-navigation {
+    @apply flex flex-wrap gap-2 mb-6;
+  }
 
-.Leadership .leadership-container {
-  @apply max-w-[1200px] m-[auto];
-}
+  .Team .team-navigation a {
+    @apply inline-flex items-center rounded-md px-4 py-2 font-medium;
+    min-height: 44px;
+    border: 1px solid #9aaeb8;
+    color: var(--color-navy);
+    text-decoration: none;
+  }
 
-.Leadership .leadership-container .leadership-header {
-  @apply flex;
-  @apply flex-col items-center mb-[1rem];
-}
+  .Team .team-navigation a:hover {
+    background: #e9f2f4;
+  }
 
-.Content .content-container {
-  @apply max-w-[1200px] m-[auto];
-}
-
-.Content .content-container .content-header {
-  @apply flex;
-  @apply flex-col items-center mb-[1rem];
-}
-
-.Design {
-  background-color: #f5f5f5;
-}
-
-.Design .design-container {
-  @apply max-w-[1200px] m-[auto];
-}
-
-.Design .design-container .design-header {
-  @apply flex;
-  @apply flex-col items-center mb-[1rem];
-}
-
-.Operations {
-  background-color: #f5f5f5;
-}
-
-.Operations .operations-container {
-  @apply max-w-[1200px] m-[auto];
-}
-
-.Operations .operations-container .operations-header {
-  @apply flex;
-  @apply flex-col items-center mb-[1rem];
-}
-
-.External .external-container {
-  @apply max-w-[1200px] m-[auto];
-}
-
-.External .external-container .external-header {
-  @apply flex;
-  @apply flex-col items-center mb-[1rem];
+  .Team .team-navigation a.active {
+    color: white;
+    background: var(--color-navy);
+    border-color: var(--color-navy);
+  }
 }

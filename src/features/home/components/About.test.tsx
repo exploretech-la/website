@@ -1,6 +1,7 @@
 import { act } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { MemoryRouter } from "react-router-dom";
+import { vi } from "vitest";
 
 import About from "./About";
 
@@ -17,7 +18,7 @@ const click = (element: Element | null | undefined) => {
 };
 
 const select = (index: number) => {
-  click(container.querySelectorAll(".carousel-indicators li")[index]);
+  click(container.querySelectorAll(".carousel-indicators button")[index]);
 };
 
 const fire = (element: HTMLImageElement, type: "load" | "error") => {
@@ -26,15 +27,7 @@ const fire = (element: HTMLImageElement, type: "load" | "error") => {
   });
 };
 
-/** Longer than the 600ms slide, so the carousel has settled on a slide. */
-const settle = () => {
-  act(() => {
-    vi.advanceTimersByTime(700);
-  });
-};
-
 beforeEach(() => {
-  vi.useFakeTimers();
   container = document.createElement("div");
   document.body.appendChild(container);
   root = createRoot(container);
@@ -53,7 +46,6 @@ afterEach(() => {
     root.unmount();
   });
   container.remove();
-  vi.useRealTimers();
 });
 
 it("skips a failed selected image and keeps backward navigation usable", () => {
@@ -64,10 +56,8 @@ it("skips a failed selected image and keeps backward navigation usable", () => {
   });
   select(2);
   fire(images[2], "error");
-  settle();
   expect(activeImage()).toBe(images[3]);
   click(container.querySelector(".carousel-control-prev"));
-  settle();
   expect(activeImage()).toBe(images[1]);
 });
 
@@ -76,10 +66,36 @@ it("does not let older image events override the newer selection", () => {
   select(1);
   select(3);
   fire(images[1], "load");
-  settle();
   expect(activeImage()).toBe(images[0]);
   fire(images[0], "error");
   fire(images[3], "load");
-  settle();
   expect(activeImage()).toBe(images[3]);
+});
+
+it("reconciles cached image successes and failures without waiting for new events", () => {
+  const complete = vi
+    .spyOn(HTMLImageElement.prototype, "complete", "get")
+    .mockReturnValue(true);
+  const width = vi
+    .spyOn(HTMLImageElement.prototype, "naturalWidth", "get")
+    .mockImplementation(function (this: HTMLImageElement) {
+      return this.alt === "Dev Tools Workshop" ? 0 : 640;
+    });
+  try {
+    act(() =>
+      root.render(
+        <MemoryRouter key="already-complete">
+          <About />
+        </MemoryRouter>,
+      ),
+    );
+    images = Array.from(container.querySelectorAll(".carousel-item img"));
+    select(1);
+    expect(activeImage()).toBe(images[2]);
+    click(container.querySelector(".carousel-control-prev"));
+    expect(activeImage()).toBe(images[0]);
+  } finally {
+    complete.mockRestore();
+    width.mockRestore();
+  }
 });
