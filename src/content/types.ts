@@ -15,6 +15,10 @@ export interface PersonCard extends PersonProfile {
 export interface DocumentLink {
   readonly name: string;
   readonly src: string;
+  readonly file?: {
+    readonly format: "PDF" | "JPG" | "PNG";
+    readonly bytes: number;
+  };
 }
 
 export type TeamSectionId =

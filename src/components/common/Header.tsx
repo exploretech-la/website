@@ -1,40 +1,45 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { Link, useLocation, useNavigationType } from "react-router-dom";
-import HomePageSections from "../../content/sections";
+import Collapse from "../Collapse";
+import { focusHashTarget } from "../../app/navigation";
+import { normalizePath } from "../../content/pages";
+import GA from "../../util/GoogleAnalytics";
 import LogoWithIcons from "../../static/svg/logo-with-icons-navy.svg";
 import CompassLogo from "../../static/svg/logo-compass.svg";
-import Collapse from "../Collapse";
-import { EVENT_ROUTES } from "../../content/events";
 
-const menus = [
-  {
-    id: "home",
-    title: "Home",
+type MenuId = "programs" | "involved" | "about";
+const menus = {
+  programs: {
+    title: "Programs",
     links: [
-      ["Home", "/"],
-      ["About", `/#${HomePageSections.ABOUT.name}`],
-      ["Get Involved", `/#${HomePageSections.GET_INVOLVED.name}`],
-      ["Speakers", `/#${HomePageSections.SPEAKERS.name}`],
-      ["Sponsors", `/#${HomePageSections.SPONSORS.name}`],
+      ["Annual event and archives", "/events"],
+      ["Ignite workshops", "/ignite"],
     ],
   },
-  { id: "events", title: "Events", links: [["Ignite", "/ignite"]] },
-  {
-    id: "resources",
-    title: "Resources",
-    links: [...EVENT_ROUTES]
-      .reverse()
-      .map(({ route, navLabel }) => [navLabel, route] as const),
+  involved: {
+    title: "Get involved",
+    links: [
+      ["UCLA volunteers", "/get-involved#volunteer"],
+      ["Partners and sponsors", "/get-involved#partners"],
+      ["All participation options", "/get-involved"],
+    ],
   },
-] as const;
+  about: {
+    title: "About",
+    links: [
+      ["Our story", "/#about"],
+      ["Our Team", "/our_team/leadership"],
+    ],
+  },
+} as const;
 
-type MenuId = (typeof menus)[number]["id"];
 export default function Header() {
   const location = useLocation();
   const navigationType = useNavigationType();
   const [expanded, setExpanded] = useState(false);
   const [menu, setMenu] = useState<MenuId | null>(null);
   const header = useRef<HTMLElement>(null);
+  const toggle = useRef<HTMLButtonElement>(null);
   const pendingHash = useRef<string | null>(null);
 
   useEffect(() => {
@@ -44,44 +49,82 @@ export default function Header() {
   }, [location.key, location.hash, navigationType]);
 
   useEffect(() => {
-    if (!menu) return;
-    const closeOutside = (event: MouseEvent) => {
+    if (!expanded && !menu) return;
+    const closeOutside = (event: globalThis.MouseEvent) => {
       if (
         event.target instanceof Node &&
         !header.current?.contains(event.target)
-      )
+      ) {
+        pendingHash.current = null;
         setMenu(null);
+        setExpanded(false);
+      }
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      setMenu(null);
+      // Safari can leave focus outside a button that was opened with a pointer.
+      if (expanded && toggle.current?.getClientRects().length) {
+        pendingHash.current = null;
+        setExpanded(false);
+        toggle.current.focus();
+      } else if (menu) document.getElementById(`nav-${menu}`)?.focus();
     };
     document.addEventListener("click", closeOutside);
-    return () => document.removeEventListener("click", closeOutside);
-  }, [menu]);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("click", closeOutside);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [expanded, menu]);
 
-  const selectLink = (href: string) => {
-    const hash = new URL(href, window.location.href).hash;
-    pendingHash.current = hash;
+  const selectLink = (
+    href: string,
+    label: string,
+    event: MouseEvent<HTMLAnchorElement>,
+  ) => {
+    if (
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    )
+      return;
+    pendingHash.current = new URL(href, window.location.href).hash;
     setMenu(null);
     setExpanded(false);
-    // Same-hash links may not change location, so scroll even without a route effect.
-    if (!expanded && hash)
-      requestAnimationFrame(() =>
-        document.getElementById(hash.slice(1))?.scrollIntoView(),
-      );
+    GA.trackEvent({ category: "Navigation", action: "Navigate", label });
   };
 
-  const renderMenu = (item: (typeof menus)[number]) => (
-    <div
-      className={`site-menu site-nav-item${menu === item.id ? " show" : ""}`}
-      key={item.id}
-      onKeyDown={(event) => {
-        if (event.key === "Escape") {
-          setMenu(null);
-          document.getElementById(`navbar-${item.id}`)?.focus();
+  const isCurrent = (href: string) => {
+    const [path, hash] = href.split("#");
+    return (
+      normalizePath(location.pathname) === normalizePath(path) &&
+      (!hash || location.hash === `#${hash}`)
+    );
+  };
+
+  const renderMenu = (id: MenuId) => {
+    const item = menus[id];
+    const open = menu === id;
+    return (
+      <div
+        className="site-menu site-nav-item"
+        key={id}
+        onBlur={(event) => {
+          if (
+            event.relatedTarget instanceof Node &&
+            !event.currentTarget.contains(event.relatedTarget)
+          )
+            setMenu(null);
+        }}
+        onKeyDown={(event) => {
+          if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+          if (event.key === "ArrowUp" && !open) return;
           event.preventDefault();
-        }
-        if (event.key === "ArrowDown" || event.key === "ArrowUp") {
-          if (event.key === "ArrowUp" && menu !== item.id) return;
-          event.preventDefault();
-          setMenu(item.id);
+          setMenu(id);
           const parent = event.currentTarget;
           const backwards = event.key === "ArrowUp";
           requestAnimationFrame(() => {
@@ -91,118 +134,106 @@ export default function Header() {
             const index = links.findIndex(
               (link) => link === document.activeElement,
             );
-            const next = Math.max(
-              0,
-              Math.min(links.length - 1, index + (backwards ? -1 : 1)),
-            );
-            links[next]?.focus();
+            links[
+              Math.max(
+                0,
+                Math.min(links.length - 1, index + (backwards ? -1 : 1)),
+              )
+            ]?.focus();
           });
-        }
-      }}
-      onBlur={(event) => {
-        if (
-          event.relatedTarget instanceof Node &&
-          !event.currentTarget.contains(event.relatedTarget)
-        )
-          setMenu(null);
-      }}
-    >
-      <a
-        aria-haspopup="true"
-        aria-expanded={menu === item.id}
-        id={`navbar-${item.id}`}
-        href="#"
-        className="site-menu-toggle site-nav-link"
-        role="button"
-        onClick={(event) => {
-          event.preventDefault();
-          setMenu((current) => (current === item.id ? null : item.id));
-        }}
-        onKeyDown={(event) => {
-          if (event.key === " ") {
-            event.preventDefault();
-            setMenu((current) => (current === item.id ? null : item.id));
-          }
         }}
       >
-        {item.title}
-      </a>
-      {menu === item.id && (
-        <div
-          className="site-menu-items show"
-          aria-labelledby={`navbar-${item.id}`}
+        <button
+          type="button"
+          className="site-menu-toggle site-nav-link"
+          id={`nav-${id}`}
+          aria-expanded={open}
+          aria-controls={`nav-${id}-links`}
+          onClick={(event) => {
+            event.currentTarget.focus();
+            setMenu((current) => (current === id ? null : id));
+          }}
         >
+          {item.title}
+          <span aria-hidden="true" className="nav-chevron" />
+        </button>
+        <div id={`nav-${id}-links`} className="site-menu-items" hidden={!open}>
           {item.links.map(([label, href]) => (
             <Link
               key={href}
-              className="site-menu-link"
               to={href}
-              onClick={() => selectLink(href)}
+              className="site-menu-link"
+              aria-current={isCurrent(href) ? "page" : undefined}
+              onClick={(event) => selectLink(href, label, event)}
             >
               {label}
             </Link>
           ))}
         </div>
-      )}
-    </div>
-  );
+      </div>
+    );
+  };
 
   return (
-    <nav
-      ref={header}
-      className={`Section Header${location.pathname === "/" ? " Home" : ""} site-nav site-nav-responsive site-nav-light`}
-    >
-      <Link className="site-brand" to="/" onClick={() => selectLink("/")}>
-        <img src={CompassLogo} className="logo-compass" alt="logo-compass" />
-        <img
-          src={LogoWithIcons}
-          className="logo-with-icons"
-          alt="logo-with-icons"
-        />
-      </Link>
-      <button
-        type="button"
-        aria-label="Toggle navigation"
-        aria-controls="site-navigation"
-        aria-expanded={expanded}
-        className={`site-nav-toggle${expanded ? "" : " collapsed"}`}
-        onClick={() => {
-          pendingHash.current = null;
-          setExpanded((value) => !value);
-        }}
-      >
-        <span className="site-nav-toggle-icon" />
-      </button>
-      <Collapse
-        in={expanded}
-        id="site-navigation"
-        className="nav-align-end site-nav-panel"
-        onExited={() => {
-          if (pendingHash.current)
-            document
-              .getElementById(pendingHash.current.slice(1))
-              ?.scrollIntoView();
-          pendingHash.current = null;
-        }}
-      >
-        <div className="site-nav-items">
+    <nav ref={header} className="Header site-nav" aria-label="Main navigation">
+      <div className="page-container site-nav-inner">
+        <Link
+          className="site-brand"
+          to="/"
+          aria-label="exploretech.la home"
+          onClick={(event) => selectLink("/", "Home", event)}
+        >
+          <img src={CompassLogo} className="logo-compass" alt="" />
+          <img src={LogoWithIcons} className="logo-with-icons" alt="" />
+          <span className="brand-name" aria-hidden="true">
+            exploretech.la
+          </span>
+        </Link>
+        <button
+          ref={toggle}
+          type="button"
+          aria-label="Toggle navigation"
+          aria-controls="site-navigation"
+          aria-expanded={expanded}
+          className="site-nav-toggle"
+          onClick={(event) => {
+            event.currentTarget.focus();
+            pendingHash.current = null;
+            setMenu(null);
+            setExpanded((value) => !value);
+          }}
+        >
+          <span className="site-nav-toggle-icon" aria-hidden="true" />
+          <span className="visually-hidden">Menu</span>
+        </button>
+        <Collapse
+          in={expanded}
+          id="site-navigation"
+          className="site-nav-panel"
+          onExited={() => {
+            if (pendingHash.current) focusHashTarget(pendingHash.current);
+            pendingHash.current = null;
+          }}
+        >
           <div className="site-nav-items">
-            {renderMenu(menus[0])}
-            <div className="site-nav-item">
-              {" "}
-              <Link
-                className="site-nav-link"
-                to="/our_team"
-                onClick={() => selectLink("/our_team")}
-              >
-                Our Team
-              </Link>{" "}
-            </div>
-            {renderMenu(menus[1])}
-            {renderMenu(menus[2])}
+            {renderMenu("programs")}
+            <Link
+              to="/get-involved#schools"
+              className="site-nav-link"
+              aria-current={
+                isCurrent("/get-involved#schools") ? "page" : undefined
+              }
+              onClick={(event) =>
+                selectLink("/get-involved#schools", "For schools", event)
+              }
+            >
+              For schools
+            </Link>
+            {renderMenu("involved")}
+            {renderMenu("about")}
           </div>
-        </div>
-      </Collapse>
+        </Collapse>
+      </div>
     </nav>
   );
 }

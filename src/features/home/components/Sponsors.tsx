@@ -1,4 +1,4 @@
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 import OutboundLink from "../../../components/OutboundLink";
 import HomePageSections from "../../../content/sections";
@@ -32,11 +32,15 @@ function renderLogo({ name, website, ...image }: SponsorLogo, sizes: string) {
 
 export default function Sponsors() {
   return (
-    <section className="Section Sponsors" id={HomePageSections.SPONSORS.name}>
+    <section
+      className="Sponsors page-container"
+      id={HomePageSections.SPONSORS.name}
+    >
       <div className="sponsors-container">
         <div className="sponsors-header">
-          <h3>Our Sponsors</h3>
-          <div className="pill-divider" />
+          <h2 className="section-heading">
+            Organizations that have supported exploretech.la
+          </h2>
         </div>
         <div className="large-logos">
           {LargeLogoSponsors.map((logo) => renderLogo(logo, LargeLogoSizes))}
@@ -45,17 +49,9 @@ export default function Sponsors() {
           {SmallLogoSponsors.map((logo) => renderLogo(logo, SmallLogoSizes))}
         </div>
         <div className="sponsor-contact">
-          <h5>Interested in sponsoring?</h5>
-          <div className="sponsor-cta">
-            <OutboundLink
-              href="mailto:exploretechla@cs.ucla.edu"
-              target="_blank"
-              eventLabel="email_us_sponsors"
-            >
-              <p>Email Us!</p>
-              <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
-            </OutboundLink>
-          </div>
+          <Link className="action action-outline" to="/get-involved#partners">
+            Discuss a partnership
+          </Link>
         </div>
       </div>
     </section>

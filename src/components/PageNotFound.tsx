@@ -1,23 +1,24 @@
-import { useEffect } from "react";
-
-import LinkWithArrow from "./common/LinkWithArrow";
+import { Link } from "react-router-dom";
 
 export default function PageNotFound() {
-  useEffect(() => {
-    const previousTitle = document.title;
-    document.title = "Page Not Found • exploretech.la";
-    return () => {
-      document.title = previousTitle;
-    };
-  }, []);
-
   return (
-    <section className="PageNotFound">
-      <h3>Sorry, this page isn't available.</h3>
+    <section className="PageNotFound page-container page-header">
+      <h1>This page could not be found</h1>
       <p>
-        The link you followed may be broken, or the page may have been removed.
+        The address may have changed. You can explore our programs or find the
+        right contact below.
       </p>
-      <LinkWithArrow text="Go back to exploretech.la" to="/" />
+      <div className="action-row">
+        <Link className="action action-primary" to="/events">
+          Explore programs
+        </Link>
+        <Link className="action action-outline" to="/get-involved">
+          Get involved
+        </Link>
+        <Link className="text-link" to="/">
+          Return home
+        </Link>
+      </div>
     </section>
   );
 }

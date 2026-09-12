@@ -1,564 +1,243 @@
-/* Hero */
+/* Home: mission, participation routes, then program and organization detail. */
 .Hero {
-  @apply h-[450px] flex justify-center items-center;
-  @apply flex-col;
   background-color: var(--color-aqua);
   color: var(--color-navy);
 }
 
+.Hero .hero-layout {
+  @apply grid gap-6 py-8;
+}
+
 .Hero .logo-with-icon-group {
-  @apply w-[20rem] h-[auto] mb-[2rem] pl-[24px];
-  @apply pr-[24px];
+  @apply w-40 h-auto mb-5;
 }
 
-.Hero .hero-content {
-  @apply flex;
-  @apply flex-col justify-center items-center text-center;
+.Hero h1 {
+  @apply text-[2rem] leading-tight mb-4;
+  max-width: 24ch;
 }
 
-.Hero .hero-content .h1-title {
-  @apply hidden;
+.Hero .hero-content > p {
+  @apply mb-4;
+  max-width: 60ch;
 }
 
-.Hero .hero-content .hero-cta {
-  @apply mt-[1rem] flex;
-  @apply flex-row;
+.Hero .hero-photo {
+  @apply w-full object-cover rounded-lg;
+  height: clamp(180px, 35vw, 300px);
+  object-position: center;
 }
 
-.Hero .hero-content .hero-cta .action:not(:last-child) {
-  @apply mr-[1rem];
+.Home .GetInvolved,
+.Home .home-programs,
+.Home .About,
+.Home .Speakers,
+.Home .Sponsors {
+  @apply py-8;
 }
 
-.Hero p {
-  @apply m-[0];
+.audience-grid,
+.program-grid {
+  @apply grid gap-4;
 }
 
-@media (min-width: 576px) {
-  .Hero .logo-with-icon-group {
-    @apply w-[25rem];
-  }
-
-  .Hero .hero-content .h1-title {
-    @apply block;
-  }
+.audience-card {
+  @apply flex flex-col gap-3 p-5 rounded-lg;
+  border: 1px solid #c4d8df;
+  background: #f2fafb;
+  color: var(--color-navy);
+  text-decoration: none;
+  min-width: 0;
 }
 
-@media (min-width: 768px) {
-  .Hero {
-    @apply flex-row;
-  }
-
-  .Hero .logo-with-icon-group {
-    @apply mr-[3rem];
-    @apply mb-[0] pl-[0];
-    @apply pr-[0];
-  }
-
-  .Hero .hero-content {
-    @apply justify-start items-start text-left max-w-[400px];
-  }
+.audience-card h3,
+.program-grid h3 {
+  @apply text-xl mb-0;
 }
 
-@media (min-width: 992px) {
-  .Hero .logo-with-icon-group {
-    @apply w-[30rem] mr-[4rem];
-  }
+.audience-card p {
+  @apply mb-0;
 }
 
-/* About */
+.audience-card-action {
+  @apply font-semibold mt-auto;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.audience-card:hover {
+  border-color: var(--color-navy);
+}
+
+.audience-card:focus-visible,
+.photo-gallery button:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 3px;
+}
+
+.program-grid article {
+  @apply py-4;
+  border-top: 2px solid var(--color-aqua);
+}
+
+.program-grid h3 {
+  @apply mb-3;
+}
+
 .About .about-content {
-  @apply flex justify-between items-center max-w-[1040px] m-[auto];
+  @apply grid gap-6 items-center;
 }
 
-.About .about-content:not(:last-child) {
-  @apply pb-[32px];
+.About .about-content + .about-content {
+  @apply mt-12;
 }
 
-.About .about-content.about-org {
-  flex-direction: column-reverse;
+.About .team-photo {
+  @apply w-full h-auto rounded-lg;
 }
 
-.About .about-content.about-team {
-  @apply flex-col;
+.photo-gallery {
+  min-width: 0;
 }
 
-.About .about-content .left-column.text,
-.About .about-content .right-column.text {
-  @apply pt-[32px];
+.photo-gallery .carousel-inner {
+  @apply grid overflow-hidden rounded-lg;
+  aspect-ratio: 4 / 3;
+  background: #e9f2f4;
 }
 
-.About .about-content .founding-story a,
-.About .about-content .current-team a {
-  @apply flex;
-  @apply flex-row items-center;
-  text-decoration: none;
-  color: var(--color-muted-blue);
+.photo-gallery .carousel-item {
+  grid-area: 1 / 1;
+  visibility: hidden;
+  min-width: 0;
+  min-height: 0;
 }
 
-.About .about-content .founding-story a:hover .MdKeyboardArrowRight,
-.About .about-content .current-team a:hover .MdKeyboardArrowRight {
-  fill: white;
-  background-color: var(--color-muted-blue);
-  border: 2px solid var(--color-muted-blue);
+.photo-gallery .carousel-item.active {
+  visibility: visible;
 }
 
-.About .about-content .founding-story a p,
-.About .about-content .current-team a p {
-  @apply mb-[0];
-  @apply mr-[0.5rem];
+.photo-gallery .carousel-item img {
+  @apply w-full h-full object-cover;
 }
 
-.About .about-content img {
-  @apply max-w-[100%];
-  @apply max-h-[100vh] h-[auto];
+.photo-gallery .gallery-controls,
+.photo-gallery .carousel-indicators {
+  @apply flex items-center justify-center;
 }
 
-.About .MdKeyboardArrowRight {
-  fill: var(--color-muted-blue);
-  border: 2px solid #e2e2e2;
-  @apply rounded-[50%] w-[1.5rem] min-w-[1.5rem] h-[1.5rem];
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
-  -moz-transition: all 0.3s ease-in-out; /** Firefox **/
-  -o-transition: all 0.3s ease-in-out; /** Opera **/
+.photo-gallery .gallery-controls {
+  @apply mt-3 flex-wrap;
 }
 
-@media (min-width: 768px) {
-  .About .about-content {
-    @apply justify-between;
+.photo-gallery .carousel-indicators {
+  flex-basis: 100%;
+  order: 2;
+}
+
+.photo-gallery .carousel-control-next {
+  margin-left: auto;
+}
+
+.photo-gallery button {
+  @apply inline-flex items-center justify-center p-0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: white;
+  color: var(--color-navy);
+  cursor: pointer;
+}
+
+.photo-gallery .carousel-control-prev,
+.photo-gallery .carousel-control-next {
+  border-color: #a4b7c1;
+  font-size: 1.5rem;
+}
+
+.photo-gallery .carousel-indicators button span {
+  @apply block w-3 h-3 rounded-full;
+  border: 2px solid var(--color-navy);
+}
+
+.photo-gallery .carousel-indicators button[aria-pressed="true"] span {
+  background: var(--color-navy);
+}
+
+.photo-gallery button:hover {
+  background: #e9f2f4;
+}
+
+.photo-gallery .gallery-status {
+  @apply text-sm text-center mt-2 mb-0;
+  min-height: 2.8em;
+}
+
+.Sponsors .large-logos,
+.Sponsors .small-logos {
+  @apply flex flex-wrap justify-center items-center gap-6 py-5;
+}
+
+.Sponsors .logo-container {
+  min-width: 0;
+}
+
+.Sponsors .logo-container a {
+  @apply flex items-center justify-center;
+  min-height: 44px;
+}
+
+.Sponsors .large-logos .logo {
+  @apply w-56 max-w-full h-auto;
+}
+
+.Sponsors .small-logos .logo {
+  @apply w-32 max-w-full h-auto;
+}
+
+.Sponsors .sponsor-contact {
+  @apply mt-6;
+}
+
+@media (min-width: 640px) {
+  .Hero h1 {
+    font-size: 2.5rem;
   }
 
-  .About .about-content:not(:last-child) {
-    @apply pb-[64px];
-  }
-
-  .About .about-content.about-org,
-  .About .about-content.about-team {
-    @apply flex-row;
-  }
-
-  .About .about-content .left-column,
-  .About .about-content .right-column {
-    @apply w-[46%];
-  }
-
-  .About .about-content .left-column.text,
-  .About .about-content .right-column.text {
-    @apply pt-[0px];
-  }
-}
-
-/* Get involved cards */
-.GetInvolved {
-  background-color: #f5f5f5;
-}
-
-.GetInvolved .cards-container {
-  @apply m-[0_auto] max-w-[1040px];
-}
-
-.GetInvolved .cards-container .cards-header {
-  @apply flex;
-  @apply flex-col items-center mb-[1rem];
-}
-
-.GetInvolved .cards-container .content-card-row {
-  overflow-x: scroll;
-  @apply whitespace-nowrap pb-[1.5rem];
-  transform: scaleX(-1) rotateZ(180deg);
-}
-
-.GetInvolved .cards-container .content-card {
-  @apply inline-block w-[18rem] mb-[0];
-  transform: scaleX(-1) rotateZ(180deg);
-}
-
-@media (max-width: 575.98px) {
-  .GetInvolved .cards-container .content-card:not(:last-child) {
-    @apply mr-[0.5rem];
-  }
-}
-
-.GetInvolved .cards-container .content-card.high-schools .content-card-image {
-  object-position: 25% 80%;
-}
-
-.GetInvolved .cards-container .content-card.companies .content-card-image {
-  object-position: 44% 50%;
-}
-
-.GetInvolved .cards-container .content-card.ucla-students .content-card-image {
-  object-position: 15% 50%;
-}
-
-.GetInvolved .cards-container .content-card .content-card-image {
-  @apply h-[512px] object-cover;
-}
-
-.GetInvolved .cards-container .content-card .content-card-overlay {
-  @apply flex;
-  @apply flex-col justify-end;
-  color: #ffffff;
-}
-
-.GetInvolved
-  .cards-container
-  .content-card
-  .content-card-overlay
-  .card-content {
-  @apply z-[2];
-}
-
-.GetInvolved
-  .cards-container
-  .content-card
-  .content-card-overlay
-  .card-content
-  .content-card-title {
-  @apply mb-[0.25rem];
-}
-
-.GetInvolved
-  .cards-container
-  .content-card
-  .content-card-overlay
-  .card-content
-  .content-card-text {
-  @apply mb-[0.4rem];
-}
-
-.GetInvolved
-  .cards-container
-  .content-card
-  .content-card-overlay
-  .card-content
-  .get-involved-cta {
-  @apply flex;
-  @apply flex-row items-center;
-}
-
-.GetInvolved
-  .cards-container
-  .content-card
-  .content-card-overlay
-  .card-content
-  .get-involved-cta
-  .cta-text {
-  opacity: 1;
-  @apply mb-[0];
-  @apply ml-[8px];
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
-  -moz-transition: all 0.3s ease-in-out; /** Firefox **/
-  -o-transition: all 0.3s ease-in-out; /** Opera **/
-}
-
-.GetInvolved
-  .cards-container
-  .content-card
-  .content-card-overlay
-  .card-content
-  .short-content {
-  @apply hidden;
-}
-
-.GetInvolved
-  .cards-container
-  .content-card
-  .content-card-overlay
-  .card-content
-  .full-content {
-  @apply block;
-}
-
-.GetInvolved
-  .cards-container
-  .content-card
-  .content-card-overlay
-  .gradient-back {
-  @apply absolute bottom-[0px] left-[0px] w-[100%] h-[224px] z-[1];
-  background: -moz-linear-gradient(
-    top,
-    rgba(137, 255, 241, 0) 0%,
-    rgba(0, 0, 0, 0.75) 100%
-  ); /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, rgba(137, 255, 241, 0)),
-    color-stop(100%, rgba(0, 0, 0, 0.75))
-  ); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    top,
-    rgba(137, 255, 241, 0) 0%,
-    rgba(0, 0, 0, 0.75) 100%
-  ); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    top,
-    rgba(137, 255, 241, 0) 0%,
-    rgba(0, 0, 0, 0.75) 100%
-  ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    top,
-    rgba(137, 255, 241, 0) 0%,
-    rgba(0, 0, 0, 0.75) 100%
-  ); /* IE10+ */
-  background: linear-gradient(
-    to bottom,
-    rgba(137, 255, 241, 0) 0%,
-    rgba(0, 0, 0, 0.75) 100%
-  ); /* W3C */
-}
-
-.GetInvolved .cards-container .content-card .MdKeyboardArrowRight {
-  fill: #ffffff;
-  background-color: var(--color-muted-blue);
-  border: 2px solid var(--color-muted-blue);
-  @apply rounded-[50%] w-[1.5rem] min-w-[1.5rem] h-[1.5rem];
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
-  -moz-transition: all 0.3s ease-in-out; /** Firefox **/
-  -o-transition: all 0.3s ease-in-out; /** Opera **/
-}
-
-@media (min-width: 576px) {
-  .GetInvolved .cards-container .content-card-row {
-    @apply block;
-  }
-
-  .GetInvolved .cards-container .content-card:first-child {
-    @apply ml-[0];
-  }
-
-  .GetInvolved .cards-container .content-card:last-child {
-    @apply mr-[0];
-  }
-
-  .GetInvolved
-    .cards-container
-    .content-card:hover
-    .content-card-overlay
-    .card-content
-    .get-involved-cta
-    .cta-text {
-    opacity: 1;
-  }
-
-  .GetInvolved
-    .cards-container
-    .content-card:hover
-    .content-card-overlay
-    .card-content
-    .get-involved-cta
-    .MdKeyboardArrowRight {
-    background-color: var(--color-muted-blue);
-    border: 2px solid var(--color-muted-blue);
-  }
-
-  .GetInvolved .cards-container .content-card.high-schools .content-card-image {
-    object-position: 20% 80%;
-  }
-
-  .GetInvolved
-    .cards-container
-    .content-card
-    .content-card-overlay
-    .card-content
-    .get-involved-cta
-    .cta-text {
-    opacity: 0;
-  }
-
-  .GetInvolved
-    .cards-container
-    .content-card
-    .content-card-overlay
-    .card-content
-    .get-involved-cta
-    .MdKeyboardArrowRight {
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-  }
-}
-
-@media (min-width: 768px) {
-  .GetInvolved .cards-container .content-card-row {
-    @apply flex;
-    overflow-x: visible;
-  }
-
-  .GetInvolved .cards-container .content-card {
-    @apply flex w-[100%];
-  }
-
-  .GetInvolved .cards-container .content-card.high-schools .content-card-image {
-    object-position: 30% 80%;
-  }
-
-  .GetInvolved .cards-container .content-card.companies .content-card-image {
-    object-position: 40% 50%;
-  }
-
-  .GetInvolved
-    .cards-container
-    .content-card.ucla-students
-    .content-card-image {
-    object-position: 12% 50%;
-  }
-
-  .GetInvolved
-    .cards-container
-    .content-card
-    .content-card-overlay
-    .card-content
-    .short-content {
-    @apply block;
-  }
-
-  .GetInvolved
-    .cards-container
-    .content-card
-    .content-card-overlay
-    .card-content
-    .full-content {
-    @apply hidden;
+  .Home .GetInvolved,
+  .Home .home-programs,
+  .Home .About,
+  .Home .Speakers,
+  .Home .Sponsors {
+    @apply py-12;
   }
 }
 
 @media (min-width: 992px) {
-  .GetInvolved
-    .cards-container
-    .content-card
-    .content-card-overlay
-    .card-content
-    .short-content {
-    @apply hidden;
+  .audience-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .GetInvolved
-    .cards-container
-    .content-card
-    .content-card-overlay
-    .card-content
-    .full-content {
-    @apply block;
+  .program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @apply gap-8;
   }
 }
 
-/* Speakers */
-.Speakers p {
-  @apply mb-[0.25rem];
-}
-
-.Speakers a {
-  text-decoration: none !important;
-}
-
-.Speakers .speakers-container {
-  @apply max-w-[1040px] m-[auto];
-}
-
-.Speakers .speakers-container .speakers-header {
-  @apply flex;
-  @apply flex-col items-center mb-[1rem];
-}
-
-.Speakers .speakers-container:not(:last-child) {
-  @apply pb-[64px];
-}
-
-@media (min-width: 768px) {
-  .Speakers .speakers-container .speakers-header {
-    @apply mb-[0];
-  }
-}
-
-/* Sponsors */
-.Sponsors {
-  background-color: #f5f5f5;
-}
-
-.Sponsors .sponsors-container {
-  @apply flex;
-  @apply flex-col justify-center items-center max-w-[1040px] m-[auto];
-}
-
-.Sponsors .sponsors-container .sponsors-header {
-  @apply flex;
-  @apply flex-col items-center;
-}
-
-.Sponsors .sponsors-container .logo-container {
-  @apply m-[1rem];
-}
-
-.Sponsors .sponsors-container .large-logos,
-.Sponsors .sponsors-container .small-logos {
-  @apply flex;
-  flex-flow: row wrap;
-  @apply justify-center items-center pb-[32px];
-}
-
-.Sponsors .sponsors-container .large-logos .logo {
-  @apply w-[14rem] h-[auto];
-}
-
-.Sponsors .sponsors-container .small-logos .logo {
-  @apply w-[8rem] h-[auto];
-}
-
-.Sponsors .sponsors-container .sponsor-contact {
-  @apply flex;
-  @apply flex-col justify-center items-center;
-}
-
-.Sponsors .sponsors-container .sponsor-contact h5 {
-  @apply mb-[1rem];
-}
-
-.Sponsors .sponsors-container .sponsor-contact .sponsor-cta a {
-  @apply flex;
-  @apply flex-row items-center;
-  text-decoration: none;
-  color: var(--color-muted-blue);
-}
-
-.Sponsors
-  .sponsors-container
-  .sponsor-contact
-  .sponsor-cta:hover
-  .MdKeyboardArrowRight {
-  fill: white;
-  background-color: var(--color-muted-blue);
-  border: 2px solid var(--color-muted-blue);
-}
-
-.Sponsors .sponsors-container .sponsor-contact .sponsor-cta p {
-  @apply mb-[0];
-  @apply mr-[0.5rem];
-}
-
-.Sponsors .MdKeyboardArrowRight {
-  fill: var(--color-muted-blue);
-  border: 2px solid #e2e2e2;
-  @apply rounded-[50%] w-[1.5rem] min-w-[1.5rem] h-[1.5rem];
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out; /** Chrome & Safari **/
-  -moz-transition: all 0.3s ease-in-out; /** Firefox **/
-  -o-transition: all 0.3s ease-in-out; /** Opera **/
-}
-
-@media (min-width: 768px) {
-  .Sponsors .sponsors-container .logo-container {
-    @apply m-[2rem];
+@media (min-width: 1100px) {
+  .Hero .hero-layout,
+  .About .about-content {
+    grid-template-columns: 1fr 1fr;
+    @apply gap-10;
   }
 
-  .Sponsors .sponsors-container .large-logos .logo {
-    @apply w-[16rem];
+  .Hero .hero-layout {
+    @apply items-center py-12;
   }
 
-  .Sponsors .sponsors-container .small-logos .logo {
-    @apply w-[12rem];
+  .Hero .hero-photo {
+    @apply h-full;
+    max-height: 460px;
   }
 }

@@ -1,6 +1,5 @@
-import { Component } from "react";
+import { Component, createRef } from "react";
 import { Link } from "react-router-dom";
-import { MdKeyboardArrowRight } from "react-icons/md";
 
 import GA from "../../../util/GoogleAnalytics";
 import OutboundLink from "../../../components/OutboundLink";
@@ -14,7 +13,7 @@ const FoundingStoryLink =
 
 // Match the two-column layout without sending desktop images to narrow screens.
 const AboutImageSizes =
-  "(min-width: 1100px) 480px, (min-width: 768px) 46vw, 100vw";
+  "(min-width: 1100px) 520px, (min-width: 640px) 640px, 100vw";
 
 interface AboutState {
   readonly activeIndex: number;
@@ -29,41 +28,45 @@ export default class About extends Component<
   private readonly loadedSlides = new Set<number>();
 
   private readonly failedSlides = new Set<number>();
+  private readonly imageRefs = CarouselSlides.map(() =>
+    createRef<HTMLImageElement>(),
+  );
+
+  componentDidMount() {
+    // Prerendered images may finish before hydration attaches load/error handlers.
+    // Reconcile the whole set first so an already-failed neighbour is skipped too.
+    this.imageRefs.forEach((ref, index) => {
+      const image = ref.current;
+      if (!image?.complete) return;
+      if (image.naturalWidth > 0) this.loadedSlides.add(index);
+      else this.failedSlides.add(index);
+    });
+    if (this.loadedSlides.size > 0) this.setState({ primed: true });
+    if (this.failedSlides.has(this.state.activeIndex))
+      this._onSelect(this.state.activeIndex);
+  }
 
   state: AboutState = { activeIndex: 0, primed: false, requestedIndex: null };
 
   render() {
     return (
-      <section className="Section About" id={HomePageSections.ABOUT.name}>
+      <section
+        className="About page-container"
+        id={HomePageSections.ABOUT.name}
+      >
         <div className="about-content about-org">
           <div className="left-column text">
-            <div className="section-title">
-              <h3 className="title">What is exploretech.la?</h3>
-              <div className="pill-divider" />
-            </div>
-            <div className="about-description">
-              <p>
-                exploretech.la is a UCLA Samueli School of Engineering student
-                organization that hosts an annual event that aims to inspire
-                high school students from underserved communities in the Greater
-                Los Angeles Area to explore computer science, engineering, and
-                technology.
-              </p>
-              <p>
-                In partnership with industry and academic organizations, our
-                event introduces students to the various applications of tech
-                through our panels, interactive workshops, and exhibition hall.
-              </p>
-              <p>
-                Every year, exploretech.la welcomes around 500 students to our
-                in-person event. The event will take place in early April, and
-                we would love for you to{" "}
-                <a className="in-text-link" href="#get-involved">
-                  attend
-                </a>
-                !
-              </p>
-            </div>
+            <h2 className="section-heading">
+              Technology students can try for themselves
+            </h2>
+            <p>
+              Our past events have included virtual reality demonstrations,
+              Scratch projects, and developer tools workshops. Students meet
+              engineers and UCLA volunteers, ask questions, and try new skills.
+            </p>
+            <Link className="text-link" to="/resources2026">
+              Browse past workshops and resources
+            </Link>
           </div>
           {this._renderCarousel()}
         </div>
@@ -74,43 +77,36 @@ export default class About extends Component<
             loading="lazy"
             decoding="async"
             className="team-photo left-column"
-            alt="Our Team"
+            alt="The exploretech.la team at the 2022 event"
           />
           <div className="right-column text">
-            <div className="section-title">
-              <h3 className="title">Who is exploretech.la?</h3>
-              <div className="pill-divider" />
-            </div>
+            <h2 className="section-heading">Run by UCLA students since 2017</h2>
             <p>
-              Founded in 2017 as student organization at UCLA, exploretech.la is
-              run by students for students. We apply our insights as recent high
-              school graduates to create engaging and impactful learning
-              experiences for our younger peers. We believe that every student
-              should have equal access to STEM education and opportunities.
+              exploretech.la is a UCLA Samueli School of Engineering student
+              organization. We work with industry and academic organizations to
+              give high school students access to STEM experiences.
             </p>
-            <div className="current-team">
+            <div className="section-links">
               <Link
-                to="/our_team"
+                className="text-link"
+                to="/our_team/leadership"
                 onClick={() =>
                   GA.trackEvent({
-                    category: "Outbound",
+                    category: "Home",
                     action: "Click",
-                    label: "current_team",
+                    label: "Meet the team",
                   })
                 }
               >
-                <p>Check out our current full team</p>
-                <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
+                Meet the team
               </Link>
-            </div>
-            <div className="founding-story">
               <OutboundLink
+                className="text-link"
                 href={FoundingStoryLink}
                 target="_blank"
                 eventLabel="founding_story"
               >
-                <p>Read about our founding story</p>
-                <MdKeyboardArrowRight className="MdKeyboardArrowRight" />
+                Read our founding story
               </OutboundLink>
             </div>
           </div>
@@ -179,6 +175,7 @@ export default class About extends Component<
           key: img.alt,
           content: (
             <img
+              ref={this.imageRefs[index]}
               {...img}
               alt={img.alt}
               sizes={AboutImageSizes}
@@ -201,7 +198,13 @@ export default class About extends Component<
         className="right-column"
         items={items}
         activeIndex={activeIndex}
-        interval={primed && requestedIndex === null ? 5000 : null}
+        status={
+          this.failedSlides.size === total
+            ? "Photos could not load. You can still browse our past workshop resources."
+            : requestedIndex !== null
+              ? `Loading photo ${requestedIndex + 1} of ${total}.`
+              : `Photo ${activeIndex + 1} of ${total}: ${CarouselSlides[activeIndex].alt}`
+        }
         onSelect={this._onSelect}
       />
     );

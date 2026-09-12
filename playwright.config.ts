@@ -4,10 +4,9 @@ import { defineConfig, devices } from "@playwright/test";
  * Browser smoke suite for the production build.
  *
  * The suite runs against `build/` served by `scripts/serve-built-site.cjs`,
- * which reproduces GitHub Pages' 404-to-root restoration. Running it against
- * the dev server would prove less: dev serves index.html for every path, so
- * deep links and trailing slashes cannot fail there the way they can in
- * production.
+ * which reproduces generated route directories and GitHub Pages' 404-to-root
+ * restoration. A dev-server SPA fallback cannot prove HTTP status, raw HTML,
+ * metadata, trailing-slash redirects, or hydration.
  *
  *   npm run build && npm run test:browser
  *
@@ -15,8 +14,7 @@ import { defineConfig, devices } from "@playwright/test";
  * matrix, which stays a session tool.
  */
 const port = Number(process.env.SMOKE_PORT ?? 4390);
-// Normally the freshly built site; pointed at a saved baseline build when
-// comparing current behaviour against the pre-refactor deployment.
+// Use a separately generated build when investigating a build-specific failure.
 const root = process.env.SMOKE_ROOT ?? "build";
 const host = "127.0.0.1";
 const baseURL = `http://${host}:${port}`;
@@ -48,11 +46,25 @@ export default defineConfig({
         viewport: { width: 1440, height: 900 },
       },
     },
+    {
+      name: "firefox",
+      use: {
+        ...devices["Desktop Firefox"],
+        viewport: { width: 1440, height: 900 },
+      },
+    },
+    {
+      name: "webkit",
+      use: {
+        ...devices["Desktop Safari"],
+        viewport: { width: 1440, height: 900 },
+      },
+    },
   ],
   webServer: {
     command: `node scripts/serve-built-site.cjs --root ${root} --port ${port} --host ${host}`,
     url: baseURL,
-    reuseExistingServer: !isCI,
+    reuseExistingServer: false,
     timeout: 30_000,
     stdout: "ignore",
     stderr: "pipe",

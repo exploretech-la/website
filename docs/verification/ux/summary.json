@@ -1,0 +1,109 @@
+{
+  "baseCommit": "b57ae7d432f4eced178a91a46f0224852f16b2f6",
+  "branch": "improve-participation-and-accessibility",
+  "checks": {
+    "unitTests": 15,
+    "browserTests": {
+      "chromium": 45,
+      "firefox": 45,
+      "webkit": 45
+    },
+    "accessibility": {
+      "engine": "axe-core 4.13.0",
+      "scenes": 34,
+      "violations": 0,
+      "tags": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21a",
+        "wcag21aa",
+        "wcag22aa"
+      ]
+    },
+    "staticRoutes": 15,
+    "preservedPublicBinaryUrls": 102,
+    "people": 35,
+    "teamSections": 7,
+    "imageSources": 59,
+    "imageVariants": 86
+  },
+  "fixes": [
+    "Visible phone mission and honest published-status notices",
+    "Working school, volunteer and partner inquiry paths; newsletter clearly separate",
+    "Program hub and year-consistent read-only archives",
+    "Correct historical Ignite duration, dates and workshop descriptions",
+    "No inert feedback controls or obsolete registration/Zoom instructions",
+    "Immediate event shortcuts, early maps/help, readable timetables and verified room/session data",
+    "Searchable compact workshop disclosures and labeled document sizes",
+    "Visible audience/people grids, compact department selector and tablet-safe header",
+    "Keyboard FAQ disclosures, named social links and video facades",
+    "Manual named gallery controls with cached/failed/stale image handling",
+    "One main/footer, skip link, deliberate route/hash focus and persistent selector focus",
+    "Accessible navy actions, visible focus,44px controls and reduced-motion behavior",
+    "Page-specific metadata/static HTML, sitemap/robots and no-JS canonical navigation",
+    "Accurate inquiry/action labels and canonical pageview normalization"
+  ],
+  "limitations": [
+    "No future program dates, deadlines, enrollment state, or testimonials were invented; existing email inquiries are the completed fallback.",
+    "Email delivery and third-party form submissions/player playback were not performed.",
+    "Automated accessibility checks supplement, not replace, assistive-technology and physical-device testing.",
+    "macOS WebKit uses native Option+Tab link navigation; no OS or Safari settings were changed.",
+    "This is an intentional UX change, not a pixel-parity refactor."
+  ],
+  "phoneComparison": {
+    "width": 390,
+    "missionHeadline": {
+      "before": "hidden",
+      "afterY": 190.5
+    },
+    "audienceChoices": {
+      "beforeY": 2047.53125,
+      "afterY": 915.25
+    },
+    "maps2026": {
+      "beforeY": 9091.34375,
+      "afterY": 1065.96875
+    },
+    "firstTeamPortrait": {
+      "beforeY": 620.421875,
+      "afterY": 403.171875
+    }
+  },
+  "layout": [
+    {"width":320,"route":"/","file":"320-_.png","title":"Technology experiences for LA high school students | exploretech.la","pageHeight":7443,"overflow":false,"heading":{"y":190.5,"width":272,"height":200,"text":"Helping Los Angeles high school students explore technology"},"maps":null,"firstPerson":{"y":4496.765625,"width":128,"height":128,"text":""},"audiences":{"y":1021.640625,"width":320,"height":900.6875,"text":"Get involved\nFor schools and students\n\nFind a program for your students and ask about the next oppor"},"primaryAction":{"y":661.640625,"width":227.140625,"height":44,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":320,"route":"/events","file":"320-_events.png","title":"Programs and event information | exploretech.la","pageHeight":2514,"overflow":false,"heading":{"y":101,"width":272,"height":36.796875,"text":"Events"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":579.21875,"width":239.140625,"height":46.390625,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":320,"route":"/get-involved","file":"320-_get-involved.png","title":"Schools, volunteers and partners | exploretech.la","pageHeight":4749,"overflow":false,"heading":{"y":101,"width":272,"height":36.796875,"text":"Get involved"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":742.203125,"width":230,"height":68.78125,"text":"Ask about school participation"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":320,"route":"/our_team/leadership","file":"320-_our_team_leadership.png","title":"Leadership team | exploretech.la","pageHeight":2916,"overflow":false,"heading":{"y":101,"width":272,"height":36.796875,"text":"Meet our team"},"maps":null,"firstPerson":{"y":403.171875,"width":128,"height":128,"text":""},"audiences":null,"primaryAction":null,"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":320,"route":"/resources2026","file":"320-_resources2026.png","title":"2026 event resources archive | exploretech.la","pageHeight":5316,"overflow":false,"heading":{"y":125,"width":272,"height":73.59375,"text":"exploretech.la 2026 archive"},"maps":{"y":1194.765625,"width":272,"height":413.953125,"text":"Maps\n\nVenue and bus maps retained from this event.\n\nBus Routes\nJPG, 59.9 kB\nopens in a new tab\nAcker"},"firstPerson":null,"audiences":null,"primaryAction":{"y":1747.5,"width":239.140625,"height":46.390625,"text":"Ask about the next event"},"workshops":15,"expandedWorkshops":0,"errors":[]},
+    {"width":320,"route":"/ignite","file":"320-_ignite.png","title":"Ignite workshops for high school students | exploretech.la","pageHeight":7119,"overflow":false,"heading":{"y":165,"width":272,"height":36.796875,"text":"Ignite"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":652.46875,"width":228,"height":68.78125,"text":"Ask about the next Ignite series"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":320,"route":"/register","file":"320-_register.png","title":"2021 virtual event archive | exploretech.la","pageHeight":4092,"overflow":false,"heading":{"y":125,"width":272,"height":110.390625,"text":"exploretech.la 2021 virtual event archive"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":509.859375,"width":272,"height":46.390625,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":390,"route":"/","file":"390-_.png","title":"Technology experiences for LA high school students | exploretech.la","pageHeight":6810,"overflow":false,"heading":{"y":190.5,"width":342,"height":120,"text":"Helping Los Angeles high school students explore technology"},"maps":null,"firstPerson":{"y":4097.25,"width":160,"height":160,"text":""},"audiences":{"y":915.25,"width":390,"height":741.515625,"text":"Get involved\nFor schools and students\n\nFind a program for your students and ask about the next oppor"},"primaryAction":{"y":555.25,"width":227.140625,"height":44,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":390,"route":"/events","file":"390-_events.png","title":"Programs and event information | exploretech.la","pageHeight":2391,"overflow":false,"heading":{"y":101,"width":342,"height":36.796875,"text":"Events"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":579.21875,"width":239.140625,"height":46.390625,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":390,"route":"/get-involved","file":"390-_get-involved.png","title":"Schools, volunteers and partners | exploretech.la","pageHeight":4118,"overflow":false,"heading":{"y":101,"width":342,"height":36.796875,"text":"Get involved"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":686.125,"width":286.765625,"height":46.390625,"text":"Ask about school participation"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":390,"route":"/our_team/leadership","file":"390-_our_team_leadership.png","title":"Leadership team | exploretech.la","pageHeight":3076,"overflow":false,"heading":{"y":101,"width":342,"height":36.796875,"text":"Meet our team"},"maps":null,"firstPerson":{"y":403.171875,"width":160,"height":160,"text":""},"audiences":null,"primaryAction":null,"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":390,"route":"/resources2026","file":"390-_resources2026.png","title":"2026 event resources archive | exploretech.la","pageHeight":5009,"overflow":false,"heading":{"y":125,"width":342,"height":73.59375,"text":"exploretech.la 2026 archive"},"maps":{"y":1065.96875,"width":342,"height":413.953125,"text":"Maps\n\nVenue and bus maps retained from this event.\n\nBus Routes\nJPG, 59.9 kB\nopens in a new tab\nAcker"},"firstPerson":null,"audiences":null,"primaryAction":{"y":1618.703125,"width":239.140625,"height":46.390625,"text":"Ask about the next event"},"workshops":15,"expandedWorkshops":0,"errors":[]},
+    {"width":390,"route":"/ignite","file":"390-_ignite.png","title":"Ignite workshops for high school students | exploretech.la","pageHeight":6943,"overflow":false,"heading":{"y":165,"width":342,"height":36.796875,"text":"Ignite"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":570,"width":290.71875,"height":46.390625,"text":"Ask about the next Ignite series"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":390,"route":"/register","file":"390-_register.png","title":"2021 virtual event archive | exploretech.la","pageHeight":3674,"overflow":false,"heading":{"y":125,"width":342,"height":73.59375,"text":"exploretech.la 2021 virtual event archive"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":473.0625,"width":342,"height":46.390625,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":768,"route":"/","file":"768-_.png","title":"Technology experiences for LA high school students | exploretech.la","pageHeight":5901,"overflow":false,"heading":{"y":190.5,"width":620.15625,"height":150,"text":"Helping Los Angeles high school students explore technology"},"maps":null,"firstPerson":{"y":4004.28125,"width":160,"height":160,"text":""},"audiences":{"y":926.0625,"width":768,"height":667.953125,"text":"Get involved\nFor schools and students\n\nFind a program for your students and ask about the next oppor"},"primaryAction":{"y":533.265625,"width":227.140625,"height":44,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":768,"route":"/events","file":"768-_events.png","title":"Programs and event information | exploretech.la","pageHeight":1558,"overflow":false,"heading":{"y":107.390625,"width":720,"height":36.796875,"text":"Events"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":532.3125,"width":239.140625,"height":46.390625,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":768,"route":"/get-involved","file":"768-_get-involved.png","title":"Schools, volunteers and partners | exploretech.la","pageHeight":2727,"overflow":false,"heading":{"y":107.390625,"width":720,"height":36.796875,"text":"Get involved"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":458.765625,"width":286.765625,"height":46.390625,"text":"Ask about school participation"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":768,"route":"/our_team/leadership","file":"768-_our_team_leadership.png","title":"Leadership team | exploretech.la","pageHeight":2199,"overflow":false,"heading":{"y":107.390625,"width":720,"height":36.796875,"text":"Meet our team"},"maps":null,"firstPerson":{"y":406.265625,"width":160,"height":160,"text":""},"audiences":null,"primaryAction":null,"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":768,"route":"/resources2026","file":"768-_resources2026.png","title":"2026 event resources archive | exploretech.la","pageHeight":3071,"overflow":false,"heading":{"y":131.390625,"width":720,"height":36.796875,"text":"exploretech.la 2026 archive"},"maps":{"y":442.5625,"width":348,"height":413.953125,"text":"Maps\n\nVenue and bus maps retained from this event.\n\nBus Routes\nJPG, 59.9 kB\nopens in a new tab\nAcker"},"firstPerson":null,"audiences":null,"primaryAction":{"y":968.90625,"width":239.140625,"height":46.390625,"text":"Ask about the next event"},"workshops":15,"expandedWorkshops":0,"errors":[]},
+    {"width":768,"route":"/ignite","file":"768-_ignite.png","title":"Ignite workshops for high school students | exploretech.la","pageHeight":4863,"overflow":false,"heading":{"y":171.390625,"width":720,"height":36.796875,"text":"Ignite"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":473.921875,"width":290.71875,"height":46.390625,"text":"Ask about the next Ignite series"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":768,"route":"/register","file":"768-_register.png","title":"2021 virtual event archive | exploretech.la","pageHeight":2495,"overflow":false,"heading":{"y":131.390625,"width":720,"height":36.796875,"text":"exploretech.la 2021 virtual event archive"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":327.46875,"width":720,"height":46.390625,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1024,"route":"/","file":"1024-_.png","title":"Technology experiences for LA high school students | exploretech.la","pageHeight":5592,"overflow":false,"heading":{"y":190.5,"width":620.15625,"height":150,"text":"Helping Los Angeles high school students explore technology"},"maps":null,"firstPerson":{"y":3978.640625,"width":160,"height":160,"text":""},"audiences":{"y":957.265625,"width":1024,"height":375.546875,"text":"Get involved\nFor schools and students\n\nFind a program for your students and ask about the next oppor"},"primaryAction":{"y":533.265625,"width":227.140625,"height":44,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1024,"route":"/events","file":"1024-_events.png","title":"Programs and event information | exploretech.la","pageHeight":1545,"overflow":false,"heading":{"y":120.1875,"width":976,"height":47.09375,"text":"Events"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":518.203125,"width":239.140625,"height":46.390625,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1024,"route":"/get-involved","file":"1024-_get-involved.png","title":"Schools, volunteers and partners | exploretech.la","pageHeight":2642,"overflow":false,"heading":{"y":120.1875,"width":976,"height":47.09375,"text":"Get involved"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":505.921875,"width":286.765625,"height":46.390625,"text":"Ask about school participation"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1024,"route":"/our_team/leadership","file":"1024-_our_team_leadership.png","title":"Leadership team | exploretech.la","pageHeight":1935,"overflow":false,"heading":{"y":120.1875,"width":976,"height":47.09375,"text":"Meet our team"},"maps":null,"firstPerson":{"y":392.140625,"width":160,"height":160,"text":""},"audiences":null,"primaryAction":null,"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1024,"route":"/resources2026","file":"1024-_resources2026.png","title":"2026 event resources archive | exploretech.la","pageHeight":3110,"overflow":false,"heading":{"y":144.1875,"width":976,"height":47.09375,"text":"exploretech.la 2026 archive"},"maps":{"y":478.453125,"width":476,"height":410.984375,"text":"Maps\n\nVenue and bus maps retained from this event.\n\nBus Routes\nJPG, 59.9 kB\nopens in a new tab\nAcker"},"firstPerson":null,"audiences":null,"primaryAction":{"y":1003.8125,"width":239.140625,"height":46.390625,"text":"Ask about the next event"},"workshops":15,"expandedWorkshops":0,"errors":[]},
+    {"width":1024,"route":"/ignite","file":"1024-_ignite.png","title":"Ignite workshops for high school students | exploretech.la","pageHeight":3950,"overflow":false,"heading":{"y":184.1875,"width":976,"height":47.09375,"text":"Ignite"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":509.8125,"width":290.71875,"height":46.390625,"text":"Ask about the next Ignite series"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1024,"route":"/register","file":"1024-_register.png","title":"2021 virtual event archive | exploretech.la","pageHeight":2512,"overflow":false,"heading":{"y":144.1875,"width":976,"height":47.09375,"text":"exploretech.la 2021 virtual event archive"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":350.5625,"width":976,"height":46.390625,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1440,"route":"/","file":"1440-_.png","title":"Technology experiences for LA high school students | exploretech.la","pageHeight":3971,"overflow":false,"heading":{"y":206.5,"width":540,"height":150,"text":"Helping Los Angeles high school students explore technology"},"maps":null,"firstPerson":{"y":2643.28125,"width":160,"height":160,"text":""},"audiences":{"y":665.265625,"width":1168,"height":357.171875,"text":"Get involved\nFor schools and students\n\nFind a program for your students and ask about the next oppor"},"primaryAction":{"y":549.265625,"width":227.140625,"height":44,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1440,"route":"/events","file":"1440-_events.png","title":"Programs and event information | exploretech.la","pageHeight":1376,"overflow":false,"heading":{"y":133,"width":1120,"height":55.1875,"text":"Events"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":559.9375,"width":239.140625,"height":46.390625,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1440,"route":"/get-involved","file":"1440-_get-involved.png","title":"Schools, volunteers and partners | exploretech.la","pageHeight":2514,"overflow":false,"heading":{"y":133,"width":1120,"height":55.1875,"text":"Get involved"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":547.65625,"width":286.765625,"height":46.390625,"text":"Ask about school participation"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1440,"route":"/our_team/leadership","file":"1440-_our_team_leadership.png","title":"Leadership team | exploretech.la","pageHeight":1761,"overflow":false,"heading":{"y":133,"width":1120,"height":55.1875,"text":"Meet our team"},"maps":null,"firstPerson":{"y":433.875,"width":160,"height":160,"text":""},"audiences":null,"primaryAction":null,"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1440,"route":"/resources2026","file":"1440-_resources2026.png","title":"2026 event resources archive | exploretech.la","pageHeight":2908,"overflow":false,"heading":{"y":157,"width":1120,"height":55.1875,"text":"exploretech.la 2026 archive"},"maps":{"y":512.171875,"width":548,"height":419,"text":"Maps\n\nVenue and bus maps retained from this event.\n\nBus Routes\nJPG, 59.9 kB\nopens in a new tab\nAcker"},"firstPerson":null,"audiences":null,"primaryAction":{"y":1053.5625,"width":239.140625,"height":46.390625,"text":"Ask about the next event"},"workshops":15,"expandedWorkshops":0,"errors":[]},
+    {"width":1440,"route":"/ignite","file":"1440-_ignite.png","title":"Ignite workshops for high school students | exploretech.la","pageHeight":3856,"overflow":false,"heading":{"y":197,"width":1120,"height":55.1875,"text":"Ignite"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":543.53125,"width":290.71875,"height":46.390625,"text":"Ask about the next Ignite series"},"workshops":0,"expandedWorkshops":0,"errors":[]},
+    {"width":1440,"route":"/register","file":"1440-_register.png","title":"2021 virtual event archive | exploretech.la","pageHeight":2384,"overflow":false,"heading":{"y":157,"width":1120,"height":55.1875,"text":"exploretech.la 2021 virtual event archive"},"maps":null,"firstPerson":null,"audiences":null,"primaryAction":{"y":371.46875,"width":1120,"height":46.390625,"text":"Ask about the next event"},"workshops":0,"expandedWorkshops":0,"errors":[]}
+  ]
+}

@@ -23,7 +23,7 @@ export const EVENT_ROUTES: readonly {
   readonly year: EventYear;
   readonly navLabel: string;
 }[] = [
-  { route: "/resources", year: "2022", navLabel: "exploretech 2021" },
-  { route: "/resources2023", year: "2023", navLabel: "exploretech 2023" },
-  { route: "/resources2026", year: "2026", navLabel: "exploretech 2026" },
+  { route: "/resources", year: "2022", navLabel: "2022 event archive" },
+  { route: "/resources2023", year: "2023", navLabel: "2023 event archive" },
+  { route: "/resources2026", year: "2026", navLabel: "2026 event archive" },
 ];

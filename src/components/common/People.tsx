@@ -8,23 +8,16 @@ interface PeopleProps {
   readonly eagerCount?: number;
 }
 
-/**
- * Horizontal-scrolling card list shared by team sections, speakers and
- * panelists. Cards with a profile link become tracked outbound anchors.
- */
 export default function People({
   people,
   className,
   eagerCount = 2,
 }: PeopleProps) {
-  if (people.length === 0) {
-    return null;
-  }
+  if (people.length === 0) return null;
 
   return (
-    <div className={className ? `People ${className}` : "People"}>
-      {people.map((person, index) => {
-        const { name, title, descriptions, image, link } = person;
+    <ul className={className ? `People ${className}` : "People"}>
+      {people.map(({ name, title, descriptions, image, link }, index) => {
         const body = (
           <>
             {image ? (
@@ -38,39 +31,40 @@ export default function People({
                 decoding="async"
               />
             ) : (
-              <div className="person-image" aria-hidden="true" />
+              <div className="person-image person-initials" aria-hidden="true">
+                {name
+                  .split(/\s+/)
+                  .map((part) => part[0])
+                  .slice(0, 2)
+                  .join("")}
+              </div>
             )}
-            <h5 className="person-name">{name}</h5>
+            <h3 className="person-name">{name}</h3>
             {title ? <p className="person-title">{title}</p> : null}
-            {descriptions
-              ? descriptions.map((description, descriptionIndex) => (
-                  <p className="person-description" key={descriptionIndex}>
-                    {description}
-                  </p>
-                ))
-              : null}
+            {descriptions?.map((description, descriptionIndex) => (
+              <p className="person-description" key={descriptionIndex}>
+                {description}
+              </p>
+            ))}
           </>
         );
-
-        if (link) {
-          return (
-            <OutboundLink
-              href={link}
-              target="_blank"
-              eventLabel={name}
-              key={name}
-            >
-              <div className="person">{body}</div>
-            </OutboundLink>
-          );
-        }
-
         return (
-          <div className="person" key={name}>
-            {body}
-          </div>
+          <li className="person" key={name}>
+            {link ? (
+              <OutboundLink
+                className="person-profile"
+                href={link}
+                target="_blank"
+                eventLabel={name}
+              >
+                {body}
+              </OutboundLink>
+            ) : (
+              body
+            )}
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 }

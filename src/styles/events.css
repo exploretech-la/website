@@ -1,210 +1,158 @@
-/*  Not found  */
 .PageNotFound {
-  @apply flex;
-  @apply flex-col items-center text-center;
+  @apply flex flex-col items-center text-center;
 }
 
-.PageNotFound h3 {
-  @apply mb-[2rem];
+.Events,
+.Resources,
+.Register {
+  @apply pb-12;
 }
 
-/*  Registration  */
-.RegistrationAlert {
-  background-color: var(--color-muted-blue);
-  @apply flex;
-  @apply flex-col items-center text-center m-[auto] pt-[32px];
-  @apply pb-[32px];
+.event-section {
+  @apply py-6;
 }
 
-.RegistrationAlert h3,
-.RegistrationAlert h5 {
-  color: white;
-  @apply pr-[10px];
-  @apply pl-[10px];
+.event-section h2,
+.program-grid h2 {
+  @apply mb-4;
 }
 
-.RegistrationAlert .buttons {
-  @apply pt-[10px] flex;
-  @apply flex-col items-center;
+.event-section h3 {
+  @apply mb-3;
 }
 
-.RegistrationAlert .buttons .button {
-  @apply pt-[10px];
-  @apply pb-[10px];
+.event-section p,
+.program-grid p {
+  @apply mb-4;
 }
 
-.RegistrationAlert .notes {
-  @apply pt-[10px];
+.event-logistics,
+.program-grid {
+  @apply grid gap-6;
 }
 
-.Waivers {
-  background-color: #f5f5f5;
-  @apply flex;
-  @apply flex-col items-center m-[auto] pb-[32px];
+.program-grid > section {
+  @apply min-w-0 border-t-2 border-[#1a496b] py-6;
 }
 
-.Waivers .waivers-title,
-.Waivers .waivers-text {
-  @apply flex;
-  @apply flex-col items-center;
+.archive-links,
+.document-list {
+  @apply m-0 mb-4 grid list-none gap-3 p-0;
 }
 
-.Waivers .buttons {
-  @apply pt-[20px] flex;
-  @apply flex-col items-center pb-[20px];
+.document-list a,
+.page-header > .action {
+  @apply flex flex-wrap justify-start gap-x-2 gap-y-1 text-left;
+  overflow-wrap: anywhere;
 }
 
-.Waivers .buttons .button {
-  @apply pt-[10px];
-  @apply pb-[10px];
+.document-meta {
+  @apply text-sm font-normal;
 }
 
-.ImportantLinks {
-  background-color: #f5f5f5;
-  @apply flex;
-  @apply flex-col items-center m-[auto] pb-[32px];
+.event-timetable {
+  @apply w-full border-collapse text-left text-sm;
 }
 
-.ImportantLinks .links-title {
-  @apply flex;
-  @apply flex-col items-center;
+.event-timetable th,
+.event-timetable td {
+  @apply border-b border-[#c8d4db] px-2 py-3 align-top;
 }
 
-.ImportantLinks .links-text {
-  @apply flex;
-  @apply flex-col items-center pt-[30px];
+.event-timetable th {
+  @apply font-semibold;
 }
 
-.ImportantLinks .buttons {
-  @apply pt-[20px] flex;
-  @apply flex-col items-center pb-[20px];
+.event-timetable thead {
+  @apply bg-[#edf5f6];
 }
 
-.ImportantLinks .buttons .button {
-  @apply pt-[10px];
-  @apply pb-[10px];
+.event-timetable tbody th {
+  @apply w-[45%];
 }
 
-.FAQ {
-  background-color: white;
+.workshop-filter {
+  @apply flex flex-wrap items-center gap-3;
 }
 
-.FAQ .faq-content {
-  @apply flex;
-  @apply flex-col justify-between max-w-[1200px] m-[auto];
+.workshop-filter label {
+  @apply w-full font-semibold;
 }
 
-.FAQ .faq-content:not(:last-child) {
-  @apply pb-[32px];
+.workshop-filter input {
+  @apply min-h-11 min-w-0 flex-1 rounded border border-[#607582] bg-white px-3 py-2 text-base;
 }
 
-.FAQ .faq-content .faq-centered-title {
-  @apply flex-col items-center;
+.Workshops [role="status"] {
+  @apply mt-3;
 }
 
-.FAQ .faq-content .left-column.text,
-.FAQ .faq-content .right-column.text {
-  @apply pt-[32px];
+.workshop-section + .workshop-section {
+  @apply mt-6;
 }
 
-.FAQ .faq-student {
-  @apply pb-[32px];
+.workshop-grid {
+  @apply grid items-start gap-3;
 }
 
-.Schedule {
-  background-color: white;
+.workshop-card {
+  @apply min-w-0 rounded border border-[#c8d4db] bg-white;
 }
 
-.Schedule .schedule-content {
-  @apply flex;
-  @apply flex-col justify-between max-w-[1200px] m-[auto];
+.workshop-card summary {
+  @apply min-h-11 cursor-pointer rounded p-4 text-left;
 }
 
-.Schedule .schedule-content:not(:last-child) {
-  @apply pb-[32px];
+.workshop-card summary::marker {
+  color: #1a496b;
 }
 
-.Schedule .schedule-content.schedule-column-container {
-  @apply flex-col;
+.workshop-title {
+  @apply font-semibold;
 }
 
-.Schedule .schedule-content .schedule-title {
-  @apply items-center text-center;
+.workshop-slot {
+  @apply mt-2 block text-sm;
 }
 
-.Schedule .schedule-content .left-column.text,
-.Schedule .schedule-content .right-column.text {
-  @apply pt-[32px];
+.workshop-body {
+  @apply border-t border-[#c8d4db] p-4 text-left;
 }
 
-.Register .registration-title {
-  @apply flex;
-  @apply flex-col items-center max-w-[1200px] m-[auto] pt-[32px];
-  @apply pb-[32px];
+.workshop-body .document-list {
+  @apply mb-0;
 }
 
-.Register .banner {
-  @apply w-[100vw] h-[auto];
+.workshop-body p {
+  @apply leading-relaxed;
 }
 
-/*  Resources  */
-.Workshops .workshops-content {
-  @apply flex;
-  @apply flex-col justify-between items-center max-w-[1200px] m-[auto];
+.faq-item {
+  @apply border-b border-[#c8d4db];
 }
 
-.Workshops .workshops-content .workshops-cards {
-  @apply flex;
-  @apply flex-col w-[75vw] pb-[50px];
+.faq-item h3 {
+  @apply m-0 text-base;
 }
 
-.Workshops .workshops-content .workshops-title {
-  @apply flex pb-[32px];
-  @apply flex-col items-center;
+.faq-item button {
+  @apply flex min-h-11 w-full items-center justify-between gap-4 bg-transparent py-4 text-left font-semibold;
+  border: 0;
+  color: var(--color-navy);
 }
 
-.Workshops .workshops-content .card-row {
-  @apply pt-[15px];
-  @apply pb-[15px];
+.faq-answer {
+  @apply pb-2;
 }
 
-.Maps {
-  background-color: #f5f5f5;
+.wristband-image {
+  @apply mb-3 block h-auto max-w-full;
 }
 
-.Maps .maps-content {
-  @apply flex;
-  @apply flex-col justify-between items-center max-w-[1200px] m-[auto];
-}
-
-.Maps .maps-content .maps-title {
-  @apply flex pb-[32px];
-  @apply flex-col items-center;
-}
-
-.Maps .maps-content .buttons {
-  @apply pt-[20px] grid gap-y-[10px];
-  grid-template-columns: auto;
-  @apply pb-[20px] w-[60vw];
-}
-
-.Resources .resources-title {
-  @apply flex;
-  @apply flex-col items-center max-w-[1200px] m-[auto] pt-[32px];
-  @apply pb-[32px];
-}
-
-.Resources .resources-text {
-  @apply flex;
-  @apply flex-col items-center text-center pt-[30px];
-}
-
-.Resources .banner {
-  @apply w-[100vw] h-[auto];
-}
-
-.Resources .full-length-button {
-  @apply pt-[20px] grid gap-y-[10px];
-  grid-template-columns: auto;
-  @apply pb-[20px] w-[100%];
+@media (min-width: 768px) {
+  .event-logistics,
+  .program-grid,
+  .workshop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

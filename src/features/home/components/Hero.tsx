@@ -1,67 +1,59 @@
 import { Link } from "react-router-dom";
 
-import GA from "../../../util/GoogleAnalytics";
-import HomePageSections from "../../../content/sections";
+import OutboundLink from "../../../components/OutboundLink";
+import images from "../../../constants/optimizedImages";
+import { PROGRAMS } from "../../../content/participation";
 import LogoWithIconGroup from "../../../static/svg/logo-navy-with-icon-group-white.svg";
-import ActionLink from "../../../components/ActionLink";
-
-const trackLearnMore = () =>
-  GA.trackEvent({ category: "Hero", action: "Click", label: "Learn More" });
+import GA from "../../../util/GoogleAnalytics";
 
 export default function Hero() {
   return (
-    <section className="Section Hero">
-      <img
-        src={LogoWithIconGroup}
-        className="logo-with-icon-group"
-        alt="logo-with-icon-group"
-      />
-      <div className="hero-content">
-        <h2 className="h1-title">Schedule is out now!</h2>
-        <h5 className="h1-title">
-          Check out our 2026 schedule page for the latest event details and
-          updates.
-        </h5>
-        <p className="h1-title">
-          <b>Any questions or partnerships?</b>
-        </p>
-        <p>
-          Contact our executive directors Spoorthy Nalumachu and Clara Zhang:{" "}
-          <a
-            href="mailto:exploretechla@cs.ucla.edu"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            exploretechla@cs.ucla.edu
-          </a>{" "}
-        </p>
-
-        <div className="hero-cta">
-          <Link
-            className="action action-info"
-            to="/resources2026"
-            onClick={() =>
-              GA.trackEvent({
-                category: "Hero",
-                action: "Click",
-                label: "Register Today",
-              })
-            }
-          >
-            Event Info
-          </Link>
-          <ActionLink
-            className="action action-info"
-            href={`#${HomePageSections.ABOUT.name}`}
-            onClick={trackLearnMore}
-            onKeyDown={(event) => {
-              if (event.key !== " ") return;
-              trackLearnMore();
-            }}
-          >
-            Learn More
-          </ActionLink>
+    <section className="Hero">
+      <div className="hero-layout page-container">
+        <div className="hero-content">
+          <img
+            src={LogoWithIconGroup}
+            className="logo-with-icon-group"
+            alt="exploretech.la"
+          />
+          <h1>Helping Los Angeles high school students explore technology</h1>
+          <p>
+            We are UCLA students bringing hands-on computer science and
+            engineering experiences to high school students from underserved
+            communities.
+          </p>
+          <p className="status-notice">{PROGRAMS.annual.status}</p>
+          <div className="hero-cta section-links">
+            <OutboundLink
+              className="action action-primary"
+              href={PROGRAMS.annual.inquiryHref}
+              eventLabel={PROGRAMS.annual.actionLabel}
+            >
+              {PROGRAMS.annual.actionLabel}
+            </OutboundLink>
+            <Link
+              className="text-link"
+              to="/events"
+              onClick={() =>
+                GA.trackEvent({
+                  category: "Hero",
+                  action: "Click",
+                  label: "Explore programs",
+                })
+              }
+            >
+              Explore our programs
+            </Link>
+          </div>
         </div>
+        <img
+          {...images["images/workshop-audience.jpg"]}
+          className="hero-photo"
+          alt="High school students taking part in an exploretech.la workshop"
+          sizes="(min-width: 1200px) 480px, (min-width: 1100px) 42vw, (min-width: 640px) 640px, 100vw"
+          fetchPriority="high"
+          decoding="async"
+        />
       </div>
     </section>
   );

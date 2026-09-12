@@ -5,11 +5,13 @@ import { people } from "../../../content/people";
 
 export default function Speakers() {
   return (
-    <section className="Section Speakers" id={HomePageSections.SPEAKERS.name}>
+    <section
+      className="Speakers page-container"
+      id={HomePageSections.SPEAKERS.name}
+    >
       <div className="speakers-container">
         <div className="speakers-header">
-          <h3>Past Speakers</h3>
-          <div className="pill-divider" />
+          <h2 className="section-heading">Past speakers</h2>
         </div>
         <People
           people={pastSpeakers.map(({ personId, title }) => ({

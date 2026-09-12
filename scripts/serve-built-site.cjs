@@ -2,16 +2,14 @@
 /**
  * Static server for the production build that behaves like GitHub Pages.
  *
- * The deployed site is a single-page app served from the root of the
- * `gh-pages` branch. Pages has no SPA rewrite: a deep path such as
- * `/our_team/design` is a real 404, and the published `404.html` turns that
- * path into `/?/our_team/design` so the restore script in `index.html` can
- * hand it back to the router. A plain "serve index.html for everything"
- * development server hides that hop, so deep links, trailing slashes and the
- * not-found page all look healthier locally than in production.
+ * Known routes have generated directory index files. Pages redirects their
+ * extensionless paths to a trailing slash and serves useful HTML with 200.
+ * Unknown paths and legacy aliases still use the published 404-to-root
+ * restoration script. A development SPA fallback hides both behaviors.
  *
  * This server therefore:
  *   - serves real files from the build directory,
+ *   - redirects generated directory paths to their slash URL, preserving query,
  *   - answers unknown document paths with `404.html` and a 404 status,
  *   - answers missing files under the emitted asset prefixes with a plain 404
  *     instead of HTML, so a broken image or PDF URL fails loudly,
@@ -99,10 +97,10 @@ function createSiteServer(options = {}) {
 
   return http.createServer((req, res) => {
     let pathname;
+    let url;
     try {
-      pathname = decodeURIComponent(
-        new URL(req.url, "http://localhost").pathname,
-      );
+      url = new URL(req.url, "http://localhost");
+      pathname = decodeURIComponent(url.pathname);
     } catch {
       res.writeHead(400, { "Content-Type": "text/plain; charset=utf-8" });
       res.end("Bad request URI");
@@ -118,12 +116,13 @@ function createSiteServer(options = {}) {
       }
 
       let status = 200;
-      // GitHub Pages serves index.html for a directory that contains one.
-      let file =
-        readableFile(resolved) ||
-        (pathname.endsWith("/")
-          ? readableFile(path.join(resolved, "index.html"))
-          : null);
+      const index = readableFile(path.join(resolved, "index.html"));
+      if (index && !pathname.endsWith("/")) {
+        res.writeHead(301, { Location: `${url.pathname}/${url.search}` });
+        res.end();
+        return;
+      }
+      let file = readableFile(resolved) || index;
 
       if (!file) {
         if (isAssetPath(pathname)) {

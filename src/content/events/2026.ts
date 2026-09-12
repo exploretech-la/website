@@ -8,10 +8,15 @@ import type { EventContent } from "./types";
 /**
  * exploretech.la 2026, served at /resources2026.
  * Panels are authored after the workshops; both render as described cards.
+ * Session times and rooms are transcribed from Event_Program_2026.pdf, pages 3, 5, 7, and 8.
  */
 export const EVENT_2026: EventContent = {
   year: "2026",
-  programHref: eventProgram,
+  program: {
+    name: "2026 event program",
+    src: eventProgram,
+    file: { format: "PDF", bytes: 41255757 },
+  },
   schedule: [
     { key: 1, name: "Opening Ceremony", time: "9:55AM - 10:10AM" },
     { key: 2, name: "Session 1", time: "10:15AM - 10:50AM" },
@@ -21,12 +26,22 @@ export const EVENT_2026: EventContent = {
     { key: 6, name: "Closing Ceremony", time: "1:10PM - 1:30PM" },
   ],
   maps: [
-    { name: "Bus Routes", src: busRoutes },
-    { name: "Ackerman Union 2F", src: ackermanUnion2F },
-    { name: "Ackerman Union 3F", src: ackermanUnion3F },
+    {
+      name: "Bus Routes",
+      src: busRoutes,
+      file: { format: "JPG", bytes: 59864 },
+    },
+    {
+      name: "Ackerman Union 2F",
+      src: ackermanUnion2F,
+      file: { format: "JPG", bytes: 46939 },
+    },
+    {
+      name: "Ackerman Union 3F",
+      src: ackermanUnion3F,
+      file: { format: "JPG", bytes: 18761 },
+    },
   ],
-  mapsLinkRel: "noopener noreferrer",
-  workshopsPlacement: "before-maps",
   workshops: [
     {
       heading: "Workshops",
@@ -34,6 +49,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "Tower Stacking Game",
+          slot: {
+            session: "Session 3",
+            time: "11:50 AM - 12:30 PM",
+            location: "Ackerman Union 3517",
+          },
           instructors: "Emma Qiu and Eli Drewry",
           description:
             "Students will compete in groups to see who can create the tallest free-standing tower with limited materials (popsicle sticks, tape, rope, etc). This challenge tests their communication, strategy, and discovering the importance of architecture while getting a chance to win prizes.",
@@ -44,6 +64,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "Intro to Game Development",
+          slot: {
+            session: "Session 1",
+            time: "10:15 AM - 10:50 AM",
+            location: "Ackerman Union 3508",
+          },
           instructors: "Joshua Jin and Paul Macapinlac",
           description:
             "Learn how the snake game works in this fun workshop! Uncover the secrets of Python and learn to customize your snake. Before you know it, you’ll be a pro game dev with a fully customized snake game.",
@@ -54,6 +79,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "Battle Bots",
+          slot: {
+            session: "Session 3",
+            time: "11:50 AM - 12:30 PM",
+            location: "Ackerman Union 2412",
+          },
           instructors: "Sofia Matos and Benjamin Garcia",
           description:
             "Drive XRP Robots on a field to take down your opponents in a game of robot soccer! After interacting with code, you will be able to drive and dribble past other robots to score using teamwork and strategy.",
@@ -63,7 +93,12 @@ export const EVENT_2026: EventContent = {
         },
         {
           kind: "described",
-          title: "Squid Games Several-Legged Pentathalon (STEM Edition)",
+          title: "Squid Games Several-Legged Pentathlon (STEM Edition)",
+          slot: {
+            session: "Session 3",
+            time: "11:50 AM - 12:30 PM",
+            location: "Ackerman Union 3508",
+          },
           instructors: "Matthew Chen and Paul Macapinlac",
           description:
             "Inspired by the hit Netflix series “Squid Games,” collaborate with up to 3 of your friends to participate in the STEM Games Several-Legged Pentathlon, where you will be tasked to solve STEM puzzles and activities in an interactive race against time.",
@@ -77,6 +112,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "AI Photobooth",
+          slot: {
+            session: "Session 3",
+            time: "11:50 AM - 12:30 PM",
+            location: "Ackerman Union 2408",
+          },
           instructors: "Ridhima Seth and Joshua Jin",
           description:
             "Do you want to learn more about AI image generation? Come to AI Photobooth! This workshop will show you the basics of how an AI image generator works, and then we’ll let you try it for yourself!",
@@ -87,6 +127,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "COVID-19 Simulator",
+          slot: {
+            session: "Session 2",
+            time: "11:00 AM - 11:40 AM",
+            location: "Ackerman Union 2412",
+          },
           instructors: "Clemente Irarrazaval and Eli Drewry",
           description:
             "Students will get an introduction into the field of game development by designing a COVID-19 spread simulator. Using Scratch they’ll explore conditionals, loops, and movement while working through obstacles. Students work in teams to build, test, and modify their own simulation-based game, also encouraging teamwork.",
@@ -97,6 +142,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "AI Music",
+          slot: {
+            session: "Session 2",
+            time: "11:00 AM - 11:40 AM",
+            location: "Ackerman Union 3517",
+          },
           instructors: "Matthew Chen and Benjamin Garcia",
           description:
             "The purpose of this workshop is to teach students how to use suno.com, an AI music website that allows users to create any form of music by simply entering into the prompt bar.",
@@ -107,6 +157,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "Bridge Building Competition",
+          slot: {
+            session: "Session 1",
+            time: "10:15 AM - 10:50 AM",
+            location: "Ackerman Union 2412",
+          },
           instructors: "Atharv Panditrao and Clemente Irarrazaval",
           description:
             "Students will design and build a small bridge using limited materials. They will learn basic structural concepts, apply problem-solving skills, and work collaboratively to create a bridge that can hold the greatest load. Students compete in teams and test their designs in a fun final challenge.",
@@ -117,6 +172,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "Live Coding Music",
+          slot: {
+            session: "Session 3",
+            time: "11:50 AM - 12:30 PM",
+            location: "Bruin Reception Room",
+          },
           instructors: "Ana Laura Santana and Atharv Panditrao",
           description:
             "Sometimes learning code can seem like it’s exclusively professional or something you will never see in your career. But in truth, coding can be useful for all types of passions beyond a corporate life, which is what gives it its beauty. In this workshop, you will learn how to become a DJ using only code!",
@@ -127,6 +187,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "Prompt Engineering",
+          slot: {
+            session: "Session 2",
+            time: "11:00 AM - 11:40 AM",
+            location: "Ackerman Union 3508",
+          },
           instructors: "Alexander Chien and Arjun Asudani",
           description:
             "Join our prompt engineering workshop to learn how to make the most out of your AI credits. Today’s chat models have vast capabilities, but accessing these skills can be more nuanced than just a straightforward question. We’ll cover prompting methods you can use to ensure you get the results you want. Let’s harness the power of AI!",
@@ -140,6 +205,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "How Machines can learn like humans (Neural Networks)",
+          slot: {
+            session: "Session 2",
+            time: "11:00 AM - 11:40 AM",
+            location: "Ackerman Union 2408",
+          },
           instructors: "Ana Laura Santana and Emma Qiu",
           description:
             "Students will learn the basics of neural networks, and how they are present in our everyday lives. They will also get hands-on experience with neural networks by loading data and training their own model. In the end, students will gain a conceptual understanding and practical skills in AI, which has become increasingly influential in the tech world.",
@@ -150,6 +220,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "AI Guess Who",
+          slot: {
+            session: "Session 1",
+            time: "10:15 AM - 10:50 AM",
+            location: "Ackerman Union 3517",
+          },
           instructors: "Ridhima Seth and Amy Lloyd",
           description:
             "Want to master Guess Who? with logic and strategy? Learn how decision trees and probability help you ask the smartest questions, minimize guesswork, and consistently win. This session makes algorithmic thinking fun and practical—sharpen your problem-solving skills while gaining a competitive edge in both games and real-world decision-making!",
@@ -160,6 +235,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "Game Theory",
+          slot: {
+            session: "Session 1",
+            time: "10:15 AM - 10:50 AM",
+            location: "Ackerman Union 2408",
+          },
           instructors: "Arjun Asudani and Alexander Chien",
           description:
             "What would you do if your success depended on someone else’s choice? This interactive workshop introduces game theory through fast-paced games and real-life scenarios. You’ll explore why people compete, when cooperation fails, and how small incentives can completely change outcomes.",
@@ -178,6 +258,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "Careers in Tech Panel",
+          slot: {
+            session: "Session 1",
+            time: "10:15 AM - 10:50 AM",
+            location: "Bruin Reception Room",
+          },
           instructors: "Meet Modi / Tammy Sujaritchai and Sofia Matos",
           description:
             "Curious about what a career in tech actually looks like? Join us for a discussion with students and professionals as they share their experiences, career paths, and advice for breaking into the industry. Learn about different roles in tech, what skills matter most, and how to start exploring your own path.",
@@ -195,6 +280,11 @@ export const EVENT_2026: EventContent = {
         {
           kind: "described",
           title: "CS/Tech in College Panel",
+          slot: {
+            session: "Session 2",
+            time: "11:00 AM - 11:40 AM",
+            location: "Bruin Reception Room",
+          },
           instructors: "Meet Modi / Tammy Sujaritchai and Amy Lloyd",
           description:
             "What is it really like to study computer science or tech in college? In this panel, students will talk about classes, projects, internships, clubs, and how they found their place in tech. Come ask questions, hear honest advice, and get a better sense of what the college experience can look like.",
@@ -212,5 +302,4 @@ export const EVENT_2026: EventContent = {
       ],
     },
   ],
-  feedback: { kind: "coming-soon", disabled: true },
 };
