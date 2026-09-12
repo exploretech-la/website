@@ -24,7 +24,7 @@ export default function People({
               <img
                 src={image}
                 className="person-image"
-                alt={name}
+                alt=""
                 width="160"
                 height="160"
                 loading={index < eagerCount ? "eager" : "lazy"}

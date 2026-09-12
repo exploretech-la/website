@@ -25,6 +25,7 @@ export default function OutboundLink({
           !event.ctrlKey &&
           !event.shiftKey &&
           !event.metaKey &&
+          !event.altKey &&
           event.button !== 1;
         if (sameWindow && href) {
           event.preventDefault();

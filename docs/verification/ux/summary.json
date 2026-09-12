@@ -2,11 +2,11 @@
   "baseCommit": "b57ae7d432f4eced178a91a46f0224852f16b2f6",
   "branch": "improve-participation-and-accessibility",
   "checks": {
-    "unitTests": 15,
+    "unitTests": 16,
     "browserTests": {
-      "chromium": 45,
-      "firefox": 45,
-      "webkit": 45
+      "chromium": 46,
+      "firefox": 46,
+      "webkit": 46
     },
     "accessibility": {
       "engine": "axe-core 4.13.0",

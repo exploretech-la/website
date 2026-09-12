@@ -617,6 +617,15 @@ test.describe("responsive layout and controls", () => {
       );
     expect(loading).toContain("eager");
     expect(loading).toContain("lazy");
+    for (const profile of await page.locator(".person-profile").all()) {
+      const name = (await profile.locator(".person-name").innerText())
+        .replace(/\s+/g, " ")
+        .trim();
+      const role = (await profile.locator(".person-title").innerText())
+        .replace(/\s+/g, " ")
+        .trim();
+      await expect(profile).toHaveAccessibleName(`${name} ${role}`);
+    }
     let missing = 0;
     for (const section of TEAM_SECTIONS) {
       await page.goto(`/our_team/${section.slug}`);
@@ -716,6 +725,36 @@ test.describe("keyboard navigation and history", () => {
         )
         .toBeLessThan(100);
     }
+  });
+
+  test("reduced-motion phone hash focus does not wait for an animation timeout", async ({
+    page,
+    baseURL,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await goOffline(page, baseURL);
+    await page.goto("/");
+    await page.locator(".site-nav-toggle").click();
+    await expect(page.locator(".site-nav-panel")).toHaveClass(/\bshow\b/);
+    await page.clock.install();
+    await page
+      .locator(".site-nav-panel")
+      .getByRole("button", { name: "About", exact: true })
+      .click();
+    await page.locator('.site-nav-panel a[href="/#about"]').click();
+    // No clock advancement: the old 300ms fallback would leave this unsettled.
+    await expect(page.locator(".site-nav-panel")).not.toHaveClass(
+      /disclosure-transition|\bshow\b/,
+    );
+    await expect(page.locator("#about")).toBeFocused();
+    await expect
+      .poll(() =>
+        page
+          .locator("#about")
+          .evaluate((node) => Math.abs(node.getBoundingClientRect().top)),
+      )
+      .toBeLessThan(40);
   });
 
   test("pushed pages focus their heading at the top; Back restores the reading position", async ({
